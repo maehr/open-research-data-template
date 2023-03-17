@@ -12,14 +12,15 @@ This GitHub template is independent of the (research) data and its format. It fo
 - Share your [open data](#open-data) with others
 - Write better [documentation](#documentation) for yourself and the community
 - Write more [consistent] code and encourage collaboration
-- Increase [security
+- Increase [security](#security)
 - Follow accepted [ethics](#ethics)
 
 ## How this template helps you
 
 ## Open data
 
-- Citable via [CITATION.cff](CITATION.cff) and [DOI](https://www.doi.org/) via [Zenodo](https://zenodo.org/)
+- Citeable via [CITATION.cff](CITATION.cff) and [DOI](https://www.doi.org/)
+- Automatic long-term archiving via [Zenodo](https://zenodo.org/)
 - Licensed under a non-restrictive [CC BY 4.0 license](LICENSE.md) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
 - Templates for reporting data issues using a [custom template](.github/ISSUE_TEMPLATE/data_issue_report.md)
 
@@ -84,6 +85,8 @@ yarn run prepare
 - [ ] select an appropriate license from [choosealicense.com](https://choosealicense.com/) and update [README.template.md](README.template.md) and [LICENSE.md](LICENSE.md)
 - [ ] delete [README.md](README.md)
 - [ ] rename [README.template.md](README.template.md) to [README.md](README.md)
+- [ ] change `CITATION.CFF` according to [citation-file-format.github.io](https://citation-file-format.github.io/)
+- [ ] setup the [Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 - [ ] Search for `TODO` in the project (mostly documentation) and fix it
 - [ ] Customize `.gitignore` with [gitignore.io](https://www.toptal.com/developers/gitignore) and `.gitattributes` with [gitattributes-generator](https://www.richie-bendall.ml/gitattributes-generator/).
 
