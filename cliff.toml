@@ -1,4 +1,5 @@
-# configuration file for git-cliff (0.1.0)
+ configuration file for git-cliff
+# see https://github.com/orhun/git-cliff#configuration-file
 
 [changelog]
 # changelog header
@@ -13,18 +14,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 # https://tera.netlify.app/docs/#introduction
 body = """
 {% if version %}\
-    ## [{{ version | replace(from="v", to="") }}] - {{ timestamp | date(format="%Y-%m-%d") }}
+    ## [{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d") }}
 {% else %}\
     ## [unreleased]
 {% endif %}\
 {% for group, commits in commits | group_by(attribute="group") %}
     ### {{ group | upper_first }}
     {% for commit in commits %}
-        - {{ commit.message | upper_first }}\
+        - {% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message | upper_first }}\
     {% endfor %}
 {% endfor %}\n
 """
-# remove the leading and trailing whitespaces from the template
+# remove the leading and trailing whitespace from the template
 trim = true
 # changelog footer
 footer = """

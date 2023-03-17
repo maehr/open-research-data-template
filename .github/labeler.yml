@@ -1,26 +1,35 @@
+data:
+  - analysis/*
+  - build/*
+  - data/*
+
+docs:
+  - _layouts/*
+  - assets/*
+  - docs/*
+  - project-management/*
+  - _config.yml
+  - android-chrome-192x192.png
+  - android-chrome-512x512.png
+  - apple-touch-icon.png
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - favicon-16x16.png
+  - favicon-32x32.png
+  - favicon.ico
+  - LICENSE.md
+  - README.md
+  - SECURITY.md
+  - site.webmanifest
+
+github:
+  - .github/*
+  - .husky/*
+
 src:
   - .dockerignore
   - .gitattributes
   - .gitignore
   - example.env
   - src/*
-
-docs:
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - LICENSE.md
-  - README.md
-  - SECURITY.md
-  - _config.yml
-  - _layouts
-  - android-chrome-192x192.png
-  - android-chrome-512x512.png
-  - apple-touch-icon.png
-  - assets/*
-  - favicon-16x16.png
-  - favicon-32x32.png
-  - favicon.ico
-  - site.webmanifest
-
-github:
-  - .github/*
+  - test/*

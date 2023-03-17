@@ -1,0 +1,22 @@
+abstract: 'This is my awesome research software. It does many things.'
+authors:
+  - family-names: Doe
+    given-names: John
+    orcid: 'https://orcid.org/0000-0001-8888-9999'
+cff-version: 1.2.0
+date-released: '2021-10-13'
+identifiers:
+  - description: 'This is the collection of archived snapshots of all versions of My Research Software'
+    type: doi
+    value: 10.5281/zenodo.123456
+  - description: 'This is the archived snapshot of version 0.11.2 of My Research Software'
+    type: doi
+    value: 10.5281/zenodo.123457
+keywords:
+  - 'amazing software'
+  - research
+license: Apache-2.0
+message: 'If you use this software, please cite it using the metadata from this file.'
+repository-code: 'https://github.com/citation-file-format/my-research-software'
+title: 'My Research Software'
+version: 0.11.2
