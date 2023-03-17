@@ -11,7 +11,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 - Share your [open data](#open-data) with others
 - Write better [documentation](#documentation) for yourself and the community
-- Write more [consistent] code and encourage collaboration
+- Write more [consistent](#consistency) code and encourage collaboration
 - Increase [security](#security)
 - Follow accepted [ethics](#ethics)
 
@@ -26,7 +26,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ### Documentation
 
-- [README.md](README.md) according to [www.makeareadme.com](https://www.makeareadme.com/) and https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html
+- [README.md](README.md) according to [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html)
 - [CHANGELOG.md](CHANGELOG.md) according to [keepachangelog.com](https://keepachangelog.com/)
 - Automated [CHANGELOG.md](CHANGELOG.md) via [git-cliff](https://github.com/orhun/git-cliff)
 - [package.json](package.json) via [npm docs](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
@@ -36,9 +36,9 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 - Consistent formatting via [Prettier](https://prettier.io/)
 - Consistent commit messages according to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) via [husky](https://github.com/typicode/husky)
-- Consistent versioning via Semantic Versioning (https://semver.org/spec/v2.0.0.html)
+- Consistent versioning via [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 - Consistent [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) workflow via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
-- Consistent issues via issue templates (https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
+- Consistent issues via [issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
 - Consistent pull request labels via [labeler](https://github.com/actions/labeler)
 - Consistent file and folder naming conventions via [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-storage.html#file-naming-conventions)
 
@@ -46,7 +46,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 - [SECURITY.md](SECURITY.md) per [GitHub](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
 - [GitHub Security Alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
-- Integrity about [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
+- Integrity via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
 
 ### Ethics
 
@@ -112,7 +112,7 @@ npm run commit
 
 ## Support
 
-This project is maintained by [@maehr] (https://github.com/maehr). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
+This project is maintained by [@maehr](https://github.com/maehr). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
 
 | Type                         | Platforms                                                                  |
 | ---------------------------- | -------------------------------------------------------------------------- |
