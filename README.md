@@ -55,40 +55,31 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## Installation
 
-To initialize the template, [generate](https://github.com/maehr/open-data-template/generate) a new project and follow this guide:
+To initialize the template, [generate](https://github.com/maehr/open-data-template/generate) a new project, [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the repository to your local machine and follow this guide.
 
-- [ ] add `FULLNAME`, `USERNAME`, `REPO_NAME` and `SHORT_DESCRIPTION` to [README.md](README.md)
-- [ ] add `FULLNAME`, `USERNAME`, `REPO_NAME` and `SHORT_DESCRIPTION` to [package.json](package.json)
-- [ ] add `ZENODO_RECORD` to [README.md](README.md)
-- [ ] add favicons to `./`, e.g. via [favicon.io](https://favicon.io/)
-- [ ] enable [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
-- [ ] add `USERNAME` and `REPO_NAME` to [SECURITY.md](SECURITY.md)
-- [ ] [protect](https://help.github.com/en/articles/configuring-protected-branches) the main branch to enforce a [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) workflow
-- [ ] enable [GitHub security alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
-- [ ] install the [latest LTS version or higher of Node](https://nodejs.org/en/download/) and all dependencies via [npm](https://www.npmjs.com/), or via [pnpm](https://pnpm.io/), or via [yarn](https://yarnpkg.com/).
+1. Install [Node.js](https://nodejs.org/en/) and run the following commands in the root directory of the repository:
 
 ```bash
-# npm
 npm install
 npm run prepare
-
-# pnpm
-pnpm install
-pnpm run prepare
-
-# yarn
-yarn
-yarn run prepare
 ```
 
-- [ ] change `[INSERT CONTACT METHOD]` in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [package.json](package.json) and [SECURITY.md](SECURITY.md)
-- [ ] select an appropriate license from [choosealicense.com](https://choosealicense.com/) and update [README.template.md](README.template.md) and [LICENSE.md](LICENSE.md)
-- [ ] delete [README.md](README.md)
-- [ ] rename [README.template.md](README.template.md) to [README.md](README.md)
+2. Complete the following checklist of tasks to customize the template for your project:
+
+- [ ] enable [GitHub security alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
+- [ ] [protect](https://help.github.com/en/articles/configuring-protected-branches) the main branch to enforce a [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) workflow
+- [ ] search and replace `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION` `[INSERT CONTACT METHOD]` in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [package.json](package.json), [README.md](README.md), [SECURITY.md](SECURITY.md)
 - [ ] change `CITATION.CFF` according to [citation-file-format.github.io](https://citation-file-format.github.io/)
 - [ ] setup the [Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
+- [ ] add `ZENODO_RECORD` to [README.md](README.md)
+- [ ] add favicons to `./`, e.g. via [favicon.io](https://favicon.io/)
 - [ ] Search for `TODO` in the project (mostly documentation) and fix it
-- [ ] Customize `.gitignore` with [gitignore.io](https://www.toptal.com/developers/gitignore) and `.gitattributes` with [gitattributes-generator](https://www.richie-bendall.ml/gitattributes-generator/).
+- [ ] delete [README.md](README.md)
+- [ ] rename [README.template.md](README.template.md) to [README.md](README.md)
+- [ ] run `npm run format` to format all files
+- [ ] run `npm run commit` to commit all changes
+- [ ] run `npm run changelog` and include the output in [CHANGELOG.md](CHANGELOG.md)
+- [ ] enable [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
 
 ## Use
 
@@ -108,6 +99,12 @@ Run the wizard to write meaningful commit messages.
 
 ```bash
 npm run commit
+```
+
+Run the wizard to create a CHANGELOG.md.
+
+```bash
+npm run changelog
 ```
 
 ## Support

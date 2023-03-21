@@ -2,18 +2,20 @@
 	"name": "REPO_NAME",
 	"description": "SHORT_DESCRIPTION",
 	"author": "FULLNAME <[INSERT CONTACT METHOD]>",
-	"version": "0.0.1",
 	"url": "https://github.com/USERNAME/REPO_NAME/issues",
 	"license": "AGPL-3.0",
 	"scripts": {
 		"check": "prettier --ignore-path .gitignore  --check . '!{CODE_OF_CONDUCT.md,LICENSE.md,_layouts/default.html}'",
 		"commit": "cz",
 		"format": "prettier --ignore-path .gitignore --write . '!{CODE_OF_CONDUCT.md,LICENSE.md,_layouts/default.html}'",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"changelog": "npm exec git-cliff -- --config cliff.toml"
 	},
 	"devDependencies": {
 		"commitizen": "^4.3.0",
+		"cz": "^1.8.2",
 		"cz-conventional-changelog": "^3.3.0",
+		"git-cliff": "^1.1.2",
 		"husky": "^8.0.3",
 		"prettier": "^2.8.4"
 	},
