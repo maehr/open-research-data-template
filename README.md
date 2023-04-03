@@ -73,7 +73,7 @@ npm run prepare
 - [ ] setup the [Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 - [ ] add `ZENODO_RECORD` to [README.md](README.md)
 - [ ] add favicons to `./`, e.g. via [favicon.io](https://favicon.io/)
-- [ ] Search for `TODO` in the project (mostly documentation) and fix it
+- [ ] search for `TODO` in the project (mostly documentation) and fix it
 - [ ] delete [README.md](README.md)
 - [ ] rename [README.template.md](README.template.md) to [README.md](README.md)
 - [ ] run `npm run format` to format all files
