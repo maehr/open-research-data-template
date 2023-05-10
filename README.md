@@ -111,11 +111,14 @@ npm run changelog
 
 This project is maintained by [@maehr](https://github.com/maehr). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
 
-| Type                         | Platforms                                                                  |
-| ---------------------------- | -------------------------------------------------------------------------- |
-| 🚨 **Bug Reports**           | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues) |
-| 🎁 **Feature Requests**      | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues) |
-| 🛡 **Report a vulnerability** | See [SECURITY.md](SECURITY.md)                                             |
+| Type                                  | Platforms                                                                     |
+| ------------------------------------- | ----------------------------------------------------------------------------- |
+| 🚨 **Bug Reports**                    | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues)    |
+| 📊 **Report bad data**                | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues)    |
+| 📚 **Docs Issue**                     | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues)    |
+| 🎁 **Feature Requests**               | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues)    |
+| 🛡 **Report a security vulnerability** | See [SECURITY.md](SECURITY.md)                                                |
+| 💬 **General Questions**              | [GitHub Discussions](https://github.com/maehr/open-data-template/discussions) |
 
 ## Roadmap
 

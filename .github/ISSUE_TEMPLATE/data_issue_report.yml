@@ -1,0 +1,32 @@
+name: 📊 Report Data Issue
+description: Report faulty data
+title: '[DATE]: [TITLE]'
+labels: [data issue]
+body:
+  - type: markdown
+    attributes:
+      value: A clear and concise description of the faulty data issue.
+  - type: input
+    id: dataset
+    attributes:
+      label: 'Dataset Information'
+      placeholder: 'e.g. data/clean/abc.csv'
+  - type: textarea
+    id: expected_data
+    attributes:
+      label: 'Expected Data'
+      placeholder: 'A clear and concise description of what the expected data should be.'
+  - type: textarea
+    id: actual_data
+    attributes:
+      label: 'Actual Data'
+      placeholder: 'A clear and concise description of what the actual data is, including any discrepancies or errors.'
+  - type: input
+    id: screenshot
+    attributes:
+      label: 'Screenshot/Example (if applicable)'
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 'Additional Context'
+      placeholder: 'Add any other context about the issue here, including any potential impact or consequences of the faulty data.'
