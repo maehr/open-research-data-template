@@ -15,9 +15,9 @@
 		"commitizen": "^4.3.0",
 		"cz": "^1.8.2",
 		"cz-conventional-changelog": "^3.3.0",
-		"git-cliff": "^1.1.2",
+		"git-cliff": "^1.2.0",
 		"husky": "^8.0.3",
-		"prettier": "^2.8.4"
+		"prettier": "^2.8.8"
 	},
 	"type": "module",
 	"config": {
