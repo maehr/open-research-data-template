@@ -1,15 +1,15 @@
-# GitHub template for FAIR and open data
+# GitHub template for FAIR and open research data
 
-This GitHub template is independent of the (research) data and its format. It follows the best practices for open data as outlined in [The Turing Way](https://the-turing-way.netlify.app/). It uses [GitHub Actions](https://docs.github.com/en/actions) to manage releases, issues, and pull requests, [GitHub Pages](https://pages.github.com/) for documentation, and [Zenodo](https://zenodo.org/) for long-term archiving.
+This GitHub template is independent of the (research) data and its format. It follows the best practices for open research data as outlined in [The Turing Way](https://the-turing-way.netlify.app/). It uses [GitHub Actions](https://docs.github.com/en/actions) to manage releases, issues, and pull requests, [GitHub Pages](https://pages.github.com/) for documentation, and [Zenodo](https://zenodo.org/) for long-term archiving.
 
-[![GitHub issues](https://img.shields.io/github/issues/maehr/open-data-template.svg)](https://github.com/maehr/open-data-template/issues)
-[![GitHub forks](https://img.shields.io/github/forks/maehr/open-data-template.svg)](https://github.com/maehr/open-data-template/network)
-[![GitHub stars](https://img.shields.io/github/stars/maehr/open-data-template.svg)](https://github.com/maehr/open-data-template/stargazers)
-[![GitHub license](https://img.shields.io/github/license/maehr/open-data-template.svg)](https://github.com/maehr/open-data-template/blob/main/LICENSE.md)
+[![GitHub issues](https://img.shields.io/github/issues/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/issues)
+[![GitHub forks](https://img.shields.io/github/forks/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/network)
+[![GitHub stars](https://img.shields.io/github/stars/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/stargazers)
+[![GitHub license](https://img.shields.io/github/license/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/blob/main/LICENSE.md)
 
 ## Why use a template (even for small datasets)?
 
-- Share your [open data](#open-data) with others
+- Share your [open research data](#open-research-data) with others
 - Write better [documentation](#documentation) for yourself and the community
 - Write more [consistent](#consistency) code and encourage collaboration
 - Increase [security](#security)
@@ -17,7 +17,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## How this template helps you
 
-### Open data
+### Open research data
 
 - Citeable via [CITATION.cff](CITATION.cff) and [DOI](https://www.doi.org/)
 - Automatic long-term archiving via [Zenodo](https://zenodo.org/)
@@ -55,7 +55,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## Installation
 
-To initialize the template, [generate](https://github.com/maehr/open-data-template/generate) a new project, [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the repository to your local machine and follow this guide.
+To initialize the template, [generate](https://github.com/maehr/open-research-data-template/generate) a new project, [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the repository to your local machine and follow this guide.
 
 1. Install [Node.js](https://nodejs.org/en/) and run the following commands in the root directory of the repository:
 
@@ -111,14 +111,14 @@ npm run changelog
 
 This project is maintained by [@maehr](https://github.com/maehr). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
 
-| Type                                  | Platforms                                                                     |
-| ------------------------------------- | ----------------------------------------------------------------------------- |
-| 🚨 **Bug Reports**                    | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues)    |
-| 📊 **Report bad data**                | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues)    |
-| 📚 **Docs Issue**                     | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues)    |
-| 🎁 **Feature Requests**               | [GitHub Issue Tracker](https://github.com/maehr/open-data-template/issues)    |
-| 🛡 **Report a security vulnerability** | See [SECURITY.md](SECURITY.md)                                                |
-| 💬 **General Questions**              | [GitHub Discussions](https://github.com/maehr/open-data-template/discussions) |
+| Type                                   | Platforms                                                                              |
+| -------------------------------------- | -------------------------------------------------------------------------------------- |
+| 🚨 **Bug Reports**                     | [GitHub Issue Tracker](https://github.com/maehr/open-research-data-template/issues)    |
+| 📊 **Report bad data**                 | [GitHub Issue Tracker](https://github.com/maehr/open-research-data-template/issues)    |
+| 📚 **Docs Issue**                      | [GitHub Issue Tracker](https://github.com/maehr/open-research-data-template/issues)    |
+| 🎁 **Feature Requests**                | [GitHub Issue Tracker](https://github.com/maehr/open-research-data-template/issues)    |
+| 🛡 **Report a security vulnerability** | See [SECURITY.md](SECURITY.md)                                                         |
+| 💬 **General Questions**               | [GitHub Discussions](https://github.com/maehr/open-research-data-template/discussions) |
 
 ## Roadmap
 
@@ -132,7 +132,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct
 
 - **Moritz Mähr** - _Initial work_ - [maehr](https://github.com/maehr)
 
-See also the list of [contributors](https://github.com/maehr/open-data-template/graphs/contributors) who contributed to this project.
+See also the list of [contributors](https://github.com/maehr/open-research-data-template/graphs/contributors) who contributed to this project.
 
 ## License
 
