@@ -1,3 +1,6 @@
+# Quarto
+/.quarto/
+
 # Exclude example.env
 !example.env
 
