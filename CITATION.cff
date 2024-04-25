@@ -15,7 +15,7 @@ identifiers:
 keywords:
   - 'amazing software'
   - research
-license: Apache-2.0
+license: AGPL-3.0
 message: 'If you use this software, please cite it using the metadata from this file.'
 repository-code: 'https://github.com/citation-file-format/my-research-software'
 title: 'My Research Software'
