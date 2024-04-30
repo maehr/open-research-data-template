@@ -1,5 +1,5 @@
 {
-	"title": "My Research Software",
+	"title": "REPO_NAME",
 	"version": "0.11.2",
 	"publication_date": "2021-10-13",
 	"keywords": ["amazing software", "research"],
@@ -7,7 +7,7 @@
 		"id": "AGPL-3.0"
 	},
 	"upload_type": "software",
-	"description": "This is my awesome research software. It does many things.",
+	"description": "SHORT_DESCRIPTION",
 	"creators": [
 		{
 			"name": "Doe, John",
