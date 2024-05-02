@@ -21,11 +21,13 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          # To install LaTeX to build PDF book
-          tinytex: true
-          # uncomment below and fill to pin a version
-          # version: SPECIFIC-QUARTO-VERSION-HERE
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # with:
+        # To install LaTeX to build PDF book outputs, uncomment below
+        # tinytex: true
+        # uncomment below and fill to pin a version
+        # version: SPECIFIC-QUARTO-VERSION-HERE
 
       # add software dependencies here and any libraries
 

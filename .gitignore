@@ -1,5 +1,6 @@
 # Quarto
-/.quarto/
+.quarto/
+_site/
 
 # Exclude example.env
 !example.env
