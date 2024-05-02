@@ -2,7 +2,6 @@ on:
   push:
     branches:
       - main
-      - quarto
   workflow_dispatch:
 
 name: Render and Publish
