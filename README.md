@@ -19,7 +19,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ### Open research data
 
-- Citeable via [DOI](https://www.doi.org/) (and [CITATION.cff](CITATION.cff))
+- Citeable via [DOI](https://www.doi.org/) (and [CITATION.cff](https://citation-file-format.github.io/))
 - Automatic long-term archiving via [Zenodo](https://zenodo.org/)
 - Licensed under a non-restrictive [CC BY 4.0 license](LICENSE.md) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
 - Templates for reporting data issues using a [custom template](.github/ISSUE_TEMPLATE/data_issue_report.md)
