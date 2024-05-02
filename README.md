@@ -19,7 +19,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ### Open research data
 
-- Citeable via [CITATION.cff](CITATION.cff) and [DOI](https://www.doi.org/)
+- Citeable via [DOI](https://www.doi.org/) (and [CITATION.cff](CITATION.cff))
 - Automatic long-term archiving via [Zenodo](https://zenodo.org/)
 - Licensed under a non-restrictive [CC BY 4.0 license](LICENSE.md) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
 - Templates for reporting data issues using a [custom template](.github/ISSUE_TEMPLATE/data_issue_report.md)
@@ -68,9 +68,7 @@ npm run prepare
 
 - [ ] enable [GitHub security alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
 - [ ] [protect](https://help.github.com/en/articles/configuring-protected-branches) the main branch to enforce a [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) workflow
-- [ ] search and replace `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION` `[INSERT CONTACT METHOD]` in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [package.json](package.json), [README.template.md](README.template.md), [SECURITY.md](SECURITY.md), [CITATION.CFF](CITATION.CFF), [.zenodo.json](.zenodo.json)
-- [ ] change `CITATION.CFF` according to [citation-file-format.github.io](https://citation-file-format.github.io/) (or delete it)
-- [ ] change `.zenodo.json` according to [zenodo.org](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release) (or delete it)
+- [ ] search and replace `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION` `[INSERT CONTACT METHOD]` in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [package.json](package.json), [README.template.md](README.template.md), [SECURITY.md](SECURITY.md)
 - [ ] setup the [Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 - [ ] add `ZENODO_RECORD` to [README.md](README.md)
 - [ ] add favicons to `./`, e.g. via [favicon.io](https://favicon.io/)
@@ -81,6 +79,11 @@ npm run prepare
 - [ ] run `npm run commit` to commit all changes
 - [ ] run `npm run changelog` and include the output in [CHANGELOG.md](CHANGELOG.md)
 - [ ] enable [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+
+3. optional tasks:
+
+- [ ] add a `CITATION.CFF` according to [citation-file-format.github.io](https://citation-file-format.github.io/)
+- [ ] add a `.zenodo.json` according to [zenodo.org](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release)
 
 ## Use
 
