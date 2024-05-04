@@ -1,1 +1,1 @@
-TODO https://ec.europa.eu/eurostat/data/metadata/code-lists
+TODO https://ec.europa.eu/eurostat/web/metadata/code-lists
