@@ -40,8 +40,10 @@ website:
             href: CODE_OF_CONDUCT.md
           - text: Contributing
             href: CONTRIBUTING.md
-          - text: License
-            href: LICENSE.md
+          - text: License Data
+            href: LICENSE-CCBY
+          - text: License Code
+            href: LICENSE-AGPL
           - text: Security
             href: SECURITY.md
       - href: report.md
