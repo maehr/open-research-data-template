@@ -1,1 +1,1 @@
-Sitemap: https://USERNAME.github.io/REPO_NAME/sitemap.xml
+Sitemap: https://maehr.github.io/open-research-data-template/sitemap.xml
