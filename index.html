@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -194,8 +194,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LICENSE.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">License</span></a>
+  <a href="./LICENSE-CCBY.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">License (Data)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./LICENSE-AGPL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">License (Code)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -298,9 +304,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="open-research-data" class="level3">
 <h3 class="anchored" data-anchor-id="open-research-data">Open research data</h3>
 <ul>
-<li>Citeable via <a href="CITATION.cff">CITATION.cff</a> and <a href="https://www.doi.org/">DOI</a></li>
+<li>Citeable via <a href="https://www.doi.org/">DOI</a> (and <a href="https://citation-file-format.github.io/">CITATION.cff</a>)</li>
 <li>Automatic long-term archiving via <a href="https://zenodo.org/">Zenodo</a></li>
-<li>Licensed under a non-restrictive <a href="./LICENSE.html">CC BY 4.0 license</a> according to <a href="https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code">The Turing Way</a></li>
+<li>Licensed under a non-restrictive <a href="LICENSE.md">CC BY 4.0 license</a> according to <a href="https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code">The Turing Way</a></li>
 <li>Templates for reporting data issues using a <a href=".github/ISSUE_TEMPLATE/data_issue_report.md">custom template</a></li>
 </ul>
 </section>
@@ -311,7 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="./CHANGELOG.html">CHANGELOG.md</a> according to <a href="https://keepachangelog.com/">keepachangelog.com</a></li>
 <li>Automated <a href="./CHANGELOG.html">CHANGELOG.md</a> via <a href="https://github.com/orhun/git-cliff">git-cliff</a></li>
 <li><a href="package.json">package.json</a> via <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json">npm docs</a></li>
-<li>Accessible documentation via <a href="https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages">gh-pages</a></li>
+<li>Accessible documentation via <a href="https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages">gh-pages</a> and <a href="https://quarto.org/">Quarto</a></li>
 </ul>
 </section>
 <section id="consistency" class="level3">
@@ -357,7 +363,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><label><input type="checkbox">enable <a href="https://github.blog/2017-11-16-introducing-security-alerts-on-github/">GitHub security alerts</a></label></li>
 <li><label><input type="checkbox"><a href="https://help.github.com/en/articles/configuring-protected-branches">protect</a> the main branch to enforce a <a href="https://gist.github.com/Chaser324/ce0505fbed06b947d962">fork and pull</a> workflow</label></li>
 <li><label><input type="checkbox">search and replace <code>FULLNAME</code>, <code>USERNAME</code>, <code>REPO_NAME</code>, <code>SHORT_DESCRIPTION</code> <code>[INSERT CONTACT METHOD]</code> in <a href="./CODE_OF_CONDUCT.html">CODE_OF_CONDUCT.md</a>, <a href="package.json">package.json</a>, <a href="./README.template.html">README.template.md</a>, <a href="./SECURITY.html">SECURITY.md</a></label></li>
-<li><label><input type="checkbox">change <code>CITATION.CFF</code> according to <a href="https://citation-file-format.github.io/">citation-file-format.github.io</a></label></li>
 <li><label><input type="checkbox">setup the <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">Zenodo integration</a></label></li>
 <li><label><input type="checkbox">add <code>ZENODO_RECORD</code> to <a href="README.md">README.md</a></label></li>
 <li><label><input type="checkbox">add favicons to <code>./</code>, e.g.&nbsp;via <a href="https://favicon.io/">favicon.io</a></label></li>
@@ -368,6 +373,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><label><input type="checkbox">run <code>npm run commit</code> to commit all changes</label></li>
 <li><label><input type="checkbox">run <code>npm run changelog</code> and include the output in <a href="./CHANGELOG.html">CHANGELOG.md</a></label></li>
 <li><label><input type="checkbox">enable <a href="https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages">gh-pages</a></label></li>
+<li><label><input type="checkbox">customize the documentation with <a href="https://quarto.org/docs/websites/#workflow">Quarto</a></label></li>
+</ul>
+<ol start="3" type="1">
+<li>optional tasks:</li>
+</ol>
+<ul class="task-list">
+<li><label><input type="checkbox">add a <code>CITATION.CFF</code> according to <a href="https://citation-file-format.github.io/">citation-file-format.github.io</a></label></li>
+<li><label><input type="checkbox">add a <code>.zenodo.json</code> according to <a href="https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release">zenodo.org</a></label></li>
 </ul>
 </section>
 <section id="use" class="level2">
@@ -436,7 +449,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="license" class="level2">
 <h2 class="anchored" data-anchor-id="license">License</h2>
-<p>The data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the <a href="./LICENSE.html">LICENSE.md</a> file for details. The code in this repository is released under the GNU Affero General Public License v3.0 - see the <a href="https://www.gnu.org/licenses/agpl-3.0.html">gnu.org</a> file for details.</p>
+<p>The data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the <a href="./LICENSE-CCBY.html">LICENSE-CCBY</a> file for details. By using this data, you agree to give appropriate credit to the original author(s) and to indicate if any modifications have been made.</p>
+<p>The code in this repository is released under the GNU Affero General Public License v3.0 - see the <a href="./LICENSE-AGPL.html">LICENSE-AGPL</a> file for details. By using this code, you agree to make any modifications available under the same license.</p>
 
 
 </section>

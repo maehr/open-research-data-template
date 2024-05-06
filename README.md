@@ -19,7 +19,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ### Open research data
 
-- Citeable via [CITATION.cff](CITATION.cff) and [DOI](https://www.doi.org/)
+- Citeable via [DOI](https://www.doi.org/) (and [CITATION.cff](https://citation-file-format.github.io/))
 - Automatic long-term archiving via [Zenodo](https://zenodo.org/)
 - Licensed under a non-restrictive [CC BY 4.0 license](LICENSE.md) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
 - Templates for reporting data issues using a [custom template](.github/ISSUE_TEMPLATE/data_issue_report.md)
@@ -30,7 +30,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 - [CHANGELOG.md](CHANGELOG.md) according to [keepachangelog.com](https://keepachangelog.com/)
 - Automated [CHANGELOG.md](CHANGELOG.md) via [git-cliff](https://github.com/orhun/git-cliff)
 - [package.json](package.json) via [npm docs](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
-- Accessible documentation via [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+- Accessible documentation via [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages) and [Quarto](https://quarto.org/)
 
 ### Consistency
 
@@ -69,7 +69,6 @@ npm run prepare
 - [ ] enable [GitHub security alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
 - [ ] [protect](https://help.github.com/en/articles/configuring-protected-branches) the main branch to enforce a [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) workflow
 - [ ] search and replace `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION` `[INSERT CONTACT METHOD]` in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [package.json](package.json), [README.template.md](README.template.md), [SECURITY.md](SECURITY.md)
-- [ ] change `CITATION.CFF` according to [citation-file-format.github.io](https://citation-file-format.github.io/)
 - [ ] setup the [Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 - [ ] add `ZENODO_RECORD` to [README.md](README.md)
 - [ ] add favicons to `./`, e.g. via [favicon.io](https://favicon.io/)
@@ -80,6 +79,12 @@ npm run prepare
 - [ ] run `npm run commit` to commit all changes
 - [ ] run `npm run changelog` and include the output in [CHANGELOG.md](CHANGELOG.md)
 - [ ] enable [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+- [ ] customize the documentation with [Quarto](https://quarto.org/docs/websites/#workflow)
+
+3. optional tasks:
+
+- [ ] add a `CITATION.CFF` according to [citation-file-format.github.io](https://citation-file-format.github.io/)
+- [ ] add a `.zenodo.json` according to [zenodo.org](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release)
 
 ## Use
 
@@ -136,4 +141,6 @@ See also the list of [contributors](https://github.com/maehr/open-research-data-
 
 ## License
 
-The data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the [LICENSE.md](LICENSE.md) file for details. The code in this repository is released under the GNU Affero General Public License v3.0 - see the [gnu.org](https://www.gnu.org/licenses/agpl-3.0.html) file for details.
+The data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the [LICENSE-CCBY](LICENSE-CCBY.md) file for details. By using this data, you agree to give appropriate credit to the original author(s) and to indicate if any modifications have been made.
+
+The code in this repository is released under the GNU Affero General Public License v3.0 - see the [LICENSE-AGPL](LICENSE-AGPL.md) file for details. By using this code, you agree to make any modifications available under the same license.
