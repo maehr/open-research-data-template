@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Overwrite _quarto.yml
+        if: github.repository == 'maehr/open-research-data-template'
         run: |
           cp .github/_quarto.yml _quarto.yml
 
