@@ -1,36 +1,48 @@
 data:
-  - analysis/*
-  - build/*
-  - data/*
+  any:
+    changed-files:
+      any-glob-to-any-file:
+        - analysis/*
+        - build/*
+        - data/*
 
 docs:
-  - _layouts/*
-  - assets/*
-  - docs/*
-  - project-management/*
-  - _config.yml
-  - android-chrome-192x192.png
-  - android-chrome-512x512.png
-  - apple-touch-icon.png
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - favicon-16x16.png
-  - favicon-32x32.png
-  - favicon.ico
-  - LICENSE-AGPL.md
-  - LICENSE-CCBY.md
-  - README.md
-  - SECURITY.md
-  - site.webmanifest
+  any:
+    changed-files:
+      any-glob-to-any-file:
+        - _layouts/*
+        - assets/*
+        - docs/*
+        - project-management/*
+        - _config.yml
+        - android-chrome-192x192.png
+        - android-chrome-512x512.png
+        - apple-touch-icon.png
+        - CODE_OF_CONDUCT.md
+        - CONTRIBUTING.md
+        - favicon-16x16.png
+        - favicon-32x32.png
+        - favicon.ico
+        - LICENSE-AGPL.md
+        - LICENSE-CCBY.md
+        - README.md
+        - SECURITY.md
+        - site.webmanifest
 
 github:
-  - .github/*
-  - .husky/*
+  any:
+    changed-files:
+      any-glob-to-any-file:
+        - .github/*
+        - .husky/*
 
 src:
-  - .dockerignore
-  - .gitattributes
-  - .gitignore
-  - example.env
-  - src/*
-  - test/*
+  any:
+    changed-files:
+      any-glob-to-any-file:
+        - .dockerignore
+        - .gitattributes
+        - .gitignore
+        - example.env
+        - src/*
+        - test/*
