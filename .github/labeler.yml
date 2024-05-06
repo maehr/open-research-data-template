@@ -17,7 +17,8 @@ docs:
   - favicon-16x16.png
   - favicon-32x32.png
   - favicon.ico
-  - LICENSE.md
+  - LICENSE-AGPL.md
+  - LICENSE-CCBY.md
   - README.md
   - SECURITY.md
   - site.webmanifest
