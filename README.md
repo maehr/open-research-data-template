@@ -30,7 +30,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 - [CHANGELOG.md](CHANGELOG.md) according to [keepachangelog.com](https://keepachangelog.com/)
 - Automated [CHANGELOG.md](CHANGELOG.md) via [git-cliff](https://github.com/orhun/git-cliff)
 - [package.json](package.json) via [npm docs](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
-- Accessible documentation via [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+- Accessible documentation via [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages) and [Quarto](https://quarto.org/)
 
 ### Consistency
 
@@ -79,6 +79,7 @@ npm run prepare
 - [ ] run `npm run commit` to commit all changes
 - [ ] run `npm run changelog` and include the output in [CHANGELOG.md](CHANGELOG.md)
 - [ ] enable [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+- [ ] customize the documentation with [Quarto](https://quarto.org/docs/websites/#workflow)
 
 3. optional tasks:
 
@@ -140,5 +141,6 @@ See also the list of [contributors](https://github.com/maehr/open-research-data-
 
 ## License
 
-The data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the [LICENSE-CCBY](LICENSE-CCBY) file for details. By using this data, you agree to give appropriate credit to the original author(s) and to indicate if any modifications have been made.
-The code in this repository is released under the GNU Affero General Public License v3.0 - see the [LICENSE-AGPL](LICENSE-AGPL) file for details. By using this code, you agree to make any modifications available under the same license.
+The data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the [LICENSE-CCBY](LICENSE-CCBY.md) file for details. By using this data, you agree to give appropriate credit to the original author(s) and to indicate if any modifications have been made.
+
+The code in this repository is released under the GNU Affero General Public License v3.0 - see the [LICENSE-AGPL](LICENSE-AGPL.md) file for details. By using this code, you agree to make any modifications available under the same license.
