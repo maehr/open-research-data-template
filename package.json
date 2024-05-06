@@ -8,7 +8,7 @@
 		"check": "prettier --ignore-path .gitignore  --check . '!{CODE_OF_CONDUCT.md,LICENSE-AGPL.md,LICENSE-CCBY.md,_layouts/default.html,package-lock.json,pnpm-lock.yaml,yarn.lock}'",
 		"commit": "cz",
 		"format": "prettier --ignore-path .gitignore --write . '!{CODE_OF_CONDUCT.md,LICENSE-AGPL.md,LICENSE-CCBY.md,_layouts/default.html,package-lock.json,pnpm-lock.yaml,yarn.lock}'",
-		"prepare": "husky install",
+		"prepare": "husky",
 		"changelog": "npm exec git-cliff -- --config cliff.toml"
 	},
 	"devDependencies": {
@@ -23,11 +23,6 @@
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
-		},
-		"husky": {
-			"hooks": {
-				"prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-			}
 		}
 	}
 }
