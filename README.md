@@ -80,8 +80,10 @@ npm run prepare
 - [ ] run `npm run format` to format all files
 - [ ] run `npm run commit` to commit all changes
 - [ ] run `npm run changelog` and include the output in [CHANGELOG.md](CHANGELOG.md)
-- [ ] enable [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+- [ ] install [Quarto](https://quarto.org/docs/get-started/)
+- [ ] run `quarto publish gh-pages` to publish the documentation
 - [ ] customize the documentation with [Quarto](https://quarto.org/docs/websites/#workflow)
+- [ ] enable [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages) for the `gh-pages` branch
 
 3. optional tasks:
 
@@ -112,6 +114,12 @@ Run the wizard to create a CHANGELOG.md.
 
 ```bash
 npm run changelog
+```
+
+Preview the documentation.
+
+```bash
+quarto preview
 ```
 
 ## Support
