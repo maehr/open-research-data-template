@@ -76,12 +76,11 @@ jobs:
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          path: .
           to: html
 
       - name: JamPack Optimization
         run: |
-          npx @divriots/jampack .
+          npx @divriots/jampack ./_site
 
       - name: Upload Built Artifacts
         uses: actions/upload-artifact@v4
