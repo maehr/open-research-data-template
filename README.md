@@ -146,6 +146,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct
 ## Authors and credits
 
 - **Moritz Mähr** - _Initial work_ - [maehr](https://github.com/maehr)
+- **Moritz Twente** - _Enhancements_ - [moritztwente](https://github.com/mtwente)
 
 See also the list of [contributors](https://github.com/maehr/open-research-data-template/graphs/contributors) who contributed to this project.
 
