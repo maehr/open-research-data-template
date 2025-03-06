@@ -25,7 +25,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 - Citeable via [DOI](https://www.doi.org/) (and [CITATION.cff](https://citation-file-format.github.io/))
 - Automatic long-term archiving via [Zenodo](https://zenodo.org/)
 - Licensed under a non-restrictive [AGPL 3.0](LICENSE-AGPL.md) and [CC BY 4.0](LICENSE-CCBY.md) license according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
-- Templates for reporting data issues using a [custom template](.github/ISSUE_TEMPLATE/data_issue_report.md)
+- Templates for reporting data issues using a custom template `github/ISSUE_TEMPLATE/data_issue_report.yml`
 
 ### Documentation
 
@@ -146,6 +146,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct
 ## Authors and credits
 
 - **Moritz Mähr** - _Initial work_ - [maehr](https://github.com/maehr)
+- **Moritz Twente** - _Enhancements_ - [moritztwente](https://github.com/mtwente)
 
 See also the list of [contributors](https://github.com/maehr/open-research-data-template/graphs/contributors) who contributed to this project.
 
