@@ -98,7 +98,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: built-site
-          path: _site
 
       - name: Start static server
         run: |
@@ -121,7 +120,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: built-site
-          path: _site
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
