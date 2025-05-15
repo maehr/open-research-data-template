@@ -1,0 +1,9 @@
+meta:
+  name: REPO_NAME
+  link:
+    home: https://USERNAME.github.io/REPO_NAME
+    github: https://github.com/USERNAME
+  description: |
+    SHORT_DESCRIPTION
+
+# Go to https://quarto.org/docs/authoring/brand.html to learn more about multiformat branding with brand.yml
