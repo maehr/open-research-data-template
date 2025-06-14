@@ -13,12 +13,12 @@
 			"type": "string",
 			"default": "jupyter,papermill",
 			"description": "Specify what Python dependencies to install."
-		},
-		"juliaDeps": {
-			"type": "string",
-			"default": "IJulia",
-			"description": "Specify what Julia dependencies to install."
 		}
+		// "juliaDeps": {
+		// 	"type": "string",
+		// 	"default": "IJulia",
+		// 	"description": "Specify what Julia dependencies to install."
+		// }
 	},
 	"dependsOn": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
@@ -42,16 +42,16 @@
 		"ghcr.io/devcontainers/features/python:1": {
 			"version": "latest",
 			"enableShared": "true"
-		},
-		"ghcr.io/julialang/devcontainer-features/julia:1": {
-			"channel": "release"
 		}
+		// "ghcr.io/julialang/devcontainer-features/julia:1": {
+		// 	"channel": "release"
+		// }
 	},
 	"installsAfter": [
 		"ghcr.io/devcontainers/features/common-utils",
 		"ghcr.io/devcontainers/features/git",
 		"ghcr.io/rocker-org/devcontainer-features/r-rig",
-		"ghcr.io/devcontainers/features/python",
-		"ghcr.io/julialang/devcontainer-features/julia"
+		"ghcr.io/devcontainers/features/python"
+		// "ghcr.io/julialang/devcontainer-features/julia"
 	]
 }
