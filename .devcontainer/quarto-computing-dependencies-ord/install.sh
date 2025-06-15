@@ -85,7 +85,7 @@ quarto_r_deps ${R_DEPS}
 quarto_python_deps ${PYTHON_DEPS}
 # quarto_julia_deps ${JULIA_DEPS}
 
-npm ci
+pnpm install
 
 uv sync
 
