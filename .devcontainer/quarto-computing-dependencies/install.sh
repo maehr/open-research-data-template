@@ -44,14 +44,14 @@ quarto_python_deps() {
   python3 -m pip install ${deps}
 }
 
-quarto_julia_deps() {
-  local deps=$1
-  deps=$(echo "${deps}" | sed 's/,/","/g')
-  su "${USERNAME}" -c "~/.juliaup/bin/julia -e 'using Pkg; Pkg.add.([\"${deps}\"])'"
-}
+# quarto_julia_deps() {
+#   local deps=$1
+#   deps=$(echo "${deps}" | sed 's/,/","/g')
+#   su "${USERNAME}" -c "~/.juliaup/bin/julia -e 'using Pkg; Pkg.add.([\"${deps}\"])'"
+# }
 
 quarto_r_deps ${R_DEPS}
 quarto_python_deps ${PYTHON_DEPS}
-quarto_julia_deps ${JULIA_DEPS}
+# quarto_julia_deps ${JULIA_DEPS}
 
 apt-get clean && rm -rf /var/lib/apt/lists/*
