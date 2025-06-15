@@ -40,4 +40,15 @@ fi
 log "Final uv sync (project resolution)"
 uv sync
 
+log "Installing R packages"
+if [ -f "renv.lock" ]; then
+  log "Restoring R packages with renv"
+  su "${USERNAME}" -c "Rscript -e 'renv::restore()'"
+elif [ -f "pak.lock" ]; then
+  log "Installing R packages with pak"
+  su "${USERNAME}" -c "Rscript -e 'pak::pkg_install()'"
+else
+  log "No R package manager lock file found, skipping R package installation."
+fi
+
 log "Setup complete."
