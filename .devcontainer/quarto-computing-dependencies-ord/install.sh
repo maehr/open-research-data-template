@@ -71,6 +71,7 @@ apt-get clean && rm -rf /var/lib/apt/lists/*
 quarto_python_deps() {
   local deps=$1
   deps=$(echo "${deps}" | sed 's/,/ /g')
+  uv venv
   uv pip install ${deps}
 }
 
