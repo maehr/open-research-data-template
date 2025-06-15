@@ -8,6 +8,7 @@ USERNAME=${USERNAME:-${_REMOTE_USER:-"automatic"}}
 
 R_DEPS=${RDEPS:-"rmarkdown"}
 PYTHON_DEPS=${PYTHONDEPS:-"jupyter,papermill"}
+JULIA_DEPS=${JULIADEPS:-"IJulia"}
 VERSION=${VERSION:-"latest"}
 
 if [ "$(id -u)" -ne 0 ]; then
@@ -84,26 +85,3 @@ quarto_python_deps() {
 quarto_r_deps ${R_DEPS}
 quarto_python_deps ${PYTHON_DEPS}
 # quarto_julia_deps ${JULIA_DEPS}
-
-pnpm install
-
-uv sync
-
-
-
-# #!/bin/bash
-# set -e
-
-# echo "[devcontainer] Installing project dependencies..."
-
-# # Node.js packages
-# npm install
-
-# # Python environment via uv
-# uv sync
-
-# # R packages with renv
-# Rscript -e 'install.packages("renv", repos="https://cloud.r-project.org"); renv::restore()'
-# touch renv/restore.complete
-
-# echo "[devcontainer] Setup complete."
