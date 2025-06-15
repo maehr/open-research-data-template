@@ -38,7 +38,12 @@ elif [ -f "package-lock.json" ]; then
 fi
 
 log "Final uv sync (project resolution)"
-uv sync
+if [ -f "uv.lock" ]; then
+  log "Running uv sync"
+  su "${USERNAME}" -c "uv sync"
+else
+  log "No uv.lock file found, skipping uv sync."
+fi
 
 log "Installing R packages"
 if [ -f "renv.lock" ]; then
