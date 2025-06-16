@@ -29,10 +29,10 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ### Documentation
 
-- [README.md](README.md) according to [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html)
-- [CHANGELOG.md](CHANGELOG.md) according to [keepachangelog.com](https://keepachangelog.com/)
+- `README.md` according to [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html)
+- `CHANGELOG.md` according to [keepachangelog.com](https://keepachangelog.com/)
 - Automated [CHANGELOG.md](CHANGELOG.md) via [git-cliff](https://github.com/orhun/git-cliff)
-- [package.json](package.json) via [npm docs](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
+- `package.json` via [npm docs](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
 - Accessible documentation via [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages) and [Quarto](https://quarto.org/)
 
 ### Consistency
@@ -46,13 +46,13 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ### Security
 
-- [SECURITY.md](SECURITY.md) per [GitHub](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
+- `SECURITY.md` per [GitHub](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
 - [GitHub Security Alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
 - Integrity via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
 
 ### Ethics
 
-- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) per the [Contributor Covenant](https://www.contributor-covenant.org/)
+- `CODE_OF_CONDUCT.md` per the [Contributor Covenant](https://www.contributor-covenant.org/)
 - Friendly initial interactions via [Greetings](https://github.com/actions/starter-workflows/blob/main/automation/greetings.yml)
 
 ## Installation
