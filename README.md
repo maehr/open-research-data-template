@@ -125,7 +125,7 @@ uv run quarto preview
 
 To initialize the template, [generate](https://github.com/maehr/open-research-data-template/generate) a new project, [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the repository to your local machine and follow this guide.
 
-1. Run the following command in your terminal to prepare the project (this will install necessary tools):
+1. Run the following command in your terminal to prepare the project (this will initialize Husky):
 
    ```bash
    npm run prepare
