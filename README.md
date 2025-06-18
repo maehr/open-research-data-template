@@ -57,9 +57,11 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## Installation
 
-We recommend using **GitHub Codespaces** for a quick and reproducible setup.
+We recommend using **GitHub Codespaces** for a reproducible setup.
 
-### Quick Start with GitHub Codespaces
+## Getting Started
+
+### For Most Users: Reproducible Setup with GitHub Codespaces
 
 1. **Use this repository** with your GitHub account.
 
@@ -91,10 +93,12 @@ We recommend using **GitHub Codespaces** for a quick and reproducible setup.
      <img src=".github/docs/assets/img_terminal.png" alt="Terminal window showing command" style="width: 540px; margin: 1em 0;" />
    </div>
 
-<details>
-<summary>👩‍💻 Setup Locally (Advanced Users)</summary>
+> **Note:** All dependencies (Node.js, Python, R, Quarto) are pre-installed in the Codespace.
 
-### Prerequisites
+<details>
+<summary>👩‍💻 <strong>Advanced</strong> Local Installation</summary>
+
+#### Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
 - [R](https://cran.r-project.org/) and Rtools (on Windows)
@@ -103,7 +107,7 @@ We recommend using **GitHub Codespaces** for a quick and reproducible setup.
 
 > _Note: `uv` installs and manages the correct Python version automatically._
 
-### Setup Prerequisites
+#### Local Setup Steps
 
 ```bash
 # 1. Install Node.js dependencies
@@ -121,46 +125,29 @@ uv run quarto preview
 
 </details>
 
-### Setup Steps
+## Project Setup Checklist (for all users)
 
-To initialize the template, [generate](https://github.com/maehr/open-research-data-template/generate) a new project, [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the repository to your local machine and follow this guide.
+After creating your project from this template (either via Codespaces or local setup), complete the following steps to customize and finalize your project:
 
-1. Run the following command in your terminal to prepare the project (this will initialize Husky):
+- [ ] **Enable GitHub Security Alerts**: Go to your repository's "Security" tab on GitHub and enable security alerts.
+- [ ] **Protect the Main Branch**: In your repository settings on GitHub (under "Branches"), protect your `main` branch.
+- [ ] **Update Project Details**: Replace placeholders like `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, and `[INSERT CONTACT METHOD]` in `CODE_OF_CONDUCT.md`, `package.json`, `README.template.md`, and `SECURITY.md`.
+- [ ] **Set Up Zenodo Integration**: Follow the [Zenodo guide](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to connect your repository to Zenodo for long-term archiving and to get a DOI.
+- [ ] **Add Zenodo DOI to README**: Once you have your Zenodo DOI, add it to the `README.md` file by replacing `ZENODO_RECORD`.
+- [ ] **Add Favicons**: Add favicons to the root directory (see [favicon.io](https://favicon.io/)).
+- [ ] **Address TODOs**: Search for `TODO` comments throughout the project files and complete the tasks.
+- [ ] **Finalize README**: Delete this `README.md` and rename `README.template.md` to `README.md`.
+- [ ] **Format Files**: Run `npm run format` to ensure all files are formatted.
+- [ ] **Commit Changes**: Run `npm run commit` to save your changes with a standardized commit message.
+- [ ] **Generate Changelog**: Run `npm run changelog` and copy the output into the `CHANGELOG.md` file.
+- [ ] **Publish Documentation**: Run `quarto publish gh-pages` to publish your documentation website.
+- [ ] **Customize Documentation**: Further customize your documentation using [Quarto's features](https://quarto.org/docs/websites/#workflow).
+- [ ] **Enable GitHub Pages**: In your repository settings on GitHub (under "Pages"), configure GitHub Pages to publish from the `gh-pages` branch.
 
-   ```bash
-   npm run prepare
-   ```
+**Optional:**
 
-2. Complete the following checklist to customize the template for your project:
-
-   - [ ] **Enable GitHub Security Alerts**: Go to your repository's "Security" tab on GitHub and enable security alerts to get notified about vulnerabilities.
-   - [ ] **Protect the Main Branch**: In your repository settings on GitHub (under "Branches"), protect your `main` branch. This helps ensure that changes are made through a review process (known as a "fork and pull" workflow).
-   - [ ] **Update Project Details**: Search for the following placeholders in the specified files and replace them with your project's information:
-     - `FULLNAME` (Your full name or organization name)
-     - `USERNAME` (Your GitHub username or organization name)
-     - `REPO_NAME` (The name of your repository)
-     - `SHORT_DESCRIPTION` (A brief description of your project)
-     - `[INSERT CONTACT METHOD]` (Your preferred contact method for code of conduct issues)
-     - Files to check: `CODE_OF_CONDUCT.md`, `package.json`, `README.template.md`, `SECURITY.md`
-   - [ ] **Set Up Zenodo Integration**: Follow the [Zenodo guide](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to connect your repository to Zenodo for long-term archiving and to get a DOI (Digital Object Identifier).
-   - [ ] **Add Zenodo DOI to README**: Once you have your Zenodo DOI, add it to the `README.md` file by replacing `ZENODO_RECORD`.
-   - [ ] **Add Favicons**: Create and add favicons (the small icons you see in browser tabs) to the root directory of your project. You can use a service like [favicon.io](https://favicon.io/) to generate them.
-   - [ ] **Address TODOs**: Search for `TODO` comments throughout the project files (especially in documentation) and complete the indicated tasks.
-   - [ ] **Finalize README**:
-     - Delete the current `README.md` file (this file).
-     - Rename `README.template.md` to `README.md` to make it your project's main README.
-   - [ ] **Format Files**: Run `npm run format` in your terminal to ensure all files have consistent formatting.
-   - [ ] **Commit Changes**: Run `npm run commit` to save your changes with a standardized commit message.
-   - [ ] **Generate Changelog**: Run `npm run changelog` and copy the output into the `CHANGELOG.md` file to document the changes you've made.
-   - [ ] **Install Quarto**: If you haven't already, install [Quarto](https://quarto.org/docs/get-started/) (a tool for creating documents and websites).
-   - [ ] **Publish Documentation**: Run `quarto publish gh-pages` to publish your project's documentation website.
-   - [ ] **Customize Documentation**: Further customize your documentation using [Quarto's features](https://quarto.org/docs/websites/#workflow).
-   - [ ] **Enable GitHub Pages**: In your repository settings on GitHub (under "Pages"), configure GitHub Pages to publish from the `gh-pages` branch.
-
-3. Optional Tasks:
-
-   - [ ] **Add Citation File**: Create a `CITATION.CFF` file to make your project easily citable. You can find more information at [citation-file-format.github.io](https://citation-file-format.github.io/).
-   - [ ] **Add Zenodo Metadata File**: Create a `.zenodo.json` file to provide detailed metadata for Zenodo. See the [Zenodo developer documentation](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release) for more details.
+- [ ] **Add Citation File**: Create a `CITATION.CFF` file (see [citation-file-format.github.io](https://citation-file-format.github.io/)).
+- [ ] **Add Zenodo Metadata File**: Create a `.zenodo.json` file for Zenodo metadata ([Zenodo developer docs](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release)).
 
 ## Use
 
