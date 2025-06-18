@@ -1,4 +1,5 @@
 ---
+title: Open Resarch Data
 format:
   html:
     embed-resources: true
