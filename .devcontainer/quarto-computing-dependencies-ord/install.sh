@@ -8,7 +8,7 @@ USERNAME=${USERNAME:-${_REMOTE_USER:-"automatic"}}
 
 R_DEPS=${RDEPS:-"rmarkdown"}
 PYTHON_DEPS=${PYTHONDEPS:-"jupyter,papermill"}
-JULIA_DEPS=${JULIADEPS:-"IJulia"}
+# JULIA_DEPS=${JULIADEPS:-"IJulia"}
 VERSION=${VERSION:-"latest"}
 
 if [ "$(id -u)" -ne 0 ]; then
