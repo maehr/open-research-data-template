@@ -1,1 +1,8 @@
+---
+title: Open Resarch Data
+format:
+  html:
+    embed-resources: true
+---
+
 {{< include README.md >}}

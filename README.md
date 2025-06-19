@@ -7,8 +7,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 [![GitHub stars](https://img.shields.io/github/stars/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/stargazers)
 [![Code license](https://img.shields.io/github/license/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/blob/main/LICENSE-AGPL.md)
 [![Data license](https://img.shields.io/github/license/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/blob/main/LICENSE-CCBY.md)
-
-<!-- FIXME [![DOI](https://zenodo.org/badge/ZENODO_RECORD.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD) -->
+[![DOI](https://zenodo.org/badge/GITHUB_REPO_ID.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD)
 
 ## Why use a template (even for small datasets)?
 
@@ -29,10 +28,10 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ### Documentation
 
-- [README.md](README.md) according to [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html)
-- [CHANGELOG.md](CHANGELOG.md) according to [keepachangelog.com](https://keepachangelog.com/)
+- `README.md` according to [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html)
+- `CHANGELOG.md` according to [keepachangelog.com](https://keepachangelog.com/)
 - Automated [CHANGELOG.md](CHANGELOG.md) via [git-cliff](https://github.com/orhun/git-cliff)
-- [package.json](package.json) via [npm docs](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
+- `package.json` via [npm docs](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
 - Accessible documentation via [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages) and [Quarto](https://quarto.org/)
 
 ### Consistency
@@ -46,50 +45,110 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ### Security
 
-- [SECURITY.md](SECURITY.md) per [GitHub](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
+- `SECURITY.md` per [GitHub](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
 - [GitHub Security Alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
 - Integrity via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
 
 ### Ethics
 
-- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) per the [Contributor Covenant](https://www.contributor-covenant.org/)
+- `CODE_OF_CONDUCT.md` per the [Contributor Covenant](https://www.contributor-covenant.org/)
 - Friendly initial interactions via [Greetings](https://github.com/actions/starter-workflows/blob/main/automation/greetings.yml)
 
 ## Installation
 
-To initialize the template, [generate](https://github.com/maehr/open-research-data-template/generate) a new project, [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the repository to your local machine and follow this guide.
+We recommend using **GitHub Codespaces** for a reproducible setup.
 
-1. Install [Node.js](https://nodejs.org/en/) and run the following commands in the root directory of the repository:
+## Getting Started
+
+### For Most Users: Reproducible Setup with GitHub Codespaces
+
+1. **Use this repository** with your GitHub account.
+
+   <div align="center">
+     <img src=".github/docs/assets/img_use.png" alt="Use the repository" style="width: 540px; margin: 1em 0;" />
+   </div>
+
+2. Click the green **`<> Code`** button at the top right of this repository.
+
+3. Select the **“Codespaces”** tab and click **“Create codespace on `main`”**.
+   GitHub will now build a container that includes:
+
+   - ✅ Node.js (via `npm`)
+   - ✅ Python with `uv`
+   - ✅ R with `renv`
+   - ✅ Quarto
+
+   <div align="center">
+     <img src=".github/docs/assets/img_codespace.png" alt="Create Codespace" style="width: 540px; margin: 1em 0;" />
+   </div>
+
+4. Once the Codespace is ready, open a terminal and preview the documentation:
+
+   ```bash
+   uv run quarto preview
+   ```
+
+   <div align="center">
+     <img src=".github/docs/assets/img_terminal.png" alt="Terminal window showing command" style="width: 540px; margin: 1em 0;" />
+   </div>
+
+> **Note:** All dependencies (Node.js, Python, R, Quarto) are pre-installed in the Codespace.
+
+<details>
+<summary>👩‍💻 <strong>Advanced</strong> Local Installation</summary>
+
+#### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/)
+- [R](https://cran.r-project.org/) and Rtools (on Windows)
+- [uv (Python manager)](https://github.com/astral-sh/uv#installation)
+- [Quarto](https://quarto.org/docs/get-started/)
+
+> _Note: `uv` installs and manages the correct Python version automatically._
+
+#### Local Setup Steps
 
 ```bash
+# 1. Install Node.js dependencies
 npm install
 npm run prepare
+
+# 2. Setup Python environment
+uv sync
+
+# 3. Setup R environment
+Rscript -e 'install.packages("renv"); renv::restore()'
+
+# 4. Preview documentation
+uv run quarto preview
 ```
 
-2. Complete the following checklist of tasks to customize the template for your project:
+</details>
 
-- [ ] enable [GitHub security alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
-- [ ] [protect](https://help.github.com/en/articles/configuring-protected-branches) the main branch to enforce a [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) workflow
-- [ ] search and replace `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, `[INSERT CONTACT METHOD]` in [\_brand.yml](_brand.yml), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [package.json](package.json), [README.template.md](README.template.md), [SECURITY.md](SECURITY.md)
-- [ ] setup the [Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
-- [ ] add `ZENODO_RECORD` to [README.md](README.md)
-- [ ] add favicons to `./`, e.g. via [favicon.io](https://favicon.io/)
-- [ ] search for `TODO` in the project (mostly documentation) and fix it
-- [ ] delete [README.md](README.md)
-- [ ] rename [README.template.md](README.template.md) to [README.md](README.md)
-- [ ] run `npm run format` to format all files
-- [ ] run `npm run commit` to commit all changes
-- [ ] run `npm run changelog` and include the output in [CHANGELOG.md](CHANGELOG.md)
-- [ ] install [Quarto](https://quarto.org/docs/get-started/)
-- [ ] run `quarto publish gh-pages` to publish the documentation
-- [ ] customize the documentation with [Quarto](https://quarto.org/docs/websites/#workflow)
-- [ ] enable [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages) for the `gh-pages` branch
+## Project Setup Checklist (for all users)
 
-3. optional tasks:
+After creating your project from this template (either via Codespaces or local setup), complete the following steps to customize and finalize your project:
 
-- [ ] add a `CITATION.CFF` according to [citation-file-format.github.io](https://citation-file-format.github.io/)
-- [ ] add a `.zenodo.json` according to [zenodo.org](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release)
-- [ ] customize the documentation's appearance using [brand.yml](https://quarto.org/docs/authoring/brand.html) or CSS
+- [ ] **Enable GitHub Security Alerts**: Go to your repository's "Security" tab on GitHub and enable security alerts.
+- [ ] **Protect the Main Branch**: In your repository settings on GitHub (under "Branches"), protect your `main` branch.
+- [ ] **Update Project Details**: Replace placeholders like `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, and `[INSERT CONTACT METHOD]` in `_brand.yml`, `CODE_OF_CONDUCT.md`, `package.json`, `README.template.md`, and `SECURITY.md`.
+- [ ] **Set Up Zenodo Integration**: Follow the [Zenodo guide](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to connect your repository to Zenodo for long-term archiving and to get a DOI.
+- [ ] **Set Up Zenodo DOI Badge**: Replace `GITHUB_REPO_ID` with `id`from `https://api.github.com/repos/USERNAME/REPO_NAME`. This will automatically update with your Zenodo DOI once you make a release.
+- [ ] **Add Zenodo DOI to README**: Once you have your Zenodo DOI, add it to the `README.md` file by replacing `ZENODO_RECORD`.
+- [ ] **Add Favicons**: Add favicons to the root directory (see [favicon.io](https://favicon.io/)).
+- [ ] **Address TODOs**: Search for `TODO` comments throughout the project files and complete the tasks.
+- [ ] **Finalize README**: Delete this `README.md` and rename `README.template.md` to `README.md`.
+- [ ] **Format Files**: Run `npm run format` to ensure all files are formatted.
+- [ ] **Commit Changes**: Run `npm run commit` to save your changes with a standardized commit message.
+- [ ] **Generate Changelog**: Run `npm run changelog` and copy the output into the `CHANGELOG.md` file.
+- [ ] **Publish Documentation**: Run `quarto publish gh-pages` to publish your documentation website.
+- [ ] **Customize Documentation**: Further customize your documentation using [Quarto's features](https://quarto.org/docs/websites/#workflow).
+- [ ] **Enable GitHub Pages**: In your repository settings on GitHub (under "Pages"), configure GitHub Pages to publish from the `gh-pages` branch.
+
+**Optional:**
+
+- [ ] **Add Citation File**: Create a `CITATION.CFF` file (see [citation-file-format.github.io](https://citation-file-format.github.io/)).
+- [ ] **Add Zenodo Metadata File**: Create a `.zenodo.json` file for Zenodo metadata ([Zenodo developer docs](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release)).
 
 ## Use
 
