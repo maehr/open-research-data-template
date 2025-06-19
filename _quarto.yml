@@ -52,10 +52,12 @@ website:
 format:
   html:
     toc: true
-    theme: cosmo
+    theme:
+      - brand
+      - cosmo
+    css: styles.css
     code-copy: true
     code-overflow: wrap
-    css: styles.css
 
 freeze: true
 
