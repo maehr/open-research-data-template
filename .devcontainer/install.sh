@@ -32,9 +32,11 @@ fi
 if [ -f "pnpm-lock.yaml" ]; then
   log "Installing Node packages with pnpm"
   pnpm install
+  pnpm run prepare
 elif [ -f "package-lock.json" ]; then
   log "Installing Node packages with npm ci"
   npm ci
+  npm run prepare
 fi
 
 log "Final uv sync (project resolution)"

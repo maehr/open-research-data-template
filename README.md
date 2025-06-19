@@ -111,6 +111,7 @@ We recommend using **GitHub Codespaces** for a reproducible setup.
 ```bash
 # 1. Install Node.js dependencies
 npm install
+npm run prepare
 
 # 2. Setup Python environment
 uv sync
