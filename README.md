@@ -131,7 +131,7 @@ After creating your project from this template (either via Codespaces or local s
 
 - [ ] **Enable GitHub Security Alerts**: Go to your repository's "Security" tab on GitHub and enable security alerts.
 - [ ] **Protect the Main Branch**: In your repository settings on GitHub (under "Branches"), protect your `main` branch.
-- [ ] **Update Project Details**: Replace placeholders like `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, and `[INSERT CONTACT METHOD]` in `_brand.yml`, `CODE_OF_CONDUCT.md`, `package.json`, `README.template.md`, and `SECURITY.md`.
+- [ ] **Update Project Details**: Replace placeholders like `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, and `[INSERT CONTACT METHOD]` in `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CODE_OF_CONDUCT.md`, `package.json`, `README.template.md`, and `SECURITY.md`.
 - [ ] **Set Up Zenodo Integration**: Follow the [Zenodo guide](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to connect your repository to Zenodo for long-term archiving and to get a DOI.
 - [ ] **Set Up Zenodo DOI Badge**: Replace `GITHUB_REPO_ID` with `id`from `https://api.github.com/repos/USERNAME/REPO_NAME`. This will automatically update with your Zenodo DOI once you make a release.
 - [ ] **Add Zenodo DOI to README**: Once you have your Zenodo DOI, add it to the `README.md` file by replacing `ZENODO_RECORD`.
@@ -141,9 +141,9 @@ After creating your project from this template (either via Codespaces or local s
 - [ ] **Format Files**: Run `npm run format` to ensure all files are formatted.
 - [ ] **Commit Changes**: Run `npm run commit` to save your changes with a standardized commit message.
 - [ ] **Generate Changelog**: Run `npm run changelog` and copy the output into the `CHANGELOG.md` file.
-- [ ] **Publish Documentation**: Run `quarto publish gh-pages` to publish your documentation website.
-- [ ] **Customize Documentation**: Further customize your documentation using [Quarto's features](https://quarto.org/docs/websites/#workflow).
+- [ ] **Customize Documentation**: Customize your documentation using [Quarto's features](https://quarto.org/docs/websites/#workflow).
 - [ ] **Enable GitHub Pages**: In your repository settings on GitHub (under "Pages"), configure GitHub Pages to publish from the `gh-pages` branch.
+- [ ] **Publish Documentation**: Run `quarto publish gh-pages` to publish your documentation website.
 
 **Optional:**
 
