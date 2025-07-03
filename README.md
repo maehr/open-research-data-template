@@ -72,7 +72,6 @@ We recommend using **GitHub Codespaces** for a reproducible setup.
 
 3. Select the **“Codespaces”** tab and click **“Create codespace on `main`”**.
    GitHub will now build a container that includes:
-
    - ✅ Node.js (via `npm`)
    - ✅ Python with `uv`
    - ✅ R with `renv`
