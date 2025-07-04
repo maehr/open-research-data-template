@@ -7,7 +7,7 @@ This repository contains SHORT_DESCRIPTION. The data in this repository is openl
 [![GitHub stars](https://img.shields.io/github/stars/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/stargazers)
 [![Code license](https://img.shields.io/github/license/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/blob/main/LICENSE-AGPL.md)
 [![Data license](https://img.shields.io/github/license/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/blob/main/LICENSE-CCBY.md)
-[![DOI](https://zenodo.org/badge/ZENODO_RECORD.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD)
+[![DOI](https://zenodo.org/badge/GITHUB_REPO_ID.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD)
 
 ## Repository Structure
 
@@ -17,7 +17,7 @@ The structure of this repository follows the [Advanced Structure for Data Analys
 - `assets/`: images, logos, etc. used in the README and other documentation
 - `build/`: scripts and notebooks used to build the data
 - `data/`: data files
-- `docs/`: documentation for the data and the repository
+- `documentation/`: documentation for the data and the repository
 - `project-management/`: project management documents (e.g., meeting notes, project plans, etc.)
 - `src/`: source code for the data (e.g., scripts used to collect or process the data)
 - `test/`: tests for the data and source code

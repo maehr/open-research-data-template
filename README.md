@@ -7,7 +7,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 [![GitHub stars](https://img.shields.io/github/stars/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/stargazers)
 [![Code license](https://img.shields.io/github/license/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/blob/main/LICENSE-AGPL.md)
 [![Data license](https://img.shields.io/github/license/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/blob/main/LICENSE-CCBY.md)
-[![DOI](https://zenodo.org/badge/GITHUB_REPO_ID.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD)
+[![DOI](https://zenodo.org/badge/614287827.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD)
 
 ## Why use a template (even for small datasets)?
 
@@ -56,13 +56,13 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## Installation
 
-We recommend using **GitHub Codespaces** for a reproducible setup.
+We recommend using **[GitHub Codespaces](https://github.com/features/codespaces)** for a reproducible setup.
 
 ## Getting Started
 
 ### For Most Users: Reproducible Setup with GitHub Codespaces
 
-1. **Use this repository** with your GitHub account.
+1. **[Use this template](https://github.com/new?template_name=open-research-data-template&template_owner=maehr)** for your project in a new repository on your GitHub account.
 
    <div align="center">
      <img src=".github/docs/assets/img_use.png" alt="Use the repository" style="width: 540px; margin: 1em 0;" />
@@ -72,7 +72,6 @@ We recommend using **GitHub Codespaces** for a reproducible setup.
 
 3. Select the **“Codespaces”** tab and click **“Create codespace on `main`”**.
    GitHub will now build a container that includes:
-
    - ✅ Node.js (via `npm`)
    - ✅ Python with `uv`
    - ✅ R with `renv`
@@ -131,7 +130,7 @@ After creating your project from this template (either via Codespaces or local s
 
 - [ ] **Enable GitHub Security Alerts**: Go to your repository's "Security" tab on GitHub and enable security alerts.
 - [ ] **Protect the Main Branch**: In your repository settings on GitHub (under "Branches"), protect your `main` branch.
-- [ ] **Update Project Details**: Replace placeholders like `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, and `[INSERT CONTACT METHOD]` in `_brand.yml`, `CODE_OF_CONDUCT.md`, `package.json`, `README.template.md`, and `SECURITY.md`.
+- [ ] **Update Project Details**: Replace placeholders like `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, and `[INSERT CONTACT METHOD]` in `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CODE_OF_CONDUCT.md`, `package.json`, `README.template.md`, and `SECURITY.md`.
 - [ ] **Set Up Zenodo Integration**: Follow the [Zenodo guide](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to connect your repository to Zenodo for long-term archiving and to get a DOI.
 - [ ] **Set Up Zenodo DOI Badge**: Replace `GITHUB_REPO_ID` with `id`from `https://api.github.com/repos/USERNAME/REPO_NAME`. This will automatically update with your Zenodo DOI once you make a release.
 - [ ] **Add Zenodo DOI to README**: Once you have your Zenodo DOI, add it to the `README.md` file by replacing `ZENODO_RECORD`.
@@ -141,9 +140,9 @@ After creating your project from this template (either via Codespaces or local s
 - [ ] **Format Files**: Run `npm run format` to ensure all files are formatted.
 - [ ] **Commit Changes**: Run `npm run commit` to save your changes with a standardized commit message.
 - [ ] **Generate Changelog**: Run `npm run changelog` and copy the output into the `CHANGELOG.md` file.
-- [ ] **Publish Documentation**: Run `quarto publish gh-pages` to publish your documentation website.
-- [ ] **Customize Documentation**: Further customize your documentation using [Quarto's features](https://quarto.org/docs/websites/#workflow).
+- [ ] **Customize Documentation**: Customize your documentation using [Quarto's features](https://quarto.org/docs/websites/#workflow).
 - [ ] **Enable GitHub Pages**: In your repository settings on GitHub (under "Pages"), configure GitHub Pages to publish from the `gh-pages` branch.
+- [ ] **Publish Documentation**: Run `quarto publish gh-pages` to publish your documentation website.
 
 **Optional:**
 
