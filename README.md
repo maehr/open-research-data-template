@@ -56,13 +56,13 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## Installation
 
-We recommend using **[GitHub Codespaces](https://github.com/new?template_name=open-research-data-template&template_owner=maehr)** for a reproducible setup.
+We recommend using **[GitHub Codespaces](https://github.com/features/codespaces)** for a reproducible setup.
 
 ## Getting Started
 
 ### For Most Users: Reproducible Setup with GitHub Codespaces
 
-1. **[Use this repository](https://github.com/new?template_name=open-research-data-template&template_owner=maehr)** with your GitHub account.
+1. **[Use this template](https://github.com/new?template_name=open-research-data-template&template_owner=maehr)** for your project in a new repository on your GitHub account.
 
    <div align="center">
      <img src=".github/docs/assets/img_use.png" alt="Use the repository" style="width: 540px; margin: 1em 0;" />
@@ -72,6 +72,7 @@ We recommend using **[GitHub Codespaces](https://github.com/new?template_name=op
 
 3. Select the **“Codespaces”** tab and click **“Create codespace on `main`”**.
    GitHub will now build a container that includes:
+
    - ✅ Node.js (via `npm`)
    - ✅ Python with `uv`
    - ✅ R with `renv`
