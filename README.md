@@ -56,13 +56,13 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## Installation
 
-We recommend using **GitHub Codespaces** for a reproducible setup.
+We recommend using **[GitHub Codespaces](https://github.com/new?template_name=open-research-data-template&template_owner=maehr)** for a reproducible setup.
 
 ## Getting Started
 
 ### For Most Users: Reproducible Setup with GitHub Codespaces
 
-1. **Use this repository** with your GitHub account.
+1. **[Use this repository](https://github.com/new?template_name=open-research-data-template&template_owner=maehr)** with your GitHub account.
 
    <div align="center">
      <img src=".github/docs/assets/img_use.png" alt="Use the repository" style="width: 540px; margin: 1em 0;" />
