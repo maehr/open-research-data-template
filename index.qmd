@@ -1,5 +1,5 @@
 ---
-title: Open Resarch Data
+title: Open Research Data
 format:
   html:
     embed-resources: true
