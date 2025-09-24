@@ -1,6 +1,16 @@
 # GitHub template for FAIR and open research data
 
-This GitHub template is independent of the (research) data and its format. It follows the best practices for open research data as outlined in [The Turing Way](https://the-turing-way.netlify.app/). It uses [GitHub Actions](https://docs.github.com/en/actions) to manage releases, issues, and pull requests, [GitHub Pages](https://pages.github.com/) for documentation, and [Zenodo](https://zenodo.org/) for long-term archiving.
+**Transforming research documentation from static afterthought into living, executable environments.**
+
+This GitHub template is independent of the (research) data and its format. It follows the best practices for open research data as outlined in [The Turing Way](https://the-turing-way.netlify.app/). It uses [GitHub Actions](https://docs.github.com/en/actions) to manage releases, issues, pull requests, [GitHub Pages](https://pages.github.com/) for documentation, and [Zenodo](https://zenodo.org/) for long-term archiving.
+
+## 🏆 Academic Recognition
+
+**Peer-reviewed methodology** presented at the [Digital Humanities Tech Symposium (DHTech) 2025](https://dhtech.org/conference/2025/) at NOVA University Lisbon. Our paper "_One Template to Rule Them All: Interactive Research Data Documentation with Quarto_" demonstrates how this template addresses critical challenges in Digital Humanities research data management.
+
+> _Mähr, M., & Twente, M. (2025). "One Template to Rule Them All: Interactive Research Data Documentation with Quarto." Paper presented at Digital Humanities Tech Symposium, NOVA University Lisbon. <https://maehr.github.io/one-template-to-rule-them-all/>._
+
+**Proven impact** across 10+ domains with applications ranging from research data documentation to conference proceedings and living handbooks.
 
 [![GitHub issues](https://img.shields.io/github/issues/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/issues)
 [![GitHub forks](https://img.shields.io/github/forks/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/network)
@@ -11,11 +21,18 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## Why use a template (even for small datasets)?
 
-- Share your [open research data](#open-research-data) with others
-- Write better [documentation](#documentation) for yourself and the community
-- Write more [consistent](#consistency) code and encourage collaboration
-- Increase [security](#security)
-- Follow accepted [ethics](#ethics)
+**Move beyond static documentation** — this template transforms traditional research data publication from static supplementary files into interactive, executable environments that make your research truly reproducible and reusable.
+
+- 📊 **Executable narratives** that embed code outputs directly into documentation
+- 🚀 **Automated deployment and testing** that reduces technical overhead
+- 🏛️ **Integrated archiving with DOI** through seamless Zenodo integration
+- 📈 **Scalability and consistency** across diverse project types and domains
+- 🔒 **Enhanced security** with automated vulnerability monitoring
+- 🤝 **Community standards** following accepted ethics and collaboration practices
+
+### From Static Files to Living Documentation
+
+Traditional approaches to research data publication—where data is released as static supplementary files with minimal documentation—**fall short** of making research truly reproducible. This template creates **robust supplementary material** that exceeds traditional "supplementary information" files and enables **standalone scholarly publications**.
 
 ## How this template helps you
 
@@ -54,22 +71,43 @@ This GitHub template is independent of the (research) data and its format. It fo
 - `CODE_OF_CONDUCT.md` per the [Contributor Covenant](https://www.contributor-covenant.org/)
 - Friendly initial interactions via [Greetings](https://github.com/actions/starter-workflows/blob/main/automation/greetings.yml)
 
-## Use cases and examples
+## 🌟 Gallery of Use Cases
 
-See how the **Open Research Data Template** is being used across different domains and use cases:
+The template has been successfully deployed across **10+ diverse domains**, demonstrating versatility beyond traditional research data documentation. Each implementation showcases different aspects of transforming static documentation into interactive, executable environments.
 
-| Project                      | Preview                                                                                                                                                                                                                                                            | Use Case                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| Stadt.Geschichte.Basel — RDM | <a href="https://dokumentation.stadtgeschichtebasel.ch/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch.png" width="300" alt="Stadt.Geschichte.Basel RDM site screenshot"></a>                 | Documentation platform for research data management and public history.      |
-| sgb-figures                  | <a href="https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch_sgb_figures.png" width="300" alt="sgb-figures site screenshot"></a>        | Reproducible figures with code, data, and workflows linked to SGB.           |
-| nordatlantisk-ft             | <a href="http://mtwente.github.io/nordatlantisk-ft"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png" width="300" alt="nordatlantisk-ft site screenshot"></a>                                              | Scraped parliamentary voting data with automated updates and visualizations. |
-| maxvogt-analysis             | <a href="https://mtwente.github.io/maxvogt-analysis"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png" width="300" alt="maxvogt-analysis site screenshot"></a>                                                    | Spatial design history with geodata, workflow diagrams, and analysis code.   |
-| Modelling Marti              | <a href="https://mtwente.github.io/modelling-marti"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png" width="300" alt="Modelling Marti site screenshot"></a>                                                       | Interactive publication with topic modelling, maps, and narrative context.   |
-| DigiHistCH24                 | <a href="https://digihistch24.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/digihistch24.png" width="300" alt="DigiHistCH24 site screenshot"></a>                                                                       | Conference book of abstracts as a citable, interactive publication.          |
-| DH Bern                      | <a href="https://dhbern.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dhbern.png" width="300" alt="DH Bern site screenshot"></a>                                                                                        | Department portal aggregating projects, events, and blog posts.              |
-| Decoding Inequality 2025     | <a href="https://dhbern.github.io/decoding-inequality-2025/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/decoding_inequality_2025.png" width="300" alt="Decoding Inequality 2025 site screenshot"></a>                            | Course website with lecture notes, datasets, and student contributions.      |
-| Non-discriminatory Metadata  | <a href="https://maehr.github.io/diskriminierungsfreie-metadaten/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png" width="300" alt="Non-discriminatory Metadata site screenshot"></a>            | Living handbook on inclusive metadata, with continuous community input.      |
-| One Template — Talk          | <a href="https://maehr.github.io/one-template-to-rule-them-all/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/one_template_to_rule_them_all.png" width="300" alt="One Template to Rule Them All presentation site screenshot"></a> | Presentation site and demo of the template's features in action.             |
+### 🔬 Research Data Documentation
+
+| Project                                                                      | Preview                                                                                                                                                                                                | Description                                                                                    |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| **[Stadt.Geschichte.Basel RDM](https://forschung.stadtgeschichtebasel.ch/)** | [![Stadt.Geschichte.Basel RDM](https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch.png)](https://forschung.stadtgeschichtebasel.ch/)              | Project documentation platform combining research data management with public history outreach |
+| **[sgb-figures](https://github.com/Stadt-Geschichte-Basel/sgb-figures)**     | [![sgb-figures](https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch_sgb_figures.png)](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/) | Reproducible plots and visualizations with embedded code and data                              |
+
+### 📊 Reproducible Research Workflows
+
+| Project                                                                            | Preview                                                                                                                                                          | Description                                                                   |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **[nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/)**                 | [![nordatlantisk-ft](https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png)](http://mtwente.github.io/nordatlantisk-ft) | Danish Parliament voting data with complete analysis pipeline                 |
+| **[maxvogt-analysis](https://github.com/Stadt-Geschichte-Basel/maxvogt-analysis)** | [![maxvogt-analysis](https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png)](https://mtwente.github.io/maxvogt-analysis)       | Multi-step data compilation workflow documentation                            |
+| **[Modelling Marti](https://mtwente.github.io/modelling-marti)**                   | [![Modelling Marti](https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png)](https://mtwente.github.io/modelling-marti)          | Topic modeling project with interactive visualizations and multimedia content |
+
+### 🎓 Academic Events & Teaching
+
+| Project                                                                            | Preview                                                                                                                                                                            | Description                                                             |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| **[Digital History Switzerland 2024](https://digihistch24.github.io/)**            | [![DigiHistCH24](https://maehr.github.io/one-template-to-rule-them-all/paper/images/digihistch24.png)](https://digihistch24.github.io/)                                            | Conference website with program, abstracts, and participant information |
+| **[Digital Humanities Bern](https://dhbern.github.io/)**                           | [![DH Bern](https://maehr.github.io/one-template-to-rule-them-all/paper/images/dhbern.png)](https://dhbern.github.io/)                                                             | Department hub featuring news, events, and course information           |
+| **[Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/)** | [![Decoding Inequality 2025](https://maehr.github.io/one-template-to-rule-them-all/paper/images/decoding_inequality_2025.png)](https://dhbern.github.io/decoding-inequality-2025/) | University course website with syllabus and materials                   |
+
+### 📚 Living Publications & Handbooks
+
+| Project                                                                                     | Preview                                                                                                                                                                                            | Description                                                                           |
+| ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **[Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/)** | [![Non-discriminatory Metadata](https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png)](https://maehr.github.io/diskriminierungsfreie-metadaten/) | Comprehensive handbook that functions as both documentation and scholarly publication |
+| **[One Template to Rule Them All](https://maehr.github.io/one-template-to-rule-them-all/)** | [![One Template to Rule Them All](https://maehr.github.io/one-template-to-rule-them-all/paper/images/one_template_to_rule_them_all.png)](https://maehr.github.io/one-template-to-rule-them-all/)   | This paper's own presentation site, demonstrating meta-application                    |
+
+> 💡 **Impact on Scholarly Publishing**: These implementations demonstrate how the template bridges the gap between dynamic web-based documentation and formal peer-reviewed outputs, **facilitating transparent peer review** through complete workflow access.
+
+📖 **For detailed methodology and case studies**, see the accompanying paper: [One Template to Rule Them All: Interactive Research Data Documentation with Quarto](https://maehr.github.io/one-template-to-rule-them-all/paper/)
 
 For a detailed discussion of the template’s rationale, design, and workflows, see the accompanying paper: <https://maehr.github.io/one-template-to-rule-them-all/paper/>
 
