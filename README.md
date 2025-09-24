@@ -54,7 +54,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 - `CODE_OF_CONDUCT.md` per the [Contributor Covenant](https://www.contributor-covenant.org/)
 - Friendly initial interactions via [Greetings](https://github.com/actions/starter-workflows/blob/main/automation/greetings.yml)
 
-## Gallery
+## Use cases and examples
 
 See how the **Open Research Data Template** is being used across different domains and use cases:
 
@@ -70,6 +70,8 @@ See how the **Open Research Data Template** is being used across different domai
 | Decoding Inequality 2025     | <a href="https://dhbern.github.io/decoding-inequality-2025/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/decoding_inequality_2025.png" width="300" alt="Decoding Inequality 2025 site screenshot"></a>                            | Course website with lecture notes, datasets, and student contributions.      |
 | Non-discriminatory Metadata  | <a href="https://maehr.github.io/diskriminierungsfreie-metadaten/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png" width="300" alt="Non-discriminatory Metadata site screenshot"></a>            | Living handbook on inclusive metadata, with continuous community input.      |
 | One Template — Talk          | <a href="https://maehr.github.io/one-template-to-rule-them-all/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/one_template_to_rule_them_all.png" width="300" alt="One Template to Rule Them All presentation site screenshot"></a> | Presentation site and demo of the template's features in action.             |
+
+For a detailed discussion of the template’s rationale, design, and workflows, see the accompanying paper: <https://maehr.github.io/one-template-to-rule-them-all/paper/>
 
 ## Installation
 
