@@ -1,27 +1,26 @@
-# GitHub template for FAIR and open research data
+# GitHub Template for FAIR and Open Research Data
 
 **Transforming research documentation from static afterthought into living, executable environments.**
 
-This GitHub template is independent of the (research) data and its format. It follows the best practices for open research data as outlined in [The Turing Way](https://the-turing-way.netlify.app/). It uses [GitHub Actions](https://docs.github.com/en/actions) to manage releases, issues, pull requests, [GitHub Pages](https://pages.github.com/) for documentation, and [Zenodo](https://zenodo.org/) for long-term archiving.
-
-## 🤝 Academic Recognition
-
-**Proven impact** across 10+ domains with [applications](#gallery-of-use-cases) ranging from research data documentation to conference proceedings and living handbooks.
-
-**Peer-reviewed methodology** presented at the [Digital Humanities Tech Symposium (DHTech) 2025](https://dhtech.org/conference/2025/) at NOVA University Lisbon. Our paper demonstrates how this template addresses critical challenges in Digital Humanities research data management.
-
-> Mähr, M., & Twente, M. (2025). "One Template to Rule Them All: Interactive Research Data Documentation with Quarto." Paper presented at Digital Humanities Tech Symposium, NOVA University Lisbon. <https://maehr.github.io/one-template-to-rule-them-all/>.
+This template provides an infrastructure for documenting, publishing, and archiving research data in line with the principles of [FAIR](https://www.go-fair.org/fair-principles/) and open science. It is independent of data type or format and implements best practices as outlined in [The Turing Way](https://the-turing-way.netlify.app/). Core components include automated release management, integrated archiving with [Zenodo](https://zenodo.org/), structured documentation via [Quarto](https://quarto.org/), and long-term accessibility through [GitHub Pages](https://pages.github.com/).
 
 [![GitHub issues](https://img.shields.io/github/issues/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/issues)
 [![GitHub forks](https://img.shields.io/github/forks/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/network)
 [![GitHub stars](https://img.shields.io/github/stars/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/stargazers)
 [![Code license](https://img.shields.io/github/license/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/blob/main/LICENSE-AGPL.md)
 [![Data license](https://img.shields.io/github/license/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/blob/main/LICENSE-CCBY.md)
-[![DOI](https://zenodo.org/badge/614287827.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD)
+
+<!-- [![DOI](https://zenodo.org/badge/614287827.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD) -->
+
+## 🤝 Academic Recognition
+
+This approach was presented at the [Digital Humanities Tech Symposium (DHTech) 2025](https://dhtech.org/conference/2025/) and exemplifies how reusable templates can address persistent challenges in research data management.
+
+> Mähr, M., & Twente, M. (2025). _One Template to Rule Them All: Interactive Research Data Documentation with Quarto._ Digital Humanities Tech Symposium, NOVA University Lisbon. [https://maehr.github.io/one-template-to-rule-them-all/](https://maehr.github.io/one-template-to-rule-them-all/).
 
 ## Why use a template (even for small datasets)?
 
-**Move beyond static documentation:** this template transforms traditional research data publication from static supplementary files into interactive, executable environments that make your research truly reproducible and reusable.
+Conventional data publication as static supplementary files offers limited reproducibility and reusability. This template extends such practices by providing:
 
 - 📊 **Executable narratives** that embed code outputs directly into documentation
 - 🚀 **Automated deployment and testing** that reduces technical overhead
@@ -30,82 +29,76 @@ This GitHub template is independent of the (research) data and its format. It fo
 - 🔒 **Enhanced security** with automated vulnerability monitoring
 - 🤝 **Community standards** following accepted ethics and collaboration practices
 
-### From Static Files to Living Documentation
+## Features
 
-Traditional approaches to research data publication – where data is released as static supplementary files with minimal documentation – **fall short** of making research truly reproducible. This template creates **robust supplementary material** that exceeds traditional supplementary information files and enables **standalone scholarly publications**.
+### Open Research Data
 
-## How this template helps you
-
-### Open research data
-
-- Citeable via [DOI](https://www.doi.org/) (and [CITATION.cff](https://citation-file-format.github.io/))
-- Automatic long-term archiving via [Zenodo](https://zenodo.org/)
-- Licensed under a non-restrictive [AGPL 3.0](LICENSE-AGPL.md) and [CC BY 4.0](LICENSE-CCBY.md) license according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
-- Templates for reporting data issues using a custom template `github/ISSUE_TEMPLATE/data_issue_report.yml`
+- Citable via [DOI](https://www.doi.org/) and [CITATION.cff](https://citation-file-format.github.io/)
+- Automatic long-term archiving with [Zenodo](https://zenodo.org/)
+- Licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
+- Template for reporting data issues via `github/ISSUE_TEMPLATE/data_issue_report.yml`
 
 ### Documentation
 
-- `README.md` according to [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html)
-- `CHANGELOG.md` according to [keepachangelog.com](https://keepachangelog.com/)
-- Automated [CHANGELOG.md](CHANGELOG.md) via [git-cliff](https://github.com/orhun/git-cliff)
-- `package.json` via [npm docs](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
-- Accessible documentation via [gh-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages) and [Quarto](https://quarto.org/)
+- `README.md` following [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-readme)
+- `CHANGELOG.md` following [keepachangelog.com](https://keepachangelog.com/)
+- Automated changelog generation with [git-cliff](https://github.com/orhun/git-cliff)
+- Machine-readable project metadata in `package.json` with [npm](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
+- Accessible documentation with [GitHub Pages](https://docs.github.com/en/pages) and [Quarto](https://quarto.org/)
 
 ### Consistency
 
-- Consistent formatting via [Prettier](https://prettier.io/)
-- Consistent commit messages according to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) via [husky](https://github.com/typicode/husky)
-- Consistent versioning via [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
-- Consistent [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) workflow via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
-- Consistent issues via [issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
-- Consistent file and folder naming conventions via [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-storage.html#file-naming-conventions)
+- Code formatting with [Prettier](https://prettier.io/)
+- Commit messages following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) enforced via [husky](https://github.com/typicode/husky)
+- Versioning following [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
+- Workflow based on [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) with [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
+- Issue tracking via [issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
+- File and folder naming conventions following [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-storage.html#file-naming-conventions)
 
 ### Security
 
-- `SECURITY.md` per [GitHub](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
-- [GitHub Security Alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
-- Integrity via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
+- `SECURITY.md` following [GitHub guidelines](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
+- Vulnerability monitoring with [GitHub Security Alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
+- Repository integrity enforced via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
 
 ### Ethics
 
-- `CODE_OF_CONDUCT.md` per the [Contributor Covenant](https://www.contributor-covenant.org/)
-- Friendly initial interactions via [Greetings](https://github.com/actions/starter-workflows/blob/main/automation/greetings.yml)
+- `CODE_OF_CONDUCT.md` following the [Contributor Covenant](https://www.contributor-covenant.org/)
+- Supportive first interactions via [Greetings](https://github.com/actions/starter-workflows/blob/main/automation/greetings.yml)
 
-## 🌟 Gallery of Use Cases
+## Selected Use Cases
 
-The template has been successfully deployed across **10+ diverse domains**, demonstrating versatility beyond traditional research data documentation -- bridging the gap between dynamic web-based documentation and formal peer-reviewed outputs and facilitating transparent peer review through complete workflow access. Each implementation showcases different aspects of transforming static documentation into interactive, executable environments.
-
-📖 **For detailed methodology and case studies**, see the accompanying paper: [One Template to Rule Them All: Interactive Research Data Documentation with Quarto](https://maehr.github.io/one-template-to-rule-them-all/paper/)
+The template has been applied across domains including public history, political science, digital humanities, and teaching infrastructures.
 
 ### 🔬 Research Data Documentation
 
-| Project                                                                                                                                                                          | Preview                                                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [**Stadt.Geschichte.Basel RDM:**](https://dokumentation.stadtgeschichtebasel.ch/) Project documentation platform combining research data management with public history outreach | [![Stadt.Geschichte.Basel RDM](https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch.png)](https://dokumentation.stadtgeschichtebasel.ch/)          |
-| [**sgb-figures:**](https://github.com/Stadt-Geschichte-Basel/sgb-figures) Reproducible code and annotated data for publication-ready visualisations of research data             | [![sgb-figures](https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch_sgb_figures.png)](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/) |
+| Project                                                                                                                                                                            | Preview                                                                                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Stadt.Geschichte.Basel RDM**](https://dokumentation.stadtgeschichtebasel.ch/)<br>Project documentation platform combining research data management with public history outreach | <a href="https://dokumentation.stadtgeschichtebasel.ch/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch.png" width="540px" alt=""></a>                         |
+| [**sgb-figures**](https://github.com/Stadt-Geschichte-Basel/sgb-figures)<br>Reproducible code and annotated data for publication-ready visualisations of research data             | <a href="https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch_sgb_figures.png" width="540px" alt=""></a> |
 
 ### 📊 Reproducible Research Workflows
 
-| Project                                                                                                                                                               | Preview                                                                                                                                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**nordatlantisk-ft:**](http://mtwente.github.io/nordatlantisk-ft/) Voting records from the parliament of Denmark with complete data scraping and analysis pipeline   | [![nordatlantisk-ft](https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png)](http://mtwente.github.io/nordatlantisk-ft) |
-| [**maxvogt-analysis:**](https://github.com/Stadt-Geschichte-Basel/maxvogt-analysis) Multi-step data compilation workflow documentation                                | [![maxvogt-analysis](https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png)](https://mtwente.github.io/maxvogt-analysis)       |
-| [**Modelling Marti**](https://mtwente.github.io/modelling-marti): Topic modeling project with interactive visualizations and multimedia content as narrative elements | [![Modelling Marti](https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png)](https://mtwente.github.io/modelling-marti)          |
+| Project                                                                                                                                                                 | Preview                                                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**nordatlantisk-ft**](http://mtwente.github.io/nordatlantisk-ft/)<br>Voting records from the parliament of Denmark with complete data scraping and analysis pipeline   | <a href="http://mtwente.github.io/nordatlantisk-ft"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png" width="540px" alt=""></a> |
+| [**maxvogt-analysis**](https://github.com/Stadt-Geschichte-Basel/maxvogt-analysis)<br>Multi-step data compilation workflow documentation                                | <a href="https://mtwente.github.io/maxvogt-analysis"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png" width="540px" alt=""></a>       |
+| [**Modelling Marti**](https://mtwente.github.io/modelling-marti)<br>Topic modeling project with interactive visualizations and multimedia content as narrative elements | <a href="https://mtwente.github.io/modelling-marti"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png" width="540px" alt=""></a>         |
 
 ### 🎓 Academic Events & Teaching
 
-| Project                                                                                                                                          | Preview                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Digital History Switzerland 2024:**](https://digihistch24.github.io/) Conference website with program, abstracts, and participant information | [![DigiHistCH24](https://maehr.github.io/one-template-to-rule-them-all/paper/images/digihistch24.png)](https://digihistch24.github.io/)                                            |
-| [**Digital Humanities Bern:**](https://dhbern.github.io/) Department hub featuring news, events, and course information                          | [![DH Bern](https://maehr.github.io/one-template-to-rule-them-all/paper/images/dhbern.png)](https://dhbern.github.io/)                                                             |
-| [**Decoding Inequality 2025:**](https://dhbern.github.io/decoding-inequality-2025/) University course website with syllabus and materials        | [![Decoding Inequality 2025](https://maehr.github.io/one-template-to-rule-them-all/paper/images/decoding_inequality_2025.png)](https://dhbern.github.io/decoding-inequality-2025/) |
+| Project                                                                                                                                            | Preview                                                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Digital History Switzerland 2024**](https://digihistch24.github.io/)<br>Conference website with program, abstracts, and participant information | <a href="https://digihistch24.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/digihistch24.png" width="540px" alt=""></a>                                |
+| [**Digital Humanities Bern**](https://dhbern.github.io/)<br>Department hub featuring news, events, and course information                          | <a href="https://dhbern.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dhbern.png" width="540px" alt=""></a>                                            |
+| [**Decoding Inequality 2025**](https://dhbern.github.io/decoding-inequality-2025/)<br>University course website with syllabus and materials        | <a href="https://dhbern.github.io/decoding-inequality-2025/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/decoding_inequality_2025.png" width="540px" alt=""></a> |
 
 ### 📚 Living Publications & Handbooks
 
-| Project                                                                                                                                                                            | Preview                                                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Non-discriminatory Metadata:**](https://maehr.github.io/diskriminierungsfreie-metadaten/) Comprehensive handbook that functions as both documentation and scholarly publication | [![Non-discriminatory Metadata](https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png)](https://maehr.github.io/diskriminierungsfreie-metadaten/) |
-| [**One Template to Rule Them All:**](https://maehr.github.io/one-template-to-rule-them-all/) This repository's own presentation site, demonstrating meta-application               | [![One Template to Rule Them All](https://maehr.github.io/one-template-to-rule-them-all/paper/images/one_template_to_rule_them_all.png)](https://maehr.github.io/one-template-to-rule-them-all/)   |
+| Project                                                                                                                                                                              | Preview                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Non-discriminatory Metadata**](https://maehr.github.io/diskriminierungsfreie-metadaten/)<br>Comprehensive handbook that functions as both documentation and scholarly publication | <a href="https://maehr.github.io/diskriminierungsfreie-metadaten/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png" width="540px" alt=""></a> |
+| [**One Template to Rule Them All**](https://maehr.github.io/one-template-to-rule-them-all/)<br>This repository's own presentation site, demonstrating meta-application               | <a href="https://maehr.github.io/one-template-to-rule-them-all/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/one_template_to_rule_them_all.png" width="540px" alt=""></a>     |
 
 ## Installation
 
