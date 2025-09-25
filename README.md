@@ -6,9 +6,9 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## 🏆 Academic Recognition
 
-**Peer-reviewed methodology** presented at the [Digital Humanities Tech Symposium (DHTech) 2025](https://dhtech.org/conference/2025/) at NOVA University Lisbon. Our paper "_One Template to Rule Them All: Interactive Research Data Documentation with Quarto_" demonstrates how this template addresses critical challenges in Digital Humanities research data management.
+**Peer-reviewed methodology** presented at the [Digital Humanities Tech Symposium (DHTech) 2025](https://dhtech.org/conference/2025/) at NOVA University Lisbon. Our paper demonstrates how this template addresses critical challenges in Digital Humanities research data management.
 
-> _Mähr, M., & Twente, M. (2025). "One Template to Rule Them All: Interactive Research Data Documentation with Quarto." Paper presented at Digital Humanities Tech Symposium, NOVA University Lisbon. <https://maehr.github.io/one-template-to-rule-them-all/>._
+> Mähr, M., & Twente, M. (2025). "One Template to Rule Them All: Interactive Research Data Documentation with Quarto." Paper presented at Digital Humanities Tech Symposium, NOVA University Lisbon. <https://maehr.github.io/one-template-to-rule-them-all/>.
 
 **Proven impact** across 10+ domains with applications ranging from research data documentation to conference proceedings and living handbooks.
 
@@ -21,7 +21,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ## Why use a template (even for small datasets)?
 
-**Move beyond static documentation** — this template transforms traditional research data publication from static supplementary files into interactive, executable environments that make your research truly reproducible and reusable.
+**Move beyond static documentation:** this template transforms traditional research data publication from static supplementary files into interactive, executable environments that make your research truly reproducible and reusable.
 
 - 📊 **Executable narratives** that embed code outputs directly into documentation
 - 🚀 **Automated deployment and testing** that reduces technical overhead
@@ -32,7 +32,7 @@ This GitHub template is independent of the (research) data and its format. It fo
 
 ### From Static Files to Living Documentation
 
-Traditional approaches to research data publication—where data is released as static supplementary files with minimal documentation—**fall short** of making research truly reproducible. This template creates **robust supplementary material** that exceeds traditional "supplementary information" files and enables **standalone scholarly publications**.
+Traditional approaches to research data publication – where data is released as static supplementary files with minimal documentation – **fall short** of making research truly reproducible. This template creates **robust supplementary material** that exceeds traditional supplementary information files and enables **standalone scholarly publications**.
 
 ## How this template helps you
 
@@ -105,11 +105,9 @@ The template has been successfully deployed across **10+ diverse domains**, demo
 | **[Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/)** | [![Non-discriminatory Metadata](https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png)](https://maehr.github.io/diskriminierungsfreie-metadaten/) | Comprehensive handbook that functions as both documentation and scholarly publication |
 | **[One Template to Rule Them All](https://maehr.github.io/one-template-to-rule-them-all/)** | [![One Template to Rule Them All](https://maehr.github.io/one-template-to-rule-them-all/paper/images/one_template_to_rule_them_all.png)](https://maehr.github.io/one-template-to-rule-them-all/)   | This paper's own presentation site, demonstrating meta-application                    |
 
-> 💡 **Impact on Scholarly Publishing**: These implementations demonstrate how the template bridges the gap between dynamic web-based documentation and formal peer-reviewed outputs, **facilitating transparent peer review** through complete workflow access.
+💡 **Impact on Scholarly Publishing**: These implementations demonstrate how the template bridges the gap between dynamic web-based documentation and formal peer-reviewed outputs, **facilitating transparent peer review** through complete workflow access.
 
 📖 **For detailed methodology and case studies**, see the accompanying paper: [One Template to Rule Them All: Interactive Research Data Documentation with Quarto](https://maehr.github.io/one-template-to-rule-them-all/paper/)
-
-For a detailed discussion of the template’s rationale, design, and workflows, see the accompanying paper: <https://maehr.github.io/one-template-to-rule-them-all/paper/>
 
 ## Installation
 
@@ -262,7 +260,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct
 ## Authors and credits
 
 - **Moritz Mähr** - _Initial work_ - [maehr](https://github.com/maehr)
-- **Moritz Twente** - _Enhancements_ - [moritztwente](https://github.com/mtwente)
+- **Moritz Twente** - _Enhancements_ - [mtwente](https://github.com/mtwente)
 
 See also the list of [contributors](https://github.com/maehr/open-research-data-template/graphs/contributors) who contributed to this project.
 
