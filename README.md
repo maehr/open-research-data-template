@@ -4,13 +4,13 @@
 
 This GitHub template is independent of the (research) data and its format. It follows the best practices for open research data as outlined in [The Turing Way](https://the-turing-way.netlify.app/). It uses [GitHub Actions](https://docs.github.com/en/actions) to manage releases, issues, pull requests, [GitHub Pages](https://pages.github.com/) for documentation, and [Zenodo](https://zenodo.org/) for long-term archiving.
 
-## 🏆 Academic Recognition
+## 🤝 Academic Recognition
+
+**Proven impact** across 10+ domains with [applications](#gallery-of-use-cases) ranging from research data documentation to conference proceedings and living handbooks.
 
 **Peer-reviewed methodology** presented at the [Digital Humanities Tech Symposium (DHTech) 2025](https://dhtech.org/conference/2025/) at NOVA University Lisbon. Our paper demonstrates how this template addresses critical challenges in Digital Humanities research data management.
 
 > Mähr, M., & Twente, M. (2025). "One Template to Rule Them All: Interactive Research Data Documentation with Quarto." Paper presented at Digital Humanities Tech Symposium, NOVA University Lisbon. <https://maehr.github.io/one-template-to-rule-them-all/>.
-
-**Proven impact** across 10+ domains with applications ranging from research data documentation to conference proceedings and living handbooks.
 
 [![GitHub issues](https://img.shields.io/github/issues/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/issues)
 [![GitHub forks](https://img.shields.io/github/forks/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/network)
@@ -73,7 +73,9 @@ Traditional approaches to research data publication – where data is released a
 
 ## 🌟 Gallery of Use Cases
 
-The template has been successfully deployed across **10+ diverse domains**, demonstrating versatility beyond traditional research data documentation. Each implementation showcases different aspects of transforming static documentation into interactive, executable environments.
+The template has been successfully deployed across **10+ diverse domains**, demonstrating versatility beyond traditional research data documentation -- bridging the gap between dynamic web-based documentation and formal peer-reviewed outputs and facilitating transparent peer review through complete workflow access. Each implementation showcases different aspects of transforming static documentation into interactive, executable environments.
+
+📖 **For detailed methodology and case studies**, see the accompanying paper: [One Template to Rule Them All: Interactive Research Data Documentation with Quarto](https://maehr.github.io/one-template-to-rule-them-all/paper/)
 
 ### 🔬 Research Data Documentation
 
