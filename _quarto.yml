@@ -58,6 +58,7 @@ format:
     css: styles.css
     code-copy: true
     code-overflow: wrap
+    canonical-url: true
 
 freeze: true
 
