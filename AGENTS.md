@@ -12,8 +12,9 @@ This repository is a GitHub template for FAIR and open research data documentati
 
 This repository contains placeholder values (e.g., `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `ZENODO_RECORD`) that users will replace when creating their own projects:
 
-- **Do _not_ replace or remove these placeholders** unless the task specifically requires updating them.
-- When making changes, ensure placeholders remain intact in template files like `README.template.md`, `package.json`, `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CODE_OF_CONDUCT.md`, and `SECURITY.md`.
+- **Placeholders in `README.template.md` must remain intact** - this is the template file that users copy.
+- **Placeholders in other files** (like `package.json`, `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CODE_OF_CONDUCT.md`, and `SECURITY.md`) should be replaced with actual values for this repository.
+- When working on the template itself, be careful not to accidentally replace placeholders in `README.template.md`.
 
 ## 3. Follow Existing Formatting Standards
 
