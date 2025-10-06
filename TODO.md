@@ -12,6 +12,9 @@ Complete the following steps after creating your project from this template to c
   - `REPO_NAME` → Your repository name (e.g., "my-research-data")
   - `SHORT_DESCRIPTION` → Brief description of your project (e.g., "Analysis of climate data from 2020-2024")
   - `[INSERT CONTACT METHOD]` → Your contact email or preferred method
+  - `GITHUB_REPO_ID` → Your GitHub repository ID (e.g., "123456789")
+  - `ZENODO_RECORD` → Your Zenodo record number (e.g., "1234567") after first release or manually create a Zenodo deposit
+  - `DOI` → Your DOI after first release (e.g., "10.5281/zenodo.1234567")
   - Files to update: `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CODE_OF_CONDUCT.md`, `package.json`, `README.template.md`, and `SECURITY.md`
 - [ ] **Set Up Zenodo Integration**: Follow the [GitHub guide for Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to enable automatic archiving and obtain a DOI for your repository.
 - [ ] **Set Up Zenodo DOI Badge**: Replace `GITHUB_REPO_ID` with the repository ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (look for the `id` field in the JSON response). The badge will automatically display your Zenodo DOI after the first release.

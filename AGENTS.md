@@ -10,10 +10,10 @@ This repository is a GitHub template for FAIR and open research data documentati
 
 ## 2. Preserve Template Placeholders
 
-This repository contains placeholder values (e.g., `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `ZENODO_RECORD`) that users will replace when creating their own projects:
+This repository contains placeholder values (e.g., `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `ZENODO_RECORD`, `[INSERT CONTACT METHOD]`, `GITHUB_REPO_ID`, etc.) that users will replace when creating their own projects:
 
-- **Placeholders in `README.template.md` must remain intact** - this is the template file that users copy.
-- **Placeholders in other files** (like `package.json`, `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CODE_OF_CONDUCT.md`, and `SECURITY.md`) should be replaced with actual values for this repository.
+- **Placeholders in other files** (like `package.json`, `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CODE_OF_CONDUCT.md`, `README.template.md`, and `SECURITY.md`) should be replaced with actual values for this repository.
+- **Placeholders in all other files must remain intact**
 - When working on the template itself, be careful not to accidentally replace placeholders in `README.template.md`.
 
 ## 3. Follow Existing Formatting Standards
@@ -108,6 +108,11 @@ This template includes several GitHub-specific features:
 | `renv::restore()`         | Restore R environment from lockfile                                    |
 | `quarto render`           | **Production render – _avoid during agent sessions_**                  |
 | `quarto publish gh-pages` | **Production publish to GitHub Pages – _avoid during agent sessions_** |
+
+## 11. TODO Checklist Maintenance
+
+- Keep `TODO.md` in the repository until every checklist item is completed.
+- Mark completed tasks in `TODO.md` with `[x]` to keep the checklist current.
 
 ---
 
