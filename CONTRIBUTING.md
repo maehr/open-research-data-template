@@ -16,6 +16,7 @@ Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in
    - Run `npm run check` to verify formatting
    - Run `uv run ruff format` to format Python code
    - Run `uv run ruff check` to lint Python code
+   - Run `uv run ty check` to type check Python code (if applicable)
 4. Increase the version numbers in any examples files and the README.md to the new version that this
    Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
 5. You may merge the Pull Request in once you have the sign-off of two other developers, or if you

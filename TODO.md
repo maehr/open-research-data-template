@@ -40,7 +40,8 @@ After completing the checklist:
 
 1. Run `npm run check` to verify all files are properly formatted
 2. Run `uv run ruff check` to verify Python code passes linting
-3. Run `quarto preview` to ensure documentation renders correctly
-4. Review your GitHub Pages site to confirm it displays as expected
-5. Test that all links in your README work correctly
-6. Verify that security alerts and branch protection are active
+3. Run `uv run ty check` to verify Python type checking (if applicable)
+4. Run `quarto preview` to ensure documentation renders correctly
+5. Review your GitHub Pages site to confirm it displays as expected
+6. Test that all links in your README work correctly
+7. Verify that security alerts and branch protection are active

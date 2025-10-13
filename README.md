@@ -49,6 +49,7 @@ Conventional data publication as static supplementary files offers limited repro
 ### Consistency
 
 - Code formatting with [Prettier](https://prettier.io/) for general files and [Ruff](https://github.com/astral-sh/ruff) for Python
+- Python type checking with [ty](https://github.com/astral-sh/ty)
 - Python dependency management with [uv](https://github.com/astral-sh/uv)
 - Commit messages following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) enforced via [husky](https://github.com/typicode/husky)
 - Versioning following [Semantic Versioning](https://semver.org/spec/v2.0.0.html)

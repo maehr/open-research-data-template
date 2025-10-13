@@ -39,6 +39,7 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
 - Run **`npm run format`** before commits to enforce Prettier.
 - Use **`npm run check`** to verify formatting without writing changes.
 - For Python code, use **`uv run ruff check`** to lint and **`uv run ruff format`** to format.
+- For Python type checking, use **`uv run ty check`**.
 
 ## 4) Commits and Changelog (Both)
 
@@ -90,6 +91,7 @@ Place new files accordingly.
 
 - `npm run check` for formatting
 - `uv run ruff check` for Python linting
+- `uv run ty check` for Python type checking
 - `quarto preview` to detect rendering issues
 - Run and validate scripts in `src/`, `build/`, and `analysis/`
 - Confirm `.github/workflows/` still pass for changes
@@ -134,6 +136,7 @@ Place new files accordingly.
 | `npm run format`          | Apply Prettier formatting                        |
 | `uv run ruff check`       | Lint Python code                                 |
 | `uv run ruff format`      | Format Python code                               |
+| `uv run ty check`         | Type check Python code                           |
 | `npm run commit`          | Conventional Commits wizard                      |
 | `npm run changelog`       | Generate changelog from commits                  |
 | `npm run prepare`         | Setup Husky git hooks                            |
@@ -146,21 +149,23 @@ Place new files accordingly.
 
 Follow `TODO.md`, then:
 
-1. Replace placeholders across listed files (including `pyproject.toml`).
+1. Replace placeholders across listed files.
 2. Customize `.qmd` docs and verify with `quarto preview`.
 3. Format files: `npm run format` and `uv run ruff format`.
 4. Lint Python code: `uv run ruff check`.
-5. Commit via `npm run commit`.
-6. Generate `CHANGELOG.md` with `npm run changelog`.
-7. When ready, delete the template `README.md` and rename `README.template.md` → `README.md`.
-8. Enable Pages and publish with `quarto publish gh-pages`.
-9. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.
-10. Verify security alerts and branch protection.
+5. Type check Python code: `uv run ty check` (if applicable).
+6. Commit via `npm run commit`.
+7. Generate `CHANGELOG.md` with `npm run changelog`.
+8. When ready, delete the template `README.md` and rename `README.template.md` → `README.md`.
+9. Enable Pages and publish with `quarto publish gh-pages`.
+10. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.
+11. Verify security alerts and branch protection.
 
 ## 15) Verification Steps (Project instances)
 
 - `npm run check` passes.
 - `uv run ruff check` passes without errors.
+- `uv run ty check` passes (if applicable).
 - `quarto preview` renders without errors.
 - GitHub Pages site loads as expected.
 - README links work.
