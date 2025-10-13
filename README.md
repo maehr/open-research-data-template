@@ -185,10 +185,17 @@ Check that all files are properly formatted.
 npm run check
 ```
 
-Format all files.
+Format all files with [Prettier](https://prettier.io/).
 
 ```bash
 npm run format
+```
+
+Format all Python files with [Ruff](https://github.com/astral-sh/ruff) and lint with [ty](https://github.com/astral-sh/ty) (if applicable).
+
+```bash
+uv run ruff check
+uv run ty check
 ```
 
 Run the wizard to write meaningful commit messages.
