@@ -15,7 +15,7 @@ Complete the following steps after creating your project from this template to c
   - `GITHUB_REPO_ID` → Your GitHub repository ID (e.g., "123456789")
   - `ZENODO_RECORD` → Your Zenodo record number (e.g., "1234567") after first release or manually create a Zenodo deposit
   - `DOI` → Your DOI after first release (e.g., "10.5281/zenodo.1234567")
-  - Files to update: `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CODE_OF_CONDUCT.md`, `package.json`, `README.template.md`, and `SECURITY.md`
+  - Files to update: `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CODE_OF_CONDUCT.md`, `package.json`, `pyproject.toml`, `README.template.md`, and `SECURITY.md`
 - [ ] **Set Up Zenodo Integration**: Follow the [GitHub guide for Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to enable automatic archiving and obtain a DOI for your repository.
 - [ ] **Set Up Zenodo DOI Badge**: Replace `GITHUB_REPO_ID` with the repository ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (look for the `id` field in the JSON response). The badge will automatically display your Zenodo DOI after the first release.
 - [ ] **Add Zenodo DOI to README**: After creating your first release and obtaining a Zenodo DOI, replace `ZENODO_RECORD` in README.md with your actual Zenodo record number (found in your Zenodo deposit URL).
@@ -39,7 +39,8 @@ Complete the following steps after creating your project from this template to c
 After completing the checklist:
 
 1. Run `npm run check` to verify all files are properly formatted
-2. Run `quarto preview` to ensure documentation renders correctly
-3. Review your GitHub Pages site to confirm it displays as expected
-4. Test that all links in your README work correctly
-5. Verify that security alerts and branch protection are active
+2. Run `uv run ruff check` to verify Python code passes linting
+3. Run `quarto preview` to ensure documentation renders correctly
+4. Review your GitHub Pages site to confirm it displays as expected
+5. Test that all links in your README work correctly
+6. Verify that security alerts and branch protection are active

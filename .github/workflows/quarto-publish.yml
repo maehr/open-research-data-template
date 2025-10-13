@@ -36,7 +36,7 @@ jobs:
 
   build-optimize:
     name: Build, Optimize, and Upload Artifacts
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository

@@ -1,0 +1,38 @@
+[project]
+name = "REPO_NAME"
+version = "0.1.0"
+description = "SHORT_DESCRIPTION"
+authors = [{ name = "FULLNAME", email = "[INSERT CONTACT METHOD]" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = ["ruff>=0.8.5"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "I",   # isort
+  "B",   # flake8-bugbear
+  "C4",  # flake8-comprehensions
+  "UP",  # pyupgrade
+  "ARG", # flake8-unused-arguments
+  "SIM", # flake8-simplify
+]
+ignore = [
+  "E501", # line too long, handled by formatter
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["REPO_NAME"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
