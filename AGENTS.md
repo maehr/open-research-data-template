@@ -172,7 +172,3 @@ Follow `TODO.md`, then:
 - Security alerts and branch protection are active.
 
 **Principle**: Prefer preview over production during agent sessions. Preserve template placeholders unless customizing a project instance. Keep changes reproducible, FAIR-aligned, and verifiable.
-
-```
-
-```

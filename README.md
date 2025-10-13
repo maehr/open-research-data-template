@@ -51,6 +51,7 @@ Conventional data publication as static supplementary files offers limited repro
 - Code formatting with [Prettier](https://prettier.io/) for general files and [Ruff](https://github.com/astral-sh/ruff) for Python
 - Python type checking with [ty](https://github.com/astral-sh/ty)
 - Python dependency management with [uv](https://github.com/astral-sh/uv)
+- R dependency management with [renv](https://rstudio.github.io/renv/)
 - Commit messages following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) enforced via [husky](https://github.com/typicode/husky)
 - Versioning following [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 - Workflow based on [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) with [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)

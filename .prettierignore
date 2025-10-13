@@ -1,0 +1,10 @@
+# Ignore files for Prettier
+
+CODE_OF_CONDUCT.md
+LICENSE-AGPL.md
+LICENSE-CCBY.md
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+renv.lock
+renv/
