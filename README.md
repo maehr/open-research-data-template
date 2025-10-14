@@ -194,8 +194,19 @@ npm run format
 Format all Python files with [Ruff](https://github.com/astral-sh/ruff) and lint with [ty](https://github.com/astral-sh/ty) (if applicable).
 
 ```bash
+uv run ruff format
 uv run ruff check
 uv run ty check
+```
+
+Format all R files with [styler](https://styler.r-lib.org/) and lint with [lintr](https://lintr.r-lib.org/).
+
+```r
+# Format R code
+styler::style_dir(".")
+
+# Lint R code
+lintr::lint_dir(".")
 ```
 
 Run the wizard to write meaningful commit messages.

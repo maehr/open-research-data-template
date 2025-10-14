@@ -40,6 +40,7 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
 - Use **`npm run check`** to verify formatting without writing changes.
 - For Python code, use **`uv run ruff check`** to lint and **`uv run ruff format`** to format.
 - For Python type checking, use **`uv run ty check`**.
+- For R code, use **`styler::style_dir(".")`** to format and **`lintr::lint_dir(".")`** to lint.
 
 ## 4) Commits and Changelog (Both)
 
@@ -137,6 +138,8 @@ Place new files accordingly.
 | `uv run ruff check`       | Lint Python code                                 |
 | `uv run ruff format`      | Format Python code                               |
 | `uv run ty check`         | Type check Python code                           |
+| `styler::style_dir(".")`  | Format R code                                    |
+| `lintr::lint_dir(".")`    | Lint R code                                      |
 | `npm run commit`          | Conventional Commits wizard                      |
 | `npm run changelog`       | Generate changelog from commits                  |
 | `npm run prepare`         | Setup Husky git hooks                            |
