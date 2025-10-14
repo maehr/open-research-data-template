@@ -48,7 +48,7 @@ Conventional data publication as static supplementary files offers limited repro
 
 ### Consistency
 
-- Code formatting with [Prettier](https://prettier.io/) for general files and [Ruff](https://github.com/astral-sh/ruff) for Python
+- Code formatting with [Prettier](https://prettier.io/) for general files, [Ruff](https://github.com/astral-sh/ruff) for Python, and [styler](https://styler.r-lib.org/) and [lintr](https://lintr.r-lib.org/) for R
 - Python type checking with [ty](https://github.com/astral-sh/ty)
 - Python dependency management with [uv](https://github.com/astral-sh/uv)
 - R dependency management with [renv](https://rstudio.github.io/renv/)
