@@ -30,6 +30,7 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
     - `_brand.yml`
     - `CODE_OF_CONDUCT.md`
     - `package.json`
+    - `pyproject.toml`
     - `README.template.md` → after replacement, **rename to `README.md`** when finalized
     - `SECURITY.md`
   - Leave any non-project template placeholders untouched only if the file explicitly documents template behavior for reuse.
@@ -93,6 +94,8 @@ Place new files accordingly.
 - `npm run check` for formatting
 - `uv run ruff check` for Python linting
 - `uv run ty check` for Python type checking
+- `styler::style_dir(".")` for R formatting
+- `lintr::lint_dir(".")` for R linting
 - `quarto preview` to detect rendering issues
 - Run and validate scripts in `src/`, `build/`, and `analysis/`
 - Confirm `.github/workflows/` still pass for changes
@@ -154,21 +157,23 @@ Follow `TODO.md`, then:
 
 1. Replace placeholders across listed files.
 2. Customize `.qmd` docs and verify with `quarto preview`.
-3. Format files: `npm run format` and `uv run ruff format`.
+3. Format files: `npm run format`, `uv run ruff format`, and `styler::style_dir(".")` in R.
 4. Lint Python code: `uv run ruff check`.
 5. Type check Python code: `uv run ty check` (if applicable).
-6. Commit via `npm run commit`.
-7. Generate `CHANGELOG.md` with `npm run changelog`.
-8. When ready, delete the template `README.md` and rename `README.template.md` → `README.md`.
-9. Enable Pages and publish with `quarto publish gh-pages`.
-10. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.
-11. Verify security alerts and branch protection.
+6. Lint R code: `lintr::lint_dir(".")` in R.
+7. Commit via `npm run commit`.
+8. Generate `CHANGELOG.md` with `npm run changelog`.
+9. When ready, delete the template `README.md` and rename `README.template.md` → `README.md`.
+10. Enable Pages and publish with `quarto publish gh-pages`.
+11. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.
+12. Verify security alerts and branch protection.
 
 ## 15) Verification Steps (Project instances)
 
 - `npm run check` passes.
 - `uv run ruff check` passes without errors.
 - `uv run ty check` passes (if applicable).
+- `lintr::lint_dir(".")` passes without errors in R.
 - `quarto preview` renders without errors.
 - GitHub Pages site loads as expected.
 - README links work.
