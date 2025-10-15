@@ -202,10 +202,7 @@ uv run ty check
 Format all R files with [styler](https://styler.r-lib.org/) and lint with [lintr](https://lintr.r-lib.org/).
 
 ```r
-# Format R code
 styler::style_dir(".")
-
-# Lint R code
 lintr::lint_dir(".")
 ```
 
