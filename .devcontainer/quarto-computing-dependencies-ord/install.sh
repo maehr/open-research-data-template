@@ -9,6 +9,7 @@ USERNAME=${USERNAME:-${_REMOTE_USER:-"automatic"}}
 R_DEPS=${RDEPS:-"rmarkdown"}
 PYTHON_DEPS=${PYTHONDEPS:-"jupyter,papermill"}
 # JULIA_DEPS=${JULIADEPS:-"IJulia"}
+
 VERSION=${VERSION:-"latest"}
 
 if [ "$(id -u)" -ne 0 ]; then
@@ -70,9 +71,9 @@ enable_autocompletion
 apt-get clean && rm -rf /var/lib/apt/lists/*
 
 quarto_python_deps() {
+  uv venv
   local deps=$1
   deps=$(echo "${deps}" | sed 's/,/ /g')
-  uv venv
   uv pip install ${deps}
 }
 

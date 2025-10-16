@@ -13,17 +13,37 @@
     ]
   },
   "Packages": {
+    "httpgd": {
+      "Package": "httpgd",
+      "Version": "2.0.4",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "nx10",
+      "RemoteRepo": "httpgd",
+      "RemoteRef": "master",
+      "RemoteSha": "dd6ed3a687a2d7327bb28ca46725a0a203eb2a19"
+    },
     "languageserver": {
       "Package": "languageserver",
       "Version": "0.3.16",
-      "Source": "Repository",
-      "Repository": "P3M"
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "REditorSupport",
+      "RemoteRepo": "languageserver",
+      "RemoteRef": "v0.3.16",
+      "RemoteSha": "beed0f00563390b3e39a9bb47fc25bf852ec3734"
     },
     "lintr": {
       "Package": "lintr",
       "Version": "3.2.0",
-      "Source": "Repository",
-      "Repository": "P3M"
+      "Source": "Repository"
+    },
+    "prompt": {
+      "Package": "prompt",
+      "Version": "1.0.2",
+      "Source": "Repository"
     },
     "renv": {
       "Package": "renv",
@@ -79,11 +99,15 @@
       "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
       "Repository": "RSPM"
     },
+    "rmarkdown": {
+      "Package": "rmarkdown",
+      "Version": "2.30",
+      "Source": "Repository"
+    },
     "styler": {
       "Package": "styler",
       "Version": "1.11.0",
-      "Source": "Repository",
-      "Repository": "P3M"
+      "Source": "Repository"
     }
   }
 }
