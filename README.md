@@ -48,7 +48,10 @@ Conventional data publication as static supplementary files offers limited repro
 
 ### Consistency
 
-- Code formatting with [Prettier](https://prettier.io/)
+- Code formatting with [Prettier](https://prettier.io/) for general files, [Ruff](https://github.com/astral-sh/ruff) for Python, and [styler](https://styler.r-lib.org/) and [lintr](https://lintr.r-lib.org/) for R
+- Python type checking with [ty](https://github.com/astral-sh/ty)
+- Python dependency management with [uv](https://github.com/astral-sh/uv)
+- R dependency management with [renv](https://rstudio.github.io/renv/)
 - Commit messages following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) enforced via [husky](https://github.com/typicode/husky)
 - Versioning following [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 - Workflow based on [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) with [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
@@ -182,10 +185,25 @@ Check that all files are properly formatted.
 npm run check
 ```
 
-Format all files.
+Format all files with [Prettier](https://prettier.io/).
 
 ```bash
 npm run format
+```
+
+Format all Python files with [Ruff](https://github.com/astral-sh/ruff) and lint with [ty](https://github.com/astral-sh/ty) (if applicable).
+
+```bash
+uv run ruff format
+uv run ruff check
+uv run ty check
+```
+
+Format all R files with [styler](https://styler.r-lib.org/) and lint with [lintr](https://lintr.r-lib.org/).
+
+```r
+styler::style_dir(".")
+lintr::lint_dir(".")
 ```
 
 Run the wizard to write meaningful commit messages.

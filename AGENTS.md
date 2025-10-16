@@ -30,6 +30,7 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
     - `_brand.yml`
     - `CODE_OF_CONDUCT.md`
     - `package.json`
+    - `pyproject.toml`
     - `README.template.md` → after replacement, **rename to `README.md`** when finalized
     - `SECURITY.md`
   - Leave any non-project template placeholders untouched only if the file explicitly documents template behavior for reuse.
@@ -38,6 +39,9 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
 
 - Run **`npm run format`** before commits to enforce Prettier.
 - Use **`npm run check`** to verify formatting without writing changes.
+- For Python code, use **`uv run ruff check`** to lint and **`uv run ruff format`** to format.
+- For Python type checking, use **`uv run ty check`**.
+- For R code, use **`styler::style_dir(".")`** to format and **`lintr::lint_dir(".")`** to lint.
 
 ## 4) Commits and Changelog (Both)
 
@@ -87,7 +91,11 @@ Place new files accordingly.
 
 ## 8) Testing and CI (Both)
 
-- `npm run check`
+- `npm run check` for formatting
+- `uv run ruff check` for Python linting
+- `uv run ty check` for Python type checking
+- `styler::style_dir(".")` for R formatting
+- `lintr::lint_dir(".")` for R linting
 - `quarto preview` to detect rendering issues
 - Run and validate scripts in `src/`, `build/`, and `analysis/`
 - Confirm `.github/workflows/` still pass for changes
@@ -130,6 +138,11 @@ Place new files accordingly.
 | `uv run quarto preview`   | Preview in the pinned Python env                 |
 | `npm run check`           | Verify formatting                                |
 | `npm run format`          | Apply Prettier formatting                        |
+| `uv run ruff check`       | Lint Python code                                 |
+| `uv run ruff format`      | Format Python code                               |
+| `uv run ty check`         | Type check Python code                           |
+| `styler::style_dir(".")`  | Format R code                                    |
+| `lintr::lint_dir(".")`    | Lint R code                                      |
 | `npm run commit`          | Conventional Commits wizard                      |
 | `npm run changelog`       | Generate changelog from commits                  |
 | `npm run prepare`         | Setup Husky git hooks                            |
@@ -144,24 +157,26 @@ Follow `TODO.md`, then:
 
 1. Replace placeholders across listed files.
 2. Customize `.qmd` docs and verify with `quarto preview`.
-3. Format files: `npm run format`.
-4. Commit via `npm run commit`.
-5. Generate `CHANGELOG.md` with `npm run changelog`.
-6. When ready, delete the template `README.md` and rename `README.template.md` → `README.md`.
-7. Enable Pages and publish with `quarto publish gh-pages`.
-8. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.
-9. Verify security alerts and branch protection.
+3. Format files: `npm run format`, `uv run ruff format`, and `styler::style_dir(".")` in R.
+4. Lint Python code: `uv run ruff check`.
+5. Type check Python code: `uv run ty check` (if applicable).
+6. Lint R code: `lintr::lint_dir(".")` in R.
+7. Commit via `npm run commit`.
+8. Generate `CHANGELOG.md` with `npm run changelog`.
+9. When ready, delete the template `README.md` and rename `README.template.md` → `README.md`.
+10. Enable Pages and publish with `quarto publish gh-pages`.
+11. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.
+12. Verify security alerts and branch protection.
 
 ## 15) Verification Steps (Project instances)
 
 - `npm run check` passes.
+- `uv run ruff check` passes without errors.
+- `uv run ty check` passes (if applicable).
+- `lintr::lint_dir(".")` passes without errors in R.
 - `quarto preview` renders without errors.
 - GitHub Pages site loads as expected.
 - README links work.
 - Security alerts and branch protection are active.
 
 **Principle**: Prefer preview over production during agent sessions. Preserve template placeholders unless customizing a project instance. Keep changes reproducible, FAIR-aligned, and verifiable.
-
-```
-
-```
