@@ -83,7 +83,11 @@ jobs:
 
       - name: JamPack Optimization
         run: |
-          npx @divriots/jampack ./_site
+          if [ "${{ github.repository }}" == "maehr/open-research-data-template" ]; then
+            npx @divriots/jampack ./_site --exclude ./_site/index.html
+          else
+            npx @divriots/jampack ./_site
+          fi
 
       - name: Upload Built Artifacts
         uses: actions/upload-artifact@v4
