@@ -6,6 +6,9 @@ export DEBIAN_FRONTEND=noninteractive
 
 USERNAME=${USERNAME:-${_REMOTE_USER:-"automatic"}}
 
+R_DEPS=${RDEPS:-"rmarkdown"}
+PYTHON_DEPS=${PYTHONDEPS:-"jupyter,papermill"}
+# JULIA_DEPS=${JULIADEPS:-"IJulia"}
 
 VERSION=${VERSION:-"latest"}
 
@@ -69,6 +72,8 @@ apt-get clean && rm -rf /var/lib/apt/lists/*
 
 quarto_python_deps() {
   uv sync
+  deps=$(echo "${deps}" | sed 's/,/ /g')
+  uv pip install ${deps}
 }
 
 # quarto_julia_deps() {
@@ -78,5 +83,5 @@ quarto_python_deps() {
 # }
 
 quarto_r_deps ${R_DEPS}
-quarto_python_deps
+quarto_python_deps ${PYTHON_DEPS}
 # quarto_julia_deps ${JULIA_DEPS}
