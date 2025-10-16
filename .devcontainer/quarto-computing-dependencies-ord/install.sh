@@ -71,7 +71,7 @@ enable_autocompletion
 apt-get clean && rm -rf /var/lib/apt/lists/*
 
 quarto_python_deps() {
-  uv sync
+  (cd "${PWD}" && uv sync)
   deps=$(echo "${deps}" | sed 's/,/ /g')
   uv pip install ${deps}
 }
