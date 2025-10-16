@@ -82,12 +82,10 @@ jobs:
           to: html
 
       - name: JamPack Optimization
+        # FIXME: JamPack does not finish on ubuntu-latest for unknown reasons
+        if: github.repository =! 'maehr/open-research-data-template'
         run: |
-          if [ "${{ github.repository }}" == "maehr/open-research-data-template" ]; then
-            npx @divriots/jampack ./_site --exclude ./_site/index.html
-          else
-            npx @divriots/jampack ./_site
-          fi
+          npx @divriots/jampack ./_site
 
       - name: Upload Built Artifacts
         uses: actions/upload-artifact@v4
