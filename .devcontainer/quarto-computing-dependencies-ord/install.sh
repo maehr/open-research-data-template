@@ -72,6 +72,7 @@ apt-get clean && rm -rf /var/lib/apt/lists/*
 
 quarto_python_deps() {
   (cd "${PWD}" && uv sync)
+  local deps=$1
   deps=$(echo "${deps}" | sed 's/,/ /g')
   uv pip install ${deps}
 }
