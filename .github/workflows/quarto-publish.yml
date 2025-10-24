@@ -83,7 +83,7 @@ jobs:
 
       - name: JamPack Optimization
         # FIXME: JamPack does not finish on ubuntu-latest for unknown reasons
-        if: github.repository =! 'maehr/open-research-data-template'
+        if: github.repository != 'maehr/open-research-data-template'
         run: |
           npx @divriots/jampack ./_site
 

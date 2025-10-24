@@ -10,6 +10,7 @@
 			"installChromium": "false"
 		}
 	},
+	"postCreateCommand": "R --slave -e \"if (requireNamespace('renv', quietly = TRUE)) renv::restore(prompt = FALSE)\"",
 	"customizations": {
 		"vscode": {
 			"extensions": [
