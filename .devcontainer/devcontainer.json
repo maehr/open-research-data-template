@@ -3,36 +3,28 @@
 	"image": "ghcr.io/mcanouil/quarto-codespaces:latest",
 	"remoteUser": "vscode",
 	"features": {
-		"./quarto-computing-dependencies-ord": {},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
 			"version": "release",
-			"installTinyTex": "false",
-			"installChromium": "false"
+			// "installTinyTex": "true"
+		},
+		"./uv": {
+			"version": "latest"
+		},
+		"./quarto-computing-dependencies": {
+			"rDeps": "renv,rmarkdown,languageserver"
 		}
 	},
-	"postCreateCommand": "R --slave -e \"if (requireNamespace('renv', quietly = TRUE)) renv::restore(prompt = FALSE)\"",
+	"postStartCommand": "R -e 'renv::restore()' && uv sync",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"quarto.quarto",
-				"mcanouil.quarto-wizard",
 				"REditorSupport.r",
-				"ms-python.python",
-				"charliermarsh.ruff",
-				"ms-python.vscode-pylance",
-				"ms-toolsai.jupyter",
 				"Posit.air-vscode",
+				"charliermarsh.ruff",
 				"dbaeumer.vscode-eslint",
 				"esbenp.prettier-vscode"
 			],
-			"settings": {
-				"r.rterm.option": ["--no-save", "--no-restore-data", "--quiet"],
-				"r.useRenvLibPath": true,
-				"[r]": {
-					"editor.defaultFormatter": "Posit.air-vscode",
-					"editor.formatOnSave": true
-				}
-			},
 			"openFiles": ["README.md", "README.template.md"]
 		}
 	}
