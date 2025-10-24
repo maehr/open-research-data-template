@@ -6,6 +6,10 @@ export DEBIAN_FRONTEND=noninteractive
 
 USERNAME=${USERNAME:-${_REMOTE_USER:-"automatic"}}
 
+R_DEPS=${RDEPS:-"rmarkdown"}
+PYTHON_DEPS=${PYTHONDEPS:-"jupyter,papermill"}
+JULIA_DEPS=${JULIADEPS:-"IJulia"}
+
 if [ "$(id -u)" -ne 0 ]; then
   echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
   exit 1
@@ -28,34 +32,26 @@ elif [ "${USERNAME}" = "none" ] || ! id -u "${USERNAME}" >/dev/null 2>&1; then
   USERNAME=root
 fi
 
-# Node install
-if [ -f "pnpm-lock.yaml" ]; then
-  log "Installing Node packages with pnpm"
-  pnpm install
-  pnpm run prepare
-elif [ -f "package-lock.json" ]; then
-  log "Installing Node packages with npm ci"
-  npm ci
-  npm run prepare
-fi
+quarto_r_deps() {
+  local deps=$1
+  deps=$(echo "${deps}" | sed 's/,/","/g')
+  su "${USERNAME}" -c "Rscript -e 'pak::pkg_install(c(\"${deps}\"))'"
+}
 
-log "Final uv sync (project resolution)"
-if [ -f "uv.lock" ]; then
-  log "Running uv sync"
-  su "${USERNAME}" -c "uv sync"
-else
-  log "No uv.lock file found, skipping uv sync."
-fi
+quarto_python_deps() {
+  local deps=$1
+  deps=$(echo "${deps}" | sed 's/,/ /g')
+  python3 -m pip install ${deps}
+}
 
-log "Installing R packages"
-if [ -f "renv.lock" ]; then
-  log "Restoring R packages with renv"
-  su "${USERNAME}" -c "Rscript -e 'renv::restore()'"
-elif [ -f "pak.lock" ]; then
-  log "Installing R packages with pak"
-  su "${USERNAME}" -c "Rscript -e 'pak::pkg_install()'"
-else
-  log "No R package manager lock file found, skipping R package installation."
-fi
+quarto_julia_deps() {
+  local deps=$1
+  deps=$(echo "${deps}" | sed 's/,/","/g')
+  su "${USERNAME}" -c "~/.juliaup/bin/julia -e 'using Pkg; Pkg.add.([\"${deps}\"])'"
+}
 
-log "Setup complete."
+quarto_r_deps ${R_DEPS}
+quarto_python_deps ${PYTHON_DEPS}
+quarto_julia_deps ${JULIA_DEPS}
+
+apt-get clean && rm -rf /var/lib/apt/lists/*

@@ -1,0 +1,20 @@
+Package: REPO_NAME
+Type: Project
+Title: REPO_NAME
+Version: 0.0.0.9000
+Description: Template for FAIR/open research data with Quarto and CI (GitHub
+    Pages, Zenodo, releases).
+License: AGPL-3
+Encoding: UTF-8
+URL: https://github.com/USERNAME/REPO_NAME
+BugReports: https://github.com/USERNAME/REPO_NAME/issues
+Suggests:
+    lintr,
+    styler,
+    rmarkdown,
+    prompt,
+    languageserver,
+    httpgd
+Remotes:
+    REditorSupport/languageserver,
+    nx10/httpgd
