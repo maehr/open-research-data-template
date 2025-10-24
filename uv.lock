@@ -1813,10 +1813,6 @@ wheels = [
 name = "repo-name"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
-    { name = "jupyter" },
-    { name = "papermill" },
-]
 
 [package.dev-dependencies]
 dev = [
@@ -1827,10 +1823,6 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "jupyter", specifier = ">=1.1.1" },
-    { name = "papermill", specifier = ">=2.6.0" },
-]
 
 [package.metadata.requires-dev]
 dev = [

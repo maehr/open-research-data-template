@@ -6,8 +6,6 @@ authors = [{ name = "FULLNAME", email = "[INSERT CONTACT METHOD]" }]
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "jupyter>=1.1.1",
-    "papermill>=2.6.0",
 ]
 
 [dependency-groups]
