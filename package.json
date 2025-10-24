@@ -7,6 +7,7 @@
 	"scripts": {
 		"check": "prettier --check .",
 		"commit": "cz",
+		"deadlink-check": "bash -c 'if [ ! -d \"_site\" ]; then echo \"Error: _site directory not found. Please run \\\"quarto render\\\" first.\"; exit 1; fi; echo \"Starting HTTP server on port 5528...\"; python3 -m http.server 5528 --directory _site > /dev/null 2>&1 & SERVER_PID=$!; trap \"kill $SERVER_PID 2>/dev/null\" EXIT; sleep 3; echo \"Checking for broken links...\"; if wget --spider --recursive --no-parent --no-check-certificate http://localhost:5528/ 2>&1; then echo \"\\nSuccess: No broken links found!\"; kill $SERVER_PID 2>/dev/null; exit 0; else echo \"\\nError: Broken links detected!\"; kill $SERVER_PID 2>/dev/null; exit 1; fi'",
 		"format": "prettier --write .",
 		"prepare": "husky",
 		"changelog": "npm exec git-cliff -- --config cliff.toml"

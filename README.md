@@ -224,6 +224,12 @@ Preview the documentation.
 quarto preview
 ```
 
+Check for broken links in the rendered site (requires `_site` directory from `quarto render`).
+
+```bash
+npm run deadlink-check
+```
+
 ## Support
 
 This project is maintained by [@maehr](https://github.com/maehr). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
