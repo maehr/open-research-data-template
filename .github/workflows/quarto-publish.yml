@@ -103,21 +103,17 @@ jobs:
     needs: build-optimize
 
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
       - name: Download Built Artifacts
         uses: actions/download-artifact@v5
         with:
           name: built-site
           path: _site
 
-      - name: Start static server
-        run: |
-          cd _site
-          nohup python3 -m http.server 5528 &
-          sleep 3  # Give the server time to start
-
       - name: Check for broken links
-        run: |
-          wget --spider --recursive --no-parent --no-check-certificate http://localhost:5528/ || exit 1
+        run: .github/scripts/deadlink-check.sh
 
   deploy:
     name: Deploy
