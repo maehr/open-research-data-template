@@ -4,7 +4,7 @@ format:
   html:
     link-external-newwindow: false
     link-external-icon: false
-    embed-resources: true
+    embed-resources: false
 ---
 
 {{< include README.md >}}
