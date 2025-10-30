@@ -1,5 +1,10 @@
 ---
 title: Open Research Data
+format: 
+  html:
+    link-external-newwindow: false
+    link-external-icon: false
+    embed-resources: true
 ---
 
 {{< include README.md >}}
