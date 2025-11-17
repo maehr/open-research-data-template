@@ -1,16 +1,41 @@
 {
-	"name": "Open Research Data Template Container",
-	"image": "ghcr.io/mcanouil/quarto-codespaces:latest",
-	"remoteUser": "vscode",
+	"name": "Release - Universal - Quarto Codespaces",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".",
+		"args": {
+			"IMAGE": "mcr.microsoft.com/devcontainers/universal:latest"
+		},
+		"options": [
+			"--label",
+			"org.opencontainers.image.title=Quarto Codespaces",
+			"--label",
+			"org.opencontainers.image.description=Quarto Codespaces / Dev Containers setup for quick online testing.",
+			"--label",
+			"org.opencontainers.image.authors=Mickaël CANOUIL <https://mickael.canouil.fr>",
+			"--label",
+			"org.opencontainers.image.url=https://github.com/mcanouil/quarto-codespaces",
+			"--label",
+			"org.opencontainers.image.source=https://github.com/mcanouil/quarto-codespaces",
+			// "--label", "org.opencontainers.image.ref.name=",
+			// "--label", "org.opencontainers.image.version=",
+			"--label",
+			"org.opencontainers.image.licenses=MIT"
+		]
+	},
+	"remoteUser": "codespace",
 	"features": {
-		"./quarto-computing-dependencies-ord": {
+		"./quarto-computing-dependencies": {
 			"rDeps": "rmarkdown,languageserver,nx10/httpgd@v2.0.3,prompt,lintr",
-			"pythonDeps": "jupyter,papermill"
-			// "juliaDeps": "IJulia"
+			"pythonDeps": "jupyter,papermill",
+			"juliaDeps": "IJulia"
+		},
+		"./uv": {
+			"version": "latest"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
 			"version": "release",
-			"installTinyTex": "false",
+			"installTinyTex": "true",
 			"installChromium": "false"
 		}
 	},
@@ -21,13 +46,14 @@
 				"mcanouil.quarto-wizard",
 				"REditorSupport.r",
 				"ms-python.python",
-				// "julialang.language-julia",
-				"charliermarsh.ruff",
+				"julialang.language-julia",
+				"ms-python.black-formatter",
+				"ms-python.flake8",
 				"ms-python.vscode-pylance",
+				"ms-python.pylint",
+				"ms-python.isort",
 				"ms-toolsai.jupyter",
-				"Posit.air-vscode",
-				"dbaeumer.vscode-eslint",
-				"esbenp.prettier-vscode"
+				"Posit.air-vscode"
 			],
 			"settings": {
 				"r.rterm.option": ["--no-save", "--no-restore-data", "--quiet"],
@@ -36,8 +62,7 @@
 					"editor.defaultFormatter": "Posit.air-vscode",
 					"editor.formatOnSave": true
 				}
-			},
-			"openFiles": ["README.md", "README.template.md"]
+			}
 		}
 	}
 }
