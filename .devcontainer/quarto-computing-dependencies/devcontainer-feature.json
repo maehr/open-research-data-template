@@ -31,14 +31,16 @@
 		"ghcr.io/devcontainers/features/python:1": {
 			"version": "latest",
 			"enableShared": "true"
-		},
-		"ghcr.io/julialang/devcontainer-features/julia:1": {
-			"channel": "release"
 		}
+		// ,
+		// "ghcr.io/julialang/devcontainer-features/julia:1": {
+		// 	"channel": "release"
+		// }
 	},
 	"installsAfter": [
 		"ghcr.io/rocker-org/devcontainer-features/r-rig",
-		"ghcr.io/devcontainers/features/python",
-		"ghcr.io/julialang/devcontainer-features/julia"
+		"ghcr.io/devcontainers/features/python"
+		// ,
+		// "ghcr.io/julialang/devcontainer-features/julia"
 	]
 }
