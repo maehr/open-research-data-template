@@ -6,11 +6,12 @@ log() {
   echo "[$(date +'%Y-%m-%d %H:%M:%S')] $*"
 }
 
-log "Installing additional R packages for Quarto"
-Rscript -e 'pak::pkg_install(c("rmarkdown", "languageserver", "nx10/httpgd@v2.0.3", "prompt", "lintr"))'
+log "Installing uv (Python package manager)"
+curl -LsSf https://astral.sh/uv/install.sh | sh
+export PATH="$HOME/.cargo/bin:$PATH"
 
-log "Installing Python packages for Quarto"
-uv pip install jupyter papermill
+log "Installing additional R packages"
+Rscript -e 'pak::pkg_install(c("prompt", "lintr"))'
 
 log "Installing Node packages"
 if [ -f "pnpm-lock.yaml" ]; then
@@ -23,7 +24,7 @@ elif [ -f "package-lock.json" ]; then
   npm run prepare
 fi
 
-log "Final uv sync (project resolution)"
+log "Python environment setup with uv"
 if [ -f "uv.lock" ]; then
   log "Running uv sync"
   uv sync
@@ -31,7 +32,7 @@ else
   log "No uv.lock file found, skipping uv sync."
 fi
 
-log "Installing R packages from lock file"
+log "R environment setup with renv"
 if [ -f "renv.lock" ]; then
   log "Restoring R packages with renv"
   Rscript -e 'renv::restore()'
