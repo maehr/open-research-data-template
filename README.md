@@ -126,6 +126,8 @@ We recommend using **[GitHub Codespaces](https://github.com/features/codespaces)
    - ✅ R with `renv`
    - ✅ Quarto
 
+   > **Technical Note:** The devcontainer uses URL-based features from published registries (e.g., `ghcr.io/rocker-org/devcontainer-features/quarto-cli`) for improved maintainability and follows devcontainer best practices.
+
    <div align="center">
      <img src="https://github.com/maehr/open-research-data-template/raw/main/.github/docs/assets/img_codespace.png" alt="Create Codespace" style="width: 540px; margin: 1em 0;" />
    </div>

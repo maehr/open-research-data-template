@@ -10,7 +10,7 @@ log "Installing additional R packages for Quarto"
 Rscript -e 'pak::pkg_install(c("rmarkdown", "languageserver", "nx10/httpgd@v2.0.3", "prompt", "lintr"))'
 
 log "Installing Python packages for Quarto"
-pip install jupyter papermill
+uv pip install jupyter papermill
 
 log "Installing Node packages"
 if [ -f "pnpm-lock.yaml" ]; then
