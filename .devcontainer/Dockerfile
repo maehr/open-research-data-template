@@ -1,6 +1,9 @@
-FROM rocker/tidyverse:latest
+FROM rocker/r-ver:latest
 
-RUN apt-get update && apt-get install -y --no-install-recommends wget \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget \
+    libicu-dev \
+    libpcre2-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Install uv using wget
