@@ -3,17 +3,13 @@
 	"image": "ghcr.io/mcanouil/quarto-codespaces:latest",
 	"remoteUser": "vscode",
 	"features": {
-		"./quarto-computing-dependencies-ord": {
-			"rDeps": "rmarkdown,languageserver,nx10/httpgd@v2.0.3,prompt,lintr",
-			"pythonDeps": "jupyter,papermill"
-			// "juliaDeps": "IJulia"
-		},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
 			"version": "release",
 			"installTinyTex": "false",
 			"installChromium": "false"
 		}
 	},
+	"postCreateCommand": "bash .devcontainer/install.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -21,7 +17,6 @@
 				"mcanouil.quarto-wizard",
 				"REditorSupport.r",
 				"ms-python.python",
-				// "julialang.language-julia",
 				"charliermarsh.ruff",
 				"ms-python.vscode-pylance",
 				"ms-toolsai.jupyter",
