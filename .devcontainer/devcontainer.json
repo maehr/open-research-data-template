@@ -1,7 +1,7 @@
 {
 	"name": "Release - Universal - Quarto Codespaces",
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-	// "remoteUser": "codespace",
+	"image": "mcr.microsoft.com/devcontainers/universal:latest",
+	"remoteUser": "codespace",
 	"features": {
 		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
 			"version": "latest"
