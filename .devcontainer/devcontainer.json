@@ -1,8 +1,11 @@
 {
-	"name": "Release - Universal - Quarto Codespaces",
+	"name": "Open-Research-Data Template",
 	"image": "mcr.microsoft.com/devcontainers/universal:latest",
 	"remoteUser": "codespace",
 	"features": {
+		"ghcr.io/devcontainers/features/git-lfs:1": {
+			"installHooks": false
+		},
 		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
 			"version": "4.5.1",
 			"vscodeRSupport": "true",
@@ -17,6 +20,7 @@
 			"shellautocompletion": "true"
 		}
 	},
+	"postStartCommand": "uv sync && Rscript -e 'renv::restore()'",
 	"customizations": {
 		"vscode": {
 			"extensions": [
