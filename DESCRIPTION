@@ -1,0 +1,10 @@
+Package: "REPO_NAME"
+Type: Project
+Title: "REPO_NAME"
+Version: 0.1.0
+Suggests:
+    languageserver,
+    lintr,
+    styler,
+    renv
+Encoding: UTF-8
