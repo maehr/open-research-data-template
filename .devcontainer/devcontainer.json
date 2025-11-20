@@ -13,14 +13,14 @@
 			"version": "release",
 			"installTinyTex": "true"
 		},
-		"ghcr.io/astral-sh/devcontainer-features/uv:1": {
+		"ghcr.io/va-h/devcontainers-features/uv:1": {
 			"version": "latest"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-			"packages": "rmarkdown,languageserver,prompt,lintr,nx10/httpgd@v2.0.3"
+			"packages": "renv,languageserver"
 		}
 	},
-	"postCreateCommand": "uv pip install jupyter papermill",
+	"postCreateCommand": "uv pip install jupyter papermill && R -e \"renv::install()\"",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -43,7 +43,8 @@
 					"editor.defaultFormatter": "Posit.air-vscode",
 					"editor.formatOnSave": true
 				}
-			}
+			},
+			"openFiles": ["README.md", "README.template.md"]
 		}
 	}
 }
