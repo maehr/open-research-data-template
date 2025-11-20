@@ -24,19 +24,12 @@
 			"extensions": [
 				"quarto.quarto",
 				"REditorSupport.r",
-				"astral-sh.uv",
+				"charliermarsh.ruff",
 				"astral-sh.ty",
 				"ms-toolsai.jupyter",
-				"Posit.air-vscode"
+				"Posit.air-vscode",
+				"esbenp.prettier-vscode"
 			],
-			"settings": {
-				"r.rterm.option": ["--no-save", "--no-restore-data", "--quiet"],
-				"r.useRenvLibPath": true,
-				"[r]": {
-					"editor.defaultFormatter": "Posit.air-vscode",
-					"editor.formatOnSave": true
-				}
-			},
 			"openFiles": ["README.md", "README.template.md"]
 		}
 	}
