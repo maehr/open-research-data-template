@@ -5,7 +5,7 @@
 	"features": {
 		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
 			"version": "4.5.1",
-			"vscodeRSupport": "full",
+			"vscodeRSupport": "basic",
 			"installREnv": "true"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
