@@ -4,20 +4,19 @@
 	"remoteUser": "codespace",
 	"features": {
 		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
-			"version": "latest"
+			"version": "4.5.1",
+			"vscodeRSupport": "true",
+			"installREnv": "true"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
 			"version": "release",
 			"installTinyTex": "true"
 		},
 		"ghcr.io/va-h/devcontainers-features/uv:1": {
-			"version": "latest"
-		},
-		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-			"packages": "renv,languageserver"
+			"version": "latest",
+			"shellautocompletion": "true"
 		}
 	},
-	"postCreateCommand": "set -e && uv pip install . && uv pip install jupyter papermill && R -e \"renv::install()\"",
 	"customizations": {
 		"vscode": {
 			"extensions": [
