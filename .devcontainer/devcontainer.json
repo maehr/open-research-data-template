@@ -10,7 +10,8 @@
 		},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
 			"version": "release",
-			"installTinyTex": "true"
+			"installTinyTex": "true",
+			"installChromium": "false"
 		},
 		"ghcr.io/va-h/devcontainers-features/uv:1": {
 			"version": "latest",
