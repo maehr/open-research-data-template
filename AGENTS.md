@@ -29,6 +29,7 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
     - `.github/ISSUE_TEMPLATE/config.yml`
     - `_brand.yml`
     - `CODE_OF_CONDUCT.md`
+    - `DESCRIPTION`
     - `package.json`
     - `pyproject.toml`
     - `README.template.md` → after replacement, **rename to `README.md`** when finalized
@@ -80,8 +81,12 @@ Place new files accordingly.
 ### R (renv)
 
 1. In R: `install.packages("pkg")`
-2. `renv::snapshot()` to update `renv.lock`
-3. Commit `renv.lock`
+2. For dev tools (languageserver, lintr, styler): Add to `DESCRIPTION` Suggests field
+3. `renv::snapshot()` to update `renv.lock`
+   - For explicit dev packages: `renv::snapshot(packages = c("languageserver", "lintr", "styler"))`
+4. Commit both `DESCRIPTION` and `renv.lock`
+
+**Note**: The `DESCRIPTION` file documents R development dependencies. The `.Rprofile` configures R options and activates renv.
 
 ## 7) Documentation Practices (Both)
 
