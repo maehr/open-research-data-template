@@ -1,15 +1,11 @@
 {
 	"name": "Release - Universal - Quarto Codespaces",
-	// "build": {
-	// 	"dockerfile": "Dockerfile",
-	// 	"context": ".",
-	// 	"args": {
-	// 		"IMAGE": "mcr.microsoft.com/devcontainers/universal:latest"
-	// 	}
-	// },
 	"image": "mcr.microsoft.com/devcontainers/universal:latest",
 	"remoteUser": "codespace",
 	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+			"version": "latest"
+		},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
 			"version": "release",
 			"installTinyTex": "true"
@@ -21,14 +17,13 @@
 			"packages": "renv,languageserver"
 		}
 	},
-	"postCreateCommand": "uv sync && uv pip install jupyter papermill && R -e \"renv::install()\"",
+	"postCreateCommand": "set -e && uv pip install . && uv pip install jupyter papermill && R -e \"renv::install()\"",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"quarto.quarto",
 				"REditorSupport.r",
-				// "ms-python.python",
-				"astral-sh.ty",
+				"astral-sh.uv",
 				"charliermarsh.ruff",
 				"ms-toolsai.jupyter",
 				"Posit.air-vscode"
