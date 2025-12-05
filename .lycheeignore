@@ -1,0 +1,5 @@
+# Lychee link checker ignore patterns
+# https://github.com/lycheeverse/lychee#ignoring-links
+
+# Ignore placeholder URLs in template files
+^https://github.com/USERNAME/REPO_NAME
