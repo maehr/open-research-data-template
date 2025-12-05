@@ -247,7 +247,7 @@ choco install lychee
 cargo install lychee
 ```
 
-For other installation methods, see the [lychee installation guide](https://github.com/lycheeverse/lychee#installation).
+For other installation methods, see the [lychee repository](https://github.com/lycheeverse/lychee).
 
 Then check links in the rendered site (requires `_site` directory from `quarto render`):
 
