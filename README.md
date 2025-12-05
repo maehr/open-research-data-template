@@ -224,11 +224,7 @@ Preview the documentation.
 quarto preview
 ```
 
-Check for broken links in the rendered site (requires `_site` directory from `quarto render`).
-
-```bash
-npm run deadlink-check
-```
+Link checking is automatically performed by the GitHub Actions workflow using [lychee](https://github.com/lycheeverse/lychee) via the [lychee-action](https://github.com/lycheeverse/lychee-action). The workflow checks for broken links in the rendered site after building.
 
 ## Support
 

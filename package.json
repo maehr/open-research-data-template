@@ -7,7 +7,6 @@
 	"scripts": {
 		"check": "prettier --check .",
 		"commit": "cz",
-		"deadlink-check": ".github/scripts/deadlink-check.sh",
 		"format": "prettier --write .",
 		"prepare": "husky",
 		"changelog": "npm exec git-cliff -- --config cliff.toml"
