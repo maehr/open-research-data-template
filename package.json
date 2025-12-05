@@ -7,7 +7,7 @@
 	"scripts": {
 		"check": "prettier --check .",
 		"commit": "cz",
-		"deadlink-check": "lychee --verbose --no-progress --base _site '_site/**/*.html'",
+		"deadlink-check": "lychee --verbose --no-progress --base \"$(pwd)/_site\" './_site/**/*.html'",
 		"format": "prettier --write .",
 		"prepare": "husky",
 		"changelog": "npm exec git-cliff -- --config cliff.toml"
