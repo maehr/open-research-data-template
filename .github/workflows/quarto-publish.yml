@@ -112,11 +112,33 @@ jobs:
           name: built-site
           path: _site
 
+      - name: Start static server
+        run: |
+          cd _site
+          python3 -m http.server 5528 &
+          echo $! > server.pid
+          # Wait for server to be ready
+          for i in {1..10}; do
+            if curl -s http://localhost:5528/ > /dev/null; then
+              echo "Server is ready"
+              break
+            fi
+            echo "Waiting for server... ($i/10)"
+            sleep 1
+          done
+
       - name: Check for broken links with lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --base ${{ github.workspace }}/_site '${{ github.workspace }}/_site/**/*.html'
+          args: --verbose --no-progress http://localhost:5528/
           fail: true
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f ${{ github.workspace }}/_site/server.pid ]; then
+            kill $(cat ${{ github.workspace }}/_site/server.pid) || true
+          fi
 
   deploy:
     name: Deploy
