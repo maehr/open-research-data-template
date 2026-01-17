@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Overwrite _quarto.yml
-        if: github.event.repository.is_template == true
+        if: github.event.repository.is_template
         run: |
           cp .github/_quarto.yml _quarto.yml
 
@@ -44,12 +44,12 @@ jobs:
 
       - name: JamPack Optimization
         run: |
-          npx @divriots/jampack ./_site || { echo "JamPack optimization failed." >&2; exit 1; }
+          npx @divriots/jampack ./_site || { echo "JamPack optimization failed; see output above for details." >&2; exit 1; }
 
       - name: Archive site
         run: |
           if [ ! -d _site ]; then
-            echo "Missing _site directory." >&2
+            echo "Missing _site directory; Quarto render may have failed to produce output." >&2
             exit 1
           fi
           tar -czf site.tar.gz _site
