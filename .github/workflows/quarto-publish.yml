@@ -130,7 +130,7 @@ jobs:
       - name: Check for broken links with lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --accept 200,301,302 http://localhost:5528/
+          args: --verbose --no-progress --accept 200,301,302 --max-redirects 2 http://localhost:5528/
           fail: true
 
       - name: Stop server
