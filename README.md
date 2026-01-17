@@ -224,10 +224,10 @@ Preview the documentation.
 quarto preview
 ```
 
-Check for broken links in the rendered site (requires `_site` directory from `quarto render`).
+Check for broken links in the source documentation with [Lychee](https://lychee.cli.rs/).
 
 ```bash
-npm run deadlink-check
+npm run lychee-check
 ```
 
 ## Support

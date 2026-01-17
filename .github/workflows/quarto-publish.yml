@@ -97,31 +97,13 @@ jobs:
         with:
           path: _site
 
-  deadlinkcheck:
-    name: Download Artifacts and Check for Dead Links
-    runs-on: ubuntu-latest
-    needs: build-optimize
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v5
-
-      - name: Download Built Artifacts
-        uses: actions/download-artifact@v5
-        with:
-          name: built-site
-          path: _site
-
-      - name: Check for broken links
-        run: .github/scripts/deadlink-check.sh
-
   deploy:
     name: Deploy
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: [build-optimize, deadlinkcheck]
+    needs: [build-optimize]
     if: github.event_name != 'pull_request'
 
     steps:
