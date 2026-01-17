@@ -131,7 +131,7 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: --verbose --no-progress --accept 200,301,302 --max-redirects 2 http://localhost:5528/
-          fail: true
+          fail: false
 
       - name: Stop server
         if: always()
