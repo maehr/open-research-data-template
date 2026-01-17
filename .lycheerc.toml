@@ -22,8 +22,5 @@ cache = true
 # Cache max age (how old entries are considered fresh)
 max_cache_age = "7d"
 
-# User agent for requests
-user_agent = "lychee/0.22"
-
 # Accept status codes: 100-103 (informational), 200-299 (success), 429 (rate limit), 503 (unavailable) as non-blocking
 accept = ["100..=103", "200..=299", "429", "503"]

@@ -226,6 +226,14 @@ quarto preview
 
 Check for broken links in the source documentation with [Lychee](https://lychee.cli.rs/).
 
+Lychee is a Rust-based CLI tool. Install it first:
+
+- macOS: `brew install lychee`
+- Linux: `cargo install lychee`
+- Other: See [lychee.cli.rs](https://lychee.cli.rs/installing/)
+
+Then run the link check:
+
 ```bash
 npm run lychee-check
 ```

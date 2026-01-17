@@ -23,8 +23,8 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: .lycheecache
-          key: cache-lychee-${{ github.sha }}
-          restore-keys: cache-lychee-
+          key: cache-lychee-${{ github.ref }}-${{ hashFiles('.lycheerc.toml') }}
+          restore-keys: cache-lychee-${{ github.ref }}-
 
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
