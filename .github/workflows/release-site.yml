@@ -1,0 +1,56 @@
+on:
+  release:
+    types:
+      - published
+
+name: Build and Upload Release Site
+
+permissions:
+  contents: write
+
+jobs:
+  build-release-site:
+    name: Build and Upload Release Site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: renv
+      - name: Setup renv
+        uses: r-lib/actions/setup-renv@v2
+
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
+
+      - name: JamPack Optimization
+        run: |
+          npx @divriots/jampack ./_site || { echo "JamPack optimization failed; check the previous command output for details." >&2; exit 1; }
+
+      - name: Archive site
+        run: |
+          if [ ! -d _site ]; then
+            echo "Missing _site directory; Quarto render did not produce output." >&2
+            exit 1
+          fi
+          tar -czf site.tar.gz _site
+
+      - name: Upload site archive to release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ github.event.release.tag_name }}" site.tar.gz --clobber
