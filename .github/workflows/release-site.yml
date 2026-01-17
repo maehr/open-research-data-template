@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Overwrite _quarto.yml
-        if: github.repository == 'maehr/open-research-data-template'
+        if: github.event.repository.is_template == true
         run: |
           cp .github/_quarto.yml _quarto.yml
 
@@ -44,10 +44,14 @@ jobs:
 
       - name: JamPack Optimization
         run: |
-          npx @divriots/jampack ./_site
+          npx @divriots/jampack ./_site || { echo "JamPack optimization failed." >&2; exit 1; }
 
       - name: Archive site
         run: |
+          if [ ! -d _site ]; then
+            echo "Missing _site directory." >&2
+            exit 1
+          fi
           tar -czf site.tar.gz _site
 
       - name: Upload site archive to release
