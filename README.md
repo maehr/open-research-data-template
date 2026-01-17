@@ -2,7 +2,7 @@
 
 **Transforming research documentation from static afterthought into living, executable environments.**
 
-This template provides an infrastructure for documenting, publishing, and archiving research data in line with the principles of [FAIR](https://www.go-fair.org/fair-principles/) and open science. It is independent of data type or format and implements best practices as outlined in [The Turing Way](https://the-turing-way.netlify.app/). Core components include automated release management, integrated archiving with [Zenodo](https://zenodo.org/), structured documentation via [Quarto](https://quarto.org/), and long-term accessibility through [GitHub Pages](https://pages.github.com/).
+This template provides an infrastructure for documenting, publishing, and archiving research data in line with the principles of [FAIR](https://www.go-fair.org/fair-principles/) and open science. It is independent of data type or format and implements best practices as outlined in [The Turing Way](https://book.the-turing-way.org/). Core components include automated release management, integrated archiving with [Zenodo](https://zenodo.org/), structured documentation via [Quarto](https://quarto.org/), and long-term accessibility through [GitHub Pages](https://pages.github.com/).
 
 [![GitHub issues](https://img.shields.io/github/issues/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/issues)
 [![GitHub forks](https://img.shields.io/github/forks/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/network)
@@ -35,15 +35,15 @@ Conventional data publication as static supplementary files offers limited repro
 
 - Citable via [DOI](https://www.doi.org/) and [CITATION.cff](https://citation-file-format.github.io/)
 - Automatic long-term archiving with [Zenodo](https://zenodo.org/)
-- Licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
+- Licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed) according to [The Turing Way](https://book.the-turing-way.org/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
 - Template for reporting data issues via `github/ISSUE_TEMPLATE/data_issue_report.yml`
 
 ### Documentation
 
-- `README.md` following [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-readme)
+- `README.md` following [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-readme/)
 - `CHANGELOG.md` following [keepachangelog.com](https://keepachangelog.com/)
 - Automated changelog generation with [git-cliff](https://github.com/orhun/git-cliff)
-- Machine-readable project metadata in `package.json` with [npm](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
+- Machine-readable project metadata in `package.json` with [npm](https://docs.npmjs.com/cli/v7/configuring-npm/package-json/)
 - Accessible documentation with [GitHub Pages](https://docs.github.com/en/pages) and [Quarto](https://quarto.org/)
 
 ### Consistency
@@ -54,15 +54,15 @@ Conventional data publication as static supplementary files offers limited repro
 - R dependency management with [renv](https://rstudio.github.io/renv/)
 - Commit messages following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) enforced via [husky](https://github.com/typicode/husky)
 - Versioning following [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
-- Workflow based on [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) with [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
+- Workflow based on [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) with [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
 - Issue tracking via [issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
-- File and folder naming conventions following [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-storage.html#file-naming-conventions)
+- File and folder naming conventions following [The Turing Way](https://book.the-turing-way.org/reproducible-research/rdm/rdm-storage.html#file-naming-conventions)
 
 ### Security
 
 - `SECURITY.md` following [GitHub guidelines](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
-- Vulnerability monitoring with [GitHub Security Alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
-- Repository integrity enforced via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
+- Vulnerability monitoring with [GitHub Security Alerts](https://github.blog/news-insights/product-news/introducing-security-alerts-on-github/)
+- Repository integrity enforced via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
 
 ### Ethics
 
@@ -82,11 +82,11 @@ The template has been applied across domains including public history, political
 
 ### 📊 Reproducible Research Workflows
 
-| Project                                                                                                                                                                 | Preview                                                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**nordatlantisk-ft**](http://mtwente.github.io/nordatlantisk-ft/)<br>Voting records from the parliament of Denmark with complete data scraping and analysis pipeline   | <a href="http://mtwente.github.io/nordatlantisk-ft"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png" width="540px" alt=""></a> |
-| [**maxvogt-analysis**](https://mtwente.github.io/maxvogt-analysis/)<br>Multi-step data compilation workflow documentation                                               | <a href="https://mtwente.github.io/maxvogt-analysis"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png" width="540px" alt=""></a>       |
-| [**Modelling Marti**](https://mtwente.github.io/modelling-marti)<br>Topic modeling project with interactive visualizations and multimedia content as narrative elements | <a href="https://mtwente.github.io/modelling-marti"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png" width="540px" alt=""></a>         |
+| Project                                                                                                                                                                  | Preview                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**nordatlantisk-ft**](https://mtwente.github.io/nordatlantisk-ft/)<br>Voting records from the parliament of Denmark with complete data scraping and analysis pipeline   | <a href="https://mtwente.github.io/nordatlantisk-ft/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png" width="540px" alt=""></a> |
+| [**maxvogt-analysis**](https://mtwente.github.io/maxvogt-analysis/)<br>Multi-step data compilation workflow documentation                                                | <a href="https://mtwente.github.io/maxvogt-analysis/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png" width="540px" alt=""></a>        |
+| [**Modelling Marti**](https://mtwente.github.io/modelling-marti/)<br>Topic modeling project with interactive visualizations and multimedia content as narrative elements | <a href="https://mtwente.github.io/modelling-marti/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png" width="540px" alt=""></a>          |
 
 ### 🎓 Academic Events & Teaching
 
@@ -114,7 +114,7 @@ We recommend using **[GitHub Codespaces](https://github.com/features/codespaces)
 1. **[Use this template](https://github.com/new?template_name=open-research-data-template&template_owner=maehr)** for your project in a new repository on your GitHub account.
 
    <div align="center">
-     <img src="https://github.com/maehr/open-research-data-template/raw/main/.github/docs/assets/img_use.png" alt="Use the repository" style="width: 540px; margin: 1em 0;" />
+     <img src="https://raw.githubusercontent.com/maehr/open-research-data-template/main/.github/docs/assets/img_use.png" alt="Use the repository" style="width: 540px; margin: 1em 0;" />
    </div>
 
 2. Click the green **`<> Code`** button at the top right of this repository.
@@ -127,7 +127,7 @@ We recommend using **[GitHub Codespaces](https://github.com/features/codespaces)
    - ✅ Quarto
 
    <div align="center">
-     <img src="https://github.com/maehr/open-research-data-template/raw/main/.github/docs/assets/img_codespace.png" alt="Create Codespace" style="width: 540px; margin: 1em 0;" />
+     <img src="https://raw.githubusercontent.com/maehr/open-research-data-template/main/.github/docs/assets/img_codespace.png" alt="Create Codespace" style="width: 540px; margin: 1em 0;" />
    </div>
 
 4. Once the Codespace is ready, open a terminal and preview the documentation:
@@ -137,7 +137,7 @@ We recommend using **[GitHub Codespaces](https://github.com/features/codespaces)
    ```
 
    <div align="center">
-     <img src="https://github.com/maehr/open-research-data-template/raw/main/.github/docs/assets/img_terminal.png" alt="Terminal window showing command" style="width: 540px; margin: 1em 0;" />
+     <img src="https://raw.githubusercontent.com/maehr/open-research-data-template/main/.github/docs/assets/img_terminal.png" alt="Terminal window showing command" style="width: 540px; margin: 1em 0;" />
    </div>
 
 > **Note:** All dependencies (Node.js, Python, R, Quarto) are pre-installed in the Codespace.
