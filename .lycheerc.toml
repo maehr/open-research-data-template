@@ -1,0 +1,26 @@
+# Lychee configuration for link checking
+# https://lychee.cli.rs/configuration/
+
+# Exclude template placeholders from link checking
+exclude = ["USERNAME", "REPO_NAME", "ZENODO_RECORD", "GITHUB_REPO_ID", "FULLNAME", "\\[INSERT CONTACT METHOD\\]"]
+
+# Timeout for requests (seconds)
+timeout = 10
+
+# Maximum number of allowed retries before a link is declared dead
+max_retries = 2
+
+# Use compact output for CI
+format = "compact"
+
+# Don't show progress bar in CI
+no_progress = true
+
+# Enable caching for faster repeated runs
+cache = true
+
+# Cache max age (how old entries are considered fresh)
+max_cache_age = "7d"
+
+# Accept status codes: 100-103 (informational), 200-299 (success), 429 (rate limit), 503 (unavailable) as non-blocking
+accept = ["100..=103", "200..=299", "429", "503"]

@@ -4,6 +4,9 @@
 **/*.quarto_ipynb
 _site/
 
+# Lychee link checker cache
+.lycheecache/
+
 # Jampack
 .jampack/
 
