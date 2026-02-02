@@ -35,7 +35,7 @@ Migrate to **prek** which would provide:
    - Better command-line interface (`prek run --directory`, `prek run --last-commit`, etc.)
    - Built-in support for monorepos/workspaces
 
-## Type of Pull Request
+## Type of Issue
 
 - [x] Enhancement
 

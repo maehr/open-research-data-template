@@ -12,7 +12,7 @@ This file contains a comprehensive feature request to replace Husky with prek.
 
 **To create the issue:**
 
-1. Go to https://github.com/maehr/open-research-data-template/issues/new/choose
+1. Go to your repository's issues page (e.g., `https://github.com/USERNAME/REPO_NAME/issues/new/choose`)
 2. Select "🛠️ Request New Feature"
 3. Copy the content from `feature-request-prek.md`
 4. Fill in the form fields using the content from the markdown file:
