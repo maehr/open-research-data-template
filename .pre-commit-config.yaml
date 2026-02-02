@@ -5,5 +5,4 @@ repos:
         name: Prettier check
         entry: npm run check
         language: system
-        pass_filenames: false
         stages: [pre-commit]

@@ -111,7 +111,7 @@ We recommend using **[GitHub Codespaces](https://github.com/features/codespaces)
 
 ### Prek Git Hooks
 
-This template uses [Prek](https://prek.j178.dev/) for managing Git hooks (as a drop-in replacement for pre-commit). To install hooks locally:
+This template uses [Prek](https://prek.j178.dev/) for managing Git hooks with a pre-commit-compatible configuration. To install hooks locally:
 
 ```bash
 npm install
