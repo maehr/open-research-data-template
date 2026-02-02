@@ -8,16 +8,16 @@
 		"check": "prettier --check .",
 		"commit": "cz",
 		"format": "prettier --write .",
-		"prepare": "husky",
+		"prepare": "prek install",
 		"changelog": "npm exec git-cliff -- --config cliff.toml",
 		"lychee-check": "lychee --config .lycheerc.toml './*.md' './*.qmd' './documentation/**/*.md'"
 	},
 	"devDependencies": {
+		"@j178/prek": "^0.3.1",
 		"commitizen": "^4.3.1",
 		"cz": "^1.8.2",
 		"cz-conventional-changelog": "^3.3.0",
 		"git-cliff": "^2.10.1",
-		"husky": "^9.1.7",
 		"prettier": "^3.6.2"
 	},
 	"type": "module",

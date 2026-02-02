@@ -14,6 +14,8 @@ Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in
 3. Ensure all code is properly formatted and linted:
    - Run `npm run format` to format general files with Prettier
    - Run `npm run check` to verify formatting
+   - Install Prek hooks with `npm run prepare`
+   - Run `prek run --all-files` to run all hooks locally (or `npx @j178/prek run --all-files` if Prek isn't installed globally)
    - Run `uv run ruff format` to format Python code
    - Run `uv run ruff check` to lint Python code
    - Run `uv run ty check` to type check Python code (if applicable)

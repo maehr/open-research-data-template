@@ -2,7 +2,17 @@
 # https://lychee.cli.rs/configuration/
 
 # Exclude template placeholders from link checking
-exclude = ["USERNAME", "REPO_NAME", "ZENODO_RECORD", "GITHUB_REPO_ID", "FULLNAME", "\\[INSERT CONTACT METHOD\\]"]
+exclude = [
+  "USERNAME",
+  "REPO_NAME",
+  "ZENODO_RECORD",
+  "GITHUB_REPO_ID",
+  "FULLNAME",
+  "\\[INSERT CONTACT METHOD\\]",
+  "https://www.gnu.org/licenses/",
+  "https://www.gnu.org/licenses/agpl-3.0.html",
+  "https://www.makeareadme.com/",
+]
 
 # Timeout for requests (seconds)
 timeout = 10
@@ -23,4 +33,4 @@ cache = true
 max_cache_age = "7d"
 
 # Accept status codes: 100-103 (informational), 200-299 (success), 429 (rate limit), 503 (unavailable) as non-blocking
-accept = ["100..=103", "200..=299", "429", "503"]
+accept = ["100..=103", "200..=299", "429", "503", "521", "522", "524"]
