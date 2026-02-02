@@ -70,7 +70,7 @@ Place new files accordingly.
 
 1. `npm install <package>`
 2. Commit `package.json` and `package-lock.json`
-3. If needed: `npm run prepare` to reinit Husky hooks
+3. If needed: `npm run prepare` to install Prek git hooks
 
 ### Python (uv)
 
@@ -150,7 +150,7 @@ Place new files accordingly.
 | `lintr::lint_dir(".")`    | Lint R code                                      |
 | `npm run commit`          | Conventional Commits wizard                      |
 | `npm run changelog`       | Generate changelog from commits                  |
-| `npm run prepare`         | Setup Husky git hooks                            |
+| `npm run prepare`         | Setup Prek git hooks                             |
 | `uv sync`                 | Sync Python dependencies                         |
 | `renv::restore()`         | Restore R environment                            |
 | `quarto render`           | **Production render** (avoid in agent sessions)  |

@@ -52,7 +52,7 @@ Conventional data publication as static supplementary files offers limited repro
 - Python type checking with [ty](https://github.com/astral-sh/ty)
 - Python dependency management with [uv](https://github.com/astral-sh/uv)
 - R dependency management with [renv](https://rstudio.github.io/renv/)
-- Commit messages following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) enforced via [husky](https://github.com/typicode/husky)
+- Commit messages following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) enforced via [prek](https://prek.j178.dev/)
 - Versioning following [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 - Workflow based on [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) with [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
 - Issue tracking via [issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
@@ -108,6 +108,27 @@ The template has been applied across domains including public history, political
 We recommend using **[GitHub Codespaces](https://github.com/features/codespaces)** for a reproducible setup.
 
 ## Getting Started
+
+### Prek Git Hooks
+
+This template uses [Prek](https://prek.j178.dev/) for managing Git hooks (as a drop-in replacement for pre-commit). To install hooks locally:
+
+```bash
+npm install
+npm run prepare
+```
+
+To run all hooks on demand:
+
+```bash
+prek run --all-files
+```
+
+If Prek is not installed globally, you can run:
+
+```bash
+npx @j178/prek run --all-files
+```
 
 ### For Most Users: Reproducible Setup with GitHub Codespaces
 
