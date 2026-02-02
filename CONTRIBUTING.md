@@ -21,11 +21,7 @@ Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in
    - Run `uv run ty check` to type check Python code (if applicable)
    - Run `styler::style_dir(".")` in R to format R code
    - Run `lintr::lint_dir(".")` in R to lint R code
-4. Migrating from Husky to Prek:
-   - Remove any existing `.husky` folder from older checkouts.
-   - Run `npm install` to install the Prek dependency.
-   - Run `npm run prepare` to install the new Prek hooks.
-5. Increase the version numbers in any examples files and the README.md to the new version that this
+4. Increase the version numbers in any examples files and the README.md to the new version that this
    Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-6. You may merge the Pull Request in once you have the sign-off of two other developers, or if you
+5. You may merge the Pull Request in once you have the sign-off of two other developers, or if you
    do not have permission to do that, you may request the second reviewer to merge it for you.
