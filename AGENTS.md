@@ -105,6 +105,8 @@ Place new files accordingly.
 - Run and validate scripts in `src/`, `build/`, and `analysis/`
 - Confirm `.github/workflows/` still pass for changes
 
+**Archiving note**: CI artifacts are short-lived and for debugging only. GitHub Pages is a delivery channel. Long-term preservation uses GitHub Releases (site archive) and Zenodo for DOI-backed archival.
+
 ## 9) GitHub Features and Security (Project instances)
 
 - **Enable GitHub Security Alerts** and Dependabot updates (Repository → Security).

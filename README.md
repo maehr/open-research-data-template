@@ -38,6 +38,13 @@ Conventional data publication as static supplementary files offers limited repro
 - Licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
 - Template for reporting data issues via `github/ISSUE_TEMPLATE/data_issue_report.yml`
 
+### Archiving and Artifacts
+
+- CI artifacts are short-lived and intended for debugging workflows, not preservation
+- GitHub Pages is a delivery channel for the site, not a long-term archive
+- Releases include a `site.tar.gz` build artifact for long-term access to the rendered site
+- Zenodo integration provides DOI-backed archival of releases
+
 ### Documentation
 
 - `README.md` following [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-readme)

@@ -19,6 +19,7 @@ Complete the following steps after creating your project from this template to c
 - [ ] **Set Up Zenodo Integration**: Follow the [GitHub guide for Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to enable automatic archiving and obtain a DOI for your repository.
 - [ ] **Set Up Zenodo DOI Badge**: Replace `GITHUB_REPO_ID` with the repository ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (look for the `id` field in the JSON response). The badge will automatically display your Zenodo DOI after the first release.
 - [ ] **Add Zenodo DOI to README**: After creating your first release and obtaining a Zenodo DOI, replace `ZENODO_RECORD` in README.md with your actual Zenodo record number (found in your Zenodo deposit URL).
+- [ ] **Create a Release Archive**: Publish a GitHub Release so the workflow attaches `site.tar.gz` for long-term access to the rendered site.
 - [ ] **Add Favicons**: Generate and add favicon files to the root directory using [favicon.io](https://favicon.io/) or a similar service. Include `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, and Android icons.
 - [ ] **Address TODO Comments**: Search for `TODO` comments throughout all project files using `grep -r "TODO" .` and complete or remove each task as appropriate for your project.
 - [ ] **Finalize README**: Once all customization is complete, delete the template README.md and rename `README.template.md` to `README.md` to make it your project's main README.

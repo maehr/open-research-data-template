@@ -49,6 +49,13 @@ _Zenodo_ provides an [API (REST & OAI-PMH)](https://developers.zenodo.org/) to a
 curl -i https://zenodo.org/api/records/ZENODO_RECORD
 ```
 
+## Archiving and Artifacts
+
+- CI artifacts are short-lived and intended for debugging workflows, not preservation
+- GitHub Pages is a delivery channel for the site, not a long-term archive
+- Releases include a `site.tar.gz` build artifact for long-term access to the rendered site
+- Zenodo integration provides DOI-backed archival of releases
+
 ## Support
 
 This project is maintained by [@USERNAME](https://github.com/USERNAME). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
