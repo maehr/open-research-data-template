@@ -5,4 +5,40 @@ repos:
         name: Prettier check
         entry: npm run check
         language: system
+        types_or: [yaml, json, markdown, html, css, scss, javascript, ts]
+        stages: [pre-commit]
+
+      - id: ruff-format
+        name: Ruff Format
+        entry: bash -c 'if command -v uv >/dev/null 2>&1 && uv run ruff --version >/dev/null 2>&1; then uv run ruff format "$@"; else exit 0; fi' --
+        language: system
+        types: [python]
+        stages: [pre-commit]
+
+      - id: ruff-lint
+        name: Ruff Lint
+        entry: bash -c 'if command -v uv >/dev/null 2>&1 && uv run ruff --version >/dev/null 2>&1; then uv run ruff check "$@"; else exit 0; fi' --
+        language: system
+        types: [python]
+        stages: [pre-commit]
+
+      - id: ty-check
+        name: Ty Check
+        entry: bash -c 'if command -v uv >/dev/null 2>&1 && uv run ty --version >/dev/null 2>&1; then uv run ty check "$@"; else exit 0; fi' --
+        language: system
+        types: [python]
+        stages: [pre-commit]
+
+      - id: r-format
+        name: R Format
+        entry: bash -c 'if command -v Rscript >/dev/null 2>&1 && Rscript -e "suppressPackageStartupMessages(stopifnot(requireNamespace('\''styler'\'', quietly=TRUE)))" >/dev/null 2>&1; then Rscript -e "styler::style_file(commandArgs(TRUE))" "$@"; else exit 0; fi' --
+        language: system
+        types: [r]
+        stages: [pre-commit]
+
+      - id: r-lint
+        name: R Lint
+        entry: bash -c 'if command -v Rscript >/dev/null 2>&1 && Rscript -e "suppressPackageStartupMessages(stopifnot(requireNamespace('\''lintr'\'', quietly=TRUE)))" >/dev/null 2>&1; then Rscript -e "for (f in commandArgs(TRUE)) print(lintr::lint(f))" "$@"; else exit 0; fi' --
+        language: system
+        types: [r]
         stages: [pre-commit]
