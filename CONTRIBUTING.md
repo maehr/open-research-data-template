@@ -5,6 +5,14 @@ email, or any other method with the owners of this repository before making a ch
 
 Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
 
+## Environment Setup
+
+This project uses an `example.env` file for local configuration. To set up your environment:
+
+1. Copy `example.env` to `.env`: `cp example.env .env`
+2. Fill in the values in `.env` with your actual configuration
+3. `.env` is git-ignored and will not be committed
+
 ## Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a

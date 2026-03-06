@@ -55,7 +55,6 @@ Aligned with _The Turing Way_ advanced structure:
 
 - `analysis/` — notebooks and analysis scripts
 - `assets/` — images and media
-- `build/` — data build/processing scripts
 - `data/` — datasets (FAIR-aligned)
 - `documentation/` — extended docs beyond README
 - `project-management/` — planning and minutes
@@ -102,7 +101,7 @@ Place new files accordingly.
 - `styler::style_dir(".")` for R formatting
 - `lintr::lint_dir(".")` for R linting
 - `quarto preview` to detect rendering issues
-- Run and validate scripts in `src/`, `build/`, and `analysis/`
+- Run and validate scripts in `src/` and `analysis/`
 - Confirm `.github/workflows/` still pass for changes
 
 ## 9) GitHub Features and Security (Project instances)
