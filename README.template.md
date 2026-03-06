@@ -15,7 +15,6 @@ The structure of this repository follows the [Advanced Structure for Data Analys
 
 - `analysis/`: scripts and notebooks used to analyze the data
 - `assets/`: images, logos, etc. used in the README and other documentation
-- `build/`: scripts and notebooks used to build the data
 - `data/`: data files
 - `documentation/`: documentation for the data and the repository
 - `project-management/`: project management documents (e.g., meeting notes, project plans, etc.)

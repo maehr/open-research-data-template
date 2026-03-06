@@ -1,43 +1,43 @@
 {
-	"name": "Open-Research-Data Template",
-	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
-	"remoteUser": "codespace",
-	"features": {
-		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
-			"version": "4.5.2",
-			"vscodeRSupport": "basic",
-			"installREnv": "true"
-		},
-		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
-			"version": "release",
-			"installTinyTex": "true",
-			"installChromium": "false"
-		},
-		"ghcr.io/va-h/devcontainers-features/uv:1": {
-			"version": "latest",
-			"shellautocompletion": "true"
-		}
-	},
-	"postCreateCommand": "uv sync && Rscript -e 'renv::restore()'",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"quarto.quarto",
-				"REditorSupport.r",
-				"astral-sh.uv",
-				"astral-sh.ty",
-				"ms-toolsai.jupyter",
-				"Posit.air-vscode"
-			],
-			"settings": {
-				"r.rterm.option": ["--no-save", "--no-restore-data", "--quiet"],
-				"r.useRenvLibPath": true,
-				"[r]": {
-					"editor.defaultFormatter": "Posit.air-vscode",
-					"editor.formatOnSave": true
-				}
-			},
-			"openFiles": ["README.md", "README.template.md"]
-		}
-	}
+  "name": "Open-Research-Data Template",
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "remoteUser": "codespace",
+  "features": {
+    "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+      "version": "4.5.2",
+      "vscodeRSupport": "basic",
+      "installREnv": "true"
+    },
+    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
+      "version": "release",
+      "installTinyTex": "true",
+      "installChromium": "false"
+    },
+    "ghcr.io/va-h/devcontainers-features/uv:1": {
+      "version": "latest",
+      "shellautocompletion": "true"
+    }
+  },
+  "postCreateCommand": "uv sync && Rscript -e 'renv::restore()'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "quarto.quarto",
+        "REditorSupport.r",
+        "astral-sh.uv",
+        "astral-sh.ty",
+        "ms-toolsai.jupyter",
+        "Posit.air-vscode"
+      ],
+      "settings": {
+        "r.rterm.option": ["--no-save", "--no-restore-data", "--quiet"],
+        "r.useRenvLibPath": true,
+        "[r]": {
+          "editor.defaultFormatter": "Posit.air-vscode",
+          "editor.formatOnSave": true
+        }
+      },
+      "openFiles": ["README.md", "README.template.md"]
+    }
+  }
 }

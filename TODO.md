@@ -21,6 +21,7 @@ Complete the following steps after creating your project from this template to c
 - [ ] **Add Zenodo DOI to README**: After creating your first release and obtaining a Zenodo DOI, replace `ZENODO_RECORD` in README.md with your actual Zenodo record number (found in your Zenodo deposit URL).
 - [ ] **Add Favicons**: Generate and add favicon files to the root directory using [favicon.io](https://favicon.io/) or a similar service. Include `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, and Android icons.
 - [ ] **Address TODO Comments**: Search for `TODO` comments throughout all project files using `grep -r "TODO" .` and complete or remove each task as appropriate for your project.
+- [ ] **Update Citation File**: Edit `CITATION.cff` with your project's citation metadata (authors, title, version, DOI, and repository URL). See the [Citation File Format guide](https://citation-file-format.github.io/) for details.
 - [ ] **Finalize README**: Once all customization is complete, delete the template README.md and rename `README.template.md` to `README.md` to make it your project's main README.
 - [ ] **Format Files**: Run `npm run format` to apply consistent formatting to all files using Prettier before committing changes.
 - [ ] **Commit Changes**: Use `npm run commit` to create a properly formatted commit message following Conventional Commits standards (e.g., "chore: initial project setup").
@@ -31,8 +32,9 @@ Complete the following steps after creating your project from this template to c
 
 ## Optional Enhancements
 
-- [ ] **Add Citation File**: Create a `CITATION.cff` file with your project's citation metadata using the [Citation File Format guide](https://citation-file-format.github.io/). Include authors, title, version, DOI, and repository URL.
 - [ ] **Add Zenodo Metadata File**: Create a `.zenodo.json` file to control metadata sent to Zenodo during archival. Include custom creators, contributors, keywords, and license information. See [Zenodo developer documentation](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release) for schema details.
+
+- [ ] **Review Project-Management Files**: Populate or remove the files in `project-management/` before publishing. These are placeholder templates for meeting notes and project plans.
 
 ## Verification Steps
 
