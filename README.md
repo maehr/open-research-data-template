@@ -67,7 +67,7 @@ Conventional data publication as static supplementary files offers limited repro
 ### Ethics
 
 - `CODE_OF_CONDUCT.md` following the [Contributor Covenant](https://www.contributor-covenant.org/)
-- Supportive first interactions via [Greetings](https://github.com/actions/starter-workflows/blob/main/automation/greetings.yml)
+
 
 ## Selected Use Cases
 
