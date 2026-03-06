@@ -68,7 +68,6 @@ Conventional data publication as static supplementary files offers limited repro
 
 - `CODE_OF_CONDUCT.md` following the [Contributor Covenant](https://www.contributor-covenant.org/)
 
-
 ## Selected Use Cases
 
 The template has been applied across domains including public history, political science, digital humanities, and teaching infrastructures.
