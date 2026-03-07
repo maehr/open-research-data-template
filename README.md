@@ -243,7 +243,7 @@ Run the wizard to write meaningful commit messages.
 npm run commit
 ```
 
-For agent workflows, prefer one focused commit per logical change so `git-cliff` can turn the Conventional Commit subject into a short changelog line without extra cleanup.
+For agent workflows, prefer one focused commit per logical change so `git-cliff` can turn the Conventional Commit subject into a short changelog line without extra cleanup. Multi-line commit messages are now truncated to their first line in changelog output, so keeping the subject specific is what matters most.
 
 Run the wizard to create a CHANGELOG.md.
 
