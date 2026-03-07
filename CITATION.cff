@@ -9,5 +9,5 @@ authors:
     email: '[INSERT CONTACT METHOD]'
 repository-code: 'https://github.com/USERNAME/REPO_NAME'
 license: AGPL-3.0
-version: 0.1.0
+version: 1.0.0
 abstract: SHORT_DESCRIPTION

@@ -25,3 +25,5 @@ declined, etc.
 -->
 
 To report a security issue, please email [INSERT CONTACT METHOD] with a description of the issue, the steps you took to create the issue, affected versions, and, if known, mitigations for the issue. This project follows a 90 day disclosure timeline.
+
+If you use a coding agent while investigating a security issue, keep the initial report private. Agents can help reproduce the bug, prepare a minimal fix, update documentation, and run local validation, but maintainers should handle the private disclosure and the final release decision.

@@ -70,37 +70,39 @@ Conventional data publication as static supplementary files offers limited repro
 
 ## Selected Use Cases
 
-The template has been applied across domains including public history, political science, digital humanities, and teaching infrastructures.
+The template has been applied across domains including public history, political science, digital humanities, and teaching infrastructures. The examples below come from the
+["One Template to Rule Them All"](https://github.com/maehr/one-template-to-rule-them-all/blob/e75ec63a5a92ddb126f484571b353f701fffd916/paper/index.qmd)
+presentation and now call out the parts that coding agents can help automate.
 
 ### 🔬 Research Data Documentation
 
-| Project                                                                                                                                                                            | Preview                                                                                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Stadt.Geschichte.Basel RDM**](https://dokumentation.stadtgeschichtebasel.ch/)<br>Project documentation platform combining research data management with public history outreach | <a href="https://dokumentation.stadtgeschichtebasel.ch/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch.png" width="540px" alt=""></a>                         |
-| [**sgb-figures**](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/)<br>Reproducible code and annotated data for publication-ready visualisations of research data        | <a href="https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch_sgb_figures.png" width="540px" alt=""></a> |
+| Project                                                                                                                                                                                                                                                                         | Preview                                                                                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Stadt.Geschichte.Basel RDM**](https://dokumentation.stadtgeschichtebasel.ch/)<br>Project documentation platform combining research data management with public history outreach; agents can update metadata, maintain setup checklists, and validate publication-ready docs. | <a href="https://dokumentation.stadtgeschichtebasel.ch/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch.png" width="540px" alt=""></a>                         |
+| [**sgb-figures**](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/)<br>Reproducible code and annotated data for publication-ready visualisations of research data; agents can keep captions, changelog entries, and formatting in sync with analytical updates.       | <a href="https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch_sgb_figures.png" width="540px" alt=""></a> |
 
 ### 📊 Reproducible Research Workflows
 
-| Project                                                                                                                                                                 | Preview                                                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**nordatlantisk-ft**](http://mtwente.github.io/nordatlantisk-ft/)<br>Voting records from the parliament of Denmark with complete data scraping and analysis pipeline   | <a href="http://mtwente.github.io/nordatlantisk-ft"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png" width="540px" alt=""></a> |
-| [**maxvogt-analysis**](https://mtwente.github.io/maxvogt-analysis/)<br>Multi-step data compilation workflow documentation                                               | <a href="https://mtwente.github.io/maxvogt-analysis"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png" width="540px" alt=""></a>       |
-| [**Modelling Marti**](https://mtwente.github.io/modelling-marti)<br>Topic modeling project with interactive visualizations and multimedia content as narrative elements | <a href="https://mtwente.github.io/modelling-marti"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png" width="540px" alt=""></a>         |
+| Project                                                                                                                                                                                                                                                        | Preview                                                                                                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**nordatlantisk-ft**](http://mtwente.github.io/nordatlantisk-ft/)<br>Voting records from the parliament of Denmark with complete data scraping and analysis pipeline; agents can scaffold scrapers, refresh documentation, and run formatting before release. | <a href="http://mtwente.github.io/nordatlantisk-ft"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png" width="540px" alt=""></a> |
+| [**maxvogt-analysis**](https://mtwente.github.io/maxvogt-analysis/)<br>Multi-step data compilation workflow documentation; agents can keep processing notes, metadata edits, and changelog updates aligned across the pipeline.                                | <a href="https://mtwente.github.io/maxvogt-analysis"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png" width="540px" alt=""></a>       |
+| [**Modelling Marti**](https://mtwente.github.io/modelling-marti)<br>Topic modeling project with interactive visualizations and multimedia content as narrative elements; agents can automate notebook-to-doc updates, link checks, and release preparation.    | <a href="https://mtwente.github.io/modelling-marti"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png" width="540px" alt=""></a>         |
 
 ### 🎓 Academic Events & Teaching
 
-| Project                                                                                                                                            | Preview                                                                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Digital History Switzerland 2024**](https://digihistch24.github.io/)<br>Conference website with program, abstracts, and participant information | <a href="https://digihistch24.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/digihistch24.png" width="540px" alt=""></a>                                |
-| [**Digital Humanities Bern**](https://dhbern.github.io/)<br>Department hub featuring news, events, and course information                          | <a href="https://dhbern.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dhbern.png" width="540px" alt=""></a>                                            |
-| [**Decoding Inequality 2025**](https://dhbern.github.io/decoding-inequality-2025/)<br>University course website with syllabus and materials        | <a href="https://dhbern.github.io/decoding-inequality-2025/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/decoding_inequality_2025.png" width="540px" alt=""></a> |
+| Project                                                                                                                                                                                                                                           | Preview                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Digital History Switzerland 2024**](https://digihistch24.github.io/)<br>Conference website with program, abstracts, and participant information; agents can batch-edit schedules, validate links, and keep publication assets consistent.      | <a href="https://digihistch24.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/digihistch24.png" width="540px" alt=""></a>                                |
+| [**Digital Humanities Bern**](https://dhbern.github.io/)<br>Department hub featuring news, events, and course information; agents can maintain navigation, announcement pages, and formatting checks for multi-page sites.                        | <a href="https://dhbern.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dhbern.png" width="540px" alt=""></a>                                            |
+| [**Decoding Inequality 2025**](https://dhbern.github.io/decoding-inequality-2025/)<br>University course website with syllabus and materials; agents can help update teaching materials, sync metadata, and prepare changelog-ready release notes. | <a href="https://dhbern.github.io/decoding-inequality-2025/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/decoding_inequality_2025.png" width="540px" alt=""></a> |
 
 ### 📚 Living Publications & Handbooks
 
-| Project                                                                                                                                                                              | Preview                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Non-discriminatory Metadata**](https://maehr.github.io/diskriminierungsfreie-metadaten/)<br>Comprehensive handbook that functions as both documentation and scholarly publication | <a href="https://maehr.github.io/diskriminierungsfreie-metadaten/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png" width="540px" alt=""></a> |
-| [**One Template to Rule Them All**](https://maehr.github.io/one-template-to-rule-them-all/)<br>This repository's own presentation site, demonstrating meta-application               | <a href="https://maehr.github.io/one-template-to-rule-them-all/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/one_template_to_rule_them_all.png" width="540px" alt=""></a>     |
+| Project                                                                                                                                                                                                                                                                    | Preview                                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Non-discriminatory Metadata**](https://maehr.github.io/diskriminierungsfreie-metadaten/)<br>Comprehensive handbook that functions as both documentation and scholarly publication; agents can keep long-form docs, citations, and accessibility checks aligned.         | <a href="https://maehr.github.io/diskriminierungsfreie-metadaten/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png" width="540px" alt=""></a> |
+| [**One Template to Rule Them All**](https://maehr.github.io/one-template-to-rule-them-all/)<br>This repository's own presentation site, demonstrating meta-application; agents can reuse the same setup, validation, and publication workflow documented in this template. | <a href="https://maehr.github.io/one-template-to-rule-them-all/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/one_template_to_rule_them_all.png" width="540px" alt=""></a>     |
 
 ## Installation
 
@@ -197,6 +199,15 @@ uv run quarto preview
 
 After creating your project from this template (either via Codespaces or local setup), follow the comprehensive checklist in [TODO.md](TODO.md) to customize and finalize your project. The checklist includes essential setup tasks, optional enhancements, and verification steps to ensure your research data repository is properly configured.
 
+If you want a coding agent to help, point it to [.github/copilot-instructions.md](.github/copilot-instructions.md) first and then ask it to work through the checklist items marked as agent-assisted.
+
+| Setup step                                                            | Typical owner                                  | References                                                                                        |
+| --------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Replace placeholders, customize metadata, and update documentation    | 🤖 Agent-assisted                              | [TODO.md](TODO.md), [.github/copilot-instructions.md](.github/copilot-instructions.md)            |
+| Run formatting, changelog, preview, and validation commands           | 🤖 Agent-assisted                              | [Use](#use), [documentation/agent-release-workflow.qmd](documentation/agent-release-workflow.qmd) |
+| Enable GitHub Security, Branch Protection, Pages, and Zenodo settings | 👤 Manual in GitHub/Zenodo                     | [TODO.md](TODO.md)                                                                                |
+| Approve the final release and publish production artifacts            | 🤝 Shared: agent prepares, maintainer confirms | [documentation/agent-release-workflow.qmd](documentation/agent-release-workflow.qmd)              |
+
 ## Use
 
 Check that all files are properly formatted.
@@ -238,6 +249,12 @@ Run the wizard to create a CHANGELOG.md.
 npm run changelog
 ```
 
+If your clone is shallow, fetch the full history first so the generated changelog reflects the full evolution of the template:
+
+```bash
+git fetch --tags --unshallow origin
+```
+
 Preview the documentation.
 
 ```bash
@@ -273,7 +290,18 @@ This project is maintained by [@maehr](https://github.com/maehr). Please underst
 
 ## Roadmap
 
-There are currently no changes planned.
+### v1.0.0 release readiness
+
+- [x] Document agent-assisted setup, validation, and release preparation workflows
+- [x] Ship changelog guidance that is based on commit history and ready for automation
+- [x] Preserve rendered HTML documentation in release assets for Zenodo archival
+- [ ] Publish the first stable release and record the resulting DOI metadata
+
+### Post-v1.0.0
+
+- [ ] Expand agent recipes for project-specific metadata, showcase updates, and support tasks
+- [ ] Add smoke tests for preview and template customization paths
+- [ ] Grow the showcase gallery with more agent-assisted research data projects
 
 ## Contributing
 

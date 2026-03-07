@@ -5,13 +5,11 @@ email, or any other method with the owners of this repository before making a ch
 
 Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
 
-## Environment Setup
+## Local and Agent Setup
 
-This project uses an `example.env` file for local configuration. To set up your environment:
+Use [GitHub Codespaces](https://github.com/features/codespaces) or follow the local setup steps in [README.md](README.md). For coding agents, start with [.github/copilot-instructions.md](.github/copilot-instructions.md) so repository-specific rules are applied before changes are made.
 
-1. Copy `example.env` to `.env`: `cp example.env .env`
-2. Fill in the values in `.env` with your actual configuration
-3. `.env` is git-ignored and will not be committed
+Agents can usually handle documentation edits, placeholder replacement, formatting, changelog generation, and preview preparation. Maintainers should still personally review any GitHub or Zenodo settings changes and any production publication steps.
 
 ## Pull Request Process
 

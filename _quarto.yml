@@ -36,6 +36,8 @@ website:
         contents:
           - text: Changelog
             href: CHANGELOG.md
+          - text: Agent guide
+            href: documentation/agent-release-workflow.qmd
           - text: Code of Conduct
             href: CODE_OF_CONDUCT.md
           - text: Contributing
