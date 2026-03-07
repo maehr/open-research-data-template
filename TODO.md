@@ -2,8 +2,6 @@
 
 Complete the following steps after creating your project from this template to customize and finalize your project. Each item is designed to be clear and actionable for both human users and AI assistants. If you are using GitHub Copilot or another coding agent, start with [.github/copilot-instructions.md](.github/copilot-instructions.md) and use the labels below to divide work clearly.
 
-This checklist is for **project instances created from the template**. The template repository keeps its own maintainer notes in the repository file `.github/TEMPLATE_MAINTENANCE.md` so your project can start from a clean scaffold.
-
 - 🤖 **Agent-assisted**: a coding agent can usually do this directly in the repository.
 - 👤 **Manual**: this must be completed in GitHub, Zenodo, or another external service.
 - 🤝 **Shared**: an agent can prepare the repository work, but a maintainer should approve the final platform action.
@@ -28,10 +26,10 @@ This checklist is for **project instances created from the template**. The templ
 - [ ] 🤖 **Add Favicons**: Generate and add favicon files to the root directory using [favicon.io](https://favicon.io/) or a similar service. Include `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, and Android icons.
 - [ ] 🤖 **Address TODO Comments**: Search for `TODO` comments throughout all project files using `grep -r "TODO" .` and complete or remove each task as appropriate for your project.
 - [ ] 🤖 **Update Citation File**: Edit `CITATION.cff` with your project's citation metadata (authors, title, version, DOI, and repository URL). See the [Citation File Format guide](https://citation-file-format.github.io/) for details.
-- [ ] 🤖 **Finalize README**: Once all customization is complete, delete the template README.md and rename `README.template.md` to `README.md` to make it your project's main README.
+- [ ] 🤖 **Finalize README and Changelog**: Once all customization is complete, delete the template `README.md` and `CHANGELOG.md`, then rename `README.template.md` to `README.md` and `CHANGELOG.template.md` to `CHANGELOG.md`.
 - [ ] 🤖 **Format Files**: Run `npm run format` to apply consistent formatting to all files using Prettier before committing changes.
 - [ ] 🤖 **Commit Changes**: Use `npm run commit` to create a properly formatted commit message following Conventional Commits standards (e.g., "chore: initial project setup").
-- [ ] 🤖 **Generate Changelog**: Run `npm run changelog` to generate entries from your project's commit history, then curate the output into `CHANGELOG.md`.
+- [ ] 🤖 **Generate Changelog**: Run `npm run changelog` to generate entries from your project's commit history, then curate the output into `CHANGELOG.template.md`.
 - [ ] 🤖 **Customize Documentation**: Adapt the Quarto documentation to your project by editing `.qmd` files, adding your data analysis, visualizations, and narrative. See [Quarto documentation](https://quarto.org/docs/websites/#workflow) for guidance.
 - [ ] 👤 **Enable GitHub Pages**: In repository settings under "Pages", set the source to "Deploy from a branch" and select the `gh-pages` branch and `/ (root)` folder.
 - [ ] 🤝 **Publish Documentation**: Run `quarto publish gh-pages` outside the agent session after preview and validation checks pass.

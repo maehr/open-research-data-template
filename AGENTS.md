@@ -9,11 +9,6 @@ This repository is a **GitHub template** for FAIR and open research data documen
 >
 > Rules below state which context they target. When unspecified, they apply to both.
 
-> **Documentation split**
->
-> - `README.md` and `.github/TEMPLATE_MAINTENANCE.md` are for the template repository itself.
-> - `README.template.md`, `TODO.md`, and `CHANGELOG.md` are scaffolds for project instances created from this template.
-
 ## 1) Use Preview Mode During Interactive Sessions (Both)
 
 - **Always run `quarto preview` (or `uv run quarto preview`)** while iterating on docs. Live reload for `.qmd`, `.md`, and assets.
@@ -54,8 +49,7 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
 - Use **`npm run commit`** to follow Conventional Commits.
 - Prefer one focused logical change per commit so `git-cliff` can reuse the subject line directly.
 - Use **`npm run changelog:unreleased`** for compact agent previews while iterating.
-- For **project instances**, generate entries with **`npm run changelog`** and curate them into `CHANGELOG.md`.
-- For **template maintenance**, curate release notes in `.github/TEMPLATE_MAINTENANCE.md` and keep `CHANGELOG.md` as a clean downstream scaffold.
+- After committing, generate entries with **`npm run changelog`** and update `CHANGELOG.md` for template maintenance or `CHANGELOG.template.md` for project instances.
 
 ## 5) Repository Structure (Both)
 
@@ -176,8 +170,8 @@ Follow `TODO.md`, then:
 5. Type check Python code: `uv run ty check` (if applicable).
 6. Lint R code: `lintr::lint_dir(".")` in R.
 7. Commit via `npm run commit`.
-8. Preview pending changelog entries with `npm run changelog:unreleased`, then generate `CHANGELOG.md` with `npm run changelog`.
-9. When ready, delete the template `README.md` and rename `README.template.md` → `README.md`.
+8. Preview pending changelog entries with `npm run changelog:unreleased`, then generate `CHANGELOG.template.md` with `npm run changelog`.
+9. When ready, delete the template `README.md` and `CHANGELOG.md`, then rename `README.template.md` → `README.md` and `CHANGELOG.template.md` → `CHANGELOG.md`.
 10. Enable Pages and publish with `quarto publish gh-pages`.
 11. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.
 12. Verify security alerts and branch protection.

@@ -4,8 +4,6 @@ title: Agent-assisted release workflow
 
 This guide shows where coding agents can help when someone creates a project from this template and prepares a first release.
 
-It is written for **project instances**. Template-maintainer release notes and workflow decisions live in the repository file `.github/TEMPLATE_MAINTENANCE.md` so downstream projects can keep their own README and changelog scaffolding clean.
-
 ## Deployment flow
 
 ```{mermaid}
@@ -29,7 +27,7 @@ flowchart LR
 
 1. Use [TODO.md](../TODO.md) to split work into 🤖, 👤, and 🤝 tasks.
 2. Use `npm run commit` for one focused Conventional Commit per logical change, then preview pending notes with `npm run changelog:unreleased`.
-3. Generate the full draft changelog with `npm run changelog` only when you are ready to update your project's `CHANGELOG.md`.
+3. Generate the full draft changelog with `npm run changelog` only when you are ready to update `CHANGELOG.template.md`.
 4. Review the preview before any production publication step.
 5. Publish GitHub Pages and the first release outside the agent session.
 6. After Zenodo records the release, update `ZENODO_RECORD`, `DOI`, and the DOI badge placeholders in the project instance.

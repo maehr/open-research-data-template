@@ -1,8 +1,5 @@
 # REPO_NAME
 
-> [!IMPORTANT]
-> This file is the project-instance scaffold. Replace the placeholders, then rename `README.template.md` to `README.md` when your project is ready.
-
 This repository contains SHORT_DESCRIPTION. The data in this repository is openly available to everyone and is intended to support reproducible research.
 
 [![GitHub issues](https://img.shields.io/github/issues/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/issues)

@@ -5,12 +5,7 @@ This repository is a GitHub template for FAIR and open research data projects. W
 ## 1. Determine the context first
 
 - **Template maintenance**: preserve placeholders such as `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `ZENODO_RECORD`, `GITHUB_REPO_ID`, `DOI`, and `[INSERT CONTACT METHOD]` in template files.
-- **Project instance**: replace those placeholders in the files listed in [TODO.md](../TODO.md), then rename `README.template.md` to `README.md` when the project is finalized.
-
-Use this documentation split consistently:
-
-- `README.md` and [TEMPLATE_MAINTENANCE.md](TEMPLATE_MAINTENANCE.md) describe the template repository itself.
-- `README.template.md`, [TODO.md](../TODO.md), and [CHANGELOG.md](../CHANGELOG.md) are the scaffolds that project instances should customize.
+- **Project instance**: replace those placeholders in the files listed in [TODO.md](../TODO.md), then rename `README.template.md` to `README.md` and `CHANGELOG.template.md` to `CHANGELOG.md` when the project is finalized.
 
 ## 2. Prefer preview over production
 
@@ -36,10 +31,10 @@ Use this documentation split consistently:
 - Fetch the full history first when needed: `git fetch --tags --unshallow origin`
 - Use `npm run commit` so each logical change becomes a Conventional Commit that `git-cliff` can summarize cleanly
 - Use `npm run changelog:unreleased` while iterating to keep agent context small
-- For project instances, draft changelog entries with `npm run changelog` and curate them into [CHANGELOG.md](../CHANGELOG.md)
-- For template maintenance, curate release notes in [TEMPLATE_MAINTENANCE.md](TEMPLATE_MAINTENANCE.md) and keep [CHANGELOG.md](../CHANGELOG.md) as a clean scaffold
+- Draft the full release notes with `npm run changelog`
+- For project instances, curate the generated entries into [CHANGELOG.template.md](../CHANGELOG.template.md) until it is renamed to `CHANGELOG.md`
 
 ## 6. Keep docs and governance files consistent
 
-- Update related files together when changing setup or release guidance: `README.md`, `TODO.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `SECURITY.md`, and documentation in `documentation/`
+- Update related files together when changing setup or release guidance: `README.md`, `CHANGELOG.md`, `README.template.md`, `CHANGELOG.template.md`, `TODO.md`, `CONTRIBUTING.md`, `SECURITY.md`, and documentation in `documentation/`
 - Link new guidance back to this file when it helps humans and agents find the right workflow quickly
