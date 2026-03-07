@@ -243,10 +243,18 @@ Run the wizard to write meaningful commit messages.
 npm run commit
 ```
 
+For agent workflows, prefer one focused commit per logical change so `git-cliff` can turn the Conventional Commit subject into a short changelog line without extra cleanup.
+
 Run the wizard to create a CHANGELOG.md.
 
 ```bash
 npm run changelog
+```
+
+If you only need a compact preview while iterating with a coding agent, use:
+
+```bash
+npm run changelog:unreleased
 ```
 
 If your clone is shallow, fetch the full history first so the generated changelog reflects the full evolution of the template:

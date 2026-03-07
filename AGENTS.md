@@ -47,6 +47,8 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
 ## 4) Commits and Changelog (Both)
 
 - Use **`npm run commit`** to follow Conventional Commits.
+- Prefer one focused logical change per commit so `git-cliff` can reuse the subject line directly.
+- Use **`npm run changelog:unreleased`** for compact agent previews while iterating.
 - After committing, generate entries with **`npm run changelog`** and update `CHANGELOG.md`.
 
 ## 5) Repository Structure (Both)
@@ -137,24 +139,25 @@ Place new files accordingly.
 
 ## 13) Commands Recap (Both)
 
-| Command                   | Purpose                                          |
-| ------------------------- | ------------------------------------------------ |
-| `quarto preview`          | Live preview with reload                         |
-| `uv run quarto preview`   | Preview in the pinned Python env                 |
-| `npm run check`           | Verify formatting                                |
-| `npm run format`          | Apply Prettier formatting                        |
-| `uv run ruff check`       | Lint Python code                                 |
-| `uv run ruff format`      | Format Python code                               |
-| `uv run ty check`         | Type check Python code                           |
-| `styler::style_dir(".")`  | Format R code                                    |
-| `lintr::lint_dir(".")`    | Lint R code                                      |
-| `npm run commit`          | Conventional Commits wizard                      |
-| `npm run changelog`       | Generate changelog from commits                  |
-| `npm run prepare`         | Setup Prek git hooks                             |
-| `uv sync`                 | Sync Python dependencies                         |
-| `renv::restore()`         | Restore R environment                            |
-| `quarto render`           | **Production render** (avoid in agent sessions)  |
-| `quarto publish gh-pages` | **Production publish** (avoid in agent sessions) |
+| Command                        | Purpose                                          |
+| ------------------------------ | ------------------------------------------------ |
+| `quarto preview`               | Live preview with reload                         |
+| `uv run quarto preview`        | Preview in the pinned Python env                 |
+| `npm run check`                | Verify formatting                                |
+| `npm run format`               | Apply Prettier formatting                        |
+| `uv run ruff check`            | Lint Python code                                 |
+| `uv run ruff format`           | Format Python code                               |
+| `uv run ty check`              | Type check Python code                           |
+| `styler::style_dir(".")`       | Format R code                                    |
+| `lintr::lint_dir(".")`         | Lint R code                                      |
+| `npm run commit`               | Conventional Commits wizard                      |
+| `npm run changelog:unreleased` | Compact preview of pending changelog entries     |
+| `npm run changelog`            | Generate changelog from commits                  |
+| `npm run prepare`              | Setup Prek git hooks                             |
+| `uv sync`                      | Sync Python dependencies                         |
+| `renv::restore()`              | Restore R environment                            |
+| `quarto render`                | **Production render** (avoid in agent sessions)  |
+| `quarto publish gh-pages`      | **Production publish** (avoid in agent sessions) |
 
 ## 14) Finalization Workflow Checklist (Project instances)
 
@@ -167,7 +170,7 @@ Follow `TODO.md`, then:
 5. Type check Python code: `uv run ty check` (if applicable).
 6. Lint R code: `lintr::lint_dir(".")` in R.
 7. Commit via `npm run commit`.
-8. Generate `CHANGELOG.md` with `npm run changelog`.
+8. Preview pending changelog entries with `npm run changelog:unreleased`, then generate `CHANGELOG.md` with `npm run changelog`.
 9. When ready, delete the template `README.md` and rename `README.template.md` → `README.md`.
 10. Enable Pages and publish with `quarto publish gh-pages`.
 11. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.

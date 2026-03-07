@@ -29,7 +29,9 @@ This repository is a GitHub template for FAIR and open research data projects. W
 ## 5. Manage the changelog from history
 
 - Fetch the full history first when needed: `git fetch --tags --unshallow origin`
-- Draft release notes with `npm run changelog`
+- Use `npm run commit` so each logical change becomes a Conventional Commit that `git-cliff` can summarize cleanly
+- Use `npm run changelog:unreleased` while iterating to keep agent context small
+- Draft the full release notes with `npm run changelog`
 - Curate the generated entries into [CHANGELOG.md](../CHANGELOG.md), keeping `Unreleased` at the top
 
 ## 6. Keep docs and governance files consistent

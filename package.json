@@ -10,6 +10,7 @@
     "format": "prettier --write .",
     "prepare": "prek install",
     "changelog": "npm exec git-cliff -- --config cliff.toml",
+    "changelog:unreleased": "npm exec git-cliff -- --config cliff.toml --unreleased --strip all",
     "lychee-check": "lychee --config .lycheerc.toml './*.md' './*.qmd' './documentation/**/*.md'"
   },
   "devDependencies": {
