@@ -71,7 +71,7 @@ Conventional data publication as static supplementary files offers limited repro
 ## Selected Use Cases
 
 The template has been applied across domains including public history, political science, digital humanities, and teaching infrastructures. The examples below come from the
-["One Template to Rule Them All"](https://github.com/maehr/one-template-to-rule-them-all/blob/e75ec63a5a92ddb126f484571b353f701fffd916/paper/index.qmd)
+["One Template to Rule Them All"](https://maehr.github.io/one-template-to-rule-them-all/)
 presentation and now call out the parts that coding agents can help automate.
 
 ### 🔬 Research Data Documentation

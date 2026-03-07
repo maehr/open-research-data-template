@@ -26,7 +26,7 @@ flowchart LR
 ## Showcase examples and automation opportunities
 
 The showcase links below come from the
-["One Template to Rule Them All"](https://github.com/maehr/one-template-to-rule-them-all/blob/e75ec63a5a92ddb126f484571b353f701fffd916/paper/index.qmd)
+["One Template to Rule Them All"](https://maehr.github.io/one-template-to-rule-them-all/)
 presentation.
 
 | Showcase | What the template supports | Where agents help |

@@ -44,7 +44,9 @@ commit_preprocessors = [
 ]
 # regex for parsing and grouping commits
 commit_parsers = [
-    { message = "^Merge pull request", skip = true},
+    { message = "^Merge", skip = true},
+    { message = "^Initial plan$", skip = true},
+    { message = "^Create feature request issue", skip = true},
     { message = "^feat", group = "Features"},
     { message = "^fix", group = "Bug Fixes"},
     { message = "^ci", group = "Continuous Integration"},
