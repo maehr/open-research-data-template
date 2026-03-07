@@ -114,6 +114,7 @@ Place new files accordingly.
 ## 10) Zenodo Integration and DOI (Project instances)
 
 - **Enable Zenodo–GitHub integration** to archive releases and mint DOIs.
+- The `release.yml` workflow automatically builds the rendered site and attaches it as a `site-<tag>.zip` release asset so that Zenodo archives the HTML documentation alongside the source code.
 - After first release:
   - Record your **`ZENODO_RECORD`** and **`DOI`**.
   - **Zenodo DOI badge**: replace `GITHUB_REPO_ID` with the numeric repo ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (`id` field). Badge will display your DOI after Zenodo links the release.

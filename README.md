@@ -34,7 +34,7 @@ Conventional data publication as static supplementary files offers limited repro
 ### Open Research Data
 
 - Citable via [DOI](https://www.doi.org/) and [CITATION.cff](https://citation-file-format.github.io/)
-- Automatic long-term archiving with [Zenodo](https://zenodo.org/)
+- Automatic long-term archiving with [Zenodo](https://zenodo.org/), including the rendered documentation site as a release asset
 - Licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
 - Template for reporting data issues via `github/ISSUE_TEMPLATE/data_issue_report.yml`
 
@@ -67,7 +67,6 @@ Conventional data publication as static supplementary files offers limited repro
 ### Ethics
 
 - `CODE_OF_CONDUCT.md` following the [Contributor Covenant](https://www.contributor-covenant.org/)
-- Supportive first interactions via [Greetings](https://github.com/actions/starter-workflows/blob/main/automation/greetings.yml)
 
 ## Selected Use Cases
 

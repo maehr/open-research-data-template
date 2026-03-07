@@ -33,8 +33,8 @@ Complete the following steps after creating your project from this template to c
 ## Optional Enhancements
 
 - [ ] **Add Zenodo Metadata File**: Create a `.zenodo.json` file to control metadata sent to Zenodo during archival. Include custom creators, contributors, keywords, and license information. See [Zenodo developer documentation](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release) for schema details.
-
 - [ ] **Review Project-Management Files**: Populate or remove the files in `project-management/` before publishing. These are placeholder templates for meeting notes and project plans.
+- [ ] **Rendered Site in Releases**: The `release.yml` workflow automatically builds the Quarto site and attaches a `site-<tag>.zip` to each GitHub release. This ensures the rendered HTML documentation is preserved alongside the source archive when Zenodo captures the release.
 
 ## Verification Steps
 

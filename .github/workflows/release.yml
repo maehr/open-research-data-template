@@ -1,0 +1,58 @@
+on:
+  release:
+    types: [published]
+
+name: Attach Rendered Site to Release
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-attach:
+    name: Build Site and Upload Release Asset
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Overwrite _quarto.yml
+        if: github.repository == 'maehr/open-research-data-template'
+        run: |
+          cp .github/_quarto.yml _quarto.yml
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Sync Python dependencies
+        run: uv sync
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: renv
+      - uses: r-lib/actions/setup-renv@v2
+
+      - name: Render Quarto Project
+        run: uv run quarto render --to html
+
+      - name: JamPack Optimization
+        run: |
+          npx @divriots/jampack ./_site
+
+      - name: Package site into ZIP
+        run: |
+          cd _site
+          zip -r ../site-${{ github.event.release.tag_name }}.zip .
+
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: site-${{ github.event.release.tag_name }}.zip
