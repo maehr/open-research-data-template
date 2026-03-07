@@ -12,6 +12,11 @@ This template provides an infrastructure for documenting, publishing, and archiv
 
 <!-- [![DOI](https://zenodo.org/badge/614287827.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD) -->
 
+> [!IMPORTANT]
+> This `README.md` describes the **template repository itself**. If you created a new repository from this template, start with [TODO.md](TODO.md), customize [README.template.md](README.template.md), and keep [CHANGELOG.md](CHANGELOG.md) for your project's own release history.
+>
+> Template-maintainer release notes and changelog workflow live in the repository file `.github/TEMPLATE_MAINTENANCE.md`.
+
 ## 🤝 Academic Recognition
 
 This approach was presented at the [Digital Humanities Tech Symposium (DHTech) 2025](https://dh-tech.github.io/2025/06/04/digital-humanities-tech-symposium-agenda/) and exemplifies how reusable templates can address persistent challenges in research data management.
@@ -41,7 +46,7 @@ Conventional data publication as static supplementary files offers limited repro
 ### Documentation
 
 - `README.md` following [www.makeareadme.com](https://www.makeareadme.com/) and [The Turing Way](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-readme)
-- `CHANGELOG.md` following [keepachangelog.com](https://keepachangelog.com/)
+- `CHANGELOG.md` as a clean [Keep a Changelog](https://keepachangelog.com/) scaffold for downstream projects
 - Automated changelog generation with [git-cliff](https://github.com/orhun/git-cliff)
 - Machine-readable project metadata in `package.json` with [npm](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
 - Accessible documentation with [GitHub Pages](https://docs.github.com/en/pages) and [Quarto](https://quarto.org/)
@@ -201,6 +206,8 @@ After creating your project from this template (either via Codespaces or local s
 
 If you want a coding agent to help, point it to [.github/copilot-instructions.md](.github/copilot-instructions.md) first and then ask it to work through the checklist items marked as agent-assisted.
 
+For consistency across this repository, downstream project scaffolding stays in `README.template.md`, `CHANGELOG.md`, and `TODO.md`, while template-maintainer notes stay in `README.md` and `.github/TEMPLATE_MAINTENANCE.md`.
+
 | Setup step                                                            | Typical owner                                  | References                                                                                        |
 | --------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | Replace placeholders, customize metadata, and update documentation    | 🤖 Agent-assisted                              | [TODO.md](TODO.md), [.github/copilot-instructions.md](.github/copilot-instructions.md)            |
@@ -245,7 +252,7 @@ npm run commit
 
 For agent workflows, prefer one focused commit per logical change so `git-cliff` can turn the Conventional Commit subject into a short changelog line without extra cleanup. Multi-line commit messages are now truncated to their first line in changelog output, so keeping the subject specific is what matters most.
 
-Run the wizard to create a CHANGELOG.md.
+Run the wizard to draft changelog entries for your project.
 
 ```bash
 npm run changelog
@@ -257,11 +264,13 @@ If you only need a compact preview while iterating with a coding agent, use:
 npm run changelog:unreleased
 ```
 
-If your clone is shallow, fetch the full history first so the generated changelog reflects the full evolution of the template:
+If your clone is shallow, fetch the full history first so the generated changelog reflects the history you want to summarize:
 
 ```bash
 git fetch --tags --unshallow origin
 ```
+
+When you are maintaining the template repository itself rather than a project instance, record release notes in `.github/TEMPLATE_MAINTENANCE.md` and leave `CHANGELOG.md` as the downstream-project scaffold.
 
 Preview the documentation.
 
@@ -296,7 +305,7 @@ This project is maintained by [@maehr](https://github.com/maehr). Please underst
 | 🛡 **Report a security vulnerability** | See [SECURITY.md](SECURITY.md)                                                         |
 | 💬 **General Questions**               | [GitHub Discussions](https://github.com/maehr/open-research-data-template/discussions) |
 
-## Roadmap
+## Template roadmap
 
 ### v1.0.0 release readiness
 

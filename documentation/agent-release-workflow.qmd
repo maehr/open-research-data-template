@@ -4,6 +4,8 @@ title: Agent-assisted release workflow
 
 This guide shows where coding agents can help when someone creates a project from this template and prepares a first release.
 
+It is written for **project instances**. Template-maintainer release notes and workflow decisions live in the repository file `.github/TEMPLATE_MAINTENANCE.md` so downstream projects can keep their own README and changelog scaffolding clean.
+
 ## Deployment flow
 
 ```{mermaid}
@@ -23,30 +25,11 @@ flowchart LR
 - **Validation**: agents can run formatting and changelog commands, then prepare preview-ready documentation changes for review.
 - **Publication**: maintainers should approve GitHub Pages, release publication, and Zenodo steps, while agents prepare the repository state and release notes.
 
-## Showcase examples and automation opportunities
-
-The showcase links below come from the
-["One Template to Rule Them All"](https://maehr.github.io/one-template-to-rule-them-all/)
-presentation.
-
-| Showcase | What the template supports | Where agents help |
-| --- | --- | --- |
-| [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/) | Public-facing FAIR documentation for a research data platform | Update metadata, refresh docs, and keep checklists and support files aligned |
-| [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/) | Publication-ready visualisation documentation | Synchronize narrative text, figures, changelog entries, and formatting |
-| [nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/) | Scraping and analysis workflow documentation | Scaffold scripts, document pipeline changes, and prepare release notes |
-| [maxvogt-analysis](https://mtwente.github.io/maxvogt-analysis/) | Multi-step data compilation workflow | Keep metadata edits and processing docs synchronized across steps |
-| [Modelling Marti](https://mtwente.github.io/modelling-marti) | Narrative project with interactive outputs | Automate notebook-to-doc updates, link checks, and preview validation |
-| [Digital History Switzerland 2024](https://digihistch24.github.io/) | Event website with schedules and abstracts | Batch-edit content, validate links, and update release notes |
-| [Digital Humanities Bern](https://dhbern.github.io/) | Department site with news and events | Maintain navigation, content consistency, and formatting checks |
-| [Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/) | Teaching site with course materials | Update materials, metadata, and changelog entries together |
-| [Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/) | Living handbook and publication | Keep citations, docs, and accessibility-focused content aligned |
-| [One Template to Rule Them All](https://maehr.github.io/one-template-to-rule-them-all/) | Meta-example for this repository family | Reuse the same setup, validation, and release workflow documented here |
-
 ## First-release checklist handoff
 
 1. Use [TODO.md](../TODO.md) to split work into 🤖, 👤, and 🤝 tasks.
 2. Use `npm run commit` for one focused Conventional Commit per logical change, then preview pending notes with `npm run changelog:unreleased`.
-3. Generate the full draft changelog with `npm run changelog` only when you are ready to update `CHANGELOG.md`.
+3. Generate the full draft changelog with `npm run changelog` only when you are ready to update your project's `CHANGELOG.md`.
 4. Review the preview before any production publication step.
 5. Publish GitHub Pages and the first release outside the agent session.
 6. After Zenodo records the release, update `ZENODO_RECORD`, `DOI`, and the DOI badge placeholders in the project instance.

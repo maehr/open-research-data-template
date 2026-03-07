@@ -7,6 +7,11 @@ This repository is a GitHub template for FAIR and open research data projects. W
 - **Template maintenance**: preserve placeholders such as `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `ZENODO_RECORD`, `GITHUB_REPO_ID`, `DOI`, and `[INSERT CONTACT METHOD]` in template files.
 - **Project instance**: replace those placeholders in the files listed in [TODO.md](../TODO.md), then rename `README.template.md` to `README.md` when the project is finalized.
 
+Use this documentation split consistently:
+
+- `README.md` and [TEMPLATE_MAINTENANCE.md](TEMPLATE_MAINTENANCE.md) describe the template repository itself.
+- `README.template.md`, [TODO.md](../TODO.md), and [CHANGELOG.md](../CHANGELOG.md) are the scaffolds that project instances should customize.
+
 ## 2. Prefer preview over production
 
 - Run `quarto preview` or `uv run quarto preview` while iterating on docs.
@@ -31,8 +36,8 @@ This repository is a GitHub template for FAIR and open research data projects. W
 - Fetch the full history first when needed: `git fetch --tags --unshallow origin`
 - Use `npm run commit` so each logical change becomes a Conventional Commit that `git-cliff` can summarize cleanly
 - Use `npm run changelog:unreleased` while iterating to keep agent context small
-- Draft the full release notes with `npm run changelog`
-- Curate the generated entries into [CHANGELOG.md](../CHANGELOG.md), keeping `Unreleased` at the top
+- For project instances, draft changelog entries with `npm run changelog` and curate them into [CHANGELOG.md](../CHANGELOG.md)
+- For template maintenance, curate release notes in [TEMPLATE_MAINTENANCE.md](TEMPLATE_MAINTENANCE.md) and keep [CHANGELOG.md](../CHANGELOG.md) as a clean scaffold
 
 ## 6. Keep docs and governance files consistent
 
