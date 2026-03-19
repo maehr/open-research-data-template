@@ -4,6 +4,8 @@ title: Agent-assisted release workflow
 
 This guide shows where coding agents can help when someone creates a project from this template and prepares a first release.
 
+For the broader setup checklist, start with [TODO.md](../../TODO.md).
+
 ## Deployment flow
 
 ```{mermaid}
@@ -20,13 +22,13 @@ flowchart LR
 ### Where agents can intervene
 
 - **Use the template**: agents can explain the repository structure and identify which files still contain placeholders.
-- **Project setup**: agents can edit metadata, documentation, and support files after following [`.github/copilot-instructions.md`](https://github.com/maehr/open-research-data-template/blob/main/.github/copilot-instructions.md).
+- **Project setup**: agents can edit metadata, documentation, and support files after following `.github/copilot-instructions.md`.
 - **Validation**: agents can run formatting and changelog commands, then prepare preview-ready documentation changes for review.
 - **Publication**: maintainers should approve the Pages settings, commit the prepared release archive, merge or push the validated site changes to `main`, and publish the GitHub release, while agents prepare the repository state and release notes.
 
 ## First-release checklist handoff
 
-1. Use [TODO.md](../TODO.md) to split work into 🤖, 👤, and 🤝 tasks.
+1. Use [TODO.md](../../TODO.md) to split work into `agent-assisted`, `maintainer-only`, and shared tasks.
 2. Use `npm run commit` for one focused Conventional Commit per logical change, then preview pending notes with `npm run changelog:unreleased`.
 3. Generate the full draft changelog with `npm run changelog` only when you are ready to update `CHANGELOG.template.md`.
 4. Review the preview before any production publication step.

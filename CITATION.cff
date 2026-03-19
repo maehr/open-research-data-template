@@ -4,6 +4,7 @@ message: >-
   If you use this template, please cite it using the
   metadata from this file.
 type: software
+version: 1.0.0
 authors:
   - family-names: Mähr
     given-names: Moritz

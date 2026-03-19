@@ -203,12 +203,12 @@ After creating your project from this template (either via Codespaces or local s
 
 If you want a coding agent to help, point it to [.github/copilot-instructions.md](.github/copilot-instructions.md) first and then ask it to work through the checklist items marked as agent-assisted.
 
-| Setup step                                                            | Typical owner                                  | References                                                                                        |
-| --------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Replace placeholders, customize metadata, and update documentation    | 🤖 Agent-assisted                              | [TODO.md](TODO.md), [.github/copilot-instructions.md](.github/copilot-instructions.md)            |
-| Run formatting, changelog, preview, and validation commands           | 🤖 Agent-assisted                              | [Use](#use), [documentation/agent-release-workflow.qmd](documentation/agent-release-workflow.qmd) |
-| Enable GitHub Security, Branch Protection, Pages, and Zenodo settings | 👤 Manual in GitHub/Zenodo                     | [TODO.md](TODO.md)                                                                                |
-| Approve the final release and publish production artifacts            | 🤝 Shared: agent prepares, maintainer confirms | [documentation/agent-release-workflow.qmd](documentation/agent-release-workflow.qmd)              |
+| Setup step                                                            | Typical owner                                  | References                                                                                                        |
+| --------------------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Replace placeholders, customize metadata, and update documentation    | 🤖 Agent-assisted                              | [TODO.md](TODO.md), [.github/copilot-instructions.md](.github/copilot-instructions.md)                            |
+| Run formatting, changelog, preview, and validation commands           | 🤖 Agent-assisted                              | [Use](#use), [.github/template-site/agent-release-workflow.qmd](.github/template-site/agent-release-workflow.qmd) |
+| Enable GitHub Security, Branch Protection, Pages, and Zenodo settings | 👤 Manual in GitHub/Zenodo                     | [TODO.md](TODO.md)                                                                                                |
+| Approve the final release and publish production artifacts            | 🤝 Shared: agent prepares, maintainer confirms | [.github/template-site/agent-release-workflow.qmd](.github/template-site/agent-release-workflow.qmd)              |
 
 ## Use
 
