@@ -14,12 +14,20 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Overwrite _quarto.yml
         if: github.repository == 'maehr/open-research-data-template'
         run: |
           cp .github/_quarto.yml _quarto.yml
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install Node.js dependencies
+        run: npm ci
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -27,7 +35,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@v7
 
       - name: Sync Python dependencies
         run: uv sync
@@ -38,21 +46,12 @@ jobs:
           r-version: renv
       - uses: r-lib/actions/setup-renv@v2
 
-      - name: Render Quarto Project
-        run: uv run quarto render --to html
-
-      - name: JamPack Optimization
-        run: |
-          npx @divriots/jampack ./_site
-
-      - name: Package site into ZIP
-        run: |
-          cd _site
-          zip -r ../site-${{ github.event.release.tag_name }}.zip .
+      - name: Build site archive
+        run: npm run site:build && npm run site:archive -- --tag ${{ github.event.release.tag_name }}
 
       - name: Upload release asset
         uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: site-${{ github.event.release.tag_name }}.zip
+          files: release-artifacts/site-${{ github.event.release.tag_name }}.zip

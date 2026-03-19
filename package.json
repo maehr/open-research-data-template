@@ -9,10 +9,15 @@
     "commit": "cz",
     "format": "prettier --write .",
     "prepare": "prek install",
+    "site:build": "uv run quarto render --to html && jampack ./_site",
+    "site:archive": "uv run python scripts/release_site_archive.py",
+    "release:prepare": "npm run site:build && npm run site:archive -- --stage",
     "changelog": "npm exec git-cliff -- --config cliff.toml",
-    "lychee-check": "lychee --config .lycheerc.toml './*.md' './*.qmd' './documentation/**/*.md'"
+    "changelog:unreleased": "npm exec git-cliff -- --config cliff.toml --unreleased --strip all",
+    "lychee-check": "lychee --config .lycheerc.toml './*.md' './*.qmd'"
   },
   "devDependencies": {
+    "@divriots/jampack": "^0.34.1",
     "@j178/prek": "^0.3.1",
     "commitizen": "^4.3.1",
     "cz": "^1.8.2",

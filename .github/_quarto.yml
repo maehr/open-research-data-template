@@ -26,8 +26,10 @@ website:
     left:
       - text: Readme
         href: index.qmd
-      - text: Report
-        href: report.md
+      - text: Release workflow
+        href: .github/template-site/agent-release-workflow.qmd
+      - text: Documentation
+        href: documentation.md
 
   sidebar:
     contents:
@@ -36,6 +38,8 @@ website:
         contents:
           - text: Changelog
             href: CHANGELOG.md
+          - text: Release workflow
+            href: .github/template-site/agent-release-workflow.qmd
           - text: Code of Conduct
             href: CODE_OF_CONDUCT.md
           - text: Contributing
@@ -46,7 +50,7 @@ website:
             href: LICENSE-AGPL.md
           - text: Security
             href: SECURITY.md
-      - href: report.md
+      - href: documentation.md
         contents: project-management/*
 
 format:

@@ -13,27 +13,29 @@ This repository is a **GitHub template** for FAIR and open research data documen
 
 - **Always run `quarto preview` (or `uv run quarto preview`)** while iterating on docs. Live reload for `.qmd`, `.md`, and assets.
 - **Do not run production commands inside agent sessions** unless explicitly requested by the human maintainer:
-  - Avoid: `quarto render`, `quarto publish gh-pages`.
+  - Avoid: `quarto render` when it is only meant to prepare production artifacts.
+  - Do not replace the GitHub Pages deployment workflow with manual publishing steps.
 - Keep the preview server running while editing.
 
 ## 2) Placeholder Policy (Template vs Project)
 
-This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `ZENODO_RECORD`, `[INSERT CONTACT METHOD]`, `GITHUB_REPO_ID`, `DOI`.
+This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `GITHUB_REPO_ID`, `ZENODO_RECORD`, `[INSERT CONTACT METHOD]`, and `DOI`.
 
 - **Template maintenance**:
-  - Keep placeholders intact across all files so downstream users can replace them.
-  - Update example values only in explanatory comments or docs.
+  - Keep placeholders intact in project-facing template files such as `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `SECURITY.template.md`, and `README.template.md` so downstream users can replace them.
+  - Keep the live template-repository files (`CITATION.cff`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `README.md`, and `CHANGELOG.md`) accurate for this repository.
 
 - **Project instances**:
   - **Replace placeholders** in:
     - `.github/ISSUE_TEMPLATE/config.yml`
     - `_brand.yml`
-    - `CODE_OF_CONDUCT.md`
+    - `CITATION.template.cff` → after replacement, **rename to `CITATION.cff`** early so GitHub shows the correct citation metadata
+    - `CODE_OF_CONDUCT.template.md` → after replacement, **rename to `CODE_OF_CONDUCT.md`** early so GitHub shows the correct community-health file
     - `DESCRIPTION`
     - `package.json`
     - `pyproject.toml`
     - `README.template.md` → after replacement, **rename to `README.md`** when finalized
-    - `SECURITY.md`
+    - `SECURITY.template.md` → after replacement, **rename to `SECURITY.md`** early so GitHub shows the correct security policy
   - Leave any non-project template placeholders untouched only if the file explicitly documents template behavior for reuse.
 
 ## 3) Formatting and Linting (Both)
@@ -47,7 +49,9 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
 ## 4) Commits and Changelog (Both)
 
 - Use **`npm run commit`** to follow Conventional Commits.
-- After committing, generate entries with **`npm run changelog`** and update `CHANGELOG.md`.
+- Prefer one focused logical change per commit so `git-cliff` can reuse the subject line directly.
+- Use **`npm run changelog:unreleased`** for compact agent previews while iterating.
+- After committing, generate entries with **`npm run changelog`** and update `CHANGELOG.md` for template maintenance or `CHANGELOG.template.md` for project instances.
 
 ## 5) Repository Structure (Both)
 
@@ -114,20 +118,21 @@ Place new files accordingly.
 ## 10) Zenodo Integration and DOI (Project instances)
 
 - **Enable Zenodo–GitHub integration** to archive releases and mint DOIs.
-- The `release.yml` workflow automatically builds the rendered site and attaches it as a `site-<tag>.zip` release asset so that Zenodo archives the HTML documentation alongside the source code.
+- Before publishing a release, run `npm run release:prepare -- --tag vX.Y.Z` and commit the generated `release-artifacts/site-vX.Y.Z.zip` so Zenodo captures the rendered HTML archive as part of the tagged repository snapshot.
+- The `release.yml` workflow also uploads the same `site-<tag>.zip` archive to the GitHub release page for convenient downloading after publication.
 - After first release:
   - Record your **`ZENODO_RECORD`** and **`DOI`**.
-  - **Zenodo DOI badge**: replace `GITHUB_REPO_ID` with the numeric repo ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (`id` field). Badge will display your DOI after Zenodo links the release.
-- Add the DOI to the README once available.
+  - **Zenodo DOI badge**: replace `GITHUB_REPO_ID` in the badge image URL with the numeric repo ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (`id` field), and replace `ZENODO_RECORD` in the badge target once Zenodo has created the record. The badge will then display your DOI.
+  - Use the **concept DOI** directly in citation metadata so it stays stable across releases.
+- Add the DOI to the README and `CITATION.cff` once available.
 
 ## 11) Website Publishing with GitHub Pages (Project instances)
 
 - In repo **Settings → Pages**:
-  - Source: **Deploy from a branch**
-  - Branch: **`gh-pages`**, folder: **`/ (root)`**
-- **Production commands** (run _outside_ agent sessions unless explicitly authorized):
-  - `quarto render`
-  - `quarto publish gh-pages`
+  - Source: **GitHub Actions**
+- **Production deployment** (run _outside_ agent sessions unless explicitly authorized):
+  - Merge or push validated changes to `main` so `.github/workflows/quarto-publish.yml` deploys the site automatically.
+  - Use the workflow's `workflow_dispatch` trigger only when you need to rerun deployment manually.
 
 ## 12) Brand and UX Polish (Project instances)
 
@@ -137,41 +142,45 @@ Place new files accordingly.
 
 ## 13) Commands Recap (Both)
 
-| Command                   | Purpose                                          |
-| ------------------------- | ------------------------------------------------ |
-| `quarto preview`          | Live preview with reload                         |
-| `uv run quarto preview`   | Preview in the pinned Python env                 |
-| `npm run check`           | Verify formatting                                |
-| `npm run format`          | Apply Prettier formatting                        |
-| `uv run ruff check`       | Lint Python code                                 |
-| `uv run ruff format`      | Format Python code                               |
-| `uv run ty check`         | Type check Python code                           |
-| `styler::style_dir(".")`  | Format R code                                    |
-| `lintr::lint_dir(".")`    | Lint R code                                      |
-| `npm run commit`          | Conventional Commits wizard                      |
-| `npm run changelog`       | Generate changelog from commits                  |
-| `npm run prepare`         | Setup Prek git hooks                             |
-| `uv sync`                 | Sync Python dependencies                         |
-| `renv::restore()`         | Restore R environment                            |
-| `quarto render`           | **Production render** (avoid in agent sessions)  |
-| `quarto publish gh-pages` | **Production publish** (avoid in agent sessions) |
+| Command or action                         | Purpose                                                |
+| ----------------------------------------- | ------------------------------------------------------ |
+| `quarto preview`                          | Live preview with reload                               |
+| `uv run quarto preview`                   | Preview in the pinned Python env                       |
+| `npm run check`                           | Verify formatting                                      |
+| `npm run format`                          | Apply Prettier formatting                              |
+| `uv run ruff check`                       | Lint Python code                                       |
+| `uv run ruff format`                      | Format Python code                                     |
+| `uv run ty check`                         | Type check Python code                                 |
+| `styler::style_dir(".")`                  | Format R code                                          |
+| `lintr::lint_dir(".")`                    | Lint R code                                            |
+| `npm run commit`                          | Conventional Commits wizard                            |
+| `npm run changelog:unreleased`            | Compact preview of pending changelog entries           |
+| `npm run changelog`                       | Generate changelog from commits                        |
+| `npm run prepare`                         | Setup Prek git hooks                                   |
+| `npm run release:prepare -- --tag vX.Y.Z` | Build, archive, and stage a Zenodo-ready site ZIP      |
+| `uv sync`                                 | Sync Python dependencies                               |
+| `renv::restore()`                         | Restore R environment                                  |
+| `quarto render`                           | **Production render** (avoid in agent sessions)        |
+| `Render and Publish` workflow             | Deploy GitHub Pages from `main` or `workflow_dispatch` |
 
 ## 14) Finalization Workflow Checklist (Project instances)
 
 Follow `TODO.md`, then:
 
 1. Replace placeholders across listed files.
-2. Customize `.qmd` docs and verify with `quarto preview`.
-3. Format files: `npm run format`, `uv run ruff format`, and `styler::style_dir(".")` in R.
-4. Lint Python code: `uv run ruff check`.
-5. Type check Python code: `uv run ty check` (if applicable).
-6. Lint R code: `lintr::lint_dir(".")` in R.
-7. Commit via `npm run commit`.
-8. Generate `CHANGELOG.md` with `npm run changelog`.
-9. When ready, delete the template `README.md` and rename `README.template.md` → `README.md`.
-10. Enable Pages and publish with `quarto publish gh-pages`.
-11. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.
-12. Verify security alerts and branch protection.
+2. Activate `CITATION.cff`, `CODE_OF_CONDUCT.md`, and `SECURITY.md` from their `.template` counterparts early so GitHub surfaces your project metadata instead of the template repository's.
+3. Customize `.qmd` docs and verify with `quarto preview`.
+4. Format files: `npm run format`, `uv run ruff format`, and `styler::style_dir(".")` in R.
+5. Lint Python code: `uv run ruff check`.
+6. Type check Python code: `uv run ty check` (if applicable).
+7. Lint R code: `lintr::lint_dir(".")` in R.
+8. Commit via `npm run commit`.
+9. Preview pending changelog entries with `npm run changelog:unreleased`, then generate `CHANGELOG.template.md` with `npm run changelog`.
+10. Before creating a release, run `npm run release:prepare -- --tag vX.Y.Z` and commit the generated `release-artifacts/site-vX.Y.Z.zip`.
+11. When ready, delete the template `README.md` and `CHANGELOG.md`, then rename `README.template.md` → `README.md` and `CHANGELOG.template.md` → `CHANGELOG.md`.
+12. Enable GitHub Pages to use GitHub Actions, then merge or push validated changes to `main` so the `Render and Publish` workflow deploys the site.
+13. After first release, update `ZENODO_RECORD` and `DOI`.
+14. Verify security alerts, branch protection, and the Pages deployment.
 
 ## 15) Verification Steps (Project instances)
 

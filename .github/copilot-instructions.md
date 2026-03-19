@@ -1,0 +1,42 @@
+# Copilot Instructions for This Repository
+
+This repository is a GitHub template for FAIR and open research data projects. When GitHub Copilot or another coding agent works here, it should optimize for the smallest safe change that keeps the template reusable.
+
+## 1. Determine the context first
+
+- **Template maintenance**: preserve placeholders such as `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `GITHUB_REPO_ID`, `ZENODO_RECORD`, `DOI`, and `[INSERT CONTACT METHOD]` in template files like `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `SECURITY.template.md`, and `README.template.md`.
+- **Project instance**: replace those placeholders in the files listed in [TODO.md](../TODO.md), rename `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, and `SECURITY.template.md` into place early, then rename `README.template.md` to `README.md` and `CHANGELOG.template.md` to `CHANGELOG.md` when the project is finalized.
+
+## 2. Prefer preview over production
+
+- Run `quarto preview` or `uv run quarto preview` while iterating on docs.
+- Do **not** run `quarto render` during an agent session unless a maintainer explicitly asks for release preparation or production publishing.
+- GitHub Pages deploys through `.github/workflows/quarto-publish.yml` after validated changes land on `main`; do not fall back to legacy manual Pages publishing guidance.
+
+## 3. Follow the setup checklist
+
+- Use [TODO.md](../TODO.md) as the source of truth.
+- Work through items marked 🤖 directly.
+- Prepare, but do not complete on your own, items marked 🤝 or 👤 unless the maintainer explicitly authorizes the external action.
+
+## 4. Use the existing validation tools
+
+- `npm run format` and `npm run check`
+- `uv run ruff format` and `uv run ruff check`
+- `uv run ty check`
+- `styler::style_dir(".")` and `lintr::lint_dir(".")`
+- `npm run changelog`
+- `npm run release:prepare -- --tag vX.Y.Z` when preparing a Zenodo-friendly release snapshot
+
+## 5. Manage the changelog from history
+
+- Fetch the full history first when needed: `git fetch --tags --unshallow origin`
+- Use `npm run commit` so each logical change becomes a Conventional Commit that `git-cliff` can summarize cleanly
+- Use `npm run changelog:unreleased` while iterating to keep agent context small
+- Draft the full release notes with `npm run changelog`
+- For project instances, curate the generated entries into [CHANGELOG.template.md](../CHANGELOG.template.md) until it is renamed to `CHANGELOG.md`
+
+## 6. Keep docs and governance files consistent
+
+- Update related files together when changing setup or release guidance: `README.md`, `CHANGELOG.md`, `CITATION.cff`, `CITATION.template.cff`, `README.template.md`, `CHANGELOG.template.md`, `CODE_OF_CONDUCT.md`, `CODE_OF_CONDUCT.template.md`, `SECURITY.md`, `SECURITY.template.md`, `TODO.md`, `CONTRIBUTING.md`, and documentation in `documentation/`
+- Link new guidance back to this file when it helps humans and agents find the right workflow quickly

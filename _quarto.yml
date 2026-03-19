@@ -26,8 +26,8 @@ website:
     left:
       - text: Readme
         href: index.qmd
-      - text: Report
-        href: report.md
+      - text: Documentation
+        href: documentation.md
 
   sidebar:
     contents:
@@ -46,7 +46,7 @@ website:
             href: LICENSE-AGPL.md
           - text: Security
             href: SECURITY.md
-      - href: report.md
+      - href: documentation.md
         contents: project-management/*
 
 format:

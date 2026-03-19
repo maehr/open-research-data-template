@@ -7,6 +7,7 @@ exclude = [
   "REPO_NAME",
   "ZENODO_RECORD",
   "GITHUB_REPO_ID",
+  "DOI",
   "FULLNAME",
   "\\[INSERT CONTACT METHOD\\]",
   "https://www.gnu.org/licenses/",
@@ -14,6 +15,8 @@ exclude = [
   "https://www.makeareadme.com/",
   "https://fsf.org/",
   "https://book.the-turing-way.org/",
+  "https://www.contributor-covenant.org/faq",
+  "https://www.contributor-covenant.org/version/2/1/code_of_conduct.html",
 ]
 
 # Timeout for requests (seconds)
