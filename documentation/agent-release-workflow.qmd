@@ -20,7 +20,7 @@ flowchart LR
 ### Where agents can intervene
 
 - **Use the template**: agents can explain the repository structure and identify which files still contain placeholders.
-- **Project setup**: agents can edit metadata, documentation, and support files after following [.github/copilot-instructions.md](../.github/copilot-instructions.md).
+- **Project setup**: agents can edit metadata, documentation, and support files after following [`.github/copilot-instructions.md`](https://github.com/maehr/open-research-data-template/blob/main/.github/copilot-instructions.md).
 - **Validation**: agents can run formatting and changelog commands, then prepare preview-ready documentation changes for review.
 - **Publication**: maintainers should approve the Pages settings, commit the prepared release archive, merge or push the validated site changes to `main`, and publish the GitHub release, while agents prepare the repository state and release notes.
 

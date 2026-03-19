@@ -14,7 +14,7 @@
     "release:prepare": "npm run site:build && npm run site:archive -- --stage",
     "changelog": "npm exec git-cliff -- --config cliff.toml",
     "changelog:unreleased": "npm exec git-cliff -- --config cliff.toml --unreleased --strip all",
-    "lychee-check": "lychee --config .lycheerc.toml './*.md' './*.qmd' './documentation/**/*.md'"
+    "lychee-check": "lychee --config .lycheerc.toml './*.md' './*.qmd' './documentation/**/*.md' './documentation/**/*.qmd'"
   },
   "devDependencies": {
     "@divriots/jampack": "^0.34.1",

@@ -10,7 +10,7 @@ Complete the following steps after creating your project from this template to c
 
 - [ ] 👤 **Enable GitHub Security Alerts**: Navigate to your repository's "Security" tab on GitHub and enable Dependabot alerts and security updates to monitor vulnerabilities in dependencies.
 - [ ] 👤 **Protect the Main Branch**: In repository settings under "Branches", add a branch protection rule for `main` to require pull request reviews before merging and prevent force pushes.
-- [ ] 🤖 **Update Project Details**: Replace all placeholder values in the following files with your actual project information:
+- [ ] 🤖 **Update Project Details**: Replace all placeholder values and review inherited project metadata in the following files with your actual project information:
   - `FULLNAME` → Your full name (e.g., "Jane Doe")
   - `USERNAME` → Your GitHub username (e.g., "janedoe")
   - `REPO_NAME` → Your repository name (e.g., "my-research-data")
@@ -19,6 +19,7 @@ Complete the following steps after creating your project from this template to c
   - `GITHUB_REPO_ID` → Your GitHub repository ID (e.g., "123456789")
   - `ZENODO_RECORD` → Your Zenodo record number (e.g., "1234567") after first release or manually create a Zenodo deposit
   - `DOI` → Your DOI after first release (e.g., "10.5281/zenodo.1234567")
+  - `version` in `pyproject.toml` → Your project's starting version (the template defaults to `0.1.0`)
   - Files to update: `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `package.json`, `pyproject.toml`, `README.template.md`, and `SECURITY.template.md`
 - [ ] 🤖 **Activate Project-Specific Citation and Governance Files**: After replacing placeholders, rename `CITATION.template.cff` to `CITATION.cff`, `CODE_OF_CONDUCT.template.md` to `CODE_OF_CONDUCT.md`, and `SECURITY.template.md` to `SECURITY.md` so GitHub shows your project's metadata instead of the template repository's.
 - [ ] 👤 **Set Up Zenodo Integration**: Follow the [GitHub guide for Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to enable automatic archiving and obtain a DOI for your repository.

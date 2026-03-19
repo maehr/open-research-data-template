@@ -13,9 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 # https://tera.netlify.app/docs/#introduction
 body = """
 {% if version %}\
-    ## [{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d") }}
+    ## [{{ version | trim_start_matches(pat="v") }}](https://github.com/USERNAME/REPO_NAME/releases/tag/{{ version }}) - {{ timestamp | date(format="%Y-%m-%d") }}
 {% else %}\
-    ## [Unreleased](https://github.com/USERNAME/REPO_NAME/compare/...HEAD)
+    ## [Unreleased](https://github.com/USERNAME/REPO_NAME/compare/v1.0.0...HEAD)
 {% endif %}\
 {% for group, commits in commits | group_by(attribute="group") %}
     ### {{ group | upper_first }}
@@ -50,8 +50,7 @@ commit_parsers = [
     { message = "^feat", group = "Features"},
     { message = "^fix", group = "Bug Fixes"},
     { message = "^ci", group = "Continuous Integration"},
-    { message = "^doc", group = "Documentation"},
-    { message = "^docs", group = "Documentation"},
+    { message = "^docs?", group = "Documentation"},
     { message = "^perf", group = "Performance"},
     { message = "^refactor", group = "Refactor"},
     { message = "^style", group = "Styling"},

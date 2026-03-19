@@ -1,6 +1,6 @@
 [project]
 name = "REPO_NAME"
-version = "1.0.0"
+version = "0.1.0"
 description = "SHORT_DESCRIPTION"
 authors = [{ name = "FULLNAME", email = "[INSERT CONTACT METHOD]" }]
 readme = "README.md"
