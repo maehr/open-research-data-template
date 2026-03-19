@@ -16,11 +16,11 @@ The structure of this repository follows the [Advanced Structure for Data Analys
 - `analysis/`: scripts and notebooks used to analyze the data
 - `assets/`: images, logos, etc. used in the README and other documentation
 - `data/`: data files
-- `documentation/`: documentation for the data and the repository
+- `documentation/`: extended documentation pages for the data and repository, such as methods, data dictionaries, workflows, or user guides
 - `project-management/`: project management documents (e.g., meeting notes, project plans, etc.)
 - `src/`: source code for the data (e.g., scripts used to collect or process the data)
 - `test/`: tests for the data and source code
-- `report.md`: a report describing the analysis of the data
+- `documentation.md`: the top-level documentation guide that explains the repository's overall documentation approach and links to supporting pages
 
 ## Data Description
 
