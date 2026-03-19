@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Quarto-based documentation and GitHub Pages publishing for FAIR and open research data projects.
-- Zenodo integration guidance, `.zenodo.json` metadata support, and a release workflow that attaches the rendered site as a release asset.
+- Zenodo integration guidance, `.zenodo.json` metadata support, and release-preparation commands that commit a rendered site archive into tagged snapshots.
 - GitHub Codespaces/devcontainer setup, issue templates, citation metadata, and a curated showcase gallery spanning research, teaching, and living publications.
 - Add a `CHANGELOG.template.md` scaffold so downstream projects can rename it consistently, just like `README.template.md`.
 - Split citation and governance metadata into live repo files plus `.template` companions so the template can publish real DOI metadata without losing downstream placeholders.

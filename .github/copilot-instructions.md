@@ -10,7 +10,8 @@ This repository is a GitHub template for FAIR and open research data projects. W
 ## 2. Prefer preview over production
 
 - Run `quarto preview` or `uv run quarto preview` while iterating on docs.
-- Do **not** run `quarto render` or `quarto publish gh-pages` during an agent session unless a maintainer explicitly asks for production publishing.
+- Do **not** run `quarto render` during an agent session unless a maintainer explicitly asks for release preparation or production publishing.
+- GitHub Pages deploys through `.github/workflows/quarto-publish.yml` after validated changes land on `main`; do not fall back to legacy manual Pages publishing guidance.
 
 ## 3. Follow the setup checklist
 
@@ -25,6 +26,7 @@ This repository is a GitHub template for FAIR and open research data projects. W
 - `uv run ty check`
 - `styler::style_dir(".")` and `lintr::lint_dir(".")`
 - `npm run changelog`
+- `npm run release:prepare -- --tag vX.Y.Z` when preparing a Zenodo-friendly release snapshot
 
 ## 5. Manage the changelog from history
 

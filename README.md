@@ -36,7 +36,7 @@ Conventional data publication as static supplementary files offers limited repro
 ### Open Research Data
 
 - Citable via the template [DOI](https://doi.org/10.5281/zenodo.19111355), the live [CITATION.cff](CITATION.cff), and the downstream [CITATION.template.cff](CITATION.template.cff)
-- Automatic long-term archiving with [Zenodo](https://zenodo.org/), including the rendered documentation site as a release asset
+- Automatic long-term archiving with [Zenodo](https://zenodo.org/), plus a commit-ready rendered site archive for tagged snapshots
 - Licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
 - Template for reporting data issues via `github/ISSUE_TEMPLATE/data_issue_report.yml`
 
@@ -287,6 +287,24 @@ Then run the link check:
 npm run lychee-check
 ```
 
+Prepare a Zenodo-friendly site archive before creating a GitHub release.
+
+```bash
+npm run site:build
+npm run site:archive -- --tag v1.0.0
+```
+
+Or run the combined helper, which builds the site, creates `release-artifacts/site-v1.0.0.zip`, and stages the archive directory for commit:
+
+```bash
+npm run release:prepare -- --tag v1.0.0
+npm run commit
+```
+
+Commit the generated archive before you publish the GitHub release. Zenodo captures files that are already in the tagged repository snapshot, while the release workflow only mirrors the same ZIP onto the GitHub release page for convenient downloading.
+
+If you change Quarto's output directory from `_site`, pass the matching folder with `--site-dir`, for example `npm run site:archive -- --tag v1.0.0 --site-dir site`.
+
 ## Support
 
 This project is maintained by [@maehr](https://github.com/maehr). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
@@ -306,7 +324,7 @@ This project is maintained by [@maehr](https://github.com/maehr). Please underst
 
 - [x] Document agent-assisted setup, validation, and release preparation workflows
 - [x] Ship changelog guidance that is based on commit history and ready for automation
-- [x] Preserve rendered HTML documentation in release assets for Zenodo archival
+- [x] Preserve rendered HTML documentation in tagged repository snapshots for Zenodo archival
 - [x] Record the template repository's Zenodo concept DOI and live citation metadata
 - [ ] Publish the first stable GitHub release for the repository
 

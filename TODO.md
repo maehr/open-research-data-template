@@ -31,15 +31,16 @@ Complete the following steps after creating your project from this template to c
 - [ ] 🤖 **Format Files**: Run `npm run format` to apply consistent formatting to all files using Prettier before committing changes.
 - [ ] 🤖 **Commit Changes**: Use `npm run commit` to create a properly formatted commit message following Conventional Commits standards (e.g., "chore: initial project setup").
 - [ ] 🤖 **Generate Changelog**: Run `npm run changelog` to generate entries from your project's commit history, then curate the output into `CHANGELOG.template.md`.
+- [ ] 🤝 **Prepare a Zenodo-ready Site Archive**: Before creating a GitHub release, run `npm run release:prepare -- --tag vX.Y.Z`, review the generated `release-artifacts/site-vX.Y.Z.zip`, and commit it with `npm run commit`. Zenodo archives files that are already in the tagged repository snapshot, not GitHub release assets that are added later. If your Quarto project uses a different output directory, pass it through with `--site-dir`.
 - [ ] 🤖 **Customize Documentation**: Adapt the Quarto documentation to your project by editing `.qmd` files, adding your data analysis, visualizations, and narrative. See [Quarto documentation](https://quarto.org/docs/websites/#workflow) for guidance.
-- [ ] 👤 **Enable GitHub Pages**: In repository settings under "Pages", set the source to "Deploy from a branch" and select the `gh-pages` branch and `/ (root)` folder.
-- [ ] 🤝 **Publish Documentation**: Run `quarto publish gh-pages` outside the agent session after preview and validation checks pass.
+- [ ] 👤 **Enable GitHub Pages**: In repository settings under "Pages", set the source to **GitHub Actions** so the built-in deployment workflow can publish the site.
+- [ ] 🤝 **Deploy Documentation**: After preview and validation checks pass, merge or push the approved changes to `main` and confirm the `Render and Publish` workflow deploys the site successfully. Use the workflow's manual dispatch option only if you need to rerun the deployment.
 
 ## Optional Enhancements
 
 - [ ] 🤖 **Add Zenodo Metadata File**: Create a `.zenodo.json` file to control metadata sent to Zenodo during archival. Include custom creators, contributors, keywords, and license information. See [Zenodo developer documentation](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release) for schema details.
 - [ ] 🤖 **Review Project-Management Files**: Populate or remove the files in `project-management/` before publishing. These are placeholder templates for meeting notes and project plans.
-- [ ] 🤖 **Rendered Site in Releases**: The `release.yml` workflow automatically builds the Quarto site and attaches a `site-<tag>.zip` to each GitHub release. This ensures the rendered HTML documentation is preserved alongside the source archive when Zenodo captures the release.
+- [ ] 🤖 **Rendered Site on GitHub Releases**: The `release.yml` workflow also uploads `release-artifacts/site-<tag>.zip` to the GitHub release page for convenient downloading after publication, but Zenodo preservation depends on the committed archive from the tagged snapshot.
 
 ## Verification Steps
 

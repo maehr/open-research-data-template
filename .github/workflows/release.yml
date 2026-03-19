@@ -38,21 +38,12 @@ jobs:
           r-version: renv
       - uses: r-lib/actions/setup-renv@v2
 
-      - name: Render Quarto Project
-        run: uv run quarto render --to html
-
-      - name: JamPack Optimization
-        run: |
-          npx @divriots/jampack ./_site
-
-      - name: Package site into ZIP
-        run: |
-          cd _site
-          zip -r ../site-${{ github.event.release.tag_name }}.zip .
+      - name: Build site archive
+        run: npm run site:build && npm run site:archive -- --tag ${{ github.event.release.tag_name }}
 
       - name: Upload release asset
         uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: site-${{ github.event.release.tag_name }}.zip
+          files: release-artifacts/site-${{ github.event.release.tag_name }}.zip

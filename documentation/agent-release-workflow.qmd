@@ -11,9 +11,10 @@ flowchart LR
     A[Use the template] --> B[Project setup<br/>Codespaces or local]
     B --> C[Agent-assisted repository updates<br/>placeholders, docs, metadata, changelog]
     C --> D[Validation<br/>format, lint, preview, link checks]
-    D --> E[GitHub Pages publication]
-    E --> F[GitHub release asset<br/>site-tag.zip]
-    F --> G[Zenodo archive and DOI]
+    D --> E[Prepare release archive<br/>npm run release:prepare]
+    E --> F[Commit release-artifacts<br/>site-tag.zip]
+    F --> G[GitHub release]
+    G --> H[Zenodo archive and DOI]
 ```
 
 ### Where agents can intervene
@@ -21,7 +22,7 @@ flowchart LR
 - **Use the template**: agents can explain the repository structure and identify which files still contain placeholders.
 - **Project setup**: agents can edit metadata, documentation, and support files after following [.github/copilot-instructions.md](../.github/copilot-instructions.md).
 - **Validation**: agents can run formatting and changelog commands, then prepare preview-ready documentation changes for review.
-- **Publication**: maintainers should approve GitHub Pages, release publication, and Zenodo steps, while agents prepare the repository state and release notes.
+- **Publication**: maintainers should approve the Pages settings, commit the prepared release archive, merge or push the validated site changes to `main`, and publish the GitHub release, while agents prepare the repository state and release notes.
 
 ## First-release checklist handoff
 
@@ -29,5 +30,6 @@ flowchart LR
 2. Use `npm run commit` for one focused Conventional Commit per logical change, then preview pending notes with `npm run changelog:unreleased`.
 3. Generate the full draft changelog with `npm run changelog` only when you are ready to update `CHANGELOG.template.md`.
 4. Review the preview before any production publication step.
-5. Publish GitHub Pages and the first release outside the agent session.
-6. After Zenodo records the release, update `GITHUB_REPO_ID`, `ZENODO_RECORD`, and `DOI` placeholders in the project instance.
+5. Run `npm run release:prepare -- --tag vX.Y.Z`, then commit the generated `release-artifacts/site-vX.Y.Z.zip` before the GitHub release is published.
+6. Enable GitHub Pages to use GitHub Actions, then let the `Render and Publish` workflow deploy the validated `main` branch outside the agent session.
+7. After Zenodo records the release, update `GITHUB_REPO_ID`, `ZENODO_RECORD`, and `DOI` placeholders in the project instance.

@@ -9,6 +9,9 @@
     "commit": "cz",
     "format": "prettier --write .",
     "prepare": "prek install",
+    "site:build": "uv run quarto render --to html && npx @divriots/jampack ./_site",
+    "site:archive": "uv run python scripts/release_site_archive.py",
+    "release:prepare": "npm run site:build && npm run site:archive -- --stage",
     "changelog": "npm exec git-cliff -- --config cliff.toml",
     "changelog:unreleased": "npm exec git-cliff -- --config cliff.toml --unreleased --strip all",
     "lychee-check": "lychee --config .lycheerc.toml './*.md' './*.qmd' './documentation/**/*.md'"
