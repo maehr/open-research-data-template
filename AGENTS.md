@@ -18,22 +18,23 @@ This repository is a **GitHub template** for FAIR and open research data documen
 
 ## 2) Placeholder Policy (Template vs Project)
 
-This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `ZENODO_RECORD`, `[INSERT CONTACT METHOD]`, `GITHUB_REPO_ID`, `DOI`.
+This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `GITHUB_REPO_ID`, `ZENODO_RECORD`, `[INSERT CONTACT METHOD]`, and `DOI`.
 
 - **Template maintenance**:
-  - Keep placeholders intact across all files so downstream users can replace them.
-  - Update example values only in explanatory comments or docs.
+  - Keep placeholders intact in project-facing template files such as `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `SECURITY.template.md`, and `README.template.md` so downstream users can replace them.
+  - Keep the live template-repository files (`CITATION.cff`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `README.md`, and `CHANGELOG.md`) accurate for this repository.
 
 - **Project instances**:
   - **Replace placeholders** in:
     - `.github/ISSUE_TEMPLATE/config.yml`
     - `_brand.yml`
-    - `CODE_OF_CONDUCT.md`
+    - `CITATION.template.cff` → after replacement, **rename to `CITATION.cff`** early so GitHub shows the correct citation metadata
+    - `CODE_OF_CONDUCT.template.md` → after replacement, **rename to `CODE_OF_CONDUCT.md`** early so GitHub shows the correct community-health file
     - `DESCRIPTION`
     - `package.json`
     - `pyproject.toml`
     - `README.template.md` → after replacement, **rename to `README.md`** when finalized
-    - `SECURITY.md`
+    - `SECURITY.template.md` → after replacement, **rename to `SECURITY.md`** early so GitHub shows the correct security policy
   - Leave any non-project template placeholders untouched only if the file explicitly documents template behavior for reuse.
 
 ## 3) Formatting and Linting (Both)
@@ -119,8 +120,9 @@ Place new files accordingly.
 - The `release.yml` workflow automatically builds the rendered site and attaches it as a `site-<tag>.zip` release asset so that Zenodo archives the HTML documentation alongside the source code.
 - After first release:
   - Record your **`ZENODO_RECORD`** and **`DOI`**.
-  - **Zenodo DOI badge**: replace `GITHUB_REPO_ID` with the numeric repo ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (`id` field). Badge will display your DOI after Zenodo links the release.
-- Add the DOI to the README once available.
+  - **Zenodo DOI badge**: replace `GITHUB_REPO_ID` in the badge image URL with the numeric repo ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (`id` field), and replace `ZENODO_RECORD` in the badge target once Zenodo has created the record. The badge will then display your DOI.
+  - Use the **concept DOI** directly in citation metadata so it stays stable across releases.
+- Add the DOI to the README and `CITATION.cff` once available.
 
 ## 11) Website Publishing with GitHub Pages (Project instances)
 
@@ -164,17 +166,18 @@ Place new files accordingly.
 Follow `TODO.md`, then:
 
 1. Replace placeholders across listed files.
-2. Customize `.qmd` docs and verify with `quarto preview`.
-3. Format files: `npm run format`, `uv run ruff format`, and `styler::style_dir(".")` in R.
-4. Lint Python code: `uv run ruff check`.
-5. Type check Python code: `uv run ty check` (if applicable).
-6. Lint R code: `lintr::lint_dir(".")` in R.
-7. Commit via `npm run commit`.
-8. Preview pending changelog entries with `npm run changelog:unreleased`, then generate `CHANGELOG.template.md` with `npm run changelog`.
-9. When ready, delete the template `README.md` and `CHANGELOG.md`, then rename `README.template.md` → `README.md` and `CHANGELOG.template.md` → `CHANGELOG.md`.
-10. Enable Pages and publish with `quarto publish gh-pages`.
-11. After first release, update `ZENODO_RECORD`, `DOI`, and DOI badge.
-12. Verify security alerts and branch protection.
+2. Activate `CITATION.cff`, `CODE_OF_CONDUCT.md`, and `SECURITY.md` from their `.template` counterparts early so GitHub surfaces your project metadata instead of the template repository's.
+3. Customize `.qmd` docs and verify with `quarto preview`.
+4. Format files: `npm run format`, `uv run ruff format`, and `styler::style_dir(".")` in R.
+5. Lint Python code: `uv run ruff check`.
+6. Type check Python code: `uv run ty check` (if applicable).
+7. Lint R code: `lintr::lint_dir(".")` in R.
+8. Commit via `npm run commit`.
+9. Preview pending changelog entries with `npm run changelog:unreleased`, then generate `CHANGELOG.template.md` with `npm run changelog`.
+10. When ready, delete the template `README.md` and `CHANGELOG.md`, then rename `README.template.md` → `README.md` and `CHANGELOG.template.md` → `CHANGELOG.md`.
+11. Enable Pages and publish with `quarto publish gh-pages`.
+12. After first release, update `ZENODO_RECORD` and `DOI`.
+13. Verify security alerts and branch protection.
 
 ## 15) Verification Steps (Project instances)
 

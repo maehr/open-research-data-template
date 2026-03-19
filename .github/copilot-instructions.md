@@ -4,8 +4,8 @@ This repository is a GitHub template for FAIR and open research data projects. W
 
 ## 1. Determine the context first
 
-- **Template maintenance**: preserve placeholders such as `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `ZENODO_RECORD`, `GITHUB_REPO_ID`, `DOI`, and `[INSERT CONTACT METHOD]` in template files.
-- **Project instance**: replace those placeholders in the files listed in [TODO.md](../TODO.md), then rename `README.template.md` to `README.md` and `CHANGELOG.template.md` to `CHANGELOG.md` when the project is finalized.
+- **Template maintenance**: preserve placeholders such as `USERNAME`, `REPO_NAME`, `FULLNAME`, `SHORT_DESCRIPTION`, `GITHUB_REPO_ID`, `ZENODO_RECORD`, `DOI`, and `[INSERT CONTACT METHOD]` in template files like `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `SECURITY.template.md`, and `README.template.md`.
+- **Project instance**: replace those placeholders in the files listed in [TODO.md](../TODO.md), rename `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, and `SECURITY.template.md` into place early, then rename `README.template.md` to `README.md` and `CHANGELOG.template.md` to `CHANGELOG.md` when the project is finalized.
 
 ## 2. Prefer preview over production
 
@@ -36,5 +36,5 @@ This repository is a GitHub template for FAIR and open research data projects. W
 
 ## 6. Keep docs and governance files consistent
 
-- Update related files together when changing setup or release guidance: `README.md`, `CHANGELOG.md`, `README.template.md`, `CHANGELOG.template.md`, `TODO.md`, `CONTRIBUTING.md`, `SECURITY.md`, and documentation in `documentation/`
+- Update related files together when changing setup or release guidance: `README.md`, `CHANGELOG.md`, `CITATION.cff`, `CITATION.template.cff`, `README.template.md`, `CHANGELOG.template.md`, `CODE_OF_CONDUCT.md`, `CODE_OF_CONDUCT.template.md`, `SECURITY.md`, `SECURITY.template.md`, `TODO.md`, `CONTRIBUTING.md`, and documentation in `documentation/`
 - Link new guidance back to this file when it helps humans and agents find the right workflow quickly

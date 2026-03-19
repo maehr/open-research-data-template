@@ -9,11 +9,10 @@ This template provides an infrastructure for documenting, publishing, and archiv
 [![GitHub stars](https://img.shields.io/github/stars/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/stargazers)
 [![Code license](https://img.shields.io/github/license/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/blob/main/LICENSE-AGPL.md)
 [![Data license](https://img.shields.io/github/license/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/blob/main/LICENSE-CCBY.md)
-
-<!-- [![DOI](https://zenodo.org/badge/614287827.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD) -->
+[![DOI](https://zenodo.org/badge/614287827.svg)](https://doi.org/10.5281/zenodo.19111355)
 
 > [!IMPORTANT]
-> This `README.md` describes the **template repository itself**. If you created a new repository from this template, start with [TODO.md](TODO.md), customize [README.template.md](README.template.md) and [CHANGELOG.template.md](CHANGELOG.template.md), then rename them to `README.md` and `CHANGELOG.md` when your project is ready.
+> This `README.md` describes the **template repository itself**. If you created a new repository from this template, start with [TODO.md](TODO.md), then customize the project-facing template files: [CITATION.template.cff](CITATION.template.cff), [CODE_OF_CONDUCT.template.md](CODE_OF_CONDUCT.template.md), [SECURITY.template.md](SECURITY.template.md), [README.template.md](README.template.md), and [CHANGELOG.template.md](CHANGELOG.template.md), and rename them into place as directed there.
 
 ## 🤝 Academic Recognition
 
@@ -36,7 +35,7 @@ Conventional data publication as static supplementary files offers limited repro
 
 ### Open Research Data
 
-- Citable via [DOI](https://www.doi.org/) and [CITATION.cff](https://citation-file-format.github.io/)
+- Citable via the template [DOI](https://doi.org/10.5281/zenodo.19111355), the live [CITATION.cff](CITATION.cff), and the downstream [CITATION.template.cff](CITATION.template.cff)
 - Automatic long-term archiving with [Zenodo](https://zenodo.org/), including the rendered documentation site as a release asset
 - Licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed) according to [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-sharing.html#step-3-choose-a-licence-and-link-to-your-paper-and-code)
 - Template for reporting data issues via `github/ISSUE_TEMPLATE/data_issue_report.yml`
@@ -63,13 +62,13 @@ Conventional data publication as static supplementary files offers limited repro
 
 ### Security
 
-- `SECURITY.md` following [GitHub guidelines](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
+- `SECURITY.md` following [GitHub guidelines](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository), with `SECURITY.template.md` for downstream projects
 - Vulnerability monitoring with [GitHub Security Alerts](https://github.blog/2017-11-16-introducing-security-alerts-on-github/)
 - Repository integrity enforced via [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
 
 ### Ethics
 
-- `CODE_OF_CONDUCT.md` following the [Contributor Covenant](https://www.contributor-covenant.org/)
+- `CODE_OF_CONDUCT.md` following the [Contributor Covenant](https://www.contributor-covenant.org/), with `CODE_OF_CONDUCT.template.md` for downstream projects
 
 ## Selected Use Cases
 
@@ -308,7 +307,8 @@ This project is maintained by [@maehr](https://github.com/maehr). Please underst
 - [x] Document agent-assisted setup, validation, and release preparation workflows
 - [x] Ship changelog guidance that is based on commit history and ready for automation
 - [x] Preserve rendered HTML documentation in release assets for Zenodo archival
-- [ ] Publish the first stable release and record the resulting DOI metadata
+- [x] Record the template repository's Zenodo concept DOI and live citation metadata
+- [ ] Publish the first stable GitHub release for the repository
 
 ### Post-v1.0.0
 
@@ -322,8 +322,8 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct
 
 ## Authors and credits
 
-- **Moritz Mähr** - _Initial work_ - [maehr](https://github.com/maehr)
-- **Moritz Twente** - _Enhancements_ - [mtwente](https://github.com/mtwente)
+- **Moritz Mähr** - _Initial work_ - [maehr](https://github.com/maehr) - [ORCID](https://orcid.org/0000-0002-1367-1618)
+- **Moritz Twente** - _Enhancements_ - [mtwente](https://github.com/mtwente) - [ORCID](https://orcid.org/0009-0005-7187-9774)
 
 See also the list of [contributors](https://github.com/maehr/open-research-data-template/graphs/contributors) who contributed to this project.
 

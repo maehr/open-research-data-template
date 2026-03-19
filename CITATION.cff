@@ -1,13 +1,22 @@
 cff-version: 1.2.0
-title: REPO_NAME
+title: GitHub Template for FAIR and Open Research Data
 message: >-
-  If you use this dataset, please cite it using the
+  If you use this template, please cite it using the
   metadata from this file.
-type: dataset
+type: software
 authors:
-  - given-names: FULLNAME
-    email: '[INSERT CONTACT METHOD]'
-repository-code: 'https://github.com/USERNAME/REPO_NAME'
+  - family-names: Mähr
+    given-names: Moritz
+    alias: maehr
+    orcid: 'https://orcid.org/0000-0002-1367-1618'
+  - family-names: Twente
+    given-names: Moritz
+    alias: mtwente
+    orcid: 'https://orcid.org/0009-0005-7187-9774'
+repository-code: 'https://github.com/maehr/open-research-data-template'
+url: 'https://maehr.github.io/open-research-data-template/'
+doi: '10.5281/zenodo.19111355'
 license: AGPL-3.0
-version: 1.0.0
-abstract: SHORT_DESCRIPTION
+abstract: >-
+  GitHub template for FAIR and open research data documentation with Quarto,
+  GitHub Pages, and Zenodo-ready release workflows.

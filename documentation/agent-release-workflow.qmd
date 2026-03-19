@@ -30,4 +30,4 @@ flowchart LR
 3. Generate the full draft changelog with `npm run changelog` only when you are ready to update `CHANGELOG.template.md`.
 4. Review the preview before any production publication step.
 5. Publish GitHub Pages and the first release outside the agent session.
-6. After Zenodo records the release, update `ZENODO_RECORD`, `DOI`, and the DOI badge placeholders in the project instance.
+6. After Zenodo records the release, update `GITHUB_REPO_ID`, `ZENODO_RECORD`, and `DOI` placeholders in the project instance.
