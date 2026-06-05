@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/maehr/open-research-data-template/compare/v1.0.0...HEAD)
 
+### Changed
+
+- Replaced the Commitizen commit wizard with Commitlint enforcement through Prek-managed `commit-msg` hooks.
+- Added GitHub CLI guidance for security alerts, Dependabot security updates, and branch protection setup.
+
 ## [1.0.0](https://github.com/maehr/open-research-data-template/releases/tag/v1.0.0)
 
 ### Added

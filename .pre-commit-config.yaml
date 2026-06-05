@@ -42,3 +42,9 @@ repos:
         language: system
         types: [r]
         stages: [pre-commit]
+
+      - id: commitlint
+        name: Commitlint
+        entry: npx commitlint --edit
+        language: system
+        stages: [commit-msg]

@@ -54,7 +54,7 @@ Conventional data publication as static supplementary files offers limited repro
 - Python type checking with [ty](https://github.com/astral-sh/ty)
 - Python dependency management with [uv](https://github.com/astral-sh/uv)
 - R dependency management with [renv](https://rstudio.github.io/renv/)
-- Commit messages following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) enforced via [prek](https://prek.j178.dev/)
+- Commit messages following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) enforced via [Commitlint](https://commitlint.js.org/) and [Prek](https://prek.j178.dev/)
 - Versioning following [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 - Workflow based on [fork and pull](https://gist.github.com/Chaser324/ce0505fbed06b947d962) with [GitHub branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
 - Issue tracking via [issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
@@ -114,7 +114,7 @@ We recommend using **[GitHub Codespaces](https://github.com/features/codespaces)
 
 ### Prek Git Hooks
 
-This template uses [Prek](https://prek.j178.dev/) for managing Git hooks with a pre-commit-compatible configuration. To install hooks locally:
+This template uses [Prek](https://prek.j178.dev/) for managing Git hooks with a pre-commit-compatible configuration. Prek installs formatting and linting hooks for `pre-commit` plus a [Commitlint](https://commitlint.js.org/) hook for `commit-msg`. To install hooks locally:
 
 ```bash
 npm install
@@ -172,6 +172,7 @@ npx @j178/prek run --all-files
 #### Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
+- [GitHub CLI](https://cli.github.com/) for repeatable repository settings changes
 - [R](https://cran.r-project.org/) and Rtools (on Windows)
 - [uv (Python manager)](https://github.com/astral-sh/uv#installation)
 - [Quarto](https://quarto.org/docs/get-started/)
@@ -203,12 +204,39 @@ After creating your project from this template (either via Codespaces or local s
 
 If you want a coding agent to help, point it to [.github/copilot-instructions.md](.github/copilot-instructions.md) first and then ask it to work through the checklist items marked as agent-assisted.
 
-| Setup step                                                            | Typical owner                                  | References                                                                                                        |
-| --------------------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Replace placeholders, customize metadata, and update documentation    | 🤖 Agent-assisted                              | [TODO.md](TODO.md), [.github/copilot-instructions.md](.github/copilot-instructions.md)                            |
-| Run formatting, changelog, preview, and validation commands           | 🤖 Agent-assisted                              | [Use](#use), [.github/template-site/agent-release-workflow.qmd](.github/template-site/agent-release-workflow.qmd) |
-| Enable GitHub Security, Branch Protection, Pages, and Zenodo settings | 👤 Manual in GitHub/Zenodo                     | [TODO.md](TODO.md)                                                                                                |
-| Approve the final release and publish production artifacts            | 🤝 Shared: agent prepares, maintainer confirms | [.github/template-site/agent-release-workflow.qmd](.github/template-site/agent-release-workflow.qmd)              |
+For GitHub repository settings such as security alerts, Dependabot security updates, branch protection, and Pages, prefer the [GitHub CLI](https://cli.github.com/) when `gh auth status` confirms access and the maintainer has approved the platform change. The web UI remains a good fallback, but `gh` commands are easier for users and agents to review, repeat, and audit.
+
+Install `gh` if it is not available yet:
+
+- macOS: `brew install gh`
+- Windows: `winget install --id GitHub.cli`
+- Linux: see the [GitHub CLI installation instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+
+```bash
+gh auth status
+gh api --method PUT "repos/:owner/:repo/vulnerability-alerts" --silent
+gh api --method PUT "repos/:owner/:repo/automated-security-fixes" --silent
+gh api --method PUT "repos/:owner/:repo/branches/main/protection" --input - <<'JSON'
+{
+  "required_status_checks": null,
+  "enforce_admins": false,
+  "required_pull_request_reviews": {
+    "required_approving_review_count": 1
+  },
+  "restrictions": null,
+  "allow_force_pushes": false,
+  "allow_deletions": false,
+  "required_conversation_resolution": true
+}
+JSON
+```
+
+| Setup step                                                            | Typical owner                                     | References                                                                                                        |
+| --------------------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Replace placeholders, customize metadata, and update documentation    | 🤖 Agent-assisted                                 | [TODO.md](TODO.md), [.github/copilot-instructions.md](.github/copilot-instructions.md)                            |
+| Run formatting, changelog, preview, and validation commands           | 🤖 Agent-assisted                                 | [Use](#use), [.github/template-site/agent-release-workflow.qmd](.github/template-site/agent-release-workflow.qmd) |
+| Enable GitHub Security, Branch Protection, Pages, and Zenodo settings | 🤝 Shared: `gh` CLI can help, maintainer confirms | [TODO.md](TODO.md)                                                                                                |
+| Approve the final release and publish production artifacts            | 🤝 Shared: agent prepares, maintainer confirms    | [.github/template-site/agent-release-workflow.qmd](.github/template-site/agent-release-workflow.qmd)              |
 
 ## Use
 
@@ -239,15 +267,15 @@ styler::style_dir(".")
 lintr::lint_dir(".")
 ```
 
-Run the wizard to write meaningful commit messages.
+Write one focused Conventional Commit subject. Commitlint checks the message through Prek's `commit-msg` hook.
 
 ```bash
-npm run commit
+git commit -m "chore: initial project setup"
 ```
 
 For agent workflows, prefer one focused commit per logical change so `git-cliff` can turn the Conventional Commit subject into a short changelog line without extra cleanup. Multi-line commit messages are now truncated to their first line in changelog output, so keeping the subject specific is what matters most.
 
-Run the wizard to draft changelog entries.
+Generate changelog entries from commit history.
 
 ```bash
 npm run changelog
@@ -298,7 +326,7 @@ Or run the combined helper, which builds the site, creates `release-artifacts/si
 
 ```bash
 npm run release:prepare -- --tag v1.0.0
-npm run commit
+git commit -m "chore: add v1.0.0 site archive"
 ```
 
 Commit the generated archive before you publish the GitHub release. Zenodo captures files that are already in the tagged repository snapshot, while the release workflow only mirrors the same ZIP onto the GitHub release page for convenient downloading.

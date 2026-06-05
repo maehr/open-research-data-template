@@ -48,7 +48,7 @@ This template includes placeholders like: `USERNAME`, `REPO_NAME`, `FULLNAME`, `
 
 ## 4) Commits and Changelog (Both)
 
-- Use **`npm run commit`** to follow Conventional Commits.
+- Use **`git commit -m "type: subject"`** with a valid Conventional Commit subject; Commitlint enforces this through Prek.
 - Prefer one focused logical change per commit so `git-cliff` can reuse the subject line directly.
 - Use **`npm run changelog:unreleased`** for compact agent previews while iterating.
 - After committing, generate entries with **`npm run changelog`** and update `CHANGELOG.md` for template maintenance or `CHANGELOG.template.md` for project instances.
@@ -110,8 +110,9 @@ Place new files accordingly.
 
 ## 9) GitHub Features and Security (Project instances)
 
-- **Enable GitHub Security Alerts** and Dependabot updates (Repository → Security).
-- **Protect `main`**: require PR reviews and disallow force pushes.
+- Prefer authenticated **GitHub CLI (`gh`) commands** for GitHub settings when the maintainer has approved the external action; use the web UI only as a fallback.
+- **Enable GitHub Security Alerts** and Dependabot updates with `gh api --method PUT "repos/:owner/:repo/vulnerability-alerts" --silent` and `gh api --method PUT "repos/:owner/:repo/automated-security-fixes" --silent`.
+- **Protect `main`** with `gh api --method PUT "repos/:owner/:repo/branches/main/protection"` so PR reviews are required and force pushes are disabled.
 - Keep `SECURITY.md` and GitHub security features active.
 - Use provided **issue templates**; modify only to improve the template.
 
@@ -153,7 +154,7 @@ Place new files accordingly.
 | `uv run ty check`                         | Type check Python code                                 |
 | `styler::style_dir(".")`                  | Format R code                                          |
 | `lintr::lint_dir(".")`                    | Lint R code                                            |
-| `npm run commit`                          | Conventional Commits wizard                            |
+| `git commit -m "type: subject"`           | Create a Commitlint-checked Conventional Commit        |
 | `npm run changelog:unreleased`            | Compact preview of pending changelog entries           |
 | `npm run changelog`                       | Generate changelog from commits                        |
 | `npm run prepare`                         | Setup Prek git hooks                                   |
@@ -174,7 +175,7 @@ Follow `TODO.md`, then:
 5. Lint Python code: `uv run ruff check`.
 6. Type check Python code: `uv run ty check` (if applicable).
 7. Lint R code: `lintr::lint_dir(".")` in R.
-8. Commit via `npm run commit`.
+8. Commit via `git commit -m "chore: initial project setup"`.
 9. Preview pending changelog entries with `npm run changelog:unreleased`, then generate `CHANGELOG.template.md` with `npm run changelog`.
 10. Before creating a release, run `npm run release:prepare -- --tag vX.Y.Z` and commit the generated `release-artifacts/site-vX.Y.Z.zip`.
 11. When ready, delete the template `README.md` and `CHANGELOG.md`, then rename `README.template.md` → `README.md` and `CHANGELOG.template.md` → `CHANGELOG.md`.

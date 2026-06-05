@@ -18,6 +18,7 @@ This repository is a GitHub template for FAIR and open research data projects. W
 - Use [TODO.md](../TODO.md) as the source of truth.
 - Work through items marked 🤖 directly.
 - Prepare, but do not complete on your own, items marked 🤝 or 👤 unless the maintainer explicitly authorizes the external action.
+- When a maintainer authorizes GitHub repository settings changes, prefer reviewable `gh` CLI commands over browser-only instructions for branch protection, security alerts, Dependabot security updates, and Pages settings.
 
 ## 4. Use the existing validation tools
 
@@ -31,7 +32,7 @@ This repository is a GitHub template for FAIR and open research data projects. W
 ## 5. Manage the changelog from history
 
 - Fetch the full history first when needed: `git fetch --tags --unshallow origin`
-- Use `npm run commit` so each logical change becomes a Conventional Commit that `git-cliff` can summarize cleanly
+- Use `git commit -m "type: subject"` so each logical change becomes a Commitlint-checked Conventional Commit that `git-cliff` can summarize cleanly
 - Use `npm run changelog:unreleased` while iterating to keep agent context small
 - Draft the full release notes with `npm run changelog`
 - For project instances, curate the generated entries into [CHANGELOG.template.md](../CHANGELOG.template.md) until it is renamed to `CHANGELOG.md`

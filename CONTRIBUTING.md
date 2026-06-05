@@ -22,6 +22,7 @@ Agents can usually handle documentation edits, placeholder replacement, formatti
    - Run `npm run check` to verify formatting
    - Install Prek hooks with `npm run prepare`
    - Run `prek run --all-files` to run all hooks locally (or `npx @j178/prek run --all-files` if Prek isn't installed globally)
+   - Commit with a Conventional Commit subject such as `git commit -m "fix: correct metadata example"`; Commitlint enforces this through the Prek `commit-msg` hook
    - Run `uv run ruff format` to format Python code
    - Run `uv run ruff check` to lint Python code
    - Run `uv run ty check` to type check Python code (if applicable)

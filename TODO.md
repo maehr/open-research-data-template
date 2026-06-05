@@ -8,8 +8,8 @@ Complete the following steps after creating your project from this template to c
 
 ## Essential Setup Tasks
 
-- [ ] 👤 **Enable GitHub Security Alerts**: Navigate to your repository's "Security" tab on GitHub and enable Dependabot alerts and security updates to monitor vulnerabilities in dependencies.
-- [ ] 👤 **Protect the Main Branch**: In repository settings under "Branches", add a branch protection rule for `main` to require pull request reviews before merging and prevent force pushes.
+- [ ] 🤝 **Enable GitHub Security Alerts**: Prefer the GitHub CLI after `gh auth status`: run `gh api --method PUT "repos/:owner/:repo/vulnerability-alerts" --silent` and `gh api --method PUT "repos/:owner/:repo/automated-security-fixes" --silent` to enable Dependabot alerts and security updates. If CLI access is unavailable, use the repository's "Security" tab on GitHub.
+- [ ] 🤝 **Protect the Main Branch**: Prefer the GitHub CLI command documented in [README.md](README.md) to add a branch protection rule for `main` that requires pull request reviews and prevents force pushes. If CLI access is unavailable, use repository settings under "Branches".
 - [ ] 🤖 **Update Project Details**: Replace all placeholder values and review inherited project metadata in the following files with your actual project information:
   - `FULLNAME` → Your full name (e.g., "Jane Doe")
   - `USERNAME` → Your GitHub username (e.g., "janedoe")
@@ -30,9 +30,9 @@ Complete the following steps after creating your project from this template to c
 - [ ] 🤖 **Customize Citation File**: Update `CITATION.template.cff` with your project's authors, title, repository URL, license, and preferred resource type before you rename it to `CITATION.cff`. Add `DOI` after the first release if you do not have one yet.
 - [ ] 🤖 **Finalize README and Changelog**: Once all customization is complete, delete the template `README.md` and `CHANGELOG.md`, then rename `README.template.md` to `README.md` and `CHANGELOG.template.md` to `CHANGELOG.md`.
 - [ ] 🤖 **Format Files**: Run `npm run format` to apply consistent formatting to all files using Prettier before committing changes.
-- [ ] 🤖 **Commit Changes**: Use `npm run commit` to create a properly formatted commit message following Conventional Commits standards (e.g., "chore: initial project setup").
+- [ ] 🤖 **Commit Changes**: Use `git commit -m "chore: initial project setup"` or another clear Conventional Commit subject. Commitlint enforces the format through the Prek `commit-msg` hook.
 - [ ] 🤖 **Generate Changelog**: Run `npm run changelog` to generate entries from your project's commit history, then curate the output into `CHANGELOG.template.md`.
-- [ ] 🤝 **Prepare a Zenodo-ready Site Archive**: Before creating a GitHub release, run `npm run release:prepare -- --tag vX.Y.Z`, review the generated `release-artifacts/site-vX.Y.Z.zip`, and commit it with `npm run commit`. Zenodo archives files that are already in the tagged repository snapshot, not GitHub release assets that are added later. If your Quarto project uses a different output directory, pass it through with `--site-dir`.
+- [ ] 🤝 **Prepare a Zenodo-ready Site Archive**: Before creating a GitHub release, run `npm run release:prepare -- --tag vX.Y.Z`, review the generated `release-artifacts/site-vX.Y.Z.zip`, and commit it with `git commit -m "chore: add vX.Y.Z site archive"`. Zenodo archives files that are already in the tagged repository snapshot, not GitHub release assets that are added later. If your Quarto project uses a different output directory, pass it through with `--site-dir`.
 - [ ] 🤖 **Customize Documentation**: Adapt the Quarto documentation to your project by editing `.qmd` files, adding your data analysis, visualizations, and narrative. See [Quarto documentation](https://quarto.org/docs/websites/#workflow) for guidance.
 - [ ] 👤 **Enable GitHub Pages**: In repository settings under "Pages", set the source to **GitHub Actions** so the built-in deployment workflow can publish the site.
 - [ ] 🤝 **Deploy Documentation**: After preview and validation checks pass, merge or push the approved changes to `main` and confirm the `Render and Publish` workflow deploys the site successfully. Use the workflow's manual dispatch option only if you need to rerun the deployment.
