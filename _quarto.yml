@@ -24,7 +24,7 @@ website:
       - icon: github
         url: https://github.com/USERNAME/REPO_NAME/
     left:
-      - text: Readme
+      - text: Home
         href: index.qmd
       - text: Documentation
         href: documentation.md

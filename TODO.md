@@ -1,58 +1,143 @@
 # Project Setup Checklist
 
-Complete the following steps after creating your project from this template to customize and finalize your project. Each item is designed to be clear and actionable for both human users and AI assistants. If you are using GitHub Copilot or another coding agent, start with [.github/copilot-instructions.md](.github/copilot-instructions.md) and use the labels below to divide work clearly.
+Use this checklist after creating a repository from the template. This file is the project workbench: it can contain unfinished tasks, reminders, setup commands, and maintenance notes.
 
-- 🤖 **Agent-assisted**: a coding agent can usually do this directly in the repository.
-- 👤 **Manual**: this must be completed in GitHub, Zenodo, or another external service.
-- 🤝 **Shared**: an agent can prepare the repository work, but a maintainer should approve the final platform action.
+Keep public explanations out of this file. Move stable information to `README.md`, `index.qmd`, `documentation.md`, or a page in `documentation/` once it is no longer a setup task.
 
-## Essential Setup Tasks
+## Owner Labels
 
-- [ ] 🤝 **Enable GitHub Security Alerts**: Prefer the GitHub CLI after `gh auth status`: run `gh api --method PUT "repos/:owner/:repo/vulnerability-alerts" --silent` and `gh api --method PUT "repos/:owner/:repo/automated-security-fixes" --silent` to enable Dependabot alerts and security updates. If CLI access is unavailable, use the repository's "Security" tab on GitHub.
-- [ ] 🤝 **Protect the Main Branch**: Prefer the GitHub CLI command documented in [README.md](README.md) to add a branch protection rule for `main` that requires pull request reviews and prevents force pushes. If CLI access is unavailable, use repository settings under "Branches".
-- [ ] 🤖 **Update Project Details**: Replace all placeholder values and review inherited project metadata in the following files with your actual project information:
-  - `FULLNAME` → Your full name (e.g., "Jane Doe")
-  - `USERNAME` → Your GitHub username (e.g., "janedoe")
-  - `REPO_NAME` → Your repository name (e.g., "my-research-data")
-  - `SHORT_DESCRIPTION` → Brief description of your project (e.g., "Analysis of climate data from 2020-2024")
-  - `[INSERT CONTACT METHOD]` → Your contact email or preferred method
-  - `GITHUB_REPO_ID` → Your GitHub repository ID (e.g., "123456789")
-  - `ZENODO_RECORD` → Your Zenodo record number (e.g., "1234567") after first release or manually create a Zenodo deposit
-  - `DOI` → Your DOI after first release (e.g., "10.5281/zenodo.1234567")
-  - `version` in `pyproject.toml` → Your project's starting version (the template defaults to `0.1.0`)
-  - Files to update: `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `package.json`, `pyproject.toml`, `README.template.md`, and `SECURITY.template.md`
-- [ ] 🤖 **Activate Project-Specific Citation and Governance Files**: After replacing placeholders, rename `CITATION.template.cff` to `CITATION.cff`, `CODE_OF_CONDUCT.template.md` to `CODE_OF_CONDUCT.md`, and `SECURITY.template.md` to `SECURITY.md` so GitHub shows your project's metadata instead of the template repository's.
-- [ ] 👤 **Set Up Zenodo Integration**: Follow the [GitHub guide for Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to enable automatic archiving and obtain a DOI for your repository.
-- [ ] 🤖 **Set Up Zenodo DOI Badge**: In `README.template.md`, replace `GITHUB_REPO_ID` in the badge image URL with the repository ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (look for the `id` field in the JSON response). The badge will automatically display your DOI after the first release.
-- [ ] 🤝 **Record Zenodo DOI Metadata**: After creating your first release and obtaining a DOI, replace `DOI` in `CITATION.cff`, and replace `ZENODO_RECORD` in the badge target in `README.template.md` with your actual record number.
-- [ ] 🤖 **Add Favicons**: Generate and add favicon files to the root directory using [favicon.io](https://favicon.io/) or a similar service. Include `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, and Android icons.
-- [ ] 🤖 **Address TODO Comments**: Search for `TODO` comments throughout all project files using `grep -r "TODO" .` and complete or remove each task as appropriate for your project.
-- [ ] 🤖 **Customize Citation File**: Update `CITATION.template.cff` with your project's authors, title, repository URL, license, and preferred resource type before you rename it to `CITATION.cff`. Add `DOI` after the first release if you do not have one yet.
-- [ ] 🤖 **Finalize README and Changelog**: Once all customization is complete, delete the template `README.md` and `CHANGELOG.md`, then rename `README.template.md` to `README.md` and `CHANGELOG.template.md` to `CHANGELOG.md`.
-- [ ] 🤖 **Format Files**: Run `npm run format` to apply consistent formatting to all files using Prettier before committing changes.
-- [ ] 🤖 **Commit Changes**: Use `git commit -m "chore: initial project setup"` or another clear Conventional Commit subject. Commitlint enforces the format through the Prek `commit-msg` hook.
-- [ ] 🤖 **Generate Changelog**: Run `npm run changelog` to generate entries from your project's commit history, then curate the output into `CHANGELOG.template.md`.
-- [ ] 🤝 **Prepare a Zenodo-ready Site Archive**: Before creating a GitHub release, run `npm run release:prepare -- --tag vX.Y.Z`, review the generated `release-artifacts/site-vX.Y.Z.zip`, and commit it with `git commit -m "chore: add vX.Y.Z site archive"`. Zenodo archives files that are already in the tagged repository snapshot, not GitHub release assets that are added later. If your Quarto project uses a different output directory, pass it through with `--site-dir`.
-- [ ] 🤖 **Customize Documentation**: Adapt the Quarto documentation to your project by editing `.qmd` files, adding your data analysis, visualizations, and narrative. See [Quarto documentation](https://quarto.org/docs/websites/#workflow) for guidance.
-- [ ] 👤 **Enable GitHub Pages**: In repository settings under "Pages", set the source to **GitHub Actions** so the built-in deployment workflow can publish the site.
-- [ ] 🤝 **Deploy Documentation**: After preview and validation checks pass, merge or push the approved changes to `main` and confirm the `Render and Publish` workflow deploys the site successfully. Use the workflow's manual dispatch option only if you need to rerun the deployment.
+| Label      | Meaning                                                                       |
+| ---------- | ----------------------------------------------------------------------------- |
+| `[Agent]`  | A coding agent can usually do this directly in the repository.                |
+| `[Shared]` | An agent can prepare the work, but a maintainer approves the external action. |
+| `[Manual]` | Complete this in GitHub, Zenodo, or another external service.                 |
 
-## Optional Enhancements
+## Why This Checklist Exists
 
-- [ ] 🤖 **Add Zenodo Metadata File**: Create a `.zenodo.json` file to control metadata sent to Zenodo during archival. Include custom creators, contributors, keywords, and license information. See [Zenodo developer documentation](https://developers.zenodo.org/?python#add-metadata-to-your-github-repository-release) for schema details.
-- [ ] 🤖 **Review Project-Management Files**: Populate or remove the files in `project-management/` before publishing. These are placeholder templates for meeting notes and project plans.
-- [ ] 🤖 **Rendered Site on GitHub Releases**: The `release.yml` workflow also uploads `release-artifacts/site-<tag>.zip` to the GitHub release page for convenient downloading after publication, but Zenodo preservation depends on the committed archive from the tagged snapshot.
+Novice users should not have to decide where every note belongs. Use this rule:
 
-## Verification Steps
+| If you need to...                                           | Put it in...                              | Why                                                                         |
+| ----------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------- |
+| Explain what the repository is and how to navigate it       | `README.md`                               | GitHub visitors need a short front door.                                    |
+| Track unfinished setup or release work                      | `TODO.md`                                 | Maintainers need a checklist that can change often.                         |
+| Explain the project to public readers                       | `index.qmd`                               | Website visitors need a readable homepage, not setup notes.                 |
+| Describe methods, fields, workflows, or decisions in detail | `documentation/` or `project-management/` | Detailed records should stay findable without making the homepage too long. |
 
-After completing the checklist:
+Examples:
 
-1. Run `npm run check` to verify all files are properly formatted
-2. Run `uv run ruff check` to verify Python code passes linting
-3. Run `uv run ty check` to verify Python type checking (if applicable)
-4. Run `styler::style_dir(".")` in R to format R code
-5. Run `lintr::lint_dir(".")` in R to verify R code passes linting
-6. Run `quarto preview` to ensure documentation renders correctly
-7. Review your GitHub Pages site to confirm it displays as expected
-8. Test that all links in your README work correctly
-9. Verify that security alerts and branch protection are active
+| Text or task                                                         | Correct home     |
+| -------------------------------------------------------------------- | ---------------- |
+| `Replace USERNAME with maehr`                                        | `TODO.md`        |
+| `Data are stored in data/ and scripts are stored in src/`            | `README.md`      |
+| `This project documents historical voting records from 1900 to 1950` | `index.qmd`      |
+| `The variable municipality_id uses the official federal code`        | `documentation/` |
+| `Enable GitHub Pages with Source: GitHub Actions`                    | `TODO.md`        |
+
+## Before You Start
+
+- [ ] `[Agent]` Install dependencies with `npm install` if they are not already installed.
+- [ ] `[Agent]` Install Git hooks with `npm run prepare`.
+- [ ] `[Agent]` Start the Quarto preview with `npm run preview` and keep it running while editing documentation.
+- [ ] `[Agent]` Read `README.md` to understand the template and this checklist to understand the setup path.
+
+Why this matters: previewing early helps you catch broken links, missing files, and confusing pages while the project is still easy to change.
+
+## Phase 1: Make The Project Identifiable
+
+- [ ] `[Agent]` Replace placeholders in `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `DESCRIPTION`, `package.json`, `pyproject.toml`, `README.template.md`, and `SECURITY.template.md`.
+- [ ] `[Agent]` Update project values for `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, `[INSERT CONTACT METHOD]`, `GITHUB_REPO_ID`, `ZENODO_RECORD`, `DOI`, and the starting project version where they apply.
+- [ ] `[Agent]` Customize citation metadata in `CITATION.template.cff`, including authors, title, repository URL, license, resource type, and DOI if already available.
+- [ ] `[Agent]` Activate project citation and governance files by renaming `CITATION.template.cff` to `CITATION.cff`, `CODE_OF_CONDUCT.template.md` to `CODE_OF_CONDUCT.md`, and `SECURITY.template.md` to `SECURITY.md`.
+- [ ] `[Agent]` Add favicons at the repository root if the project will publish a site: `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, and Android icons.
+- [ ] `[Agent]` Optionally add `.zenodo.json` for richer Zenodo metadata.
+
+Why this matters: placeholders are useful in a template, but they make a project look unfinished and can break badges, citations, package metadata, and support links.
+
+## Phase 2: Put Content In The Right Place
+
+- [ ] `[Agent]` Customize `README.template.md` as the GitHub front door: project summary, repository structure, basic use, citation, support, authors, and license.
+- [ ] `[Agent]` Customize `index.qmd` as the public website homepage: plain-language project introduction, target users, data or outputs, reuse guidance, and links to detailed pages.
+- [ ] `[Agent]` Customize `documentation.md` and pages in `documentation/` for methods, data dictionaries, workflows, user guides, or other details that are too long for the homepage.
+- [ ] `[Agent]` Review or remove placeholder files in `project-management/`, including communication, people, tools, and project-report pages.
+- [ ] `[Agent]` Resolve TODO comments outside this checklist by searching for `TODO` and completing or removing each project-specific note.
+
+Why this matters: public readers should not have to read setup tasks, and maintainers should not have to search the website for unfinished work. Keeping the files separate makes the project easier to teach, review, and maintain.
+
+## Phase 3: Configure GitHub And Zenodo
+
+- [ ] `[Shared]` Enable GitHub Security Alerts and Dependabot security updates with the GitHub CLI commands below, or use the GitHub web UI if CLI access is unavailable.
+- [ ] `[Shared]` Protect the `main` branch with the GitHub CLI branch protection command below, or configure branch protection in the GitHub web UI.
+- [ ] `[Manual]` Enable GitHub Pages in repository settings with **Source: GitHub Actions**.
+- [ ] `[Manual]` Enable Zenodo-GitHub integration so releases can be archived and assigned DOIs.
+- [ ] `[Agent]` Set up the Zenodo DOI badge by replacing `GITHUB_REPO_ID` in `README.template.md` with the numeric repository ID from `https://api.github.com/repos/USERNAME/REPO_NAME`.
+- [ ] `[Shared]` After the first release, record DOI metadata by replacing `DOI` in `CITATION.cff` and `ZENODO_RECORD` in `README.template.md`.
+
+Why this matters: repository settings affect publishing, security, citation, and long-term preservation. Some settings need maintainer approval because they happen outside the files in this repository.
+
+## Phase 4: Validate The Project Locally
+
+- [ ] `[Agent]` Format files with `npm run format`.
+- [ ] `[Agent]` Check formatting with `npm run check`.
+- [ ] `[Agent]` Lint Python code with `uv run ruff check` if Python code is present.
+- [ ] `[Agent]` Type-check Python code with `uv run ty check` if Python code is present.
+- [ ] `[Agent]` Format and lint R code with `styler::style_dir(".")` and `lintr::lint_dir(".")` if R code is present.
+- [ ] `[Agent]` Preview documentation with `npm run preview` and fix rendering issues.
+- [ ] `[Agent]` Optionally check links with `npm run lychee-check` if link checking is configured for the project.
+
+Why this matters: validation catches formatting problems, broken documentation pages, and language-specific errors before they become public or archived.
+
+## Phase 5: Commit, Publish, And Archive
+
+- [ ] `[Agent]` Commit setup changes with a Conventional Commit subject, for example `git commit -m "chore: initial project setup"`.
+- [ ] `[Agent]` Generate changelog entries with `npm run changelog`, then curate the result into `CHANGELOG.template.md`.
+- [ ] `[Shared]` Prepare a Zenodo-ready site archive before a release with `npm run release:prepare -- --tag vX.Y.Z`, then commit `release-artifacts/site-vX.Y.Z.zip`.
+- [ ] `[Shared]` Deploy documentation by merging or pushing validated changes to `main`, then confirming that the `Render and Publish` workflow succeeds.
+- [ ] `[Agent]` Finalize README and changelog by deleting the template `README.md` and `CHANGELOG.md`, then renaming `README.template.md` to `README.md` and `CHANGELOG.template.md` to `CHANGELOG.md`.
+- [ ] `[Agent]` Review final links in the README and published site.
+
+Why this matters: releases are easier to cite and preserve when the rendered site, changelog, DOI metadata, and repository files all describe the same version of the project.
+
+## GitHub CLI Reference
+
+Install the [GitHub CLI](https://cli.github.com/) if needed:
+
+| Platform | Command or instructions                                                                      |
+| -------- | -------------------------------------------------------------------------------------------- |
+| macOS    | `brew install gh`                                                                            |
+| Windows  | `winget install --id GitHub.cli`                                                             |
+| Linux    | [GitHub CLI Linux instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) |
+
+Check authentication before running repository-setting commands:
+
+```bash
+gh auth status
+```
+
+Enable security alerts and Dependabot security updates:
+
+```bash
+gh api --method PUT "repos/:owner/:repo/vulnerability-alerts" --silent
+gh api --method PUT "repos/:owner/:repo/automated-security-fixes" --silent
+```
+
+Protect `main` by requiring pull request review, disallowing force pushes and deletions, and requiring conversation resolution:
+
+```bash
+gh api --method PUT "repos/:owner/:repo/branches/main/protection" --input - <<'JSON'
+{
+  "required_status_checks": null,
+  "enforce_admins": false,
+  "required_pull_request_reviews": {
+    "required_approving_review_count": 1
+  },
+  "restrictions": null,
+  "allow_force_pushes": false,
+  "allow_deletions": false,
+  "required_conversation_resolution": true
+}
+JSON
+```
+
+## Verification Summary
+
+The setup is complete when placeholders are gone, `README.md` is the repository front door, `index.qmd` is the public homepage, formatting passes, language checks pass for the languages you use, `npm run preview` renders without errors, GitHub Pages loads correctly, security settings are active, and Zenodo DOI metadata is correct after the first release.

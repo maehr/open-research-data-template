@@ -9,6 +9,18 @@ This repository contains SHORT_DESCRIPTION. The data in this repository is openl
 [![Data license](https://img.shields.io/github/license/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/blob/main/LICENSE-CCBY.md)
 [![DOI](https://zenodo.org/badge/GITHUB_REPO_ID.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD)
 
+## Where To Find What
+
+This repository separates orientation, setup work, and public documentation so each file has one clear job. This makes the project easier for new users because they can tell from the filename whether they are reading stable guidance, unfinished setup tasks, or the published website.
+
+| File        | Use it for                                                                                                 | Why                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `README.md` | Repository summary, structure, citation, support, authors, and license                                     | GitHub visitors need a short front door.                         |
+| `TODO.md`   | Setup checklist, placeholder replacement, GitHub and Zenodo tasks, validation, and release preparation     | Maintainers need one workbench for unfinished tasks.             |
+| `index.qmd` | Public website homepage, project story, data overview, reuse guidance, and links to detailed documentation | Website readers need a clear explanation, not maintenance notes. |
+
+For example, `Enable GitHub Pages` belongs in `TODO.md`, `data/ contains cleaned datasets` belongs in `README.md`, and a plain-language explanation of what this project documents belongs in `index.qmd`.
+
 ## Repository Structure
 
 The structure of this repository follows the [Advanced Structure for Data Analysis](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-advanced/) of _The Turing Way_ and is organized as follows:
