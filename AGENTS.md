@@ -11,7 +11,7 @@ This repository is a **GitHub template** for FAIR and open research data documen
 
 ## 1) Use Preview Mode During Interactive Sessions (Both)
 
-- **Always run `quarto preview` (or `uv run quarto preview`)** while iterating on docs. Live reload for `.qmd`, `.md`, and assets.
+- **Always run `npm run preview`** while iterating on docs. It wraps `uv run quarto preview` and provides live reload for `.qmd`, `.md`, and assets.
 - **Do not run production commands inside agent sessions** unless explicitly requested by the human maintainer:
   - Avoid: `quarto render` when it is only meant to prepare production artifacts.
   - Do not replace the GitHub Pages deployment workflow with manual publishing steps.
@@ -104,15 +104,15 @@ Place new files accordingly.
 - `uv run ty check` for Python type checking
 - `styler::style_dir(".")` for R formatting
 - `lintr::lint_dir(".")` for R linting
-- `quarto preview` to detect rendering issues
+- `npm run preview` to detect rendering issues
 - Run and validate scripts in `src/` and `analysis/`
 - Confirm `.github/workflows/` still pass for changes
 
 ## 9) GitHub Features and Security (Project instances)
 
-- Prefer authenticated **GitHub CLI (`gh`) commands** for GitHub settings when the maintainer has approved the external action; use the web UI only as a fallback.
-- **Enable GitHub Security Alerts** and Dependabot updates with `gh api --method PUT "repos/:owner/:repo/vulnerability-alerts" --silent` and `gh api --method PUT "repos/:owner/:repo/automated-security-fixes" --silent`.
-- **Protect `main`** with `gh api --method PUT "repos/:owner/:repo/branches/main/protection"` so PR reviews are required and force pushes are disabled.
+- Prefer authenticated **GitHub CLI (`gh`) commands** for GitHub settings when the maintainer has approved the external action; keep the actionable commands in `TODO.md` and use the web UI only as a fallback.
+- **Enable GitHub Security Alerts** and Dependabot updates as described in `TODO.md`.
+- **Protect `main`** as described in `TODO.md` so PR reviews are required and force pushes are disabled.
 - Keep `SECURITY.md` and GitHub security features active.
 - Use provided **issue templates**; modify only to improve the template.
 
@@ -145,8 +145,7 @@ Place new files accordingly.
 
 | Command or action                         | Purpose                                                |
 | ----------------------------------------- | ------------------------------------------------------ |
-| `quarto preview`                          | Live preview with reload                               |
-| `uv run quarto preview`                   | Preview in the pinned Python env                       |
+| `npm run preview`                         | Preview Quarto docs with live reload                   |
 | `npm run check`                           | Verify formatting                                      |
 | `npm run format`                          | Apply Prettier formatting                              |
 | `uv run ruff check`                       | Lint Python code                                       |
@@ -170,7 +169,7 @@ Follow `TODO.md`, then:
 
 1. Replace placeholders across listed files.
 2. Activate `CITATION.cff`, `CODE_OF_CONDUCT.md`, and `SECURITY.md` from their `.template` counterparts early so GitHub surfaces your project metadata instead of the template repository's.
-3. Customize `.qmd` docs and verify with `quarto preview`.
+3. Customize `.qmd` docs and verify with `npm run preview`.
 4. Format files: `npm run format`, `uv run ruff format`, and `styler::style_dir(".")` in R.
 5. Lint Python code: `uv run ruff check`.
 6. Type check Python code: `uv run ty check` (if applicable).
@@ -189,7 +188,7 @@ Follow `TODO.md`, then:
 - `uv run ruff check` passes without errors.
 - `uv run ty check` passes (if applicable).
 - `lintr::lint_dir(".")` passes without errors in R.
-- `quarto preview` renders without errors.
+- `npm run preview` renders without errors.
 - GitHub Pages site loads as expected.
 - README links work.
 - Security alerts and branch protection are active.

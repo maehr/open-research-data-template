@@ -9,15 +9,15 @@ This repository is a GitHub template for FAIR and open research data projects. W
 
 ## 2. Prefer preview over production
 
-- Run `quarto preview` or `uv run quarto preview` while iterating on docs.
+- Run `npm run preview` while iterating on docs.
 - Do **not** run `quarto render` during an agent session unless a maintainer explicitly asks for release preparation or production publishing.
 - GitHub Pages deploys through `.github/workflows/quarto-publish.yml` after validated changes land on `main`; do not fall back to legacy manual Pages publishing guidance.
 
 ## 3. Follow the setup checklist
 
 - Use [TODO.md](../TODO.md) as the source of truth.
-- Work through items marked 🤖 directly.
-- Prepare, but do not complete on your own, items marked 🤝 or 👤 unless the maintainer explicitly authorizes the external action.
+- Work through items marked `[Agent]` directly.
+- Prepare, but do not complete on your own, items marked `[Shared]` or `[Manual]` unless the maintainer explicitly authorizes the external action.
 - When a maintainer authorizes GitHub repository settings changes, prefer reviewable `gh` CLI commands over browser-only instructions for branch protection, security alerts, Dependabot security updates, and Pages settings.
 
 ## 4. Use the existing validation tools
