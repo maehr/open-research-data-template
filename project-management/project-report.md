@@ -7,23 +7,23 @@ Use this page for short milestone notes. It should help a future reader understa
 
 ## Current Status
 
-| Item                   | Status                          |
-| ---------------------- | ------------------------------- |
-| Project phase          | Replace with current phase      |
-| Current release        | Replace with current release    |
-| Main open tasks        | Replace with current open tasks |
-| Main risks or blockers | Replace with risks or blockers  |
-| Next review date       | Replace with next review date   |
+| Item                   | Status |
+| ---------------------- | ------ |
+| Project phase          | TODO   |
+| Current release        | TODO   |
+| Main open tasks        | TODO   |
+| Main risks or blockers | TODO   |
+| Next review date       | TODO   |
 
 ## Milestone Log
 
 ### YYYY-MM-DD - Milestone Title
 
-- Summary: Replace with a short milestone summary.
-- Evidence: Replace with links to issues, pull requests, datasets, scripts, releases, or publications.
-- Decisions: Replace with decisions made during this milestone.
-- Open questions: Replace with unresolved questions.
-- Next actions: Replace with follow-up actions and owners.
+- Summary: TODO
+- Evidence: TODO link to issue, pull request, dataset, script, release, or publication
+- Decisions: TODO
+- Open questions: TODO
+- Next actions: TODO
 
 ## Reporting Rule
 
