@@ -19,9 +19,9 @@
   "devDependencies": {
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
-    "@j178/prek": "^0.3.1",
-    "git-cliff": "^2.10.1",
-    "prettier": "^3.6.2"
+    "@j178/prek": "^0.4.4",
+    "git-cliff": "^2.13.1",
+    "prettier": "^3.8.4"
   },
   "engines": {
     "node": ">=24"

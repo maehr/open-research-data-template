@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
 
       - name: Overwrite _quarto.yml
         if: github.repository == 'maehr/open-research-data-template'
@@ -22,7 +22,7 @@ jobs:
           cp .github/_quarto.yml _quarto.yml
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version: '24'
 
@@ -30,12 +30,12 @@ jobs:
         run: npm ci
 
       - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+        uses: quarto-dev/quarto-actions/setup@v2.2.0
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v8.2.0
 
       - name: Sync Python dependencies
         run: uv sync
@@ -50,7 +50,7 @@ jobs:
         run: npm run site:build && npm run site:archive -- --tag ${{ github.event.release.tag_name }}
 
       - name: Upload release asset
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
