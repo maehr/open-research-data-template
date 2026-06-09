@@ -9,7 +9,7 @@
     "format": "prettier --write .",
     "prepare": "prek install --hook-type pre-commit --hook-type commit-msg",
     "preview": "uv run quarto preview",
-    "site:build": "uv run quarto render --to html && jampack ./_site",
+    "site:build": "uv run quarto render --to html",
     "site:archive": "uv run python scripts/release_site_archive.py",
     "release:prepare": "npm run site:build && npm run site:archive -- --stage",
     "changelog": "npm exec git-cliff -- --config cliff.toml",
@@ -19,7 +19,6 @@
   "devDependencies": {
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
-    "@divriots/jampack": "^0.34.1",
     "@j178/prek": "^0.3.1",
     "git-cliff": "^2.10.1",
     "prettier": "^3.6.2"

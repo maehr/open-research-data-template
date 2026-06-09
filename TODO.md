@@ -106,9 +106,15 @@ gh api --method PUT "repos/:owner/:repo/branches/main/protection" --input - <<'J
     "required_approving_review_count": 1
   },
   "restrictions": null,
-  "allow_force_pushes": false,
-  "allow_deletions": false,
-  "required_conversation_resolution": true
+  "allow_force_pushes": {
+    "enabled": false
+  },
+  "allow_deletions": {
+    "enabled": false
+  },
+  "required_conversation_resolution": {
+    "enabled": true
+  }
 }
 JSON
 ```
