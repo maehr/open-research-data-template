@@ -45,6 +45,8 @@ jobs:
         with:
           r-version: renv
       - uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 2
 
       - name: Build site archive
         run: npm run site:build && npm run site:archive -- --tag ${{ github.event.release.tag_name }}

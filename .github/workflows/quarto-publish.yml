@@ -76,6 +76,8 @@ jobs:
 
       - name: Setup renv
         uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 2
 
       - name: Run lintr
         run: Rscript -e 'lintr::lint_dir(".")'
@@ -123,6 +125,8 @@ jobs:
         with:
           r-version: renv
       - uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 2
 
       # From https://github.com/julia-actions/setup-julia
       # - name: Setup Julia
