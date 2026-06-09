@@ -95,11 +95,14 @@ This approach was presented at the [Digital Humanities Tech Symposium (DHTech) 2
 
 This project is maintained through public GitHub channels so answers stay visible and reusable.
 
-| Need                               | Where                                                                                  |
-| ---------------------------------- | -------------------------------------------------------------------------------------- |
-| Bug, data, docs, or feature report | [GitHub Issues](https://github.com/maehr/open-research-data-template/issues)           |
-| Security vulnerability             | [SECURITY.md](SECURITY.md)                                                             |
-| General question                   | [GitHub Discussions](https://github.com/maehr/open-research-data-template/discussions) |
+| Type                                    | Platform                                                                               |
+| --------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Bug reports**                         | [GitHub Issues](https://github.com/maehr/open-research-data-template/issues)           |
+| **Report bad data**                     | [GitHub Issues](https://github.com/maehr/open-research-data-template/issues)           |
+| **Docs issues**                         | [GitHub Issues](https://github.com/maehr/open-research-data-template/issues)           |
+| **Feature requests**                    | [GitHub Issues](https://github.com/maehr/open-research-data-template/issues)           |
+| **Report a security vulnerability**     | See [SECURITY.md](SECURITY.md)                                                         |
+| **General questions and reuse support** | [GitHub Discussions](https://github.com/maehr/open-research-data-template/discussions) |
 
 ## Contributing
 

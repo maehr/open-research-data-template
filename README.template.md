@@ -66,12 +66,15 @@ If you use this project, cite it as described in [CITATION.cff](CITATION.cff). A
 
 This project is maintained by [@USERNAME](https://github.com/USERNAME). Please use public channels when possible so answers remain findable for others.
 
-| Need                        | Where                                                                   |
-| --------------------------- | ----------------------------------------------------------------------- |
-| Bug, data, or docs problem  | [GitHub Issues](https://github.com/USERNAME/REPO_NAME/issues)           |
-| Feature or reuse question   | [GitHub Discussions](https://github.com/USERNAME/REPO_NAME/discussions) |
-| Security vulnerability      | [SECURITY.md](SECURITY.md)                                              |
-| Project contact, if private | [INSERT CONTACT METHOD]                                                 |
+| Type                                    | Platform                                                                |
+| --------------------------------------- | ----------------------------------------------------------------------- |
+| **Bug reports**                         | [GitHub Issues](https://github.com/USERNAME/REPO_NAME/issues)           |
+| **Report bad data**                     | [GitHub Issues](https://github.com/USERNAME/REPO_NAME/issues)           |
+| **Docs issues**                         | [GitHub Issues](https://github.com/USERNAME/REPO_NAME/issues)           |
+| **Feature requests**                    | [GitHub Issues](https://github.com/USERNAME/REPO_NAME/issues)           |
+| **Report a security vulnerability**     | See [SECURITY.md](SECURITY.md)                                          |
+| **General questions and reuse support** | [GitHub Discussions](https://github.com/USERNAME/REPO_NAME/discussions) |
+| **Private project contact**             | [INSERT CONTACT METHOD]                                                 |
 
 ## Contributing
 
