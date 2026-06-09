@@ -1,4 +1,7 @@
-# Communication
+---
+title: Communication
+description: How to ask questions, report problems, and record decisions.
+---
 
 Use this page to state how people should ask questions, report problems, and record decisions. Keep only the channels your project actually uses.
 
@@ -13,9 +16,9 @@ Use this page to state how people should ask questions, report problems, and rec
 
 ## Response Expectations
 
-- TODO: state who monitors each channel.
-- TODO: state the expected response time, if the project can commit to one.
-- TODO: state where meeting notes, agendas, or decision records live.
+- Replace with the person, role, or team that monitors each channel.
+- Replace with expected response times, or state that no response time is guaranteed.
+- Replace with the location for meeting notes, agendas, or decision records.
 
 ## Decision Records
 

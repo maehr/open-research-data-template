@@ -1,4 +1,7 @@
-# Documentation Guide
+---
+title: Documentation Guide
+description: Index for project documentation, methods, workflows, and decisions.
+---
 
 Use this page as the index for project documentation. Keep the homepage readable and put detailed methods, data dictionaries, workflows, and decisions here or in `documentation/`.
 
