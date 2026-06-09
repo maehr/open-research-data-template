@@ -1,24 +1,22 @@
 ---
 title: Open Research Data Template
-subtitle: Build a FAIR research data website from a GitHub repository
+subtitle: A lean path from research data to website, citation, and archive
 ---
 
-This template helps you turn research data, documentation, code, and release notes into a website that can be published with GitHub Pages and archived with Zenodo.
+This template helps academics turn research data, documentation, code, and release notes into a public website and citable archive.
 
-If you are new to GitHub or Quarto, start here. The goal is not to learn every tool at once. The goal is to follow a repeatable path: create a repository, replace placeholders, preview the website, publish it, and archive a release.
+You do not need to learn every tool at once. Follow the checklist, preview the site while you write, and publish only after the project is understandable to a future reader.
 
-## What You Build
+## What You Get
 
-With this template, a research project can have four connected outputs:
-
-| Output | What it gives your project |
+| Output | Purpose |
 | --- | --- |
-| A GitHub repository | One place for data, code, documentation, issues, licenses, and citation metadata. |
-| A public website | A readable entry point for people who want to understand or reuse the project. |
-| A setup checklist | A clear list of tasks for replacing placeholders, validating files, and preparing releases. |
-| A citable archive | A Zenodo record and DOI so releases can be preserved and cited. |
+| GitHub repository | Data, code, licenses, citation metadata, issues, and project history. |
+| Public website | A readable explanation for students, reviewers, collaborators, and data users. |
+| Setup checklist | A clear path for replacing placeholders, validating files, and preparing releases. |
+| Zenodo archive | Preserved releases with a DOI for citation. |
 
-This matters because open research data is easier to trust and reuse when the data, methods, documentation, and publication process are kept together.
+Open research data is easier to trust when the data, methods, code, documentation, and citation route stay together.
 
 ## Start Here
 
@@ -36,13 +34,9 @@ npm run preview
 5. Edit `index.qmd` so the website explains your project to public readers.
 6. Edit `README.template.md` so GitHub visitors understand the repository.
 
-For most beginners, `TODO.md` is the safest next step after creating a repository from the template. It tells you what to do and why each phase matters.
+For most new projects, `TODO.md` is the safest next step. It tells you what to change and what can wait.
 
-## Where To Write Things
-
-Once you start editing, the most common question is: "Where should this information go?"
-
-Use this rule:
+## Write Each Thing Once
 
 | If you are writing... | Put it in... | Why |
 | --- | --- | --- |
@@ -51,62 +45,29 @@ Use this rule:
 | A public explanation of the project, data, course, or publication | `index.qmd` | Website readers need the story, not maintenance notes. |
 | Methods, data dictionaries, workflows, or detailed decisions | `documentation/` or `project-management/` | Details should be findable without making the homepage too long. |
 
-Examples:
+This keeps the website readable, the repository navigable, and the setup work visible without mixing everything into one long page.
 
-| Text or task | Best place |
-| --- | --- |
-| `Enable GitHub Pages with Source: GitHub Actions` | `TODO.md` |
-| `Data are stored in data/ and analysis scripts are stored in analysis/` | `README.md` |
-| `This dataset documents municipal election results from 1900 to 1950` | `index.qmd` |
-| `The field municipality_id uses the official federal municipality code` | `documentation/` |
+## Minimum Academic Checklist
 
-This separation keeps the public website readable, the GitHub repository easy to navigate, and the setup work visible without mixing everything into one long page.
+Before publication, make sure a reader can answer these questions:
 
-## Why Not Put Everything In The README?
-
-The README is important, but it is not the whole project. A README is best when someone is browsing the repository on GitHub and needs to know what the project is, where files live, how to cite it, and where to ask for help.
-
-The public website has a different audience. A data user, student, reviewer, or interested reader may never want to read setup commands. They need a clear explanation of what the project offers and how to reuse it.
-
-The TODO checklist has another role again. It can contain unfinished tasks such as placeholder replacement, GitHub settings, validation commands, and release preparation. Keeping that work in `TODO.md` prevents accidental publication of maintenance notes as the public project story.
+- What does the project document?
+- Who created and maintains it?
+- Which files contain the data, code, methods, and tests?
+- What are the data sources, transformations, limitations, and licenses?
+- How should the project be cited?
+- Where can users report errors or ask reuse questions?
 
 ## Examples
 
-These projects show how the same structure can support different kinds of research and teaching outputs. In each case, the website can be visual and reader-facing, the README can orient GitHub users, and the TODO checklist can track setup and maintenance.
+The same structure can support research data documentation, reproducible workflows, teaching, and living publications:
 
-### Research Data Documentation
+- [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/) for public history research data management.
+- [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/) for reproducible publication figures.
+- [nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/) for voting records and workflow documentation.
+- [Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/) for a course website.
+- [Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/) for a handbook and scholarly publication.
 
-| Project | Preview |
-| --- | --- |
-| [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/) documents research data management for a public history project. The website guides readers through methods and documentation, while repository setup tasks stay outside the public story. | <a href="https://dokumentation.stadtgeschichtebasel.ch/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch.png" width="540" alt="Preview of the Stadt.Geschichte.Basel RDM documentation website"></a> |
-| [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/) documents reproducible publication figures. The website explains outputs, the README points to scripts and data, and TODO tracks checks and release preparation. | <a href="https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch_sgb_figures.png" width="540" alt="Preview of the sgb-figures documentation website"></a> |
+## Next Step
 
-### Reproducible Research Workflows
-
-| Project | Preview |
-| --- | --- |
-| [nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/) documents voting records with scraping and analysis steps. The website can tell the workflow story, while the README explains where data and analysis live. | <a href="http://mtwente.github.io/nordatlantisk-ft/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png" width="540" alt="Preview of the nordatlantisk-ft website"></a> |
-| [maxvogt-analysis](https://mtwente.github.io/maxvogt-analysis/) documents a multi-step data compilation workflow. The website can explain methods and outputs, while TODO keeps maintenance tasks separate. | <a href="https://mtwente.github.io/maxvogt-analysis/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png" width="540" alt="Preview of the maxvogt-analysis website"></a> |
-| [Modelling Marti](https://mtwente.github.io/modelling-marti/) combines topic modeling, interactive visualizations, and multimedia documentation. The site foregrounds the narrative rather than repository mechanics. | <a href="https://mtwente.github.io/modelling-marti/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png" width="540" alt="Preview of the Modelling Marti website"></a> |
-
-### Teaching And Living Publications
-
-| Project | Preview |
-| --- | --- |
-| [Digital History Switzerland 2024](https://digihistch24.github.io/) is a conference website with program, abstracts, and participant information. Website visitors need the event content first, not repository setup notes. | <a href="https://digihistch24.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/digihistch24.png" width="540" alt="Preview of the Digital History Switzerland 2024 website"></a> |
-| [Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/) is a course website. Students need a clear public homepage, while maintainers still need README and TODO files behind the scenes. | <a href="https://dhbern.github.io/decoding-inequality-2025/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/decoding_inequality_2025.png" width="540" alt="Preview of the Decoding Inequality 2025 course website"></a> |
-| [Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/) is a handbook and scholarly publication. The website foregrounds the publication, while repository guidance remains separate. | <a href="https://maehr.github.io/diskriminierungsfreie-metadaten/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png" width="540" alt="Preview of the Non-discriminatory Metadata handbook website"></a> |
-
-## The Beginner-Friendly Workflow
-
-The template works best when you move from setup to publication in small steps:
-
-1. Replace obvious placeholders such as `USERNAME`, `REPO_NAME`, `FULLNAME`, and `SHORT_DESCRIPTION`.
-2. Write a short README so GitHub visitors know what the repository contains.
-3. Write a public homepage in `index.qmd` so website readers understand the project.
-4. Add details to `documentation/` only when the homepage becomes too long.
-5. Run `npm run preview` while editing so you see what readers will see.
-6. Run the validation commands in `TODO.md` before publishing or archiving.
-7. Publish with GitHub Pages and archive releases with Zenodo when the project is ready.
-
-This workflow makes sense because it separates three kinds of work: orienting repository users, finishing setup tasks, and explaining the project to public readers.
+Create a repository from the template, keep `npm run preview` open while editing, and use `TODO.md` as the working checklist until the first release is archived.

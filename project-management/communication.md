@@ -1,26 +1,22 @@
 # Communication
 
-The Turing Way recommends documenting communication pathways so contributors know where to ask questions, share updates, and record decisions.
+Use this page to state how people should ask questions, report problems, and record decisions. Keep only the channels your project actually uses.
 
-## Why document communication?
+## Channels
 
-- Clear communication channels reduce confusion and duplicate conversations.
-- Public, searchable discussions make it easier for new contributors to understand previous decisions.
-- Documented expectations help maintain respectful, inclusive, and timely collaboration.
+| Channel            | Use it for                                                      | Notes                                                                 |
+| ------------------ | --------------------------------------------------------------- | --------------------------------------------------------------------- |
+| GitHub Issues      | Bugs, data problems, documentation problems, and concrete tasks | Keep discussions linked to files, commits, or releases when possible. |
+| GitHub Discussions | General questions and reuse examples                            | Prefer public answers unless information is sensitive.                |
+| Pull requests      | Reviewing changes before merge                                  | Include enough context for reviewers to understand the change.        |
+| Security contact   | Vulnerabilities or sensitive reports                            | See `SECURITY.md`.                                                    |
 
-## What should be documented?
+## Response Expectations
 
-- The main audiences for the project, such as maintainers, contributors, reviewers, and external users.
-- The purpose of each channel, for example `README.md` for orientation, GitHub Issues for work, Discussions for questions, and `SECURITY.md` for private vulnerability reports.
-- Response expectations, meeting cadence, and where agendas or notes are stored.
-- How important decisions move from chats or meetings into permanent records in the repository.
+- TODO: state who monitors each channel.
+- TODO: state the expected response time, if the project can commit to one.
+- TODO: state where meeting notes, agendas, or decision records live.
 
-## How should you document it?
+## Decision Records
 
-1. Choose a small set of official channels and state the purpose of each one clearly.
-2. Keep communication routes visible in `README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, and `SECURITY.md`.
-3. Store meeting notes, decision logs, and action items in `project-management/` so they remain versioned and linkable.
-4. Use plain language, define acronyms, and write with readers outside the immediate team in mind.
-5. Link decisions back to issues, pull requests, reports, or releases so the record stays traceable.
-
-Relevant Turing Way chapters: [Guide for Communication](https://book.the-turing-way.org/communication/communication), [Communications in Open Source Projects](https://book.the-turing-way.org/communication/os-comms), and [Contributors and Communication Pathways](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-contributors).
+Record durable decisions in issues, pull requests, release notes, or `project-management/project-report.md`. Link decisions to the data, code, or documentation they affect.

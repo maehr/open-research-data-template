@@ -1,26 +1,37 @@
 # Tools
 
-Tooling documentation makes the technical environment reproducible. The Turing Way recommends recording the software, services, and conventions needed to run the project so others do not have to reverse-engineer your setup.
+Use this page to document the software and services needed to run, check, publish, and archive the project.
 
-## Why document tools?
+## Required Software
 
-- Collaborators can install and run the workflow without relying on private knowledge.
-- Versioned tool records reduce "works on my machine" problems.
-- Clear documentation shows which tools are required, optional, or replaceable.
+| Tool            | Purpose                                        | Version or source                     |
+| --------------- | ---------------------------------------------- | ------------------------------------- |
+| Node.js and npm | Documentation commands and formatting          | See `package.json`                    |
+| Quarto          | Website preview and rendering                  | Managed through `uv` command wrappers |
+| Python and uv   | Python environment, linting, and type checking | See `pyproject.toml` and `uv.lock`    |
+| R and renv      | R environment, formatting, and linting         | See `DESCRIPTION` and `renv.lock`     |
+| GitHub CLI      | Optional repository settings automation        | <https://cli.github.com/>             |
 
-## What should be documented?
+## Common Commands
 
-- Required software, package managers, versions, and lockfiles.
-- Setup steps for local development, testing, rendering, and release preparation.
-- External services and integrations, including where configuration lives without exposing secrets.
-- Naming conventions, style rules, validation commands, and automation scripts.
+| Task                 | Command             |
+| -------------------- | ------------------- |
+| Install dependencies | `npm install`       |
+| Install Git hooks    | `npm run prepare`   |
+| Preview website      | `npm run preview`   |
+| Format files         | `npm run format`    |
+| Check formatting     | `npm run check`     |
+| Lint Python          | `uv run ruff check` |
+| Type-check Python    | `uv run ty check`   |
 
-## How should you document it?
+Run language-specific commands only when the project uses that language.
 
-1. Keep machine-readable dependency files such as `package.json`, `pyproject.toml`, `DESCRIPTION`, and lockfiles in sync with human-readable setup instructions.
-2. Put common commands in `README.md` or dedicated setup pages and make them copy-and-paste ready.
-3. Explain why a tool is part of the workflow, not only how to install it.
-4. Prefer pinned versions, executable examples, and one-command workflows when possible.
-5. Update tool documentation in the same pull request as any tooling change.
+## External Services
 
-Relevant Turing Way chapters: [Research Data Management](https://book.the-turing-way.org/reproducible-research/rdm), [Reproducible Environments](https://book.the-turing-way.org/reproducible-research/renv), [File Naming Convention](https://book.the-turing-way.org/project-design/info-management/filenaming), and [Code Styling](https://book.the-turing-way.org/project-design/info-management/code-styling).
+| Service         | Purpose                                | Configuration note                                     |
+| --------------- | -------------------------------------- | ------------------------------------------------------ |
+| GitHub Pages    | Publishes the Quarto site              | Enable Source: GitHub Actions                          |
+| Zenodo          | Archives releases and mints DOIs       | Enable the GitHub integration before the first release |
+| GitHub Security | Security alerts and Dependabot updates | Enable in repository settings                          |
+
+Do not commit secrets, access tokens, or private credentials.

@@ -1,8 +1,8 @@
 # GitHub Template for FAIR and Open Research Data
 
-**Transform research documentation from a static afterthought into a living, executable environment.**
+Create a clear, citable, and reusable research data repository without starting from a blank GitHub project.
 
-This repository is a GitHub template for documenting, publishing, and archiving research data in line with [FAIR](https://www.go-fair.org/fair-principles/) and open science principles. It works across data types and follows practices from [The Turing Way](https://book.the-turing-way.org/): structured documentation with [Quarto](https://quarto.org/), publication with [GitHub Pages](https://pages.github.com/), release archiving with [Zenodo](https://zenodo.org/), and repeatable local checks.
+This template gives research teams a practical structure for data, code, documentation, citation metadata, website publishing, and Zenodo archiving. It follows [FAIR](https://www.go-fair.org/fair-principles/) and open science principles and uses [Quarto](https://quarto.org/), [GitHub Pages](https://pages.github.com/), [Zenodo](https://zenodo.org/), and repeatable local checks.
 
 [![GitHub issues](https://img.shields.io/github/issues/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/issues)
 [![GitHub forks](https://img.shields.io/github/forks/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/network)
@@ -13,29 +13,6 @@ This repository is a GitHub template for documenting, publishing, and archiving 
 
 > [!IMPORTANT]
 > This `README.md` describes the **template repository itself**. If you created a new repository from this template, start with [TODO.md](TODO.md), then customize [README.template.md](README.template.md), [CITATION.template.cff](CITATION.template.cff), [CODE_OF_CONDUCT.template.md](CODE_OF_CONDUCT.template.md), [SECURITY.template.md](SECURITY.template.md), and [CHANGELOG.template.md](CHANGELOG.template.md) as directed there.
-
-## Why This Template Exists
-
-Research data often becomes difficult to reuse because the documentation, code, decisions, and publication steps live in different places. This template keeps them together in one version-controlled repository.
-
-That matters because:
-
-- Future users can see what the data represents, how it was created, and how it should be cited.
-- Contributors can find the right place for data, analysis, documentation, tests, and project notes.
-- Maintainers can run the same checks before releases instead of relying on memory.
-- Published documentation and archived releases can stay connected to the repository history.
-
-## The Three Entry Points
-
-This template separates repository orientation, setup work, and the public website. That separation is intentional and especially useful for novice users.
-
-| File        | Job                | Put this there                                                                       | Do not put this there                               |
-| ----------- | ------------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| `README.md` | GitHub front door  | What the repository is, where to start, structure, citation, support, license        | Long setup checklists or detailed website narrative |
-| `TODO.md`   | Setup workbench    | Placeholder replacement, GitHub settings, validation, release tasks, unfinished work | Finished public explanations                        |
-| `index.qmd` | Published homepage | Plain-language project story, data overview, reuse guidance, links to docs           | Repository maintenance commands                     |
-
-For example, `Run npm run preview before publishing` belongs in `TODO.md` because it is an action. `Data are stored in data/ and analysis scripts are in analysis/` belongs in `README.md` because it helps GitHub visitors navigate. `This dataset documents municipal election results from 1900 to 1950` belongs in `index.qmd` because it helps public readers understand the project.
 
 ## Start Here
 
@@ -53,11 +30,20 @@ npm run preview
 5. Edit `index.qmd` as the public homepage for your project.
 6. Finalize `README.template.md` and rename it to `README.md` when your project-specific README is ready.
 
-## What Is Included
+## What You Get
 
-### Repository Structure
+| Need             | Included support                                                        |
+| ---------------- | ----------------------------------------------------------------------- |
+| Data reuse       | Standard folders for data, analysis, source code, tests, and docs       |
+| Public website   | Quarto site configured for GitHub Pages                                 |
+| Citation         | `CITATION.cff`, Zenodo DOI workflow, and separate data/code licenses    |
+| Project setup    | `TODO.md` checklist for placeholders, settings, validation, and release |
+| Reproducibility  | npm, uv, renv, Prettier, Ruff, ty, styler, lintr, and Prek hooks        |
+| Community health | Issue templates, contribution guide, code of conduct, and security file |
 
-The layout follows the [Advanced Structure for Data Analysis](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-advanced/) from _The Turing Way_.
+## Repository Layout
+
+The layout follows the [Advanced Structure for Data Analysis](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-advanced/) from _The Turing Way_:
 
 | Path                  | Purpose                                              |
 | --------------------- | ---------------------------------------------------- |
@@ -69,39 +55,15 @@ The layout follows the [Advanced Structure for Data Analysis](https://book.the-t
 | `src/`                | Source code for collection, processing, or analysis  |
 | `test/`               | Tests for code and data validation                   |
 
-### Documentation And Publishing
+## Write Each Thing Once
 
-- Quarto website with live preview through `npm run preview`.
-- GitHub Pages workflow for publishing rendered documentation.
-- Separate `README.md` for this template and `README.template.md` for downstream projects.
-- Separate `CHANGELOG.md` for this template and `CHANGELOG.template.md` for downstream projects.
+| File        | Use it for                                                                |
+| ----------- | ------------------------------------------------------------------------- |
+| `README.md` | Short GitHub front door: purpose, folders, citation, support, license     |
+| `TODO.md`   | Setup tasks: placeholders, GitHub settings, validation, release checklist |
+| `index.qmd` | Public website: project story, data overview, reuse guidance              |
 
-### Reproducibility And Validation
-
-- Node.js tooling with npm and Prettier.
-- Python environment management with `uv`, linting with Ruff, and type checking with ty.
-- R environment management with `renv`, formatting with styler, and linting with lintr.
-- Git hooks managed with [Prek](https://prek.j178.dev/).
-- Conventional Commit enforcement with [Commitlint](https://commitlint.js.org/).
-
-### Citation, Governance, And Release Support
-
-- Citation metadata through `CITATION.cff` for the template and `CITATION.template.cff` for downstream projects.
-- Separate data and code licenses: [CC BY 4.0](LICENSE-CCBY.md) for data and [AGPL 3.0](LICENSE-AGPL.md) for code.
-- Conduct, security, issue templates, and contribution guidance.
-- Release workflow support for Zenodo archiving, including a rendered site archive for tagged snapshots.
-
-## Examples
-
-The template approach has been used for public history, political science, digital humanities, teaching, and living publications.
-
-| Example                                                                                 | What the website can do                                      | What the README should do                        | What TODO should track                |
-| --------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------- |
-| [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/)            | Guide readers through research data management documentation | Orient contributors to the repository            | Setup, validation, and release tasks  |
-| [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/)               | Explain reproducible figures and outputs                     | Point to scripts, data, and citation information | Checks and archive preparation        |
-| [nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/)                          | Tell the workflow story for voting records                   | Explain where data and analysis live             | Technical setup and publication steps |
-| [Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/)          | Serve students as a course website                           | Help contributors navigate files                 | Course-site maintenance tasks         |
-| [Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/) | Present a handbook and scholarly publication                 | Orient contributors and cite the project         | Ongoing publication maintenance       |
+Long methods, data dictionaries, workflows, and decision records belong in `documentation/` or `project-management/`.
 
 ## Common Commands
 
@@ -119,21 +81,9 @@ The template approach has been used for public history, political science, digit
 
 Run the language-specific checks only when your project uses that language. See [TODO.md](TODO.md) for the full setup, validation, and release sequence.
 
-## Template Roadmap
+## Examples
 
-### v1.0.0 Release Readiness
-
-- [x] Document agent-assisted setup, validation, and release preparation workflows.
-- [x] Ship changelog guidance based on commit history.
-- [x] Preserve rendered HTML documentation in tagged repository snapshots for Zenodo archival.
-- [x] Record the template repository's Zenodo concept DOI and live citation metadata.
-- [ ] Publish the first stable GitHub release for the repository.
-
-### Post-v1.0.0
-
-- [ ] Expand agent recipes for project-specific metadata, showcase updates, and support tasks.
-- [ ] Add smoke tests for preview and template customization paths.
-- [ ] Grow the showcase gallery with more agent-assisted research data projects.
+The structure has supported public history, political science, digital humanities, teaching, and living publication projects, including [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/), [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/), [nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/), [Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/), and [Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/).
 
 ## Academic Recognition
 

@@ -1,9 +1,8 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change.
+Contributions are welcome when they make the template clearer, easier to reuse, or more reliable for research data projects.
 
-Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
+Please follow the [code of conduct](CODE_OF_CONDUCT.md) in all project spaces.
 
 ## Local and Agent Setup
 
@@ -13,22 +12,11 @@ Agents can usually handle documentation edits, placeholder replacement, formatti
 
 ## Pull Request Process
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment
-   variables, exposed ports, useful file locations and container parameters.
-3. Ensure all code is properly formatted and linted:
-   - Run `npm run format` to format general files with Prettier
-   - Run `npm run check` to verify formatting
-   - Install Prek hooks with `npm run prepare`
-   - Run `prek run --all-files` to run all hooks locally (or `npx @j178/prek run --all-files` if Prek isn't installed globally)
-   - Commit with a Conventional Commit subject such as `git commit -m "fix: correct metadata example"`; Commitlint enforces this through the Prek `commit-msg` hook
-   - Run `uv run ruff format` to format Python code
-   - Run `uv run ruff check` to lint Python code
-   - Run `uv run ty check` to type check Python code (if applicable)
-   - Run `styler::style_dir(".")` in R to format R code
-   - Run `lintr::lint_dir(".")` in R to lint R code
-4. Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-5. You may merge the Pull Request in once you have the sign-off of two other developers, or if you
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+1. Open an issue first for large changes, behavior changes, or new tooling.
+2. Keep pull requests focused and explain the academic user need they address.
+3. Update affected docs together, especially `README.md`, `README.template.md`, `TODO.md`, `index.qmd`, and citation or governance templates.
+4. Run `npm run preview` while editing documentation.
+5. Run `npm run format` and `npm run check` before requesting review.
+6. Run language-specific checks when relevant: `uv run ruff check`, `uv run ty check`, `styler::style_dir(".")`, and `lintr::lint_dir(".")`.
+7. Commit with a Conventional Commit subject, for example `git commit -m "docs: simplify project setup guide"`.
+8. Wait for maintainer review before merging.

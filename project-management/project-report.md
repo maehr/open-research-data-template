@@ -1,26 +1,27 @@
 # Project Report
 
-Use the project report to document what happened during the project, not only the final outcome. The Turing Way treats project planning, progress tracking, and explicit decisions as part of reproducible and reusable research.
+Use this page for short milestone notes. It should help a future reader understand what changed, why it changed, and what remains open.
 
-## Why document project progress?
+## Current Status
 
-- Progress reports keep the team aligned on goals, scope, and current status.
-- Written decisions help reviewers and future contributors understand why the project changed direction.
-- Traceable reports make it easier to connect outcomes to evidence such as issues, pull requests, releases, and analyses.
+| Item                   | Status |
+| ---------------------- | ------ |
+| Project phase          | TODO   |
+| Current release        | TODO   |
+| Main open tasks        | TODO   |
+| Main risks or blockers | TODO   |
+| Next review date       | TODO   |
 
-## What should be documented?
+## Milestone Log
 
-- Project goals, milestones, success criteria, and changes in scope.
-- Important decisions, assumptions, risks, blockers, and dependencies.
-- Links to evidence such as datasets, notebooks, scripts, issues, pull requests, and published outputs.
-- Next actions, owners, and deadlines so the report supports follow-up work.
+### YYYY-MM-DD - Milestone Title
 
-## How should you document it?
+- Summary: TODO
+- Evidence: TODO link to issue, pull request, dataset, script, release, or publication
+- Decisions: TODO
+- Open questions: TODO
+- Next actions: TODO
 
-1. Update the report on a regular cadence, for example per milestone, sprint, or release.
-2. Use dated entries and link each claim to the relevant artefact in the repository when possible.
-3. Separate factual progress updates from interpretation, open questions, and future plans.
-4. Record both what was completed and what remains unresolved.
-5. Move durable outcomes into long-lived documents such as `README.md`, `CHANGELOG.md`, or method documentation when they become part of the project's stable guidance.
+## Reporting Rule
 
-Relevant Turing Way chapters: [Project Management Frameworks Overview](https://book.the-turing-way.org/project-design/project-management-methodologies/overview), [Roadmapping](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-roadmapping), and [Research Object to capture the Research Life Cycle](https://book.the-turing-way.org/communication/research-objects).
+Record facts, link evidence, and move stable outcomes into `README.md`, `CHANGELOG.md`, or method documentation when they become part of the project record.

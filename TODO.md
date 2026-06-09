@@ -1,8 +1,6 @@
 # Project Setup Checklist
 
-Use this checklist after creating a repository from the template. This file is the project workbench: it can contain unfinished tasks, reminders, setup commands, and maintenance notes.
-
-Keep public explanations out of this file. Move stable information to `README.md`, `index.qmd`, `documentation.md`, or a page in `documentation/` once it is no longer a setup task.
+Use this checklist after creating a repository from the template. Keep it practical: unfinished setup tasks stay here, stable project explanations move to `README.md`, `index.qmd`, or `documentation/`.
 
 ## Owner Labels
 
@@ -12,35 +10,12 @@ Keep public explanations out of this file. Move stable information to `README.md
 | `[Shared]` | An agent can prepare the work, but a maintainer approves the external action. |
 | `[Manual]` | Complete this in GitHub, Zenodo, or another external service.                 |
 
-## Why This Checklist Exists
-
-Novice users should not have to decide where every note belongs. Use this rule:
-
-| If you need to...                                           | Put it in...                              | Why                                                                         |
-| ----------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------- |
-| Explain what the repository is and how to navigate it       | `README.md`                               | GitHub visitors need a short front door.                                    |
-| Track unfinished setup or release work                      | `TODO.md`                                 | Maintainers need a checklist that can change often.                         |
-| Explain the project to public readers                       | `index.qmd`                               | Website visitors need a readable homepage, not setup notes.                 |
-| Describe methods, fields, workflows, or decisions in detail | `documentation/` or `project-management/` | Detailed records should stay findable without making the homepage too long. |
-
-Examples:
-
-| Text or task                                                         | Correct home     |
-| -------------------------------------------------------------------- | ---------------- |
-| `Replace USERNAME with maehr`                                        | `TODO.md`        |
-| `Data are stored in data/ and scripts are stored in src/`            | `README.md`      |
-| `This project documents historical voting records from 1900 to 1950` | `index.qmd`      |
-| `The variable municipality_id uses the official federal code`        | `documentation/` |
-| `Enable GitHub Pages with Source: GitHub Actions`                    | `TODO.md`        |
-
 ## Before You Start
 
-- [ ] `[Agent]` Install dependencies with `npm install` if they are not already installed.
+- [ ] `[Agent]` Read `README.md` for the template overview and this checklist for the setup path.
+- [ ] `[Agent]` Install dependencies with `npm install`.
 - [ ] `[Agent]` Install Git hooks with `npm run prepare`.
 - [ ] `[Agent]` Start the Quarto preview with `npm run preview` and keep it running while editing documentation.
-- [ ] `[Agent]` Read `README.md` to understand the template and this checklist to understand the setup path.
-
-Why this matters: previewing early helps you catch broken links, missing files, and confusing pages while the project is still easy to change.
 
 ## Phase 1: Make The Project Identifiable
 
@@ -48,20 +23,20 @@ Why this matters: previewing early helps you catch broken links, missing files, 
 - [ ] `[Agent]` Update project values for `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, `[INSERT CONTACT METHOD]`, `GITHUB_REPO_ID`, `ZENODO_RECORD`, `DOI`, and the starting project version where they apply.
 - [ ] `[Agent]` Customize citation metadata in `CITATION.template.cff`, including authors, title, repository URL, license, resource type, and DOI if already available.
 - [ ] `[Agent]` Activate project citation and governance files by renaming `CITATION.template.cff` to `CITATION.cff`, `CODE_OF_CONDUCT.template.md` to `CODE_OF_CONDUCT.md`, and `SECURITY.template.md` to `SECURITY.md`.
-- [ ] `[Agent]` Add favicons at the repository root if the project will publish a site: `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, and Android icons.
+- [ ] `[Agent]` Replace the default favicons at the repository root if the project will publish a site: `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, and Android icons.
 - [ ] `[Agent]` Optionally add `.zenodo.json` for richer Zenodo metadata.
 
-Why this matters: placeholders are useful in a template, but they make a project look unfinished and can break badges, citations, package metadata, and support links.
+Outcome: badges, metadata, contact details, and citation files describe the project rather than the template.
 
 ## Phase 2: Put Content In The Right Place
 
-- [ ] `[Agent]` Customize `README.template.md` as the GitHub front door: project summary, repository structure, basic use, citation, support, authors, and license.
+- [ ] `[Agent]` Customize `README.template.md` as the GitHub front door: project summary, data at a glance, repository structure, reuse, citation, support, authors, and license.
 - [ ] `[Agent]` Customize `index.qmd` as the public website homepage: plain-language project introduction, target users, data or outputs, reuse guidance, and links to detailed pages.
 - [ ] `[Agent]` Customize `documentation.md` and pages in `documentation/` for methods, data dictionaries, workflows, user guides, or other details that are too long for the homepage.
 - [ ] `[Agent]` Review or remove placeholder files in `project-management/`, including communication, people, tools, and project-report pages.
 - [ ] `[Agent]` Resolve TODO comments outside this checklist by searching for `TODO` and completing or removing each project-specific note.
 
-Why this matters: public readers should not have to read setup tasks, and maintainers should not have to search the website for unfinished work. Keeping the files separate makes the project easier to teach, review, and maintain.
+Outcome: readers can understand the project without reading setup notes.
 
 ## Phase 3: Configure GitHub And Zenodo
 
@@ -72,7 +47,7 @@ Why this matters: public readers should not have to read setup tasks, and mainta
 - [ ] `[Agent]` Set up the Zenodo DOI badge by replacing `GITHUB_REPO_ID` in `README.template.md` with the numeric repository ID from `https://api.github.com/repos/USERNAME/REPO_NAME`.
 - [ ] `[Shared]` After the first release, record DOI metadata by replacing `DOI` in `CITATION.cff` and `ZENODO_RECORD` in `README.template.md`.
 
-Why this matters: repository settings affect publishing, security, citation, and long-term preservation. Some settings need maintainer approval because they happen outside the files in this repository.
+Outcome: the repository can publish, preserve releases, and receive security updates.
 
 ## Phase 4: Validate The Project Locally
 
@@ -84,7 +59,7 @@ Why this matters: repository settings affect publishing, security, citation, and
 - [ ] `[Agent]` Preview documentation with `npm run preview` and fix rendering issues.
 - [ ] `[Agent]` Optionally check links with `npm run lychee-check` if link checking is configured for the project.
 
-Why this matters: validation catches formatting problems, broken documentation pages, and language-specific errors before they become public or archived.
+Outcome: formatting, website preview, and language-specific checks pass before publication.
 
 ## Phase 5: Commit, Publish, And Archive
 
@@ -95,7 +70,7 @@ Why this matters: validation catches formatting problems, broken documentation p
 - [ ] `[Agent]` Finalize README and changelog by deleting the template `README.md` and `CHANGELOG.md`, then renaming `README.template.md` to `README.md` and `CHANGELOG.template.md` to `CHANGELOG.md`.
 - [ ] `[Agent]` Review final links in the README and published site.
 
-Why this matters: releases are easier to cite and preserve when the rendered site, changelog, DOI metadata, and repository files all describe the same version of the project.
+Outcome: the GitHub repository, website, changelog, and Zenodo archive describe the same release.
 
 ## GitHub CLI Reference
 
@@ -140,4 +115,4 @@ JSON
 
 ## Verification Summary
 
-The setup is complete when placeholders are gone, `README.md` is the repository front door, `index.qmd` is the public homepage, formatting passes, language checks pass for the languages you use, `npm run preview` renders without errors, GitHub Pages loads correctly, security settings are active, and Zenodo DOI metadata is correct after the first release.
+The setup is complete when placeholders are gone, `README.md` is the repository front door, `index.qmd` is the public homepage, checks pass for the languages you use, `npm run preview` renders without errors, GitHub Pages loads, security settings are active, and Zenodo DOI metadata is correct after the first release.

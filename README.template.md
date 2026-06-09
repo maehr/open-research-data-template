@@ -1,6 +1,8 @@
 # REPO_NAME
 
-This repository contains SHORT_DESCRIPTION. The data in this repository is openly available to everyone and is intended to support reproducible research.
+SHORT_DESCRIPTION.
+
+Use this README as the GitHub front door for the project. Keep it short enough for a new reader to understand what the data are, where to find them, how to reuse them, and how to cite them.
 
 [![GitHub issues](https://img.shields.io/github/issues/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/issues)
 [![GitHub forks](https://img.shields.io/github/forks/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/network)
@@ -9,90 +11,82 @@ This repository contains SHORT_DESCRIPTION. The data in this repository is openl
 [![Data license](https://img.shields.io/github/license/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/blob/main/LICENSE-CCBY.md)
 [![DOI](https://zenodo.org/badge/GITHUB_REPO_ID.svg)](https://zenodo.org/badge/latestdoi/ZENODO_RECORD)
 
-## Where To Find What
+## Overview
 
-This repository separates orientation, setup work, and public documentation so each file has one clear job. This makes the project easier for new users because they can tell from the filename whether they are reading stable guidance, unfinished setup tasks, or the published website.
+Replace this section with 3 to 5 sentences:
 
-| File        | Use it for                                                                                                 | Why                                                              |
-| ----------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `README.md` | Repository summary, structure, citation, support, authors, and license                                     | GitHub visitors need a short front door.                         |
-| `TODO.md`   | Setup checklist, placeholder replacement, GitHub and Zenodo tasks, validation, and release preparation     | Maintainers need one workbench for unfinished tasks.             |
-| `index.qmd` | Public website homepage, project story, data overview, reuse guidance, and links to detailed documentation | Website readers need a clear explanation, not maintenance notes. |
+- What does the project document?
+- Who is the intended audience?
+- What are the main data products?
+- What should users know before reusing the data?
 
-For example, `Enable GitHub Pages` belongs in `TODO.md`, `data/ contains cleaned datasets` belongs in `README.md`, and a plain-language explanation of what this project documents belongs in `index.qmd`.
+## Data At A Glance
+
+| Item                | Description                                                     |
+| ------------------- | --------------------------------------------------------------- |
+| Main data           | TODO: name the central dataset or output                        |
+| Coverage            | TODO: temporal, geographic, thematic, or source coverage        |
+| Unit of observation | TODO: person, place, event, document, measurement, record, etc. |
+| Sources             | TODO: original sources or collection method                     |
+| Formats             | TODO: CSV, JSON, GeoJSON, Parquet, images, text, etc.           |
+| Data license        | [CC BY 4.0](LICENSE-CCBY.md), unless changed                    |
+| Code license        | [AGPL 3.0](LICENSE-AGPL.md), unless changed                     |
+| Citation            | See [CITATION.cff](CITATION.cff) and the Zenodo DOI             |
 
 ## Repository Structure
 
-The structure of this repository follows the [Advanced Structure for Data Analysis](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-advanced/) of _The Turing Way_ and is organized as follows:
+| Path                  | Purpose                                      |
+| --------------------- | -------------------------------------------- |
+| `data/`               | Data files and data documentation            |
+| `documentation/`      | Methods, data dictionaries, and user guides  |
+| `analysis/`           | Notebooks and analysis scripts               |
+| `src/`                | Code for collection, processing, or analysis |
+| `test/`               | Tests for data and code                      |
+| `assets/`             | Images and media                             |
+| `project-management/` | Roles, decisions, meetings, and reports      |
 
-- `analysis/`: scripts and notebooks used to analyze the data
-- `assets/`: images, logos, etc. used in the README and other documentation
-- `data/`: data files
-- `documentation/`: extended documentation pages for the data and repository, such as methods, data dictionaries, workflows, or user guides
-- `project-management/`: project management documents (e.g., meeting notes, project plans, etc.)
-- `src/`: source code for the data (e.g., scripts used to collect or process the data)
-- `test/`: tests for the data and source code
-- `documentation.md`: the top-level documentation guide that explains the repository's overall documentation approach and links to supporting pages
+## Reuse
 
-## Data Description
+1. Read the project website: <https://USERNAME.github.io/REPO_NAME/>.
+2. Check `documentation/` for methods, field definitions, and known limitations.
+3. Use files in `data/` according to the data license.
+4. Cite the project using [CITATION.cff](CITATION.cff) or the Zenodo DOI.
 
-- TODO Describe the data in this repository, including what it represents, how it was collected or obtained, any preprocessing or cleaning that was done, and any limitations or potential biases.
-- TODO Data models, including field names, descriptions, and controlled values, should be clearly documented in a static document that is maintained with the data and is part of the products.
-- TODO All rights and intellectual property issues should be clearly documented. Where possible, data and products should be released under open licenses (Creative Commons, GNU, BSD, MPL).
-
-## Use
-
-These data are openly available to everyone and can be used for any research or educational purpose. If you use this data in your research, please cite as specified in [CITATION.cff](CITATION.cff). The following citation formats are also available through _Zenodo_:
-
-- [BibTeX](https://zenodo.org/record/ZENODO_RECORD/export/hx)
-- [CSL](https://zenodo.org/record/ZENODO_RECORD/export/csl)
-- [DataCite](https://zenodo.org/record/ZENODO_RECORD/export/dcite4)
-- [Dublin Core](https://zenodo.org/record/ZENODO_RECORD/export/xd)
-- [DCAT](https://zenodo.org/record/ZENODO_RECORD/export/dcat)
-- [JSON](https://zenodo.org/record/ZENODO_RECORD/export/json)
-- [JSON-LD](https://zenodo.org/record/ZENODO_RECORD/export/schemaorg_jsonld)
-- [GeoJSON](https://zenodo.org/record/ZENODO_RECORD/export/geojson)
-- [MARCXML](https://zenodo.org/record/ZENODO_RECORD/export/xm)
-
-_Zenodo_ provides an [API (REST & OAI-PMH)](https://developers.zenodo.org/) to access the data. For example, the following command will return the metadata for the most recent version of the data
+Clone the repository if you want the full project history and code:
 
 ```bash
-curl -i https://zenodo.org/api/records/ZENODO_RECORD
+git clone https://github.com/USERNAME/REPO_NAME.git
 ```
+
+## Citation
+
+If you use this project, cite it as described in [CITATION.cff](CITATION.cff). Archived releases and citation exports are available on [Zenodo](https://zenodo.org/record/ZENODO_RECORD) after the first release.
 
 ## Support
 
-This project is maintained by [@USERNAME](https://github.com/USERNAME). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
+This project is maintained by [@USERNAME](https://github.com/USERNAME). Please use public channels when possible so answers remain findable for others.
 
-| Type                                   | Platforms                                                               |
-| -------------------------------------- | ----------------------------------------------------------------------- |
-| 🚨 **Bug Reports**                     | [GitHub Issue Tracker](https://github.com/USERNAME/REPO_NAME/issues)    |
-| 📊 **Report bad data**                 | [GitHub Issue Tracker](https://github.com/USERNAME/REPO_NAME/issues)    |
-| 📚 **Docs Issue**                      | [GitHub Issue Tracker](https://github.com/USERNAME/REPO_NAME/issues)    |
-| 🎁 **Feature Requests**                | [GitHub Issue Tracker](https://github.com/USERNAME/REPO_NAME/issues)    |
-| 🛡 **Report a security vulnerability** | See [SECURITY.md](SECURITY.md)                                          |
-| 💬 **General Questions**               | [GitHub Discussions](https://github.com/USERNAME/REPO_NAME/discussions) |
-
-## Roadmap
-
-No changes are currently planned.
+| Need                        | Where                                                                   |
+| --------------------------- | ----------------------------------------------------------------------- |
+| Bug, data, or docs problem  | [GitHub Issues](https://github.com/USERNAME/REPO_NAME/issues)           |
+| Feature or reuse question   | [GitHub Discussions](https://github.com/USERNAME/REPO_NAME/discussions) |
+| Security vulnerability      | [SECURITY.md](SECURITY.md)                                              |
+| Project contact, if private | [INSERT CONTACT METHOD]                                                 |
 
 ## Contributing
 
-All contributions to this repository are welcome! If you find errors or problems with the data, or if you want to add new data or features, please open an issue or pull request. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+Corrections, data issues, documentation improvements, and reuse examples are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. The available versions are listed in the [tags on this repository](https://github.com/USERNAME/REPO_NAME/tags).
+Versions are listed in the [repository tags](https://github.com/USERNAME/REPO_NAME/tags) and archived releases are listed on [Zenodo](https://zenodo.org/record/ZENODO_RECORD).
 
-## Authors and acknowledgment
+## Authors And Acknowledgment
 
 - **FULLNAME** - _Initial work_ - [USERNAME](https://github.com/USERNAME)
 
-See also the list of [contributors](https://github.com/USERNAME/REPO_NAME/graphs/contributors) who contributed to this project.
+See the [contributors page](https://github.com/USERNAME/REPO_NAME/graphs/contributors) for additional contributions.
 
 ## License
 
-The data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the [LICENSE-CCBY](LICENSE-CCBY.md) file for details. By using this data, you agree to give appropriate credit to the original author(s) and to indicate if any modifications have been made.
-
-The code in this repository is released under the GNU Affero General Public License v3.0 - see the [LICENSE-AGPL](LICENSE-AGPL.md) file for details. By using this code, you agree to make any modifications available under the same license.
+Data are released under [CC BY 4.0](LICENSE-CCBY.md). Code is released under [AGPL 3.0](LICENSE-AGPL.md).
