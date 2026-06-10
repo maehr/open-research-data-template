@@ -1,8 +1,8 @@
 # GitHub Template for FAIR and Open Research Data
 
-Create a clear, citable, and reusable research data repository without starting from a blank GitHub project.
+Create a clear, citable, and reusable research data repository from this structured, ready-made template.
 
-This template gives research teams a practical structure for data, code, documentation, citation metadata, website publishing, and Zenodo archiving. It follows [FAIR](https://www.go-fair.org/fair-principles/) and open science principles and uses [Quarto](https://quarto.org/), [GitHub Pages](https://pages.github.com/), [Zenodo](https://zenodo.org/), and repeatable local checks.
+This framework gives research teams a practical structure for data, code, documentation, citation metadata, website publishing, and Zenodo archiving. It follows [FAIR](https://www.go-fair.org/fair-principles/) and open science principles and uses [Quarto](https://quarto.org/), [GitHub Pages](https://pages.github.com/), [Zenodo](https://zenodo.org/), and repeatable local checks.
 
 [![GitHub issues](https://img.shields.io/github/issues/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/issues)
 [![GitHub forks](https://img.shields.io/github/forks/maehr/open-research-data-template.svg)](https://github.com/maehr/open-research-data-template/network)
