@@ -60,7 +60,7 @@ Before publication, make sure a reader can answer these questions:
 
 ## Examples
 
-The same structure can support research data documentation, reproducible workflows, teaching, and living publications:
+The template has been applied across domains including public history, political science, digital humanities, teaching infrastructures, and living publication projects:
 
 - [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/) for public history research data management.
 - [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/) for reproducible publication figures.

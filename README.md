@@ -81,9 +81,9 @@ Long methods, data dictionaries, workflows, and decision records belong in `docu
 
 Run the language-specific checks only when your project uses that language. See [TODO.md](TODO.md) for the full setup, validation, and release sequence.
 
-## Examples
+## Selected Use Cases
 
-The structure has supported public history, political science, digital humanities, teaching, and living publication projects, including [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/), [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/), [nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/), [Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/), and [Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/).
+The template has been applied across domains including public history, political science, digital humanities, teaching infrastructures, and living publication projects, including [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/), [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/), [nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/), [Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/), and [Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/).
 
 ## Academic Recognition
 
