@@ -58,7 +58,7 @@ Before publication, make sure a reader can answer these questions:
 - How should the project be cited?
 - Where can users report errors or ask reuse questions?
 
-## Examples
+## Selected Use Cases
 
 The template has been applied across domains including public history, political science, digital humanities, teaching infrastructures, and living publication projects:
 
