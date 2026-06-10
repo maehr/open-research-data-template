@@ -7,12 +7,12 @@ Use this page to state how people should ask questions, report problems, and rec
 
 ## Channels
 
-| Channel            | Use it for                                                      | Notes                                                                 |
-| ------------------ | --------------------------------------------------------------- | --------------------------------------------------------------------- |
-| GitHub Issues      | Bugs, data problems, documentation problems, and concrete tasks | Keep discussions linked to files, commits, or releases when possible. |
-| GitHub Discussions | General questions and reuse examples                            | Prefer public answers unless information is sensitive.                |
-| Pull requests      | Reviewing changes before merge                                  | Include enough context for reviewers to understand the change.        |
-| Security contact   | Vulnerabilities or sensitive reports                            | See `SECURITY.md`.                                                    |
+| Channel                                                                 | Use it for                                                      | Notes                                                                 |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [GitHub Issues](https://github.com/USERNAME/REPO_NAME/issues)           | Bugs, data problems, documentation problems, and concrete tasks | Keep discussions linked to files, commits, or releases when possible. |
+| [GitHub Discussions](https://github.com/USERNAME/REPO_NAME/discussions) | General questions and reuse examples                            | Prefer public answers unless information is sensitive.                |
+| [Pull Requests](https://github.com/USERNAME/REPO_NAME/pulls)            | Reviewing changes before merge                                  | Include enough context for reviewers to understand the change.        |
+| Security contact                                                        | Vulnerabilities or sensitive reports                            | See `SECURITY.md`.                                                    |
 
 ## Response Expectations
 
