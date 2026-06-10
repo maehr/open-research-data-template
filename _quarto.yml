@@ -27,7 +27,7 @@ website:
       - text: Home
         href: index.qmd
       - text: Documentation
-        href: documentation.md
+        href: documentation/index.qmd
 
   sidebar:
     contents:
@@ -46,7 +46,7 @@ website:
             href: LICENSE-AGPL.md
           - text: Security
             href: SECURITY.md
-      - href: documentation.md
+      - href: documentation/index.qmd
         contents: project-management/*
 
 format:

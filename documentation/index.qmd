@@ -10,7 +10,7 @@ Good documentation lets contributors, reviewers, and future users understand wha
 ## Minimum Documentation
 
 | Topic        | Where to document it                                     |
-| ------------ | -------------------------------------------------------- |
+|--------------|----------------------------------------------------------|
 | Project aim  | `README.md` and `index.qmd`                              |
 | Data sources | `documentation/` or a dedicated data dictionary          |
 | Data fields  | `documentation/` or files stored alongside `data/`       |
@@ -22,12 +22,12 @@ Good documentation lets contributors, reviewers, and future users understand wha
 
 ## Suggested Pages
 
-| Page                               | Use it for                                      |
-| ---------------------------------- | ----------------------------------------------- |
-| `documentation/data-dictionary.md` | Field names, definitions, units, and values     |
-| `documentation/methods.md`         | Collection, cleaning, analysis, and limitations |
-| `documentation/reuse.md`           | Download, citation, license, and examples       |
-| `documentation/workflow.md`        | Scripts, order of operations, and checks        |
+| Page | Use it for |
+|------------------------------|------------------------------------------|
+| `documentation/data-dictionary.md` | Field names, definitions, units, and values |
+| `documentation/methods.md` | Collection, cleaning, analysis, and limitations |
+| `documentation/reuse.md` | Download, citation, license, and examples |
+| `documentation/workflow.md` | Scripts, order of operations, and checks |
 
 Create only the pages your project needs. A short accurate page is better than a long placeholder.
 

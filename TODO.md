@@ -32,7 +32,7 @@ Outcome: badges, metadata, contact details, and citation files describe the proj
 
 - [ ] `[Agent]` Customize `README.template.md` as the GitHub front door: project summary, data at a glance, repository structure, reuse, citation, support, authors, and license.
 - [ ] `[Agent]` Customize `index.qmd` as the public website homepage: plain-language project introduction, target users, data or outputs, reuse guidance, and links to detailed pages.
-- [ ] `[Agent]` Customize `documentation.md` and pages in `documentation/` for methods, data dictionaries, workflows, user guides, or other details that are too long for the homepage.
+- [ ] `[Agent]` Customize `documentation/index.qmd` and other pages in `documentation/` for methods, data dictionaries, workflows, user guides, or other details that are too long for the homepage.
 - [ ] `[Agent]` Review or remove placeholder files in `project-management/`, including communication, people, tools, and project-report pages.
 - [ ] `[Agent]` Resolve TODO comments outside this checklist by searching for `TODO` and completing or removing each project-specific note.
 
