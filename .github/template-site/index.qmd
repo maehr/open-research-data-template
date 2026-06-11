@@ -1,0 +1,5 @@
+---
+title: GitHub Template for FAIR and Open Research Data
+---
+
+{{< include README.md >}}

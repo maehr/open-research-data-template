@@ -35,7 +35,7 @@ website:
       - text: Readme
         href: index.qmd
       - text: Release workflow
-        href: .github/template-site/agent-release-workflow.qmd
+        href: release-workflow.qmd
       - text: Documentation
         href: documentation/index.qmd
 
@@ -47,7 +47,7 @@ website:
           - text: Changelog
             href: CHANGELOG.md
           - text: Release workflow
-            href: .github/template-site/agent-release-workflow.qmd
+            href: release-workflow.qmd
           - text: Code of Conduct
             href: CODE_OF_CONDUCT.md
           - text: Contributing

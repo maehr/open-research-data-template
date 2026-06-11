@@ -17,11 +17,13 @@ jobs:
         uses: actions/checkout@v6.0.3
 
       # The template repository release archive should match the showcase site.
-      # Forks and repositories created from the template use root _quarto.yml.
-      - name: Use template showcase Quarto config
+      # Forks and repositories created from the template use root project-facing files.
+      - name: Use template showcase Quarto files
         if: github.repository == 'maehr/open-research-data-template'
         run: |
           cp .github/template-site/_quarto.yml _quarto.yml
+          cp .github/template-site/index.qmd index.qmd
+          cp .github/template-site/agent-release-workflow.qmd release-workflow.qmd
 
       - name: Set up Node.js
         uses: actions/setup-node@v6.4.0
