@@ -3,7 +3,7 @@ title: Tools
 description: Software, commands, and services for running, checking, publishing, and archiving the project.
 ---
 
-Use this page to document the software and services needed to run, check, publish, and archive the project.
+This page documents the software and services needed to run, check, publish, and archive the project.
 
 ## Required Software
 

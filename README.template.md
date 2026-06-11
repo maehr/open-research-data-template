@@ -1,8 +1,6 @@
 # REPO_NAME
 
-SHORT_DESCRIPTION.
-
-Use this README as the GitHub front door for the project. Keep it short enough for a new reader to understand what the data are, where to find them, how to reuse them, and how to cite them.
+This repository contains SHORT_DESCRIPTION.
 
 [![GitHub issues](https://img.shields.io/github/issues/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/issues)
 [![GitHub forks](https://img.shields.io/github/forks/USERNAME/REPO_NAME.svg)](https://github.com/USERNAME/REPO_NAME/network)
@@ -13,12 +11,7 @@ Use this README as the GitHub front door for the project. Keep it short enough f
 
 ## Overview
 
-Replace this section with 3 to 5 sentences:
-
-- What does the project document?
-- Who is the intended audience?
-- What are the main data products?
-- What should users know before reusing the data?
+TODO: Describe what the project documents in 3 to 5 sentences. State the intended audience, the main data products, and anything users should know before reusing the data.
 
 ## Data At A Glance
 
@@ -34,6 +27,8 @@ Replace this section with 3 to 5 sentences:
 | Citation            | See [CITATION.cff](CITATION.cff) and the Zenodo DOI             |
 
 ## Repository Structure
+
+The repository follows the [Advanced Structure for Data Analysis](https://book.the-turing-way.org/project-design/pd-overview/project-repo/project-repo-advanced/) from _The Turing Way_.
 
 | Path                  | Purpose                                      |
 | --------------------- | -------------------------------------------- |

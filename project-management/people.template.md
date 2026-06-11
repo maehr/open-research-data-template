@@ -3,7 +3,7 @@ title: People
 description: Roles, responsibilities, credit, users, and stakeholders.
 ---
 
-Use this page to document roles, responsibilities, and credit. Keep it current when people join, leave, or change responsibilities.
+This page documents project roles, responsibilities, credit, users, and stakeholders. Keep it current when people join, leave, or change responsibilities.
 
 ## Roles
 

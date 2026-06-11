@@ -3,7 +3,7 @@ title: Documentation Guide
 description: Index for project documentation, methods, workflows, and decisions.
 ---
 
-Use this page as the index for project documentation. Keep the homepage readable and put detailed methods, data dictionaries, workflows, and decisions here or in `documentation/`.
+This section collects detailed project documentation. Keep the homepage readable and put methods, data dictionaries, workflows, and decisions here or in related documentation pages.
 
 Good documentation lets contributors, reviewers, and future users understand what was done, why it was done, and how to reuse the work.
 
@@ -19,6 +19,8 @@ Good documentation lets contributors, reviewers, and future users understand wha
 | Decisions    | `project-management/` or linked issues and pull requests |
 | Licenses     | `README.md`, `LICENSE-CCBY.md`, and `LICENSE-AGPL.md`    |
 | Citation     | `README.md`, `CITATION.cff`, and Zenodo release metadata |
+
+[INSERT OR REMOVE PROJECT-SPECIFIC DOCUMENTATION LINKS.]
 
 ## Suggested Pages
 

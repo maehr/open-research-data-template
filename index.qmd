@@ -1,73 +1,44 @@
 ---
-title: Open Research Data Template
-subtitle: A lean path from research data to website, citation, and archive
+title: REPO_NAME
+subtitle: SHORT_DESCRIPTION
 ---
 
-This template helps academics turn research data, documentation, code, and release notes into a public website and citable archive.
+This project documents SHORT_DESCRIPTION. It provides data, documentation, and reuse guidance for [INSERT AUDIENCE].
 
-You do not need to learn every tool at once. Follow the checklist, preview the site while you write, and publish only after the project is understandable to a future reader.
+## Data At A Glance
 
-## What You Get
-
-| Output | Purpose |
+| Item | Description |
 | --- | --- |
-| GitHub repository | Data, code, licenses, citation metadata, issues, and project history. |
-| Public website | A readable explanation for students, reviewers, collaborators, and data users. |
-| Setup checklist | A clear path for replacing placeholders, validating files, and preparing releases. |
-| Zenodo archive | Preserved releases with a DOI for citation. |
+| Main data | [INSERT CENTRAL DATASET OR OUTPUT] |
+| Coverage | [INSERT TEMPORAL, GEOGRAPHIC, THEMATIC, OR SOURCE COVERAGE] |
+| Unit of observation | [INSERT PERSON, PLACE, EVENT, DOCUMENT, MEASUREMENT, RECORD, ETC.] |
+| Sources | [INSERT ORIGINAL SOURCES OR COLLECTION METHOD] |
+| Formats | [INSERT CSV, JSON, GEOJSON, PARQUET, IMAGES, TEXT, ETC.] |
+| License | Data: CC BY 4.0; code: AGPL 3.0, unless changed |
 
-Open research data is easier to trust when the data, methods, code, documentation, and citation route stay together.
+## How To Use This Project
 
-## Start Here
+1. Read the overview and known limitations on this page.
+2. Review the detailed methods, workflows, or data dictionary in [Documentation](documentation/index.qmd).
+3. Download or inspect the data in the repository's `data/` folder.
+4. Reuse the data according to the license and citation guidance below.
 
-1. Create a new repository with [Use this template](https://github.com/new?template_name=open-research-data-template&template_owner=maehr).
-2. Open the new repository in GitHub Codespaces or clone it locally.
-3. Install dependencies and start the live preview.
+## Documentation
 
-```bash
-npm install
-npm run prepare
-npm run preview
-```
+[INSERT LINKS TO METHODS, DATA DICTIONARY, WORKFLOW, PROJECT REPORT, OR REUSE NOTES.]
 
-4. Work through `TODO.md` to replace placeholders and configure the project.
-5. Edit `index.qmd` so the website explains your project to public readers.
-6. Edit `README.template.md` so GitHub visitors understand the repository.
+## Citation
 
-For most new projects, `TODO.md` is the safest next step. It tells you what to change and what can wait.
+If you use this project, cite it as described in [CITATION.cff](CITATION.cff). Archived releases and citation exports are available on [Zenodo](https://zenodo.org/record/ZENODO_RECORD) after the first release.
 
-## Write Each Thing Once
+## Support
 
-| If you are writing... | Put it in... | Why |
-| --- | --- | --- |
-| A short explanation of the repository and its folders | `README.md` | GitHub visitors need a quick front door. |
-| A task that still needs to be done | `TODO.md` | Maintainers need one checklist for unfinished setup work. |
-| A public explanation of the project, data, course, or publication | `index.qmd` | Website readers need the story, not maintenance notes. |
-| Methods, data dictionaries, workflows, or detailed decisions | `documentation/` or `project-management/` | Details should be findable without making the homepage too long. |
+Report data problems, documentation issues, and reuse questions through the support channels listed in [README.md](README.md).
 
-This keeps the website readable, the repository navigable, and the setup work visible without mixing everything into one long page.
+## Known Limitations
 
-## Minimum Academic Checklist
+[INSERT IMPORTANT DATA LIMITATIONS, UNCERTAINTY, MISSING COVERAGE, ETHICAL CONSIDERATIONS, OR REUSE CONSTRAINTS.]
 
-Before publication, make sure a reader can answer these questions:
+## License
 
-- What does the project document?
-- Who created and maintains it?
-- Which files contain the data, code, methods, and tests?
-- What are the data sources, transformations, limitations, and licenses?
-- How should the project be cited?
-- Where can users report errors or ask reuse questions?
-
-## Selected Use Cases
-
-The template has been applied across domains including public history, political science, digital humanities, teaching infrastructures, and living publication projects:
-
-- [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/) for public history research data management.
-- [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/) for reproducible publication figures.
-- [nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/) for voting records and workflow documentation.
-- [Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/) for a course website.
-- [Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/) for a handbook and scholarly publication.
-
-## Next Step
-
-Create a repository from the template, keep `npm run preview` open while editing, and use `TODO.md` as the working checklist until the first release is archived.
+Data are released under [CC BY 4.0](LICENSE-CCBY.md). Code is released under [AGPL 3.0](LICENSE-AGPL.md), unless this project states different licenses.

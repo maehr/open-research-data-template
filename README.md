@@ -12,7 +12,7 @@ This framework gives research teams a practical structure for data, code, docume
 [![DOI](https://zenodo.org/badge/614287827.svg)](https://doi.org/10.5281/zenodo.19111355)
 
 > [!IMPORTANT]
-> This `README.md` describes the **template repository itself**. If you created a new repository from this template, start with [TODO.md](TODO.md), then customize [README.template.md](README.template.md), [CITATION.template.cff](CITATION.template.cff), [CODE_OF_CONDUCT.template.md](CODE_OF_CONDUCT.template.md), [SECURITY.template.md](SECURITY.template.md), and [CHANGELOG.template.md](CHANGELOG.template.md) as directed there.
+> This `README.md` describes the **template repository itself**. If you created a new repository from this template, start with [TODO.md](TODO.md), then customize [README.template.md](README.template.md), [CITATION.template.cff](CITATION.template.cff), [CODE_OF_CONDUCT.template.md](CODE_OF_CONDUCT.template.md), [SECURITY.template.md](SECURITY.template.md), [CHANGELOG.template.md](CHANGELOG.template.md), and any needed `project-management/*.template.md` files as directed there.
 
 ## Start Here
 
@@ -28,7 +28,7 @@ npm run preview
 
 4. Work through [TODO.md](TODO.md) to customize placeholders, configure GitHub and Zenodo, validate the site, and prepare the first release.
 5. Edit `index.qmd` as the public homepage for your project.
-6. Finalize `README.template.md` and rename it to `README.md` when your project-specific README is ready.
+6. Finalize `README.template.md` and any needed `project-management/*.template.md` scaffolds by replacing placeholders and removing `.template` from the filenames.
 
 ## What You Get
 
@@ -83,7 +83,37 @@ Run the language-specific checks only when your project uses that language. See 
 
 ## Selected Use Cases
 
-The template has been applied across domains including public history, political science, digital humanities, teaching infrastructures, and living publication projects, including [Stadt.Geschichte.Basel RDM](https://dokumentation.stadtgeschichtebasel.ch/), [sgb-figures](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/), [nordatlantisk-ft](http://mtwente.github.io/nordatlantisk-ft/), [Decoding Inequality 2025](https://dhbern.github.io/decoding-inequality-2025/), and [Non-discriminatory Metadata](https://maehr.github.io/diskriminierungsfreie-metadaten/).
+The template has been applied across domains including public history, political science, digital humanities, teaching infrastructures, and living publication projects. These examples come from the ["One Template to Rule Them All"](https://maehr.github.io/one-template-to-rule-them-all/) presentation.
+
+### Research Data Documentation
+
+| Project                                                                                                                                                                             | Preview                                                                                                                                                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Stadt.Geschichte.Basel RDM**](https://dokumentation.stadtgeschichtebasel.ch/)<br>Project documentation platform combining research data management with public history outreach. | <a href="https://dokumentation.stadtgeschichtebasel.ch/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch.png" width="540px" alt="Stadt.Geschichte.Basel documentation screenshot"></a> |
+| [**sgb-figures**](https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/)<br>Reproducible code and annotated data for publication-ready visualizations of research data.        | <a href="https://dokumentation.stadtgeschichtebasel.ch/sgb-figures/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dokumentation_stadtgeschichtebasel_ch_sgb_figures.png" width="540px" alt="sgb-figures screenshot"></a>  |
+
+### Reproducible Research Workflows
+
+| Project                                                                                                                                                                     | Preview                                                                                                                                                                                                            |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [**nordatlantisk-ft**](http://mtwente.github.io/nordatlantisk-ft/)<br>Voting records from the parliament of Denmark with complete data scraping and analysis documentation. | <a href="http://mtwente.github.io/nordatlantisk-ft"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/nordatlantisk_ft_report.png" width="540px" alt="nordatlantisk-ft screenshot"></a> |
+| [**maxvogt-analysis**](https://mtwente.github.io/maxvogt-analysis/)<br>Multi-step data compilation workflow documentation.                                                  | <a href="https://mtwente.github.io/maxvogt-analysis"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/maxvogt_analysis.png" width="540px" alt="maxvogt-analysis screenshot"></a>       |
+| [**Modelling Marti**](https://mtwente.github.io/modelling-marti)<br>Topic modeling project with interactive visualizations and multimedia content as narrative elements.    | <a href="https://mtwente.github.io/modelling-marti"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/modelling_marti.png" width="540px" alt="Modelling Marti screenshot"></a>          |
+
+### Academic Events And Teaching
+
+| Project                                                                                                                                             | Preview                                                                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [**Digital History Switzerland 2024**](https://digihistch24.github.io/)<br>Conference website with program, abstracts, and participant information. | <a href="https://digihistch24.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/digihistch24.png" width="540px" alt="Digital History Switzerland 2024 screenshot"></a>                        |
+| [**Digital Humanities Bern**](https://dhbern.github.io/)<br>Department hub featuring news, events, and course information.                          | <a href="https://dhbern.github.io/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/dhbern.png" width="540px" alt="Digital Humanities Bern screenshot"></a>                                             |
+| [**Decoding Inequality 2025**](https://dhbern.github.io/decoding-inequality-2025/)<br>University course website with syllabus and materials.        | <a href="https://dhbern.github.io/decoding-inequality-2025/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/decoding_inequality_2025.png" width="540px" alt="Decoding Inequality 2025 screenshot"></a> |
+
+### Living Publications And Handbooks
+
+| Project                                                                                                                                                                                 | Preview                                                                                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Non-discriminatory Metadata**](https://maehr.github.io/diskriminierungsfreie-metadaten/)<br>Handbook that functions as both documentation and scholarly publication.                 | <a href="https://maehr.github.io/diskriminierungsfreie-metadaten/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/diskriminierungsfreie_metadaten.png" width="540px" alt="Non-discriminatory Metadata screenshot"></a> |
+| [**One Template to Rule Them All**](https://maehr.github.io/one-template-to-rule-them-all/)<br>This repository's own presentation site, demonstrating meta-application of the template. | <a href="https://maehr.github.io/one-template-to-rule-them-all/"><img src="https://maehr.github.io/one-template-to-rule-them-all/paper/images/one_template_to_rule_them_all.png" width="540px" alt="One Template to Rule Them All screenshot"></a>   |
 
 ## Academic Recognition
 

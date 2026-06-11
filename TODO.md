@@ -19,7 +19,7 @@ Use this checklist after creating a repository from the template. Keep it practi
 
 ## Phase 1: Make The Project Identifiable
 
-- [ ] `[Agent]` Replace placeholders in `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `DESCRIPTION`, `package.json`, `pyproject.toml`, `README.template.md`, and `SECURITY.template.md`.
+- [ ] `[Agent]` Replace placeholders in `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `DESCRIPTION`, `index.qmd`, `package.json`, `project-management/*.template.md`, `pyproject.toml`, `README.template.md`, and `SECURITY.template.md`.
 - [ ] `[Agent]` Update project values for `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, `[INSERT CONTACT METHOD]`, `GITHUB_REPO_ID`, `ZENODO_RECORD`, `DOI`, and the starting project version where they apply.
 - [ ] `[Agent]` Customize citation metadata in `CITATION.template.cff`, including authors, title, repository URL, license, resource type, and DOI if already available.
 - [ ] `[Agent]` Activate project citation and governance files by renaming `CITATION.template.cff` to `CITATION.cff`, `CODE_OF_CONDUCT.template.md` to `CODE_OF_CONDUCT.md`, and `SECURITY.template.md` to `SECURITY.md`.
@@ -33,8 +33,8 @@ Outcome: badges, metadata, contact details, and citation files describe the proj
 - [ ] `[Agent]` Customize `README.template.md` as the GitHub front door: project summary, data at a glance, repository structure, reuse, citation, support, authors, and license.
 - [ ] `[Agent]` Customize `index.qmd` as the public website homepage: plain-language project introduction, target users, data or outputs, reuse guidance, and links to detailed pages.
 - [ ] `[Agent]` Customize `documentation/index.qmd` and other pages in `documentation/` for methods, data dictionaries, workflows, user guides, or other details that are too long for the homepage.
-- [ ] `[Agent]` Review or remove placeholder files in `project-management/`, including communication, people, tools, and project-report pages.
-- [ ] `[Agent]` Resolve TODO comments outside this checklist by searching for `TODO` and completing or removing each project-specific note.
+- [ ] `[Agent]` Customize any needed `project-management/*.template.md` files, then rename each finished file by removing `.template` so it can be published with the site.
+- [ ] `[Agent]` Resolve TODO comments outside this checklist and unfinished `*.template.*` files by searching for `TODO` and completing or removing each project-specific note.
 
 Outcome: readers can understand the project without reading setup notes.
 

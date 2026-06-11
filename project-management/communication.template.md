@@ -3,7 +3,7 @@ title: Communication
 description: How to ask questions, report problems, and record decisions.
 ---
 
-Use this page to state how people should ask questions, report problems, and record decisions. Keep only the channels your project actually uses.
+This project uses the following channels for questions, problem reports, change reviews, and durable decisions.
 
 ## Channels
 
@@ -17,7 +17,7 @@ Use this page to state how people should ask questions, report problems, and rec
 ## Response Expectations
 
 - TODO: state who monitors each channel.
-- TODO: state the expected response time, if the project can commit to one.
+- TODO: state the expected response time, if the project can commit to one, or write "No guaranteed response time".
 - TODO: state where meeting notes, agendas, or decision records live.
 
 ## Decision Records

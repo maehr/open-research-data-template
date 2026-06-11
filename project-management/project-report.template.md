@@ -3,7 +3,7 @@ title: Project Report
 description: Milestone notes, project status, decisions, and open questions.
 ---
 
-Use this page for short milestone notes. It should help a future reader understand what changed, why it changed, and what remains open.
+This report records short milestone notes so future readers can understand what changed, why it changed, and what remains open.
 
 ## Current Status
 
