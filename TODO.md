@@ -21,7 +21,7 @@ Use this checklist after creating a repository from the template. Keep it practi
 
 - [ ] `[Agent]` Replace placeholders in `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `DESCRIPTION`, `index.qmd`, `package.json`, `project-management/*.template.md`, `pyproject.toml`, `README.template.md`, and `SECURITY.template.md`.
 - [ ] `[Agent]` Update project values for `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, `[INSERT CONTACT METHOD]`, `GITHUB_REPO_ID`, `ZENODO_RECORD`, `DOI`, and the starting project version where they apply.
-- [ ] `[Agent]` Customize citation metadata in `CITATION.template.cff`, including authors, title, repository URL, license, resource type, and DOI if already available.
+- [ ] `[Agent]` Customize citation metadata in `CITATION.template.cff`, including authors, ORCID, title, repository URL, license, resource type, and DOI if already available.
 - [ ] `[Agent]` Activate project citation and governance files by renaming `CITATION.template.cff` to `CITATION.cff`, `CODE_OF_CONDUCT.template.md` to `CODE_OF_CONDUCT.md`, and `SECURITY.template.md` to `SECURITY.md`.
 - [ ] `[Agent]` Replace the default favicons at the repository root if the project will publish a site: `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, and Android icons.
 - [ ] `[Agent]` Optionally add `.zenodo.json` for richer Zenodo metadata.
