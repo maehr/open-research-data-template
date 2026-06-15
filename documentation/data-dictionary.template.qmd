@@ -1,0 +1,36 @@
+---
+title: Data Dictionary
+description: Structure, variables, and definitions for the published datasets.
+---
+
+This document describes the structure and variables of the datasets located in the `data/` directory. Proper documentation ensures that the data is FAIR (Findable, Accessible, Interoperable, and Reusable).
+
+## Overview
+
+- **Title**: TODO: Title of the dataset
+- **Authors**: TODO: Authors and contributors (include ORCIDs)
+- **Funding**: TODO: Funding sources and grant numbers
+- **License**: [CC BY 4.0](../LICENSE-CCBY.md) (unless specified otherwise)
+
+## Methodology
+
+TODO: Describe how the data was collected, processed, and cleaned. Mention any tools, scripts, or specific protocols used.
+
+## File Overview
+
+| File                 | Format | Description                                      |
+| -------------------- | ------ | ------------------------------------------------ |
+| `data/clean/TODO.csv`| CSV    | TODO: Describe the cleaned, ready-to-use dataset |
+| `data/raw/TODO.csv`  | CSV    | TODO: Describe the raw, unprocessed data         |
+
+*Note: Ensure all data files are in open, non-proprietary formats (e.g., CSV, JSON) and have been properly anonymized if they contained sensitive information.*
+
+## Definitions / Data Dictionary
+
+### `data/clean/TODO.csv`
+
+| Variable Name | Description                                      | Data Type | Units / Format | Allowed Values / Codes |
+| ------------- | ------------------------------------------------ | --------- | -------------- | ---------------------- |
+| `id`          | Unique identifier for the observation            | String    | UUID           | N/A                    |
+| `date`        | Date of observation                              | Date      | YYYY-MM-DD     | N/A                    |
+| `TODO`        | TODO: Description of variable                    | TODO      | TODO           | TODO                   |
