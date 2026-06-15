@@ -1,5 +1,13 @@
 project:
   type: website
+  render:
+    - '*.qmd'
+    - '*.md'
+    - 'documentation/**/*.qmd'
+    - 'documentation/**/*.md'
+    - 'project-management/**/*.qmd'
+    - 'project-management/**/*.md'
+    - '!**/*.template.md'
 
 website:
   title: GitHub template for FAIR and open research data
@@ -27,9 +35,9 @@ website:
       - text: Readme
         href: index.qmd
       - text: Release workflow
-        href: .github/template-site/agent-release-workflow.qmd
+        href: release-workflow.qmd
       - text: Documentation
-        href: documentation.md
+        href: documentation/index.qmd
 
   sidebar:
     contents:
@@ -39,7 +47,7 @@ website:
           - text: Changelog
             href: CHANGELOG.md
           - text: Release workflow
-            href: .github/template-site/agent-release-workflow.qmd
+            href: release-workflow.qmd
           - text: Code of Conduct
             href: CODE_OF_CONDUCT.md
           - text: Contributing
@@ -50,8 +58,8 @@ website:
             href: LICENSE-AGPL.md
           - text: Security
             href: SECURITY.md
-      - href: documentation.md
-        contents: project-management/*
+      - text: Documentation
+        href: documentation/index.qmd
 
 format:
   html:

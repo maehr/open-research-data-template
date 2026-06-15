@@ -7,27 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/maehr/open-research-data-template/compare/v1.0.0...HEAD)
 
+### Changed
+
+- Streamlined the template setup guidance so new projects have clearer starting points in `README.md`, `TODO.md`, and the website homepage.
+- Clarified GitHub setup guidance for security alerts, Dependabot security updates, branch protection, Pages, Zenodo, and local preview.
+
 ## [1.0.0](https://github.com/maehr/open-research-data-template/releases/tag/v1.0.0)
 
 ### Added
 
 - Quarto-based documentation and GitHub Pages publishing for FAIR and open research data projects.
-- Zenodo integration guidance, `.zenodo.json` metadata support, and release-preparation commands that commit a rendered site archive into tagged snapshots.
-- GitHub Codespaces/devcontainer setup, issue templates, citation metadata, and a curated showcase gallery spanning research, teaching, and living publications.
-- Add a `CHANGELOG.template.md` scaffold so downstream projects can rename it consistently, just like `README.template.md`.
-- Split citation and governance metadata into live repo files plus `.template` companions so the template can publish real DOI metadata without losing downstream placeholders.
+- Zenodo integration guidance, citation metadata, issue templates, and release-preparation support.
+- `README.template.md`, `CHANGELOG.template.md`, citation, conduct, and security templates for downstream projects.
 
 ### Changed
 
-- Tooling around Prettier, Ruff, ty, styler, lintr, and Prek to make repository maintenance easier for both humans and agents.
-- GitHub Actions workflows for changelog generation, link checking, site publication, and release packaging.
-- Setup and governance documentation so coding agents can safely customize placeholders, update metadata, and prepare releases.
-- Trim back template/project split notes in agent-facing docs so the repository stays easier to understand.
+- Setup and governance documentation so maintainers can replace placeholders, update metadata, and prepare releases.
+- GitHub Actions workflows for link checking, site publication, and release packaging.
 
 ### Fixed
 
-- Broken external links, 404s, project-renaming follow-ups, and assorted documentation inconsistencies discovered during template maintenance.
-- Various template maintenance fixes across documentation and repository scaffolding.
+- Broken external links, project-renaming follow-ups, and documentation inconsistencies discovered during template maintenance.
 
 ### Security
 

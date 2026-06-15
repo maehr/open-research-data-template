@@ -27,10 +27,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version: '24'
 
@@ -48,10 +48,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v8.2.0
 
       - name: Run ruff check
         run: uv run ruff check
@@ -67,7 +67,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
@@ -76,6 +76,8 @@ jobs:
 
       - name: Setup renv
         uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 2
 
       - name: Run lintr
         run: Rscript -e 'lintr::lint_dir(".")'
@@ -86,15 +88,19 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
 
-      - name: Overwrite _quarto.yml
+      # The template repository publishes a showcase site. Forks and repositories
+      # created from the template keep using the root project-facing files.
+      - name: Use template showcase Quarto files
         if: github.repository == 'maehr/open-research-data-template'
         run: |
-          cp .github/_quarto.yml _quarto.yml
+          cp .github/template-site/_quarto.yml _quarto.yml
+          cp .github/template-site/index.qmd index.qmd
+          cp .github/template-site/agent-release-workflow.qmd release-workflow.qmd
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version: '24'
 
@@ -102,7 +108,7 @@ jobs:
         run: npm ci
 
       - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+        uses: quarto-dev/quarto-actions/setup@v2.2.0
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # with:
@@ -115,7 +121,7 @@ jobs:
 
       # From https://github.com/astral-sh/setup-uv
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v8.2.0
 
       # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
       - name: Setup R
@@ -123,6 +129,8 @@ jobs:
         with:
           r-version: renv
       - uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 2
 
       # From https://github.com/julia-actions/setup-julia
       # - name: Setup Julia
@@ -134,14 +142,14 @@ jobs:
         run: npm run site:build
 
       - name: Upload Built Artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: built-site
           path: _site
 
       - name: Upload static files as artifact
         id: deployment
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: _site
 
@@ -157,4 +165,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5.0.0

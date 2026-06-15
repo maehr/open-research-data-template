@@ -14,15 +14,19 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
 
-      - name: Overwrite _quarto.yml
+      # The template repository release archive should match the showcase site.
+      # Forks and repositories created from the template use root project-facing files.
+      - name: Use template showcase Quarto files
         if: github.repository == 'maehr/open-research-data-template'
         run: |
-          cp .github/_quarto.yml _quarto.yml
+          cp .github/template-site/_quarto.yml _quarto.yml
+          cp .github/template-site/index.qmd index.qmd
+          cp .github/template-site/agent-release-workflow.qmd release-workflow.qmd
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version: '24'
 
@@ -30,12 +34,12 @@ jobs:
         run: npm ci
 
       - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+        uses: quarto-dev/quarto-actions/setup@v2.2.0
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v8.2.0
 
       - name: Sync Python dependencies
         run: uv sync
@@ -45,12 +49,14 @@ jobs:
         with:
           r-version: renv
       - uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 2
 
       - name: Build site archive
         run: npm run site:build && npm run site:archive -- --tag ${{ github.event.release.tag_name }}
 
       - name: Upload release asset
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

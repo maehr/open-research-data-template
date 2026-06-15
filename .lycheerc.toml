@@ -17,6 +17,9 @@ exclude = [
   "https://book.the-turing-way.org/",
   "https://www.contributor-covenant.org/faq",
   "https://www.contributor-covenant.org/version/2/1/code_of_conduct.html",
+  "https://doi.org/10.5281/zenodo.19111355",
+  "https://zenodo.org/",
+  "https://zenodo.org/badge/614287827.svg",
 ]
 
 # Timeout for requests (seconds)

@@ -1,5 +1,44 @@
 ---
-title: Open Research Data
+title: REPO_NAME
+subtitle: SHORT_DESCRIPTION
 ---
 
-{{< include README.md >}}
+This project documents SHORT_DESCRIPTION. It provides data, documentation, and reuse guidance for [INSERT AUDIENCE].
+
+## Data At A Glance
+
+| Item | Description |
+| --- | --- |
+| Main data | [INSERT CENTRAL DATASET OR OUTPUT] |
+| Coverage | [INSERT TEMPORAL, GEOGRAPHIC, THEMATIC, OR SOURCE COVERAGE] |
+| Unit of observation | [INSERT PERSON, PLACE, EVENT, DOCUMENT, MEASUREMENT, RECORD, ETC.] |
+| Sources | [INSERT ORIGINAL SOURCES OR COLLECTION METHOD] |
+| Formats | [INSERT CSV, JSON, GEOJSON, PARQUET, IMAGES, TEXT, ETC.] |
+| License | Data: CC BY 4.0; code: AGPL 3.0, unless changed |
+
+## How To Use This Project
+
+1. Read the overview and known limitations on this page.
+2. Review the detailed methods, workflows, or data dictionary in [Documentation](documentation/index.qmd).
+3. Download or inspect the data in the repository's `data/` folder.
+4. Reuse the data according to the license and citation guidance below.
+
+## Documentation
+
+[INSERT LINKS TO METHODS, DATA DICTIONARY, WORKFLOW, PROJECT REPORT, OR REUSE NOTES.]
+
+## Citation
+
+If you use this project, cite it as described in [CITATION.cff](CITATION.cff). Archived releases and citation exports are available on [Zenodo](https://zenodo.org/record/ZENODO_RECORD) after the first release.
+
+## Support
+
+Report data problems, documentation issues, and reuse questions through the support channels listed in [README.md](README.md).
+
+## Known Limitations
+
+[INSERT IMPORTANT DATA LIMITATIONS, UNCERTAINTY, MISSING COVERAGE, ETHICAL CONSIDERATIONS, OR REUSE CONSTRAINTS.]
+
+## License
+
+Data are released under [CC BY 4.0](LICENSE-CCBY.md). Code is released under [AGPL 3.0](LICENSE-AGPL.md), unless this project states different licenses.
