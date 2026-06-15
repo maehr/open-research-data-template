@@ -16,7 +16,7 @@ This page documents project roles, responsibilities, credit, users, and stakehol
 
 ## Credit
 
-Use `README.md`, `CITATION.cff`, release notes, and Git history for credit. Be clear about the difference between authorship, maintainership, data contribution, review, and technical support. Always include [ORCID](https://orcid.org/) identifiers to unambiguously link contributors to their work.
+Use `README.md`, `CITATION.cff`, release notes, and Git history for credit. Be clear about the difference between authorship, maintainership, data contribution, review, and technical support. Where applicable, include [ORCID](https://orcid.org/) identifiers to unambiguously link individual contributors to their work.
 
 ## Users And Stakeholders
 

@@ -42,7 +42,7 @@ Outcome: datasets are clean, anonymized, documented, and provided in open format
 - [ ] `[Agent]` Customize `README.template.md` as the GitHub front door: project summary, data at a glance, repository structure, reuse, citation, support, authors, and license.
 - [ ] `[Agent]` Customize `index.qmd` as the public website homepage: plain-language project introduction, target users, data or outputs, reuse guidance, and links to detailed pages.
 - [ ] `[Agent]` Customize `documentation/index.qmd` and other pages in `documentation/` for methods, data dictionaries, workflows, user guides, or other details that are too long for the homepage.
-- [ ] `[Agent]` Customize any needed `project-management/*.template.md` files, then rename each finished file by removing `.template` so it can be published with the site.
+- [ ] `[Agent]` Customize any needed `project-management/*.template.md` and `documentation/*.template.{md,qmd}` files, then rename each finished file by removing `.template` so it can be published with the site.
 - [ ] `[Agent]` Resolve TODO comments outside this checklist and unfinished `*.template.*` files by searching for `TODO` and completing or removing each project-specific note.
 
 Outcome: readers can understand the project without reading setup notes.

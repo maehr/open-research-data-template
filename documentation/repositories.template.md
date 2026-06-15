@@ -14,6 +14,7 @@ Consider the following characteristics when selecting a repository:
 - **Support and Operation**: Is it operated by a trusted institution? What level of user support is available?
 - **Persistent Identifiers**: Does it issue DOIs (Digital Object Identifiers) or other persistent identifiers?
 - **Retention**: What are the guarantees for long-term preservation?
+- **Registration**: Do users need an account, institutional affiliation, or approval to deposit?
 - **Costs**: Are there fees for data deposition or access?
 
 ## Common Repositories
