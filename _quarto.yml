@@ -8,6 +8,7 @@ project:
     - 'project-management/**/*.qmd'
     - 'project-management/**/*.md'
     - '!**/*.template.md'
+    - '!**/*.template.qmd'
 
 website:
   title: REPO_NAME
