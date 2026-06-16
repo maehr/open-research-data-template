@@ -21,24 +21,33 @@ Use this checklist after creating a repository from the template. Keep it practi
 
 - [ ] `[Agent]` Replace placeholders in `.github/ISSUE_TEMPLATE/config.yml`, `_brand.yml`, `CITATION.template.cff`, `CODE_OF_CONDUCT.template.md`, `DESCRIPTION`, `index.qmd`, `package.json`, `project-management/*.template.md`, `pyproject.toml`, `README.template.md`, and `SECURITY.template.md`.
 - [ ] `[Agent]` Update project values for `FULLNAME`, `USERNAME`, `REPO_NAME`, `SHORT_DESCRIPTION`, `[INSERT CONTACT METHOD]`, `GITHUB_REPO_ID`, `ZENODO_RECORD`, `DOI`, and the starting project version where they apply.
-- [ ] `[Agent]` Customize citation metadata in `CITATION.template.cff`, including authors, title, repository URL, license, resource type, and DOI if already available.
+- [ ] `[Agent]` Customize citation metadata in `CITATION.template.cff`, including authors, ORCID, title, repository URL, license, resource type, and DOI if already available.
 - [ ] `[Agent]` Activate project citation and governance files by renaming `CITATION.template.cff` to `CITATION.cff`, `CODE_OF_CONDUCT.template.md` to `CODE_OF_CONDUCT.md`, and `SECURITY.template.md` to `SECURITY.md`.
 - [ ] `[Agent]` Replace the default favicons at the repository root if the project will publish a site: `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, and Android icons.
 - [ ] `[Agent]` Optionally add `.zenodo.json` for richer Zenodo metadata.
 
 Outcome: badges, metadata, contact details, and citation files describe the project rather than the template.
 
-## Phase 2: Put Content In The Right Place
+## Phase 2: Prepare Data For Publication
+
+- [ ] `[Agent]` Verify that all data files in `data/` are in open, non-proprietary formats (e.g., CSV, JSON, TXT). Avoid proprietary formats like XLSX unless strictly necessary.
+- [ ] `[Agent]` Ensure all data has been properly anonymized and stripped of personally identifiable information (PII) before committing to the repository.
+- [ ] `[Agent]` Check data for errors, inconsistencies, or missing values.
+- [ ] `[Agent]` Document the data by filling out `documentation/data-dictionary.template.qmd`. Include title, authors, funding, methodology, file overview, and definitions for all variables.
+
+Outcome: datasets are clean, anonymized, documented, and provided in open formats.
+
+## Phase 3: Put Content In The Right Place
 
 - [ ] `[Agent]` Customize `README.template.md` as the GitHub front door: project summary, data at a glance, repository structure, reuse, citation, support, authors, and license.
 - [ ] `[Agent]` Customize `index.qmd` as the public website homepage: plain-language project introduction, target users, data or outputs, reuse guidance, and links to detailed pages.
 - [ ] `[Agent]` Customize `documentation/index.qmd` and other pages in `documentation/` for methods, data dictionaries, workflows, user guides, or other details that are too long for the homepage.
-- [ ] `[Agent]` Customize any needed `project-management/*.template.md` files, then rename each finished file by removing `.template` so it can be published with the site.
+- [ ] `[Agent]` Customize any needed `project-management/*.template.md` and `documentation/*.template.{md,qmd}` files, then rename each finished file by removing `.template` so it can be published with the site.
 - [ ] `[Agent]` Resolve TODO comments outside this checklist and unfinished `*.template.*` files by searching for `TODO` and completing or removing each project-specific note.
 
 Outcome: readers can understand the project without reading setup notes.
 
-## Phase 3: Configure GitHub And Zenodo
+## Phase 4: Configure GitHub And Zenodo
 
 - [ ] `[Shared]` Enable GitHub Security Alerts and Dependabot security updates with the GitHub CLI commands below, or use the GitHub web UI if CLI access is unavailable.
 - [ ] `[Shared]` Protect the `main` branch with the GitHub CLI branch protection command below, or configure branch protection in the GitHub web UI.
@@ -49,7 +58,7 @@ Outcome: readers can understand the project without reading setup notes.
 
 Outcome: the repository can publish, preserve releases, and receive security updates.
 
-## Phase 4: Validate The Project Locally
+## Phase 5: Validate The Project Locally
 
 - [ ] `[Agent]` Format files with `npm run format`.
 - [ ] `[Agent]` Check formatting with `npm run check`.
@@ -61,7 +70,7 @@ Outcome: the repository can publish, preserve releases, and receive security upd
 
 Outcome: formatting, website preview, and language-specific checks pass before publication.
 
-## Phase 5: Commit, Publish, And Archive
+## Phase 6: Commit, Publish, And Archive
 
 - [ ] `[Agent]` Commit setup changes with a Conventional Commit subject, for example `git commit -m "chore: initial project setup"`.
 - [ ] `[Agent]` Generate changelog entries with `npm run changelog`, then curate the result into `CHANGELOG.template.md`.

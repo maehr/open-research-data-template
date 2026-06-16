@@ -26,10 +26,11 @@ Good documentation lets contributors, reviewers, and future users understand wha
 
 | Page | Use it for |
 |------------------------------|------------------------------------------|
-| `documentation/data-dictionary.md` | Field names, definitions, units, and values |
+| `documentation/data-dictionary.qmd` | Field names, definitions, units, and values |
 | `documentation/methods.md` | Collection, cleaning, analysis, and limitations |
 | `documentation/reuse.md` | Download, citation, license, and examples |
 | `documentation/workflow.md` | Scripts, order of operations, and checks |
+| `documentation/repositories.md` | Evaluating repository characteristics (Zenodo, OpenAgrar, discipline-specific options) |
 
 Create only the pages your project needs. A short accurate page is better than a long placeholder.
 
