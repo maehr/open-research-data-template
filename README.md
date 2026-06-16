@@ -32,6 +32,8 @@ npm run preview
 
 ## What You Get
 
+The publication workflow follows the BfR [ToDo-Liste für die Publikation von Forschungsdaten](https://doi.org/10.5281/zenodo.13744645):
+
 | Need             | Included support                                                        |
 | ---------------- | ----------------------------------------------------------------------- |
 | Data reuse       | Standard folders for data, analysis, source code, tests, and docs       |
