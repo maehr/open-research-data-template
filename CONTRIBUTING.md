@@ -6,7 +6,7 @@ Please follow the [code of conduct](CODE_OF_CONDUCT.md) in all project spaces.
 
 ## Local and Agent Setup
 
-Use [GitHub Codespaces](https://github.com/features/codespaces) or follow the local setup steps in [README.md](README.md). For coding agents, start with [.github/copilot-instructions.md](.github/copilot-instructions.md) so repository-specific rules are applied before changes are made.
+Use [GitHub Codespaces](https://github.com/features/codespaces) or follow the local setup steps in [README.md](README.md). For coding agents, start with [AGENTS.md](AGENTS.md) so repository-specific rules are applied before changes are made.
 
 Agents can usually handle documentation edits, placeholder replacement, formatting, changelog generation, and preview preparation. Maintainers should still personally review any GitHub or Zenodo settings changes and any production publication steps.
 
