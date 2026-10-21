@@ -126,7 +126,7 @@ Place new files accordingly.
 - After first release:
   - Record your **`ZENODO_RECORD`** and **`DOI`**.
   - **Zenodo DOI badge**: replace `GITHUB_REPO_ID` in the badge image URL with the numeric repo ID from `https://api.github.com/repos/USERNAME/REPO_NAME` (`id` field), and replace `ZENODO_RECORD` in the badge target once Zenodo has created the record. The badge will then display your DOI.
-  - Use the **concept DOI** directly in citation metadata so it stays stable across releases.
+  - Use the **concept DOI** in citation metadata to cite the evolving project across releases. Cite a **version DOI** when a result depends on one specific release, such as when reproducing that result.
 - Add the DOI to the README and `CITATION.cff` once available.
 
 ## 11) Website Publishing with GitHub Pages (Project instances)

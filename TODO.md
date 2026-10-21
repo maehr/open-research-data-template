@@ -56,6 +56,15 @@ Outcome: readers can understand the project without reading setup notes.
 - [ ] `[Agent]` Set up the Zenodo DOI badge by replacing `GITHUB_REPO_ID` in `README.template.md` with the numeric repository ID from `https://api.github.com/repos/USERNAME/REPO_NAME`.
 - [ ] `[Shared]` After the first release, record DOI metadata by replacing `DOI` in `CITATION.cff` and `ZENODO_RECORD` in `README.template.md`.
 
+Use DOI identifiers consistently when citing the project:
+
+| Identifier  | Use                                           |
+| ----------- | --------------------------------------------- |
+| Concept DOI | Cite the evolving project or dataset          |
+| Version DOI | Cite the exact release that produced a result |
+
+Keep the concept DOI in `CITATION.cff`; cite the version DOI when a result depends on one specific release.
+
 Outcome: the repository can publish, preserve releases, and receive security updates.
 
 ## Phase 5: Validate The Project Locally
