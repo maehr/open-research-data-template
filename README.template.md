@@ -57,6 +57,13 @@ git clone https://github.com/USERNAME/REPO_NAME.git
 
 If you use this project, cite it as described in [CITATION.cff](CITATION.cff). Archived releases and citation exports are available on [Zenodo](https://zenodo.org/record/ZENODO_RECORD) after the first release.
 
+| Identifier  | Use                                           |
+| ----------- | --------------------------------------------- |
+| Concept DOI | Cite the evolving project or dataset          |
+| Version DOI | Cite the exact release that produced a result |
+
+Use the version DOI when a result depends on one specific release; keep the concept DOI in `CITATION.cff` to cite the evolving project.
+
 ## Support
 
 This project is maintained by [@USERNAME](https://github.com/USERNAME). Please use public channels when possible so answers remain findable for others.
